@@ -1,4 +1,4 @@
-# Vert.x Example Maven Project
+# Vertx Weblabs Widget Project
 
 Example project for creating a Vert.x module with a Gradle build.
 
