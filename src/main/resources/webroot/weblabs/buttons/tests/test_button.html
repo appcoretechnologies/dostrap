@@ -1,16 +1,34 @@
 <!DOCTYPE html>
-<html >
+<html>
 <head>
+    <title>Dojo Learning</title>
 <link rel="stylesheet" href="../../css/bootstrap.css">
-     <script src="../../../dojo/dojo/dojo.js" data-dojo-config="'cacheBust:new Date();parseOnLoad':true,'async':true,'packages':[{'name':'weblabs','location':'./../../weblabs'}],'parseOnLoad':true"></script>
-
-
+     <script src="../../../dojo/dojo/dojo.js" data-dojo-config="'cacheBust:new Date();parseOnLoad':true,'async':true,
+     'packages':[{'name':'weblabs','location':'./../../weblabs'}],'parseOnLoad':true"></script>
     <script>
-        require(["dojo/parser", "dijit/form/Button"]);
+        require(["dojo/parser", "dijit/form/button"]);
+
+      //
+
     </script>
+
 </head>
+
 <body>
-<span data-dojo-type="weblabs/buttons/button" data-dojo-props="label:'hello'">
-</span>
+<div id="widgetContainer"></div>
+<script type="text/javascript">
+
+    require(["weblabs/buttons/button"],
+            function(button) {
+                var widget = new button({label:"Amit"});
+
+                widget.placeAt("widgetContainer");
+
+                widget.setLabel("Amit2");
+            });
+</script>
+
 </body>
 </html>
+
+data-dojo-props='label:"Amit"'
