@@ -2,33 +2,30 @@
 <html>
 <head>
     <title>Dojo Learning</title>
-<link rel="stylesheet" href="../../css/bootstrap.css">
-     <script src="../../../dojo/dojo/dojo.js" data-dojo-config="'cacheBust:new Date();parseOnLoad':true,'async':true,
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <script src="../../../dojo/dojo/dojo.js" data-dojo-config="'cacheBust:new Date();parseOnLoad':true,'async':true,
      'packages':[{'name':'weblabs','location':'./../../weblabs'}],'parseOnLoad':true"></script>
     <script>
-        require(["dojo/parser", "dijit/form/button"]);
-
-      //
-
+        require(["dojo/parser", "dijit/form/Button"]);
     </script>
 
 </head>
 
-<body>
-<div id="widgetContainer"></div>
+<body class="claro">
+<span data-dojo-type="weblabs/buttons/button" data-dojo-props='label:"Amit",size:"small",type:"warning"'></span>
+<button data-dojo-type="weblabs/buttons/button">AmitAP</button>
+<span data-dojo-type="weblabs/buttons/button" data-dojo-props='label:"AmitAnil",size:"medium",type:"success"'></span>
+<span id="widgetContainer2"></span>
+
+
 <script type="text/javascript">
-
     require(["weblabs/buttons/button"],
-            function(button) {
-                var widget = new button({label:"Amit"});
-
-                widget.placeAt("widgetContainer");
-
-                widget.setLabel("Amit2");
+            function (button) {
+                var widget = new button({label: "AmitP", size: "medium", type: "info"});
+                widget.placeAt("widgetContainer2");
+                widget.set("label", "AmitPoojary");
+                widget.set("size", "xsmall");
             });
 </script>
-
 </body>
 </html>
-
-data-dojo-props='label:"Amit"'
