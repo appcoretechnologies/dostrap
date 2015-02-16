@@ -13,16 +13,28 @@ define([
 	var Button = declare([ _WidgetBase, _TemplatedMixin ], {
 		templateString : template,
 		menuItemType: "",
-
+		disabled: "",
+		
 		_setMenuItemTypeAttr : function(val) {
 			var displayClass = "";
 			if (val == "divider") {
 				displayClass = "divider";
 			}
 			if (this.containerNode) {
-				domClass.replace(this.menuItemNode, displayClass);
+				domClass.add(this.menuItemNode, displayClass);
 			}
 			this._set("menuItemType", val);
+		},
+		_setDisabledAttr : function(val) {
+			var displayClass = "";
+		
+			if (val == "disabled") {
+				displayClass = "disabled";
+			}
+			if (this.containerNode) {
+				domClass.add(this.menuItemNode, displayClass);
+			}
+			this._set("disabled", val);
 		}
 	});
 

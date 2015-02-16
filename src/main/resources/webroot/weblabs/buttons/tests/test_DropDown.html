@@ -30,10 +30,11 @@ require([
   "dijit/MenuBar",
   "dijit/PopupMenuBarItem",
   "dijit/layout/TabContainer",
-  "dijit/DropDownMenu",
+   "dijit/MenuItem",
    "weblabs/buttons/DropDown",
     "weblabs/buttons/MenuItem"
 ]);
+
 </script>
 
 
@@ -42,10 +43,10 @@ require([
 <body data-maq-flow-layout="true" data-maq-comptype="sketchlofi" class="claro" data-maq-ws="collapse" data-maq-appstates="{}" data-maq-device="android_340x480" id="myapp">
 
 
-<span data-dojo-type="weblabs/buttons/DropDown">
+<div data-dojo-type="weblabs/buttons/DropDown" id="testDropDown">
 <span data-dojo-type="weblabs/buttons/MenuItem">Action One</span>
 <span data-dojo-type="weblabs/buttons/MenuItem">Some Other Action</span>
-<span data-dojo-type="weblabs/buttons/MenuItem">Something else here</span>
+<span data-dojo-type="weblabs/buttons/MenuItem" data-dojo-props="disabled:'disabled'">Something else here</span>
 <span data-dojo-type="weblabs/buttons/MenuItem" data-dojo-props="menuItemType: 'divider'">
 </span>
 <span data-dojo-type="weblabs/buttons/MenuItem" >Separate Link</span>
@@ -54,5 +55,13 @@ require([
 
 
 </div>
+<script type="text/javascript">
+require(["dojo/dom","weblabs/buttons/MenuItem"],
+        function(dom, MenuItem){
+	var dropDown = dom.byId('testDropDown');
+	var menuItem = new MenuItem({label:"test new"});
+	dropDown.addChild(menuItem);
+	});
+</script>
 </body>
 </html>
