@@ -32,7 +32,8 @@ require([
   "dijit/layout/TabContainer",
    "dijit/MenuItem",
    "weblabs/buttons/DropDown",
-    "weblabs/buttons/MenuItem"
+    "weblabs/buttons/MenuItem",
+	"weblabs/buttons/DropDownMenu"
 ]);
 
 </script>
@@ -42,25 +43,40 @@ require([
 </head>
 <body data-maq-flow-layout="true" data-maq-comptype="sketchlofi" class="claro" data-maq-ws="collapse" data-maq-appstates="{}" data-maq-device="android_340x480" id="myapp">
 
-
-<div data-dojo-type="weblabs/buttons/DropDown" id="testDropDown">
-<span data-dojo-type="weblabs/buttons/MenuItem">Action One</span>
+<div id="test"/>
+<div data-dojo-type="weblabs/buttons/dropdown" data-dojo-props="label: 'DropDown'" id="testDropDown">
+<span data-dojo-type="weblabs/buttons/MenuItem"  >Action One</span>
 <span data-dojo-type="weblabs/buttons/MenuItem">Some Other Action</span>
 <span data-dojo-type="weblabs/buttons/MenuItem" data-dojo-props="disabled:'disabled'">Something else here</span>
 <span data-dojo-type="weblabs/buttons/MenuItem" data-dojo-props="menuItemType: 'divider'">
 </span>
 <span data-dojo-type="weblabs/buttons/MenuItem" >Separate Link</span>
-</span>
-	
-
 
 </div>
 <script type="text/javascript">
-require(["dojo/dom","weblabs/buttons/MenuItem"],
-        function(dom, MenuItem){
-	var dropDown = dom.byId('testDropDown');
+require(["dijit","weblabs/buttons/MenuItem","weblabs/buttons/dropdown","dojo/dom","weblabs/buttons/DropDownMenu"],
+        function(dijit, MenuItem,dropdown,dom,DropDownMenu){
+	
+	var dropdownmenu= new DropDownMenu({label:"test "});
+
 	var menuItem = new MenuItem({label:"test new"});
-	dropDown.addChild(menuItem);
+	var menuItem2 = new MenuItem({label:"test new2"});
+	var menuItem3 = new MenuItem({label:"test new3"});
+	var menuItem4 = new MenuItem({label:"test new4"});
+	
+	dropdownmenu.addChild(menuItem);
+	dropdownmenu.addChild(menuItem2);
+	dropdownmenu.addChild(menuItem3);
+	dropdownmenu.addChild(menuItem4);
+	dropdownmenu.startup();
+	var button = new dropdown({
+        label: "hello!",
+     
+        dropDown: dropdownmenu,
+       
+    });
+
+	dom.byId("test").appendChild(dropdownmenu.domNode)
 	});
 </script>
 </body>

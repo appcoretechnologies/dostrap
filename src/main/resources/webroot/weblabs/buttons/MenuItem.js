@@ -14,7 +14,7 @@ define([
 		templateString : template,
 		menuItemType: "",
 		disabled: "",
-		
+		Label:"",
 		_setMenuItemTypeAttr : function(val) {
 			var displayClass = "";
 			if (val == "divider") {
@@ -25,6 +25,16 @@ define([
 			}
 			this._set("menuItemType", val);
 		},
+		_setLabelAttr: function(/*String*/ val){
+			// summary:
+			//		Hook for set('label', ...) to work.
+			// description:
+			//		Set the label (text) of the button; takes an HTML string.
+			this._set("label", val);
+			var labelNode = this.containerNode || this.focusNode;
+			labelNode.innerHTML = val;
+		},
+		
 		_setDisabledAttr : function(val) {
 			var displayClass = "";
 		

@@ -28,6 +28,7 @@ define([
 		_setToggleClassAttr: { node: "menuNode", type: "class" },
 		templateString: template,
 		disabled: "",
+		label:"",
 		_connectHandlers : [],
 		
 		buildRendering: function(){
@@ -65,45 +66,20 @@ define([
 			}
 			this._set("disabled", val);
 		},
-		
-		addChild: function(/*dijit/_WidgetBase*/ widget, /*int?*/ insertIndex){
+			_setLabelAttr: function(/*String*/ val){
 			// summary:
-			//		Makes the given widget a child of this widget.
+			//		Hook for set('label', ...) to work.
 			// description:
-			//		Inserts specified child widget's dom node as a child of this widget's
-			//		container node, and possibly does other processing (such as layout).
-
-			// I want to just call domConstruct.place(widget.domNode, this.containerNode, insertIndex), but the counting
-			// is thrown off by text nodes and comment nodes that show up when constructed by markup.
-			// In the future consider stripping those nodes on construction, either in the parser or this widget code.
-			var refNode = this.containerNode;
-			if(insertIndex > 0){
-				// Old-school way to get nth child; dojo.query would be easier but _Container was weened from dojo.query
-				// in #10087 to minimize download size.   Not sure if that's still and issue with new smaller dojo/query.
-				refNode = refNode.firstChild;
-				while(insertIndex > 0){
-					if(refNode.nodeType == 1){ insertIndex--; }
-					refNode = refNode.nextSibling;
-				}
-				if(refNode){
-					insertIndex = "before";
-				}else{
-					// to support addChild(child, n-1) where there are n children (should add child at end)
-					refNode = this.containerNode;
-					insertIndex = "last";
-				}
-			}
-
-			domConstruct.place(widget.domNode, refNode, insertIndex);
-
-			// If I've been started but the child widget hasn't been started,
-			// start it now.  Make sure to do this after widget has been
-			// inserted into the DOM tree, so it can see that it's being controlled by me,
-			// so it doesn't try to size itself.
-			if(this._started && !widget._started){
-				widget.startup();
-			}
-		}
+			//		Set the label (text) of the button; takes an HTML string.
+			this._set("label", val);
+			var labelNode = this.dropdownButtonNode;
+			labelNode.innerHTML = val;
+			
+		},
+		
+		
+	
+	
 	});
 
 	
