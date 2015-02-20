@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dojo Learning</title>
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <script src="../../../dojo/dojo/dojo.js" data-dojo-config="'cacheBust:new Date();parseOnLoad':true,'async':true,
+     'packages':[{'name':'weblabs','location':'./../../weblabs'}],'parseOnLoad':true"></script>
+</head>
+<script>
+    require(["dojo/parser", "weblabs/buttons/dropdown", "weblabs/buttons/dropdownmenu", "dijit/_Container"],
+            function (parser, dropdown, dropdownmenu) {
+                var widget = new dropdown({label: "AmitP", size: "xsmall", type: "info"});
+                var menuItem = new dropdownmenu({
+                    label: "Save"
+                });
+                widget.placeAt("widgetContainer");
+                widget.set("label", "AmitPoojary");
+                widget.set("size", "medium");
+                widget.addChild(menuItem);
+            });
+
+</script>
+
+
+<body>
+<span id="widgetContainer"></span>
+<span data-dojo-type="weblabs/buttons/dropdown" data-dojo-props='label:"Amit",size:"small",type:"default"'>
+    <span data-dojo-type="weblabs/buttons/dropdownmenu"
+          data-dojo-props='label:"Amit",size:"small",type:"default"'></span>
+</span>
+
+</body>
+</html>

@@ -1,65 +1,22 @@
 define(['dojo/_base/declare',
-    'dijit/_WidgetBase',
+    'dijit/_Widget',
     'dijit/_TemplatedMixin',
-    "dojo/text!./templates/Dropdown.html",
+    "dojo/text!./templates/Dropdownmenu.html",
     'dojo/domReady!',
     'dojo/dom-class',
-    'dijit/_Container',
-    'dojo/on'
-], function (declare, _WidgetBase, _Templated, templateString, dom, domClass,_Container) {
+    'dijit/_Contained'
+], function (declare, _Widget, _Templated, templateString, dom, domClass, _Contained) {
 
-    var isOpen=false;
-    return declare([ _WidgetBase, _Templated,_Container], {
+
+    return declare([ _Widget, _Templated, _Contained], {
         widgetsInTemplate: true,
         templateString: templateString,
         showLabel: false,
         size: "medium",
         label: "default",
-        buttonClass: " btn btn-default dropdown-toggle",
-        type: "default",
-        toggleClass: "dropdown",
-        _setToggleClassAttr: { node: "menuNode", type: "class" },
-        _connectHandlers : [],
-
-        buildRendering: function(){
-            this.inherited(arguments);
-            var onClickHandler = this.connect(this.domNode, "onclick", "toggleDropDown");
-            this._connectHandlers.push(onClickHandler);
-        },
-        toggleDropDown: function(){
-            if(isOpen)
-            {
-                this.set("toggleClass","dropdown");
-                isOpen=false;
-            }else{
-                this.set("toggleClass","dropdown open");
-                isOpen=true;
-            }
-        },
-
-        startup: function(){
-            if(this._started){
-                return;
-            }
-
-            // the child widget from srcNodeRef is the dropdown widget.  Insert it in the page DOM,
-            // make it invisible, and store a reference to pass to the popup code.
-            if(!this.dropDown && this.containerNode){
-                var dropDownNode = query("[widgetId]", this.containerNode)[0];
-                if(dropDownNode){
-                    this.dropDown = registry.byNode(containerNode);
-                }
-                delete this.containerNode;
-            }
-            if(this.dropDown){
-                popup.hide(this.dropDown);
-            }
-
-            this.inherited(arguments);
-        },
-
+        buttonClass: " btn btn-default ",
         setButtonClass: function () {
-            var buttonClass = "btn dropdown-toggle";
+            var buttonClass = "btn";
             switch (this.size) {
                 case "small":
                     buttonClass += " btn-sm";
@@ -93,9 +50,9 @@ define(['dojo/_base/declare',
 
             }
             this.buttonClass = buttonClass;
-            this.titleNode.className = this.buttonClass;
         },
 
+        type: "default",
         _setLabelAttr: function (/*String*/ content) {
             // summary:
             //		Hook for set('label', ...) to work.
@@ -104,7 +61,7 @@ define(['dojo/_base/declare',
             //		If the label is hidden (showLabel=false) then and no title has
             //		been specified, then label is also set as title attribute of icon.
             this.inherited(arguments);
-            //this.titleNode.innerHTML = content;
+         //   this.containerNode.innerHTML = content;
 
         },
 
