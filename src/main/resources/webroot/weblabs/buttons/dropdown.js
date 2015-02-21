@@ -78,7 +78,7 @@ define([
 		},
 		
 		
-	
+	_setIconClassAttr: { node: "iconNode", type: "class" },
 	
 	});
 
