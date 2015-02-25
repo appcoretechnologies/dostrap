@@ -4,13 +4,12 @@ define(['dojo/_base/declare',
     "dojo/text!./templates/Dropdown.html",
     'dojo/domReady!',
     'dojo/dom-class',
-    'dijit/_Container',
-    'dojo/on'
+    'dijit/_Container'
 ], function (declare, _WidgetBase, _Templated, templateString, dom, domClass,_Container) {
 
     var isOpen=false;
-    return declare([ _WidgetBase, _Templated,_Container], {
-        widgetsInTemplate: true,
+    return declare([ _WidgetBase, _Templated, _Container], {
+       // widgetsInTemplate: true,
         templateString: templateString,
         showLabel: false,
         size: "medium",
@@ -35,27 +34,6 @@ define(['dojo/_base/declare',
                 this.set("toggleClass","dropdown open");
                 isOpen=true;
             }
-        },
-
-        startup: function(){
-            if(this._started){
-                return;
-            }
-
-            // the child widget from srcNodeRef is the dropdown widget.  Insert it in the page DOM,
-            // make it invisible, and store a reference to pass to the popup code.
-            if(!this.dropDown && this.containerNode){
-                var dropDownNode = query("[widgetId]", this.containerNode)[0];
-                if(dropDownNode){
-                    this.dropDown = registry.byNode(containerNode);
-                }
-                delete this.containerNode;
-            }
-            if(this.dropDown){
-                popup.hide(this.dropDown);
-            }
-
-            this.inherited(arguments);
         },
 
         setButtonClass: function () {
@@ -126,6 +104,7 @@ define(['dojo/_base/declare',
         },
 
         _fillContent: function (/*DomNode*/ source) {
+            this.inherited(arguments);
             // Overrides _Templated._fillContent().
             // If button label is specified as srcNodeRef.innerHTML rather than
             // this.params.label, handle it here.

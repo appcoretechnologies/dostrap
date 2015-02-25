@@ -1,15 +1,15 @@
 define(['dojo/_base/declare',
-    'dijit/_Widget',
+    'dijit/_WidgetBase',
     'dijit/_TemplatedMixin',
     "dojo/text!./templates/Dropdownmenu.html",
     'dojo/domReady!',
     'dojo/dom-class',
     'dijit/_Contained'
-], function (declare, _Widget, _Templated, templateString, dom, domClass, _Contained) {
+], function (declare, _Widget, _Templated, templateString, dom, domClass,_Contained) {
 
 
-    return declare([ _Widget, _Templated, _Contained], {
-        widgetsInTemplate: true,
+    return declare([ _Widget, _Templated,_Contained], {
+       // widgetsInTemplate: true,
         templateString: templateString,
         showLabel: false,
         size: "medium",
@@ -61,7 +61,7 @@ define(['dojo/_base/declare',
             //		If the label is hidden (showLabel=false) then and no title has
             //		been specified, then label is also set as title attribute of icon.
             this.inherited(arguments);
-         //   this.containerNode.innerHTML = content;
+            this.containerNode.innerHTML = content;
 
         },
 

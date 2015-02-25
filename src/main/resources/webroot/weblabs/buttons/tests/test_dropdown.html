@@ -7,8 +7,11 @@
      'packages':[{'name':'weblabs','location':'./../../weblabs'}],'parseOnLoad':true"></script>
 </head>
 <script>
-    require(["dojo/parser", "weblabs/buttons/dropdown", "weblabs/buttons/dropdownmenu", "dijit/_Container"],
-            function (parser, dropdown, dropdownmenu) {
+    require(["dojo/parser", "weblabs/buttons/dropdown", "weblabs/buttons/dropdownmenu"]);
+</script>
+<script>
+    require(["weblabs/buttons/dropdown", "weblabs/buttons/dropdownmenu", "dijit/_Container"],
+            function (dropdown, dropdownmenu, _Container) {
                 var widget = new dropdown({label: "AmitP", size: "xsmall", type: "info"});
                 var menuItem = new dropdownmenu({
                     label: "Save"
@@ -24,10 +27,10 @@
 
 <body>
 <span id="widgetContainer"></span>
-<span data-dojo-type="weblabs/buttons/dropdown" data-dojo-props='label:"Amit",size:"small",type:"default"'>
+<div data-dojo-type="weblabs/buttons/dropdown" data-dojo-props='label:"Amit",size:"small",type:"default"'>
     <span data-dojo-type="weblabs/buttons/dropdownmenu"
           data-dojo-props='label:"Amit",size:"small",type:"default"'></span>
-</span>
+</div>
 
 </body>
 </html>
