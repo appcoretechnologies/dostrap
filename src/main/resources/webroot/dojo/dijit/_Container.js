@@ -18,7 +18,7 @@ define([
 				// All widgets with descendants must set containerNode.
 				// NB: this code doesn't quite work right because for TabContainer it runs before
 				// _TemplatedMixin::buildRendering(), and thus
-				// sets this.containerNode to this.domNode, later to be overridden by the assignment in the template.
+				// sets this.containerNode to this.domNode, later to be overridden by the assignment in the templates.
 				this.containerNode = this.domNode;
 			}
 		},

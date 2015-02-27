@@ -27,7 +27,7 @@ var TextColorDropDown = dojo.declare("dojox.editor.plugins._TextColorDropDown", 
 	//		private
 
 	// templateString: String
-	//		The template used to create the ColorPicker.
+	//		The templates used to create the ColorPicker.
 	templateString: "<div style='display: none; position: absolute; top: -10000; z-index: -10000'>" +
 		"<div dojoType='dijit.TooltipDialog' dojoAttachPoint='dialog' class='dojoxEditorColorPicker'>" +
 			"<div dojoType='dojox.widget.ColorPicker' dojoAttachPoint='_colorPicker'></div>" +
@@ -41,13 +41,13 @@ var TextColorDropDown = dojo.declare("dojox.editor.plugins._TextColorDropDown", 
 		"</div>",
 
 	// widgetsInTemplate: Boolean
-	//		Flag denoting widgets are contained in the template.
+	//		Flag denoting widgets are contained in the templates.
 	widgetsInTemplate: true,
 
 	constructor: function(){
 		// summary:
 		//		Constructor over-ride so that the translated strings are mixsed in so
-		//		the template fills out.
+		//		the templates fills out.
 		var strings = dojo.i18n.getLocalization("dojox.editor.plugins", "TextColor");
 		dojo.mixin(this, strings);
 	},

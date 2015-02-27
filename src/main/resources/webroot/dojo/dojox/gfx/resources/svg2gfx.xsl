@@ -795,9 +795,9 @@ GMail, etc.) or Eric (Saugus.net, ShellTown, etc.)
 		</xsl:if>
 		<!-- When GFX gets group fills etc., remove the following line and uncomment the ones below. -->
 		<xsl:apply-templates select="@transform"/>
-		<!--<xsl:call-template name="common-attributes">-->
+		<!--<xsl:call-templates name="common-attributes">-->
 		<!--	<xsl:with-param name="node" select="."/>-->
-		<!--</xsl:call-template>-->
+		<!--</xsl:call-templates>-->
 		<xsl:text>}</xsl:text>
 		<xsl:if test="not(position()=last())"> 
 			<xsl:text >,</xsl:text> 

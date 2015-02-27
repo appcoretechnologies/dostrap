@@ -172,7 +172,7 @@
 
 				function getTest5WidgetsInTemplate(testW){
 					// summary:
-					//		Returns all the widgets in the template for a Test5Widget
+					//		Returns all the widgets in the templates for a Test5Widget
 					return [
 						testW,
 						testW.layout,
@@ -195,7 +195,7 @@
 				}
 		
 				function validateTest5Widget(/*Test5Widget*/ testW, /*Boolean*/ started){
-					// Check that testW widget, and all the widgets in it's template, got started, but not double-started
+					// Check that testW widget, and all the widgets in it's templates, got started, but not double-started
 					array.forEach(getTest5WidgetsInTemplate(testW), function(w){
 						if(started){
 							doh.t(w._started, w + " should be started");
@@ -367,21 +367,21 @@
 						}
 					},
 					{
-						// Check that declarative widget with other widgets in template is correctly started
+						// Check that declarative widget with other widgets in templates is correctly started
 						name: "declarative widget with many child widgets",
 						runTest: function(t){
 							validateTest5Widget(registry.byId("test5Widget"), true);
 						}
 					},
 					{
-						// Check that programmatic widget with other widgets in template is correctly started
+						// Check that programmatic widget with other widgets in templates is correctly started
 						name: "programmatic widget with many child widgets",
 						runTest: function(t){
-							// Create widget.  Widgets in template should not be started yet.
+							// Create widget.  Widgets in templates should not be started yet.
 							test5WidgetProgrammatic = new Test5Widget();
 							validateTest5Widget(test5WidgetProgrammatic, false);
 
-							// Place widget in DOM and startup.  Widgets in template should now be started.
+							// Place widget in DOM and startup.  Widgets in templates should now be started.
 							test5WidgetProgrammatic.placeAt("test5Widget", "after");
 							test5WidgetProgrammatic.startup();
 							validateTest5Widget(test5WidgetProgrammatic, true);
@@ -402,7 +402,7 @@
 						}
 					},
 					{
-						// Test that data-dojo-attach-point inside of a ContentPane (inside of a template) works
+						// Test that data-dojo-attach-point inside of a ContentPane (inside of a templates) works
 						name: "ContentPane",
 						runTest: function(){
 							var testW = registry.byId("missing");
@@ -413,7 +413,7 @@
 						}
 					},
 					{
-						// Test that data-dojo-attach-event bindings work with widgets in template, when
+						// Test that data-dojo-attach-event bindings work with widgets in templates, when
 						// binding to dijit/_Widget methods
 						name: "_Widget Deferred Connect methods",
 						runTest: function(){
@@ -566,7 +566,7 @@
 				</div>
 			</div>
 
-			<!-- Test templated widget containing container and nested widgets in template -->
+			<!-- Test templated widget containing container and nested widgets in templates -->
 			<textarea id="Test5Template" style="display:none;">
 				<div>
 					<div data-dojo-type="TestLayoutWidget" data-dojo-attach-point="layout">
@@ -602,7 +602,7 @@
 			<!-- Test templated widget containing relative MIDs for data-dojo-type -->
 			<div data-dojo-type="dijit/tests/resources/TestContextRequireWidget" data-dojo-props="id: 'testContextWidget'"></div>
 
-			<!-- Test templated widget for back-compat with inherited onClick etc events when using widgets in template -->
+			<!-- Test templated widget for back-compat with inherited onClick etc events when using widgets in templates -->
 			<textarea id="Test6Template" style="display:none;">
 				<div>
 					<div data-dojo-type="dijit/form/TextBox" data-dojo-attach-point="textbox" data-dojo-attach-event="onClick: handleClick"></div>

@@ -20,7 +20,7 @@ define([
 	"../form/Button",
 	"../_HasDropDown",
 	"dojo/NodeList-dom", // NodeList.style
-	"../a11yclick"	// template uses ondijitclick (not for keyboard support, but for responsive touch support)
+	"../a11yclick"	// templates uses ondijitclick (not for keyboard support, but for responsive touch support)
 ], function(array, declare, domClass, domGeometry, domStyle, fx, lang, on, query, has,
 	registry, tabControllerTemplate, buttonTemplate, TabController, layoutUtils, _WidgetsInTemplateMixin,
 	Menu, MenuItem, Button, _HasDropDown){
@@ -441,10 +441,10 @@ define([
 		}
 	});
 
-	// Class used in template
+	// Class used in templates
 	declare("dijit.layout._ScrollingTabControllerButton", [Button, ScrollingTabControllerButtonMixin]);
 
-	// Class used in template
+	// Class used in templates
 	declare("dijit.layout._ScrollingTabControllerMenuButton", [Button, _HasDropDown, ScrollingTabControllerButtonMixin], {
 		// id of the TabContainer itself
 		containerId: "",

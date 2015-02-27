@@ -343,7 +343,7 @@ define([
 
 	dd.DomTemplate = lang.extend(function(/*String|DOMNode|dojo/Url*/ obj){
 		// summary:
-		//		The template class for DOM templating.
+		//		The templates class for DOM templating.
 		if(!obj.nodes){
 			var node = dom.byId(obj);
 			if(node && node.nodeType == 1){
@@ -379,7 +379,7 @@ define([
 		},
 		getRootNode: function(){
 			// summary:
-			//		Returns the template root node.
+			//		Returns the templates root node.
 			return this.buffer.rootNode;
 		},
 		getBuffer: function(){
@@ -389,7 +389,7 @@ define([
 		},
 		render: function(/*dojox/dtl/Context?*/context, /*concatenable?*/buffer){
 			// summary:
-			//		Renders this template.
+			//		Renders this templates.
 			buffer = this.buffer = buffer || this.getBuffer();
 			this.rootNode = null;
 			var output = this.nodelist.render(context || new dd.Context({}), buffer);
@@ -430,7 +430,7 @@ define([
 
 			if(!parent){
 				if(node.nodeType == 3 && lang.trim(node.data)){
-					throw new Error("Text should not exist outside of the root node in template");
+					throw new Error("Text should not exist outside of the root node in templates");
 				}
 				return this;
 			}
@@ -438,7 +438,7 @@ define([
 				if(node.nodeType == 3 && !lang.trim(node.data)){
 					return this;
 				}else{
-					throw new Error("Content should not exist outside of the root node in template");
+					throw new Error("Content should not exist outside of the root node in templates");
 				}
 			}
 			if(parent._dirty){

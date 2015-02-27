@@ -46,7 +46,7 @@ public final class DOHRobot extends Applet{
 	// Robot what it got back.
 	// charMap maps characters to the KeyEvent that generates the character on
 	// the user's machine.
-	// charMap uses the Java 1.4.2 (lack of) template syntax for wider
+	// charMap uses the Java 1.4.2 (lack of) templates syntax for wider
 	// compatibility.
 	private static HashMap charMap = null;
 	// Java key constants to iterate over

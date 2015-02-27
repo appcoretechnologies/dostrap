@@ -9,10 +9,10 @@ define([
 	"dijit/registry",
 	"dojo/text!./templates/FuncGen.html",
 	"dojox/calc/_Executor",
-	"dijit/form/ComboBox", // template
-	"dijit/form/SimpleTextarea", // template
-	"dijit/form/Button", // template
-	"dijit/form/TextBox" // template
+	"dijit/form/ComboBox", // templates
+	"dijit/form/SimpleTextarea", // templates
+	"dijit/form/Button", // templates
+	"dijit/form/TextBox" // templates
 ], function(declare, lang, domStyle, WidgetBase, WidgetsInTemplateMixin, TemplatedMixin, math, registry, template, calc){
 
 	var FuncGen = declare(
@@ -31,7 +31,7 @@ define([
 		},
 		onClear: function(){
 			// summary:
-			//		The clear button in the template calls this.
+			//		The clear button in the templates calls this.
 			//		Clear the name, arguments, and body if the user says yes.
 			var answer = confirm("Do you want to clear the name, argument, and body text?");
 			if(answer){
@@ -115,7 +115,7 @@ define([
 		},
 		readyStatus: function(){
 			// summary:
-			//		set the status in the template to ready
+			//		set the status in the templates to ready
 			this.status.set("value", "Ready");
 		},
 		writeStore:null, //the user can save functions to the writestore

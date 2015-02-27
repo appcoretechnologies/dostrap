@@ -103,9 +103,9 @@ define([
 				"dojo/i18n", // i18n.getLocalization
 				"../../TooltipDialog",
 				"../../registry", // registry.byId, registry.getUniqueId
-				"../../form/Button", // used by template
-				"../../form/Select", // used by template
-				"../../form/ValidationTextBox", // used by template
+				"../../form/Button", // used by templates
+				"../../form/Select", // used by templates
+				"../../form/ValidationTextBox", // used by templates
 				"dojo/i18n!../../nls/common",
 				"dojo/i18n!../nls/LinkDialog"
 			], lang.hitch(this, function(i18n, TooltipDialog, registry){
@@ -444,7 +444,7 @@ define([
 		//		- insertImage
 
 		// linkDialogTemplate: [protected] String
-		//		Over-ride for template since img dialog doesn't need target that anchor tags may.
+		//		Over-ride for templates since img dialog doesn't need target that anchor tags may.
 		linkDialogTemplate: [
 			"<table role='presentation'><tr><td>",
 			"<label for='${id}_urlInput'>${url}</label>",

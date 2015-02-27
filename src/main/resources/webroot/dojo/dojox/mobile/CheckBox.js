@@ -28,7 +28,7 @@ define([
 			}
 			this.inherited(arguments);
 			if(!this.templateString){
-				// if this widget is templated, let the template set the focusNode via an attach point
+				// if this widget is templated, let the templates set the focusNode via an attach point
 				this.focusNode = this.domNode;
 			}
 

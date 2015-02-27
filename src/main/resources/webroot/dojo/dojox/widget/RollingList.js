@@ -24,7 +24,7 @@ dojo.declare("dojox.widget._RollingListPane",
 	//		should extend this one
 
 	// templateString: string
-	//		our template
+	//		our templates
 	templateString: '<div class="dojoxRollingListPane"><table><tbody><tr><td dojoAttachPoint="containerNode"></td></tr></tbody></div>',
 
 	// parentWidget: dojox.widget.RollingList
@@ -298,7 +298,7 @@ dojo.declare("dojox.widget._RollingListGroupPane",
 	//		a pane that will handle groups (treats them as menu items)
 	
 	// templateString: string
-	//		our template
+	//		our templates
 	templateString: '<div><div dojoAttachPoint="containerNode"></div>' +
 					'<div dojoAttachPoint="menuContainer">' +
 						'<div dojoAttachPoint="menuNode"></div>' +
@@ -579,7 +579,7 @@ dojo.declare("dojox.widget.RollingList",
 	//		a rolling list that can be tied to a data store with children
 		
 	// templateString: String
-	//		The template to be used to construct the widget.
+	//		The templates to be used to construct the widget.
 	templateString: dojo.cache("dojox.widget", "RollingList/RollingList.html"),
 	widgetsInTemplate: true,
 	

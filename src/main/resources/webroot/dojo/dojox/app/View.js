@@ -14,17 +14,17 @@ define(["require", "dojo/when", "dojo/on", "dojo/_base/declare", "dojo/_base/lan
 			//		|
 			// 		|	// load view controller from views/simple.js by default
 			//		|	"simple":{
-			//		|		"template": "myapp/views/simple.html",
+			//		|		"templates": "myapp/views/simple.html",
 			//		|		"nls": "myapp/nls/simple"
 			//		|		"dependencies":["dojox/mobile/TextBox"]
 			//		|	}
 			//		|
 			//		|	"home":{
-			//		|		"template": "myapp/views/home.html", // no controller set to not use a view controller
+			//		|		"templates": "myapp/views/home.html", // no controller set to not use a view controller
 			//		|		"dependencies":["dojox/mobile/TextBox"]
 			//		|	}
 			//		|	"main":{
-			//		|		"template": "myapp/views/main.html",
+			//		|		"templates": "myapp/views/main.html",
 			//		|		"controller": "myapp/views/main.js", // identify load view controller from views/main.js
 			//		|		"dependencies":["dojox/mobile/TextBox"]
 			//		|	}
@@ -36,7 +36,7 @@ define(["require", "dojo/when", "dojo/on", "dojo/_base/declare", "dojo/_base/lan
 			//		|		name: this.name,
 			//		|		parent: this,
 			//		|		templateString: this.templateString,
-			//		|		template: this.template, 
+			//		|		templates: this.templates,
 			//		|		controller: this.controller
 			//		|	});
 			//		|	viewObj.start(); // start view
@@ -47,8 +47,8 @@ define(["require", "dojo/when", "dojo/on", "dojo/_base/declare", "dojo/_base/lan
 			//		- app: the app
 			//		- id: view id
 			//		- name: view name
-			//		- template: view template identifier. If templateString is not empty, this parameter is ignored.
-			//		- templateString: view template string
+			//		- templates: view templates identifier. If templateString is not empty, this parameter is ignored.
+			//		- templateString: view templates string
 			//		- controller: view controller module identifier
 			//		- parent: parent view
 			//		- children: children views
@@ -62,7 +62,7 @@ define(["require", "dojo/when", "dojo/on", "dojo/_base/declare", "dojo/_base/lan
 
 		_loadTemplate: function(){
 			// summary:
-			//		load view HTML template and dependencies.
+			//		load view HTML templates and dependencies.
 			// tags:
 			//		private
 			//
@@ -122,7 +122,7 @@ define(["require", "dojo/when", "dojo/on", "dojo/_base/declare", "dojo/_base/lan
 			var tplDef = new Deferred();
 			var defDef = this.inherited(arguments);
 			var nlsDef = nls(this);
-			// when parent loading is done (controller), proceed with template
+			// when parent loading is done (controller), proceed with templates
 			// (for data-dojo-* to work we need to wait for controller to be here, this is also
 			// useful when the controller is used as a layer for the view)
 			when(defDef, lang.hitch(this, function(){
@@ -130,7 +130,7 @@ define(["require", "dojo/when", "dojo/on", "dojo/_base/declare", "dojo/_base/lan
 					// we inherit from the parent NLS
 					this.nls = lang.mixin({}, this.parent.nls);
 					if(nls){
-						// make sure template can access nls doing ${nls.myprop}
+						// make sure templates can access nls doing ${nls.myprop}
 						lang.mixin(this.nls, nls);
 					}
 					when(this._loadTemplate(), function(value){
@@ -143,7 +143,7 @@ define(["require", "dojo/when", "dojo/on", "dojo/_base/declare", "dojo/_base/lan
 
 		_startup: function(){
 			// summary:
-			//		startup widgets in view template.
+			//		startup widgets in view templates.
 			// tags:
 			//		private
 			this.buildRendering();

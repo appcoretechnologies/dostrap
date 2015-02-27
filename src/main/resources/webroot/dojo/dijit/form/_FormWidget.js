@@ -54,7 +54,7 @@ define([
 		},
 
 		postMixInProperties: function(){
-			// Setup name=foo string to be referenced from the template (but only if a name has been specified).
+			// Setup name=foo string to be referenced from the templates (but only if a name has been specified).
 			// Unfortunately we can't use _setNameAttr to set the name in IE due to IE limitations, see #8484, #8660.
 			// But when IE6 and IE7 are desupported, then we probably don't need this anymore, so should remove it in 2.0.
 			// Also, don't do this for Windows 8 Store Apps because it causes a security exception (see #16452).

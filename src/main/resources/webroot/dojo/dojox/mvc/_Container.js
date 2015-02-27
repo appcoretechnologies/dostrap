@@ -14,14 +14,14 @@ define([
 
 		// exprchar:  Character
 		//		Character to use for a substitution expression, for a substitution string like ${this.index}
-		//		If this class is declared in a template HTML and exprchar is used in in-line template of this class, something other than `$` should be specified to avoid conflict with exprchar of outer-template.
+		//		If this class is declared in a templates HTML and exprchar is used in in-line templates of this class, something other than `$` should be specified to avoid conflict with exprchar of outer-templates.
 		exprchar: '$',
 	
 		// templateString: [private] String
-		//		The template or content for this container. It is usually obtained from the
+		//		The templates or content for this container. It is usually obtained from the
 		//		body of the container and may be modified or repeated over a collection/array.
 		//		In this simple implementation, attach points, attach events and WAI
-		//		attributes are not supported in the template.
+		//		attributes are not supported in the templates.
 		templateString : "",
 	
 		// inlineTemplateString: [private] String
@@ -41,7 +41,7 @@ define([
 			//		Parse the body of this MVC container widget.
 			// description:
 			//		The bodies of MVC containers may be model-bound views generated dynamically.
-			//		Parse the body, start an contained widgets and attach template nodes for
+			//		Parse the body, start an contained widgets and attach templates nodes for
 			//		contained widgets as necessary.
 			// tags:
 			//		protected
@@ -95,7 +95,7 @@ define([
 
 		_exprRepl: function(tmpl){
 			// summary:
-			//		Does substitution of ${foo+bar} type expressions in template string.
+			//		Does substitution of ${foo+bar} type expressions in templates string.
 			// tags:
 			//		private
 			var pThis = this, transform = function(value, key){

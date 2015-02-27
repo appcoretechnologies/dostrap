@@ -60,7 +60,7 @@ define([
 		},
 
 		// templateString: String
-		//		The template of this widget.
+		//		The templates of this widget.
 		templateString: template,
 
 		baseClass: "dijitColorPalette",
@@ -71,7 +71,7 @@ define([
 		},
 
 		buildRendering: function(){
-			// Instantiate the template, which makes a skeleton into which we'll insert a bunch of
+			// Instantiate the templates, which makes a skeleton into which we'll insert a bunch of
 			// <img> nodes
 			this.inherited(arguments);
 
@@ -81,7 +81,7 @@ define([
 				palette: this.palette
 			});
 
-			// Creates <img> nodes in each cell of the template.
+			// Creates <img> nodes in each cell of the templates.
 			this._preparePalette(
 				this._palettes[this.palette],
 				i18n.getLocalization("dojo", "colors", this.lang));

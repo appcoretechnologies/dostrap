@@ -11,7 +11,7 @@ dojo.declare("MainAssistant", dojox.mobile.app.SceneAssistant, {
       "This app has the following info: \n"
         + dojo.toJson(dojox.mobile.app.info, true).split("\t").join("  ");
         
-    // Instantiate widgets in the template HTML.
+    // Instantiate widgets in the templates HTML.
     this.controller.parse();
     
     var _this = this;

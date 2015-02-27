@@ -45,7 +45,7 @@ define([
 			this.inherited(arguments);
 			var node = this.focusNode || this.domNode;
 			if(this.checked){
-				// need this here instead of on the template so IE8 tab order works
+				// need this here instead of on the templates so IE8 tab order works
 				node.setAttribute('checked', 'checked');
 			}
 

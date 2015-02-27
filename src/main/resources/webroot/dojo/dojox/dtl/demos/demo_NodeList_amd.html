@@ -18,7 +18,7 @@
 
 				query(".fruit2").dtl("<div><ul>{% for item in items %}<li>{{ item }}</li>{% endfor %}</ul></div", { items: ["apple", "banana", "pear"] });
 
-				// Now, create a real template object
+				// Now, create a real templates object
 				var tpl = new dojox.dtl.Template(require.toUrl("dojox/dtl/demos/templates/nodelist.html"));
 
 				// And test its update function with a dojo.query

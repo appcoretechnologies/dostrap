@@ -144,7 +144,7 @@ function(
 		resizeSecondarySheet: function(height){
 			// summary:
 			//		Resizes the secondary sheet header and relayout the other sub components according this new height.
-			//		Warning: this method is only available for the default template and default CSS.
+			//		Warning: this method is only available for the default templates and default CSS.
 			// height: Integer
 			//		The new height in pixels.
 			if(this.secondarySheetNode){

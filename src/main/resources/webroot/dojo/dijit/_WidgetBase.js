@@ -151,7 +151,7 @@ define([
 		_setClassAttr: { node: "domNode", type: "class" },
 
 		// Override automatic assigning type --> focusNode, it causes exception on IE6-8.
-		// Instead, type must be specified as ${type} in the template, as part of the original DOM.
+		// Instead, type must be specified as ${type} in the templates, as part of the original DOM.
 		_setTypeAttr: null,
 
 		// style: String||Object
@@ -186,7 +186,7 @@ define([
 		// domNode: [readonly] DomNode
 		//		This is our visible representation of the widget! Other DOM
 		//		Nodes may by assigned to other properties, usually through the
-		//		template system's data-dojo-attach-point syntax, but the domNode
+		//		templates system's data-dojo-attach-point syntax, but the domNode
 		//		property is the canonical "top level" node in widget UI.
 		domNode: null,
 
@@ -490,9 +490,9 @@ define([
 		postMixInProperties: function(){
 			// summary:
 			//		Called after the parameters to the widget have been read-in,
-			//		but before the widget template is instantiated. Especially
+			//		but before the widget templates is instantiated. Especially
 			//		useful to set properties that are referenced in the widget
-			//		template.
+			//		templates.
 			// tags:
 			//		protected
 		},
@@ -581,7 +581,7 @@ define([
 			//		Destroy this widget, but not its descendants.  Descendants means widgets inside of
 			//		this.containerNode.   Will also destroy any resources (including widgets) registered via this.own().
 			//
-			//		This method will also destroy internal widgets such as those created from a template,
+			//		This method will also destroy internal widgets such as those created from a templates,
 			//		assuming those widgets exist inside of this.domNode but outside of this.containerNode.
 			//
 			//		For 2.0 it's planned that this method will also destroy descendant widgets, so apps should not

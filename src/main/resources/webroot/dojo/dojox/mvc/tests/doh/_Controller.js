@@ -19,8 +19,8 @@ define([
 			var ctrl = w.controllerNode,
 			 id = ctrl.id;
 			w.destroy();
-			doh.f(registry.byId(id), "The controller should have been removed from registry along with the template widget");
-			doh.t(ctrl._destroyed, "The controller should have been marked as destroyed along with the template widget");
+			doh.f(registry.byId(id), "The controller should have been removed from registry along with the templates widget");
+			doh.t(ctrl._destroyed, "The controller should have been marked as destroyed along with the templates widget");
 		},
 		function useWithDijit(){
 			var model = new Stateful(),

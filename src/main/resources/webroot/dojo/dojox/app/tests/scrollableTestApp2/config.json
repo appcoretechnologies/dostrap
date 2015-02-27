@@ -118,7 +118,7 @@
 
 	// views: The children views of an application or of a view. Dependencies may be defined on views for
 	// optimization and organization purposes. Models might also be defined on views if they are view-specific
-	// Finally a view item as three additional properties: transition for specific view transitions, template for
+	// Finally a view item as three additional properties: transition for specific view transitions, templates for
 	// defining the view rendering and finally controller to provide an AMD module to be mixed into the view to 
 	// control it. AMD modules identifiers starting with “.” will be resolved relative to the application root. All other
 	// modules identifiers will be resolved according to the Dojo AMD loader rules and in particular with respect

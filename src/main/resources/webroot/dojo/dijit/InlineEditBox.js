@@ -61,7 +61,7 @@ define([
 		buildRendering: function(){
 			this.inherited(arguments);
 
-			// Create edit widget in place in the template
+			// Create edit widget in place in the templates
 			// TODO: remove getObject() for 2.0
 			var Cls = typeof this.editor == "string" ? (lang.getObject(this.editor) || require(this.editor)) : this.editor;
 

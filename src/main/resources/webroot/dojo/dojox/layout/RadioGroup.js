@@ -12,8 +12,8 @@ return {
 	//		that accepts ContentPanes as children, and applies aesthetically pleasing responsive transition animations
 	//		attached to :hover of the Buttons created.
 
-	// FIXME: take the Buttons out of the root template, and allow layoutAlign or similar attrib to use a different
-	//	template, or build the template dynamically?
+	// FIXME: take the Buttons out of the root templates, and allow layoutAlign or similar attrib to use a different
+	//	templates, or build the templates dynamically?
 	};
 =====*/
 var RadioGroup = declare("dojox.layout.RadioGroup",[StackContainer,Templated],{
@@ -35,7 +35,7 @@ var RadioGroup = declare("dojox.layout.RadioGroup",[StackContainer,Templated],{
 	buttonClass: "dojox.layout._RadioButton",
 	
 	// templateString: String
-	//		the template for our container
+	//		the templates for our container
 	templateString: '<div class="dojoxRadioGroup">'
 			+' 	<div dojoAttachPoint="buttonHolder" style="display:none;">'
 			+'		<table class="dojoxRadioButtons"><tbody><tr class="dojoxRadioButtonRow" dojoAttachPoint="buttonNode"></tr></tbody></table>'
@@ -288,7 +288,7 @@ declare("dojox.layout._RadioButton",[Widget,Templated,Contained],{
 		//		remove hover state class from sibling Buttons. This is easier (and more reliable)
 		//		than setting up an additional connection to onMouseOut
 		
-		// FIXME: this relies on the template being [div][span]node[/span][/div]
+		// FIXME: this relies on the templates being [div][span]node[/span][/div]
 		query(".dojoxRadioButtonSelected", this.domNode.parentNode.parentNode)
 			.removeClass("dojoxRadioButtonSelected")
 		;

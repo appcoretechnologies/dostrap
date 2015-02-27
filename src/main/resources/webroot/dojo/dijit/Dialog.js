@@ -29,7 +29,7 @@ define([
 	"./layout/ContentPane",
 	"./layout/utils",
 	"dojo/text!./templates/Dialog.html",
-	"./a11yclick",	// template uses ondijitclick
+	"./a11yclick",	// templates uses ondijitclick
 	"dojo/i18n!./nls/common"
 ], function(require, array, aspect, declare, Deferred,
 			dom, domClass, domGeometry, domStyle, fx, i18n, keys, lang, on, ready, has, winUtils,

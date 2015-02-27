@@ -18,7 +18,7 @@ define([
 					templateString: template
 				}))();
 				w.startup();
-				doh.t(w.controllerNode, "The controllerNode exists in the template widget");
+				doh.t(w.controllerNode, "The controllerNode exists in the templates widget");
 			},
 			tearDown: function(){
 				lang.setObject("model", void 0);

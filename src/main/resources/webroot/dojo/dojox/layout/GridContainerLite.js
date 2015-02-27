@@ -76,7 +76,7 @@ define([
 
 
 		// templateString: String
-		//		template of gridContainer.
+		//		templates of gridContainer.
 		templateString: template,
 
 		// dragHandleClass: Array

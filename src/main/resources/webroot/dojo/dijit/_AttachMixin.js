@@ -21,7 +21,7 @@ define([
 	});
 
 	// To be lightweight, _AttachMixin doesn't require() dijit/a11yclick.
-	// If the subclass has a template using "ondijitclick", it must load dijit/a11yclick itself.
+	// If the subclass has a templates using "ondijitclick", it must load dijit/a11yclick itself.
 	// In that case, the a11yclick variable below will get set to point to that synthetic event.
 	var a11yclick;
 
@@ -40,12 +40,12 @@ define([
 /*=====
 		// _attachPoints: [private] String[]
 		//		List of widget attribute names associated with data-dojo-attach-point=... in the
-		//		template, ex: ["containerNode", "labelNode"]
+		//		templates, ex: ["containerNode", "labelNode"]
 		_attachPoints: [],
 
 		// _attachEvents: [private] Handle[]
 		//		List of connections associated with data-dojo-attach-event=... in the
-		//		template
+		//		templates
 		_attachEvents: [],
 
 		// attachScope: [public] Object
@@ -84,7 +84,7 @@ define([
 			this.inherited(arguments);
 
 			// recurse through the node, looking for, and attaching to, our
-			// attachment points and events, which should be defined on the template node.
+			// attachment points and events, which should be defined on the templates node.
 			this._attachTemplateNodes(this.domNode);
 
 			this._beforeFillContent();		// hook for _WidgetsInTemplateMixin
@@ -226,7 +226,7 @@ define([
 	});
 
 	// These arguments can be specified for widgets which are used in templates.
-	// Since any widget can be specified as sub widgets in template, mix it
+	// Since any widget can be specified as sub widgets in templates, mix it
 	// into the base widget class.  (This is a hack, but it's effective.).
 	// Remove for 2.0.   Also, hide from API doc parser.
 	lang.extend(_WidgetBase, /*===== {} || =====*/ {

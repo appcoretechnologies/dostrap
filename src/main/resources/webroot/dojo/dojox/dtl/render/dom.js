@@ -32,7 +32,7 @@ define([
 
 			var frag = tpl.render(context, buffer).getParent();
 			if(!frag){
-				throw new Error("Rendered template does not have a root node");
+				throw new Error("Rendered templates does not have a root node");
 			}
 
 			if(this.domNode !== frag){

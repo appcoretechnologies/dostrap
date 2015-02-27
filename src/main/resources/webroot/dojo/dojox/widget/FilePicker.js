@@ -12,11 +12,11 @@ dojo.declare("dojox.widget._FileInfoPane",
 	//		file
 	
 	// templateString: string
-	//		delete our template string
+	//		delete our templates string
 	templateString: "",
 	
 	// templateString: String
-	//		The template to be used to construct the widget.
+	//		The templates to be used to construct the widget.
 	templateString: dojo.cache("dojox.widget", "FilePicker/_FileInfoPane.html"),
 	
 	postMixInProperties: function(){

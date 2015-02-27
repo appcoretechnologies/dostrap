@@ -5,7 +5,7 @@ dojo.declare("MainAssistant", dojox.mobile.app.SceneAssistant, {
   setup: function(){
     console.log("In main assistant setup");
     
-    // Instantiate widgets in the template HTML.
+    // Instantiate widgets in the templates HTML.
     this.controller.parse();
     
     var appInfoNode = this.controller.query(".appInfoArea")[0];

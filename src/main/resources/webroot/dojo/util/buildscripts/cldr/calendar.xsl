@@ -114,7 +114,7 @@
         		</monthWidth> 
                           ......                   
 	            alias info will be recorded as 'months-format-abbr@localeAlias' : {'target' : "months-format-wide"}                        
-	            TBD: Seems the following section cann't be extracted out as a reusable template       
+	            TBD: Seems the following section cann't be extracted out as a reusable templates
 	            insert 'locale' alias information end -->
 	            <xsl:call-template name="insert_comma"/>
 	'<xsl:value-of select="$item"/><xsl:text>s-</xsl:text>
@@ -188,7 +188,7 @@
 			                    </xsl:otherwise>
 			                </xsl:choose>
 			                <xsl:text>':</xsl:text>
-			                <!--xsl:call-template name="subSelect"><xsl:with-param name="name" select="./*[name()=$item]"></xsl:with-param></xsl:call-template-->
+			                <!--xsl:call-templates name="subSelect"><xsl:with-param name="name" select="./*[name()=$item]"></xsl:with-param></xsl:call-templates-->
 			                <xsl:call-template name="subSelect_in_place"><xsl:with-param name="name" select="$item"></xsl:with-param></xsl:call-template>
 							<!-- for leap month -->
 							<xsl:for-each select="*[@yeartype='leap']">
@@ -214,7 +214,7 @@
     </xsl:choose>
 </xsl:template>
   
-<!-- template for inserting 'locale' alias information,
+<!-- templates for inserting 'locale' alias information,
 	   e.g. for     <calendar type="buddhist">
 							<months>
 								<alias source="locale" path="../../calendar[@type='gregorian']/months"/>
@@ -672,7 +672,7 @@
     
 <xsl:template name="ignore" match="cyclicNameSets | monthPatterns"></xsl:template>
 
-  <!-- too bad that can only use standard xsl:call-template(name can not be variable) 
+  <!-- too bad that can only use standard xsl:call-templates(name can not be variable)
          error occurs if use <saxon:call-templates($templateToCall)  /> -->
  <xsl:template name="invoke_template_by_name">
      <xsl:param name="templateName"></xsl:param>

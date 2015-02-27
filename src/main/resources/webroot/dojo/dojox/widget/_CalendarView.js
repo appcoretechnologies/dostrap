@@ -24,7 +24,7 @@ define([
 					template.parentNode.appendChild(template.cloneNode(true));
 				}
 			}else{
-				// XXX: this is the same as template!
+				// XXX: this is the same as templates!
 				var bNode = query(clazz, this.domNode)[0];
 				for(i = 0; i < n; i++){
 					template.parentNode.insertBefore(template.cloneNode(true), bNode);

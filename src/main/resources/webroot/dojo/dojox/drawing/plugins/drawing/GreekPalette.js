@@ -104,7 +104,7 @@ return dojo.declare("dojox.drawing.plugins.drawing.GreekPalette",
 	},
 
 	// templateString: String
-	//		The template of this widget.  Using dojoxEntityPalette classes
+	//		The templates of this widget.  Using dojoxEntityPalette classes
 	//		in order to allow easy transfer of css
 	templateString: '<div class="dojoxEntityPalette">\n' +
 			'	<table>\n' +

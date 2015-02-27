@@ -15,7 +15,7 @@ define([
 	return declare("dojox.mvc.Repeat", _Container, {
 		// summary:
 		//		A model-bound container which binds to a collection within a data model
-		//		and produces a repeating user-interface from a template for each
+		//		and produces a repeating user-interface from a templates for each
 		//		iteration within the collection.
 		//
 		// description:
@@ -26,7 +26,7 @@ define([
 		// index: Integer
 		//		An index used to track the current iteration when the repeating UI is
 		//		produced. This may be used to parameterize the content in the repeat
-		//		template for the current iteration.
+		//		templates for the current iteration.
 		//
 		//		For example, consider a collection of search or query results where
 		//		each item contains a "Name" property used to prime the "Results" data
@@ -79,7 +79,7 @@ define([
 		},
 
 		// summary:
-		//		Override and save template from body.
+		//		Override and save templates from body.
 		postscript: function(params, srcNodeRef){
 			//this.srcNodeRef = dom.byId(srcNodeRef);
 			if(this.useParent && dom.byId(this.useParent)){

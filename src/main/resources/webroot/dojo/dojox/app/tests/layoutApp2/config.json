@@ -79,8 +79,8 @@
 		}
 	},	
 
-// this app uses constraints and multiple files in defaultView instead of an outer template for a table layout
-//	"template": "layoutApp2/views/navigation.html",
+// this app uses constraints and multiple files in defaultView instead of an outer templates for a table layout
+//	"templates": "layoutApp2/views/navigation.html",
 
 	//the name of the view to load when the app is initialized.
 	"defaultView": "navigation+simple",

@@ -113,7 +113,7 @@
 	//	"main": {
 	//		"controller" : "swapViewTestApp/views/main.js",
 	//		"constraint" : "center",
-	//		"template": "swapViewTestApp/views/main.html"
+	//		"templates": "swapViewTestApp/views/main.html"
 	//	},
 		"navigation":{
 			"controller" : "swapViewTestApp/views/navigation.js",

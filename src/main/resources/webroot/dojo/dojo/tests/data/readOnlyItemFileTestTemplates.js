@@ -32,7 +32,7 @@ tests.data.readOnlyItemFileTestTemplates.registerTestsForDatastore = function(/*
 	//		Given the name of a datastore class to use, this function creates
 	//		a set of unit tests for that datastore, and registers the new test
 	//		group with the doh test framework.  The new unit tests are based
-	//		on a set of "template" unit tests.
+	//		on a set of "templates" unit tests.
 	var datastoreClass = dojo.getObject(datastoreClassName);
 	var testTemplates = tests.data.readOnlyItemFileTestTemplates.testTemplates;
 	var testsForDatastore = [];

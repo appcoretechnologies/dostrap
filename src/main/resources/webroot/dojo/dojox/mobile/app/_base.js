@@ -217,7 +217,7 @@ dojo.require("dojox.mobile.app.ImageThumbView");
 
 		resolveTemplate: function(sceneName){
 			// summary:
-			//		Given the name of a scene, returns the path to it's template
+			//		Given the name of a scene, returns the path to it's templates
 			//		file.  For example, for a scene named 'main', the file
 			//		returned is 'app/views/main/main-scene.html'
 			//		This function can be overridden if it is desired to have

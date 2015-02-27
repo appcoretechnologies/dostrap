@@ -822,9 +822,9 @@ define([
 			//		- rootNode: DomNode?:
 			//			identical to the function's `rootNode` argument, though
 			//			allowed to be passed in via this `options object.
-			//		- template: Boolean:
+			//		- templates: Boolean:
 			//			If true, ignores ContentPane's stopParser flag and parses contents inside of
-			//			a ContentPane inside of a template.   This allows dojoAttachPoint on widgets/nodes
+			//			a ContentPane inside of a templates.   This allows dojoAttachPoint on widgets/nodes
 			//			nested inside the ContentPane to work.
 			//		- inherited: Object:
 			//			Hash possibly containing dir and lang settings to be applied to
@@ -836,10 +836,10 @@ define([
 			//			multi-version support is used, when it will be something like dojo16, dojo20, etc.)
 			//		- propsThis: Object:
 			//			If specified, "this" referenced from data-dojo-props will refer to propsThis.
-			//			Intended for use from the widgets-in-template feature of `dijit._WidgetsInTemplateMixin`
+			//			Intended for use from the widgets-in-templates feature of `dijit._WidgetsInTemplateMixin`
 			//		- contextRequire: Function:
 			//			If specified, this require is utilised for looking resolving modules instead of the
-			//			`dojo/parser` context `require()`.  Intended for use from the widgets-in-template feature of
+			//			`dojo/parser` context `require()`.  Intended for use from the widgets-in-templates feature of
 			//			`dijit._WidgetsInTemplateMixin`.
 			// returns: Mixed
 			//		Returns a blended object that is an array of the instantiated objects, but also can include

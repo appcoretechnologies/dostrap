@@ -20,8 +20,8 @@ var FeedViewer = declare("dojox.atom.widget.FeedViewer", [_Widget, _Templated, _
 	// summary:
 	//		An ATOM feed viewer that allows for viewing a feed, deleting entries, and editing entries.
 
-	feedViewerTableBody: null,	//The body of the feed viewer table so we can access it and populate it.  Will be assigned via template.
-	feedViewerTable: null,		//The overal table container which contains the feed viewer table.  Will be assigned via template.
+	feedViewerTableBody: null,	//The body of the feed viewer table so we can access it and populate it.  Will be assigned via templates.
+	feedViewerTable: null,		//The overal table container which contains the feed viewer table.  Will be assigned via templates.
 	entrySelectionTopic: "",	//The topic to broadcast when any entry is clicked so that a listener can pick up it and display it.
 	url: "",					//The URL to which to connect to initially on creation.
 	xmethod: false,

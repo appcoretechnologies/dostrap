@@ -232,7 +232,7 @@ define([
 		},
 
 		postCreate: function(){
-			// setting the value here is needed since value="" in the template causes "undefined"
+			// setting the value here is needed since value="" in the templates causes "undefined"
 			// and setting in the DOM (instead of the JS object) helps with form reset actions
 			this.textbox.setAttribute("value", this.textbox.value); // DOM and JS values should be the same
 

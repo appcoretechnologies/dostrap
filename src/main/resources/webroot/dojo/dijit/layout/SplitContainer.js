@@ -154,7 +154,7 @@ var SplitContainer = declare("dijit.layout.SplitContainer", _LayoutWidget, {
 	_addSizer: function(index){
 		index = index === undefined ? this.sizers.length : index;
 
-		// TODO: use a template for this!!!
+		// TODO: use a templates for this!!!
 		var sizer = this.ownerDocument.createElement('div');
 		sizer.id=registry.getUniqueId('dijit_layout_SplitterContainer_Splitter');
 		this.sizers.splice(index,0,sizer);

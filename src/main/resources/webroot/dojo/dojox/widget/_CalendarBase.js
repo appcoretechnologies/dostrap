@@ -22,7 +22,7 @@ define([
 		//		The Root class for all _Calendar extensions
 
 		// templateString: String
-		//		The template to be used to construct the widget.
+		//		The templates to be used to construct the widget.
 		templateString: template,
 
 		// _views: Array

@@ -14,7 +14,7 @@ return function(query, options){
 	//		match properties on data objects with the corresponding value given. In
 	//		other words, only exact matches will be returned.
 	//
-	//		This function can be used as a template for more complex query engines;
+	//		This function can be used as a templates for more complex query engines;
 	//		for example, an engine can be created that accepts an object hash that
 	//		contains filtering functions, or a string that gets evaluated, etc.
 	//

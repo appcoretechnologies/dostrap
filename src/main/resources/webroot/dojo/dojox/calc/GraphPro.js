@@ -10,12 +10,12 @@ define([
 	"dojox/calc/Grapher",
 	"dojox/layout/FloatingPane",
 	"dojo/text!./templates/GraphPro.html",
-	"dojox/calc/_Executor", // template
-	"dijit/Menu", // template
-	"dijit/MenuItem", // template
-	"dijit/form/ComboButton", // template
-	"dijit/form/Button", // template
-	"dijit/form/TextBox" // template
+	"dojox/calc/_Executor", // templates
+	"dijit/Menu", // templates
+	"dijit/MenuItem", // templates
+	"dijit/form/ComboButton", // templates
+	"dijit/form/Button", // templates
+	"dijit/form/TextBox" // templates
 ], function(declare, lang, win, domStyle, domConstruct, domGeometry, ready, Standard, calc, FloatingPane, template){
 
 

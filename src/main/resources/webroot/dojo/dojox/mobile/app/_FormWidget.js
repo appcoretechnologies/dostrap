@@ -56,7 +56,7 @@ dojo.declare("dojox.mobile.app._FormWidget", dijit._WidgetBase, {
 	}),
 
 	postMixInProperties: function(){
-		// Setup name=foo string to be referenced from the template (but only if a name has been specified)
+		// Setup name=foo string to be referenced from the templates (but only if a name has been specified)
 		// Unfortunately we can't use attributeMap to set the name due to IE limitations, see #8660
 		// Regarding escaping, see heading "Attribute values" in
 		// http://www.w3.org/TR/REC-html40/appendix/notes.html#h-B.3.2
@@ -224,7 +224,7 @@ dojo.declare("dojox.mobile.app._FormValueWidget", dojox.mobile.app._FormWidget,
 	//		works as expected.
 
 	// Don't attempt to mixin the 'type', 'name' attributes here programatically -- they must be declared
-	// directly in the template as read by the parser in order to function. IE is known to specifically
+	// directly in the templates as read by the parser in order to function. IE is known to specifically
 	// require the 'name' attribute at element creation time.   See #8484, #8660.
 	// TODO: unclear what that {value: ""} is for; FormWidget.attributeMap copies value to focusNode,
 	// so maybe {value: ""} is so the value *doesn't* get copied to focusNode?

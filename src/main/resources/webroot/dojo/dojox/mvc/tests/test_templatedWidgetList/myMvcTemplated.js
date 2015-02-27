@@ -13,12 +13,12 @@ define([
 		// summary:
 		//		A sample templated widget for dojox.mvc
 		// description:
-		//		This template is used to show how to use exprchar to avoid instance of _TemplatedMixin error in dojo.mvc data binding.
-		//		If the templateString contains ${xxx}, it will throw an template error, use #{xxx} with exprchar :"#" instead.
+		//		This templates is used to show how to use exprchar to avoid instance of _TemplatedMixin error in dojo.mvc data binding.
+		//		If the templateString contains ${xxx}, it will throw an templates error, use #{xxx} with exprchar :"#" instead.
 		//		See how it works in test_mvc_widget.html and test_mvc_widget_template.html
 
 		// ctrl: dojox.mvc.ModelRefController
-		//		The controller that the form widgets in the template refer to.
+		//		The controller that the form widgets in the templates refer to.
 		ctrl: null,
 
 		templateString: template,

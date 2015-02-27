@@ -4,7 +4,7 @@ dojo.declare("FlickrSearchSelectionAssistant", dojox.mobile.app.SceneAssistant, 
   
 	setup: function(){
     
-		// Instantiate widgets in the template HTML.
+		// Instantiate widgets in the templates HTML.
 		this.controller.parse();
 		
 		var scenes = [

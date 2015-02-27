@@ -14,28 +14,28 @@ define([
 
 	var _TemplatedMixin = declare("dijit._TemplatedMixin", _AttachMixin, {
 		// summary:
-		//		Mixin for widgets that are instantiated from a template
+		//		Mixin for widgets that are instantiated from a templates
 
 		// templateString: [protected] String
-		//		A string that represents the widget template.
+		//		A string that represents the widget templates.
 		//		Use in conjunction with dojo.cache() to load from a file.
 		templateString: null,
 
 		// templatePath: [protected deprecated] String
-		//		Path to template (HTML file) for this widget relative to dojo.baseUrl.
+		//		Path to templates (HTML file) for this widget relative to dojo.baseUrl.
 		//		Deprecated: use templateString with require([... "dojo/text!..."], ...) instead
 		templatePath: null,
 
 		// skipNodeCache: [protected] Boolean
-		//		If using a cached widget template nodes poses issues for a
+		//		If using a cached widget templates nodes poses issues for a
 		//		particular widget class, it can set this property to ensure
-		//		that its template is always re-built from a string
+		//		that its templates is always re-built from a string
 		_skipNodeCache: false,
 
 /*=====
 		// _rendered: Boolean
-		//		Not normally use, but this flag can be set by the app if the server has already rendered the template,
-		//		i.e. already inlining the template for the widget into the main page.   Reduces _TemplatedMixin to
+		//		Not normally use, but this flag can be set by the app if the server has already rendered the templates,
+		//		i.e. already inlining the templates for the widget into the main page.   Reduces _TemplatedMixin to
 		//		just function like _AttachMixin.
 		_rendered: false,
 =====*/
@@ -46,7 +46,7 @@ define([
 
 		_stringRepl: function(tmpl){
 			// summary:
-			//		Does substitution of ${foo} type properties in template string
+			//		Does substitution of ${foo} type properties in templates string
 			// tags:
 			//		private
 			var className = this.declaredClass, _this = this;
@@ -65,7 +65,7 @@ define([
 
 		_escapeValue: function(/*String*/ val){
 			// summary:
-			//		Escape a value to be inserted into the template, either into an attribute value
+			//		Escape a value to be inserted into the templates, either into an attribute value
 			//		(ex: foo="${bar}") or as inner text of an element (ex: <span>${foo}</span>)
 
 			// Safer substitution, see heading "Attribute values" in
@@ -84,7 +84,7 @@ define([
 
 		buildRendering: function(){
 			// summary:
-			//		Construct the UI for this widget from a template, setting this.domNode.
+			//		Construct the UI for this widget from a templates, setting this.domNode.
 			// tags:
 			//		protected
 
@@ -93,9 +93,9 @@ define([
 					this.templateString = cache(this.templatePath, {sanitize: true});
 				}
 
-				// Lookup cached version of template, and download to cache if it
+				// Lookup cached version of templates, and download to cache if it
 				// isn't there already.  Returns either a DomNode or a string, depending on
-				// whether or not the template contains ${foo} replacement parameters.
+				// whether or not the templates contains ${foo} replacement parameters.
 				var cached = _TemplatedMixin.getCachedTemplate(this.templateString, this._skipNodeCache, this.ownerDocument);
 
 				var node;
@@ -103,7 +103,7 @@ define([
 					node = domConstruct.toDom(this._stringRepl(cached), this.ownerDocument);
 					if(node.nodeType != 1){
 						// Flag common problems such as templates with multiple top level nodes (nodeType == 11)
-						throw new Error("Invalid template: " + cached);
+						throw new Error("Invalid templates: " + cached);
 					}
 				}else{
 					// if it's a node, all we have to do is clone it
@@ -145,12 +145,12 @@ define([
 
 	_TemplatedMixin.getCachedTemplate = function(templateString, alwaysUseString, doc){
 		// summary:
-		//		Static method to get a template based on the templatePath or
+		//		Static method to get a templates based on the templatePath or
 		//		templateString key
 		// templateString: String
-		//		The template
+		//		The templates
 		// alwaysUseString: Boolean
-		//		Don't cache the DOM tree for this template, even if it doesn't have any variables
+		//		Don't cache the DOM tree for this templates, even if it doesn't have any variables
 		// doc: Document?
 		//		The target document.   Defaults to document global if unspecified.
 		// returns: Mixed
@@ -176,13 +176,13 @@ define([
 		templateString = string.trim(templateString);
 
 		if(alwaysUseString || templateString.match(/\$\{([^\}]+)\}/g)){
-			// there are variables in the template so all we can do is cache the string
+			// there are variables in the templates so all we can do is cache the string
 			return (tmplts[key] = templateString); //String
 		}else{
-			// there are no variables in the template so we can cache the DOM tree
+			// there are no variables in the templates so we can cache the DOM tree
 			var node = domConstruct.toDom(templateString, doc);
 			if(node.nodeType != 1){
-				throw new Error("Invalid template: " + templateString);
+				throw new Error("Invalid templates: " + templateString);
 			}
 			return (tmplts[key] = node); //Node
 		}
@@ -193,7 +193,7 @@ define([
 			var cache = _TemplatedMixin._templateCache;
 			for(var key in cache){
 				var value = cache[key];
-				if(typeof value == "object"){ // value is either a string or a DOM node template
+				if(typeof value == "object"){ // value is either a string or a DOM node templates
 					domConstruct.destroy(value);
 				}
 				delete cache[key];

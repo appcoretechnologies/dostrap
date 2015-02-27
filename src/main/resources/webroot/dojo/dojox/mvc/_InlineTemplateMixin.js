@@ -7,8 +7,8 @@ define([
 
 	return declare("dojox.mvc._InlineTemplateMixin", null, {
 		// summary:
-		//		A mixin for template widget, which will look for `<script type="dojox/mvc/InlineTemplate">`
-		//		and treat the HTML in there as the template string.
+		//		A mixin for templates widget, which will look for `<script type="dojox/mvc/InlineTemplate">`
+		//		and treat the HTML in there as the templates string.
 
 		buildRendering: function(){
 			var root = this.srcNodeRef;

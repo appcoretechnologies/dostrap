@@ -149,9 +149,9 @@ var FeedEntryEditor = declare("dojox.atom.widget.FeedEntryEditor", FeedEntryView
 	// the editMode flag by inserting appropriate editor widgets inside of just splashing the content in the page.
 	setTitle: function(/*DOM node*/titleAnchorNode, /*boolean*/editMode, /*object*/entry){
 		// summary:
-		//		Function to set the contents of the title node in the template to some value from the entry.
+		//		Function to set the contents of the title node in the templates to some value from the entry.
 		// description:
-		//		Function to set the contents of the title node in the template to some value from the entry.
+		//		Function to set the contents of the title node in the templates to some value from the entry.
 		//		This exists specifically so users can over-ride how the title data is filled out from an entry.
 		// titleAnchorNode:
 		//		The DOM node to attach the title data to.
@@ -183,9 +183,9 @@ var FeedEntryEditor = declare("dojox.atom.widget.FeedEntryEditor", FeedEntryView
 
 	setAuthors: function(/*DOM node*/authorsAnchorNode, /*boolean*/editMode, /*object*/entry){
 		// summary:
-		//		Function to set the contents of the author node in the template to some value from the entry.
+		//		Function to set the contents of the author node in the templates to some value from the entry.
 		// description:
-		//		Function to set the contents of the author node in the template to some value from the entry.
+		//		Function to set the contents of the author node in the templates to some value from the entry.
 		//		This exists specifically so users can over-ride how the title data is filled out from an entry.
 		// authorsAnchorNode:
 		//		The DOM node to attach the author data to.
@@ -209,9 +209,9 @@ var FeedEntryEditor = declare("dojox.atom.widget.FeedEntryEditor", FeedEntryView
 
 	setContributors: function(/*DOM node*/contributorsAnchorNode, /*boolean*/editMode, /*object*/entry){
 		// summary:
-		//		Function to set the contents of the contributor node in the template to some value from the entry.
+		//		Function to set the contents of the contributor node in the templates to some value from the entry.
 		// description:
-		//		Function to set the contents of the contributor node in the template to some value from the entry.
+		//		Function to set the contents of the contributor node in the templates to some value from the entry.
 		//		This exists specifically so users can over-ride how the title data is filled out from an entry.
 		// contributorsAnchorNode:
 		//		The DOM node to attach the contributor data to.
@@ -235,9 +235,9 @@ var FeedEntryEditor = declare("dojox.atom.widget.FeedEntryEditor", FeedEntryView
 
 	setId: function(/*DOM node*/idAnchorNode, /*boolean*/editMode, /*object*/entry){
 		// summary:
-		//		Function to set the contents of the ID  node in the template to some value from the entry.
+		//		Function to set the contents of the ID  node in the templates to some value from the entry.
 		// description:
-		//		Function to set the contents of the ID node in the template to some value from the entry.
+		//		Function to set the contents of the ID node in the templates to some value from the entry.
 		//		This exists specifically so users can over-ride how the title data is filled out from an entry.
 		// idAnchorNode:
 		//		The DOM node to attach the ID data to.
@@ -260,9 +260,9 @@ var FeedEntryEditor = declare("dojox.atom.widget.FeedEntryEditor", FeedEntryView
 
 	setUpdated: function(/*DOM node*/updatedAnchorNode, /*boolean*/editMode, /*object*/entry){
 		// summary:
-		//		Function to set the contents of the updated  node in the template to some value from the entry.
+		//		Function to set the contents of the updated  node in the templates to some value from the entry.
 		// description:
-		//		Function to set the contents of the updated node in the template to some value from the entry.
+		//		Function to set the contents of the updated node in the templates to some value from the entry.
 		//		This exists specifically so users can over-ride how the title data is filled out from an entry.
 		// updatedAnchorNode:
 		//		The DOM node to attach the updated data to.
@@ -286,9 +286,9 @@ var FeedEntryEditor = declare("dojox.atom.widget.FeedEntryEditor", FeedEntryView
 
 	setSummary: function(/*DOM node*/summaryAnchorNode, /*boolean*/editMode, /*object*/entry){
 		// summary:
-		//		Function to set the contents of the summary  node in the template to some value from the entry.
+		//		Function to set the contents of the summary  node in the templates to some value from the entry.
 		// description:
-		//		Function to set the contents of the summary node in the template to some value from the entry.
+		//		Function to set the contents of the summary node in the templates to some value from the entry.
 		//		This exists specifically so users can over-ride how the title data is filled out from an entry.
 		// summaryAnchorNode:
 		//		The DOM node to attach the summary data to.
@@ -319,9 +319,9 @@ var FeedEntryEditor = declare("dojox.atom.widget.FeedEntryEditor", FeedEntryView
 
 	setContent: function(/*DOM node*/contentAnchorNode, /*boolean*/editMode, /*object*/entry){
 		// summary:
-		//		Function to set the contents of the content node in the template to some value from the entry.
+		//		Function to set the contents of the content node in the templates to some value from the entry.
 		// description:
-		//		Function to set the contents of the content node in the template to some value from the entry.
+		//		Function to set the contents of the content node in the templates to some value from the entry.
 		//		This exists specifically so users can over-ride how the title data is filled out from an entry.
 		// summaryAnchorNode:
 		//		The DOM node to attach the content data to.

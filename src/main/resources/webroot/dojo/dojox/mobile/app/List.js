@@ -11,8 +11,8 @@ dojo.require("dijit._WidgetBase");
 	dojo.declare("dojox.mobile.app.List", dijit._WidgetBase, {
 		// summary:
 		//		A templated list widget. Given a simple array of data objects
-		//		and a HTML template, it renders a list of elements, with
-		//		support for a swipe delete action.  An optional template
+		//		and a HTML templates, it renders a list of elements, with
+		//		support for a swipe delete action.  An optional templates
 		//		can be provided for when the list is empty.
 
 		// items: Array
@@ -179,16 +179,16 @@ dojo.require("dijit._WidgetBase");
 				}
 			});
 
-			// If no item template has been provided, it is an error.
+			// If no item templates has been provided, it is an error.
 			if(!this.itemTemplate){
-				throw Error("An item template must be provided to " + this.declaredClass);
+				throw Error("An item templates must be provided to " + this.declaredClass);
 			}
 
-			// Load the item template
+			// Load the item templates
 			this._loadTemplate(this.itemTemplate, "itemTemplate", this._checkLoadComplete);
 
 			if(this.emptyTemplate){
-				// If the optional empty template has been provided, load it.
+				// If the optional empty templates has been provided, load it.
 				this._loadTemplate(this.emptyTemplate, "emptyTemplate", this._checkLoadComplete);
 			}
 
@@ -495,7 +495,7 @@ dojo.require("dijit._WidgetBase");
 			// Delete all existing nodes, except the deletion buttons.
 			dojo.query("> *:not(.buttons)", this.domNode).forEach(dojo.destroy);
 
-			// If there is no data, and an empty template has been provided,
+			// If there is no data, and an empty templates has been provided,
 			// render it.
 			if(this.items.length < 1 && this.emptyTemplate){
 				dojo.place(dojo._toDom(this.emptyTemplate), this.domNode, "first");
@@ -585,7 +585,7 @@ dojo.require("dijit._WidgetBase");
 
 		_loadTemplate: function(url, thisAttr, callback){
 			// summary:
-			//		Loads a template
+			//		Loads a templates
 			if(!url){
 				callback();
 				return;

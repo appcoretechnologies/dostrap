@@ -8,7 +8,7 @@ define([
 	"../_Container",
 	"../_HasDropDown",
 	"dojo/text!./templates/DropDownButton.html",
-	"../a11yclick"	// template uses ondijitclick
+	"../a11yclick"	// templates uses ondijitclick
 ], function(declare, lang, query, registry, popup, Button, _Container, _HasDropDown, template){
 
 	// module:

@@ -18,7 +18,7 @@ define([
 		//		works as expected.
 
 		// Don't attempt to mixin the 'type', 'name' attributes here programatically -- they must be declared
-		// directly in the template as read by the parser in order to function. IE is known to specifically
+		// directly in the templates as read by the parser in order to function. IE is known to specifically
 		// require the 'name' attribute at element creation time.  See #8484, #8660.
 
 		_layoutHackIE7: function(){

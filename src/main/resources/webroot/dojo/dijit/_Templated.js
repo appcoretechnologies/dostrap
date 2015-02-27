@@ -12,7 +12,7 @@ define([
 	//		dijit/_Templated
 
 	// These arguments can be specified for widgets which are used in templates.
-	// Since any widget can be specified as sub widgets in template, mix it
+	// Since any widget can be specified as sub widgets in templates, mix it
 	// into the base widget class.  (This is a hack, but it's effective.)
 	// Remove for 2.0.   Also, hide from API doc parser.
 	lang.extend(_WidgetBase, /*===== {} || =====*/ {
@@ -22,11 +22,11 @@ define([
 
 	return declare("dijit._Templated", [_TemplatedMixin, _WidgetsInTemplateMixin], {
 		// summary:
-		//		Deprecated mixin for widgets that are instantiated from a template.
+		//		Deprecated mixin for widgets that are instantiated from a templates.
 		//		Widgets should use _TemplatedMixin plus if necessary _WidgetsInTemplateMixin instead.
 
 		// widgetsInTemplate: [protected] Boolean
-		//		Should we parse the template to find widgets that might be
+		//		Should we parse the templates to find widgets that might be
 		//		declared in markup inside it?  False by default.
 		widgetsInTemplate: false,
 

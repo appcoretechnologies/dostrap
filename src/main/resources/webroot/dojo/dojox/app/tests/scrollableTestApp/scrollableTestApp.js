@@ -15,7 +15,7 @@ define(["dojox/mobile/ProgressIndicator", "dojox/mobile/TransitionEvent", "dojox
 			}		
 		};
 
-		// global for call from template
+		// global for call from templates
 		this.removeScrollableItem = function(index){
 				this.loadedModels.repeatmodels.model.splice(index, 1);
 				return false; 	 		

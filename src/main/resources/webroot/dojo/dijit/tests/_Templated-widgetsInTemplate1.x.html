@@ -298,14 +298,14 @@
 							}
 						},
 						{
-							// Check that declarative widget with layout widgets in template is correctly created and rendered
+							// Check that declarative widget with layout widgets in templates is correctly created and rendered
 							name: "declarative widget with layout widgets",
 							runTest: function(t){
 								validateTest4Widget(t, dijit.byId("test4Widget"));
 							}
 						},
 						{
-							// Check that programmatic widget with layout widgets in template is correctly created and rendered
+							// Check that programmatic widget with layout widgets in templates is correctly created and rendered
 							name: "programmatic widget with layout widgets",
 							runTest: function(t){
 								test4WidgetProgrammatic = new Test4Widget({}).placeAt("test4Widget", "after");
@@ -314,7 +314,7 @@
 							}
 						},
 						{
-							// Compare programmatic and declaratively created widget with layout widgets in template
+							// Compare programmatic and declaratively created widget with layout widgets in templates
 							name: "programmatic vs declarative with layout widgets",
 							runTest: function(t){
 								// Focus unrelated element, so that we don't have different classes on our two widgets
@@ -335,14 +335,14 @@
 							}
 						},
 						{
-							// Check that declarative widget with other widgets in template is correctly started
+							// Check that declarative widget with other widgets in templates is correctly started
 							name: "declarative widget with many child widgets",
 							runTest: function(t){
 								validateTest5Widget(t, dijit.byId("test5Widget"));
 							}
 						},
 						{
-							// Check that programmatic widget with other widgets in template is correctly started
+							// Check that programmatic widget with other widgets in templates is correctly started
 							name: "programmatic widget with many child widgets",
 							runTest: function(t){
 								test5WidgetProgrammatic = new Test5Widget().placeAt("test5Widget", "after");
@@ -365,7 +365,7 @@
 							}
 						},
 						{
-							// Test that dojoAttachPoint inside of a ContentPane (inside of a template) works
+							// Test that dojoAttachPoint inside of a ContentPane (inside of a templates) works
 							name: "ContentPane",
 							runTest: function(){
 								var testW = dijit.byId("missing");
@@ -438,7 +438,7 @@
 		</div>
 	</div>
 
-	<!-- Test templated widget containing layout widgets in template -->
+	<!-- Test templated widget containing layout widgets in templates -->
 	<xmp id="Test4Template" style="display:none;">
 		<div>
 			<div dojoType="dijit.layout.TabContainer" dojoAttachPoint="tabCont" style="height: 5em;">
@@ -453,7 +453,7 @@
 	</xmp>
 	<div dojoType="Test4Widget" id="test4Widget" ></div>
 
-	<!-- Test templated widget containing container and nested widgets in template -->
+	<!-- Test templated widget containing container and nested widgets in templates -->
 	<xmp id="Test5Template" style="display:none;">
 		<div>
 			<div dojoType="TestLayoutWidget" dojoAttachPoint="layout">

@@ -15,7 +15,7 @@ var AutoUrlLink = dojo.declare("dojox.editor.plugins.AutoUrlLink", [_Plugin], {
 	//		a hyperlink that points to that URL.
 	
 	// _template: [private] String
-	//		The link template
+	//		The link templates
 	_template: "<a _djrealurl='${url}' href='${url}'>${url}</a>",
 	
 	setEditor: function(/*dijit.Editor*/ editor){

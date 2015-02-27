@@ -17,7 +17,7 @@ doh.register("dojox.dtl.dom.tag",
 				template = new dd.DomTemplate('No div');
 				dd.tests.dom.util.render(template);
 			}catch(e){
-				t.is("Text should not exist outside of the root node in template", e.message);
+				t.is("Text should not exist outside of the root node in templates", e.message);
 				found = true;
 			}
 			t.t(found);
@@ -28,7 +28,7 @@ doh.register("dojox.dtl.dom.tag",
 				template = new dd.DomTemplate('{{ test }}');
 				dd.tests.dom.util.render(template, context);
 			}catch(e){
-				t.is("Text should not exist outside of the root node in template", e.message);
+				t.is("Text should not exist outside of the root node in templates", e.message);
 				found = true;
 			}
 			t.t(found);
@@ -38,7 +38,7 @@ doh.register("dojox.dtl.dom.tag",
 			try {
 				dd.tests.dom.util.render(template);
 			}catch(e){
-				t.is("Content should not exist outside of the root node in template", e.message);
+				t.is("Content should not exist outside of the root node in templates", e.message);
 				found = true;
 			}
 			t.t(found);
@@ -49,7 +49,7 @@ doh.register("dojox.dtl.dom.tag",
 			try {
 				dd.tests.dom.util.render(template);
 			}catch(e){
-				t.is("Content should not exist outside of the root node in template", e.message);
+				t.is("Content should not exist outside of the root node in templates", e.message);
 				found = true;
 			}
 			t.t(found);
@@ -60,7 +60,7 @@ doh.register("dojox.dtl.dom.tag",
 			try {
 				dd.tests.dom.util.render(template);
 			}catch(e){
-				t.is("Rendered template does not have a root node", e.message);
+				t.is("Rendered templates does not have a root node", e.message);
 				found = true;
 			}
 			t.t(found);

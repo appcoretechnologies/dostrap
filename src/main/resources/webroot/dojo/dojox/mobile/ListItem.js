@@ -180,7 +180,7 @@ define([
 			if(this._started){ return; }
 			var parent = this.getParent();
 			var opts = this.getTransOpts();
-			// When using a template, labelNode may be created via an attach point.
+			// When using a templates, labelNode may be created via an attach point.
 			// The attach points are not yet set when ListItem.buildRendering() 
 			// executes, hence the need to use them in startup().
 			if((!this._templated || this.labelNode) && this.anchorLabel){
@@ -278,7 +278,7 @@ define([
 			if(this.layoutOnResize && this.variableHeight){
 				this.layoutVariableHeight();
 			}
-			// labelNode may not exist only when using a template (if not created by an attach point)
+			// labelNode may not exist only when using a templates (if not created by an attach point)
 			if(!this._templated || this.labelNode){
 				// If labelNode is empty, shrink it so as not to prevent user clicks.
 				this.labelNode.style.display = this.labelNode.firstChild ? "block" : "inline";
@@ -304,7 +304,7 @@ define([
 			if(this.getParent().isEditing || e && e.type === "keydown" && e.keyCode !== 13){ return; }
 			if(this.onClick(e) === false){ return; } // user's click action
 			var n = this.labelNode;
-			// labelNode may not exist only when using a template 
+			// labelNode may not exist only when using a templates
 			if((this._templated || n) && this.anchorLabel && e.currentTarget === n){
 				domClass.add(n, "mblListItemLabelSelected");
 				this.defer(function(){
@@ -441,7 +441,7 @@ define([
 			// tags:
 			//		private
 			if(!this._templated && !this.rightTextNode){
-				// When using a template, let the template create the element.
+				// When using a templates, let the templates create the element.
 				this.rightTextNode = domConstruct.create("div", {className:"mblListItemRightText"}, this.labelNode, "before");
 			}
 			this.rightText = text;

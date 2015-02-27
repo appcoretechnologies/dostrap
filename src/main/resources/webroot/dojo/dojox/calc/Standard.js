@@ -16,12 +16,12 @@ define([
 	"dojox/math/_base",
 	"dijit/TooltipDialog",
 	"dojo/text!./templates/Standard.html",
-	"dojox/calc/_Executor", // template
-	"dijit/Menu", // template
-	"dijit/MenuItem", // template
-	"dijit/form/ComboButton", // template
-	"dijit/form/Button", // template
-	"dijit/form/TextBox" // template
+	"dojox/calc/_Executor", // templates
+	"dijit/Menu", // templates
+	"dijit/MenuItem", // templates
+	"dijit/form/ComboButton", // templates
+	"dijit/form/Button", // templates
+	"dijit/form/TextBox" // templates
 ], function(declare, lang, has, win, event, domStyle, ready, keys, registry, typematic, WidgetBase, WidgetsInTemplateMixin, TemplatedMixin, _TextBoxMixin, math, TooltipDialog, template, calc){
 
 	return declare(

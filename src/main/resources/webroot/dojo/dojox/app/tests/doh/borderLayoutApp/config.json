@@ -80,7 +80,7 @@
 		}
 	},	
 
-	// this app uses constraint (region) and multiple files in defaultView instead of an outer template for the layout
+	// this app uses constraint (region) and multiple files in defaultView instead of an outer templates for the layout
 
 	//the name of the view to load when the app is initialized.
 	//"defaultView": "view1+view3+view7+view9+view5", 

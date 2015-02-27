@@ -37,7 +37,7 @@ define([
 			plainText: false,
 
 			// templateString: [public] String
-			//		The template used to construct the labeled dropdown.
+			//		The templates used to construct the labeled dropdown.
 			templateString: "<span style='white-space: nowrap' class='dijit dijitReset dijitInline'>" +
 				"<label class='dijitLeft dijitInline' for='${selectId}'>${label}</label>" +
 				"<input data-dojo-type='../../form/FilteringSelect' required='false' " +
@@ -47,7 +47,7 @@ define([
 				"</span>",
 
 			// contextRequire: [public] Function
-			//		The context require that is used to resolve modules in template.
+			//		The context require that is used to resolve modules in templates.
 			contextRequire: require,
 
 			postMixInProperties: function(){
@@ -57,15 +57,15 @@ define([
 
 				this.strings = i18n.getLocalization("dijit._editor", "FontChoice");
 
-				// Set some substitution variables used in the template
+				// Set some substitution variables used in the templates
 				this.label = this.strings[this.command];
 
 				// _WidgetBase sets the id after postMixInProperties(), but we need it now.
 				// Alternative is to have a buildRendering() method and move this.selectId setting there,
-				// or alternately get rid of selectId variable and just access ${id} in template?
+				// or alternately get rid of selectId variable and just access ${id} in templates?
 				this.id = registry.getUniqueId(this.declaredClass.replace(/\./g, "_"));
 
-				this.selectId = this.id + "_select";	// used in template
+				this.selectId = this.id + "_select";	// used in templates
 
 				this.inherited(arguments);
 			},

@@ -9,7 +9,7 @@ define([
 	"./_FormWidget",
 	"./_ButtonMixin",
 	"dojo/text!./templates/Button.html",
-	"../a11yclick"	// template uses ondijitclick
+	"../a11yclick"	// templates uses ondijitclick
 ], function(require, declare, domClass, has, kernel, lang, ready, _FormWidget, _ButtonMixin, template){
 
 	// module:

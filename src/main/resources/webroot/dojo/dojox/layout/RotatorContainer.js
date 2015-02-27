@@ -339,10 +339,10 @@ declare("dojox.layout.RotatorPager", [Widget, Templated, Contained], {
 	// description:
 	//		A pager can be defined one of two ways:
 	//
-	//		- Externally of the RotatorContainer's template and tell the
+	//		- Externally of the RotatorContainer's templates and tell the
 	//		RotatorPager the rotatorId of the RotatorContainer
 	//		- As a direct descendant of the RotatorContainer (i.e. inside the
-	//		RotatorContainer's template)
+	//		RotatorContainer's templates)
 	//
 	//		The pager can contain the following components:
 	//

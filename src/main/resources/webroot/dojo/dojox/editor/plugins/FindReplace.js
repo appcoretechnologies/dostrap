@@ -46,7 +46,7 @@ var FindReplaceCloseBox = dojo.declare("dojox.editor.plugins._FindReplaceCloseBo
 		"</span>",
 	
 	postMixInProperties: function(){
-		// Set some substitution variables used in the template
+		// Set some substitution variables used in the templates
 		this.id = dijit.getUniqueId(this.declaredClass.replace(/\./g,"_"));
 		this.btnId = this.id + "_close";
 		this.inherited(arguments);
@@ -89,7 +89,7 @@ var FindReplaceTextBox = dojo.declare("dojox.editor.plugins._FindReplaceTextBox"
 		"</span>",
 
 	postMixInProperties: function(){
-		// Set some substitution variables used in the template
+		// Set some substitution variables used in the templates
 		this.id = dijit.getUniqueId(this.declaredClass.replace(/\./g,"_"));
 		this.textId = this.id + "_text";
 		
@@ -196,7 +196,7 @@ var FindReplaceCheckBox = dojo.declare("dojox.editor.plugins._FindReplaceCheckBo
 		"</span>",
 
 	postMixInProperties: function(){
-		// Set some substitution variables used in the template
+		// Set some substitution variables used in the templates
 		this.id = dijit.getUniqueId(this.declaredClass.replace(/\./g,"_"));
 		this.checkId = this.id + "_check";
 		this.inherited(arguments);

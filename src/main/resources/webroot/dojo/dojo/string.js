@@ -84,7 +84,7 @@ string.substitute = function(	/*String*/		template,
 	// summary:
 	//		Performs parameterized substitutions on a string. Throws an
 	//		exception if any parameter is unmatched.
-	// template:
+	// templates:
 	//		a string with expressions in the form `${key}` to be replaced or
 	//		`${key:format}` which specifies a format function. keys are case-sensitive.
 	// map:

@@ -29,16 +29,16 @@ define([
 
 		// exprchar:  Character
 		//		Character to use for a substitution expression, for a substitution string like ${this.value}
-		//		If this class is declared in a template HTML and exprchar is used in in-line template of this class, something other than `$` should be specified to avoid conflict with exprchar of outer-template.
+		//		If this class is declared in a templates HTML and exprchar is used in in-line templates of this class, something other than `$` should be specified to avoid conflict with exprchar of outer-templates.
 		exprchar: '$',
 	
 		// templateString: [private] String
-		//		The template or data-bound output content.
+		//		The templates or data-bound output content.
 		templateString : "",
 	
 		postscript: function(params, srcNodeRef){
 			// summary:
-			//		Override and save template from body.
+			//		Override and save templates from body.
 			this.srcNodeRef = dom.byId(srcNodeRef);
 			if(this.srcNodeRef){
 				this.templateString = this.srcNodeRef.innerHTML;
@@ -82,7 +82,7 @@ define([
 	
 		_exprRepl: function(tmpl){
 			// summary:
-			//		Does substitution of ${foo+bar} type expressions in template string.
+			//		Does substitution of ${foo+bar} type expressions in templates string.
 			// tags:
 			//		private
 			var pThis = this, transform = function(value, key){

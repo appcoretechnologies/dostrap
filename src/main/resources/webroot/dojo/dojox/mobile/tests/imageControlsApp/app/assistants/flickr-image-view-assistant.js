@@ -6,7 +6,7 @@ dojo.declare("FlickrImageViewAssistant", dojox.mobile.app.SceneAssistant, {
 	
 	setup: function(){
 	
-		// Instantiate widgets in the template HTML.
+		// Instantiate widgets in the templates HTML.
 		this.controller.parse();
 		
 		var viewer = this.viewer = dijit.byId("flickrImageView");

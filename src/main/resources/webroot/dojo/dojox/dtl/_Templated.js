@@ -60,7 +60,7 @@ define([
 			}
 			this._attachTemplateNodes(node);
 			if(this.widgetsInTemplate){
-				//Make sure dojoType is used for parsing widgets in template.
+				//Make sure dojoType is used for parsing widgets in templates.
 				//The Parser.query could be changed from multiversion support.
 				var parser = Parser, qry, attr;
 				if(parser._query != "[dojoType]"){

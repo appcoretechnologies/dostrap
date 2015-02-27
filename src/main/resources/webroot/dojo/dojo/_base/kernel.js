@@ -277,7 +277,7 @@ define(["../has", "./config", "require", "module"], function(has, config, requir
 			//	|	// ...
 			//	|
 			//	|	// code in a module using acme resources
-			//	|	var tmpltPath = dojo.moduleUrl("acme.widget","templates/template.html");
+			//	|	var tmpltPath = dojo.moduleUrl("acme.widget","templates/templates.html");
 			//	|	var dataPath = dojo.moduleUrl("acme.util","resources/data.json");
 
 			dojo.deprecated("dojo.moduleUrl()", "use require.toUrl", "2.0");

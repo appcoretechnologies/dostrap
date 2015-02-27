@@ -4,7 +4,7 @@ dojo.declare("FlickrSearchGroupAssistant", dojox.mobile.app.SceneAssistant, {
   
 	setup: function(){
     
-		// Instantiate widgets in the template HTML.
+		// Instantiate widgets in the templates HTML.
 		this.controller.parse();
 		
 		// This api key should not be reused. You should get your own

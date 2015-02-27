@@ -6,7 +6,7 @@ dojo.declare("FlickrImageThumbViewAssistant", dojox.mobile.app.SceneAssistant, {
 
 	setup: function(){
 
-		// Instantiate widgets in the template HTML.
+		// Instantiate widgets in the templates HTML.
 		this.controller.parse();
 
 		this.handlePhotoLoad = dojo.hitch(this, this.handlePhotoLoad);

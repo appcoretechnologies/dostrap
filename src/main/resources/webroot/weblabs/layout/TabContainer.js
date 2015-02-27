@@ -1,29 +1,73 @@
 define(['dojo/_base/declare',
     'dijit/_WidgetBase',
     'dijit/_TemplatedMixin',
-    "dojo/text!./template/TabContainer.html",
+    "dojo/text!./templates/TabContainer.html",
     'dojo/domReady!',
     'dojo/dom-class',
     'dijit/_Container',
-    "dojo/dom-construct"
-], function (declare, _WidgetBase, _Templated, templateString, dom, domClass,_Container,domConstruct) {
-
+    "dojo/dom-construct",
+    'weblabs/layout/navButton',
+    "dojo/dom-style",
+    "dojo/dom-attr"
+], function (declare, _WidgetBase, _Templated, templateString, dom, domClass,_Container, domConstruct, NavButton,domStyle,domAttr) {
+  var isActive= false;
 
     return declare([ _WidgetBase, _Templated, _Container], {
       //  widgetsInTemplate: true,
+        showLabel: false,
         templateString: templateString,
-        postMixInProperties: function () {
+      /* toggleClass: "",
+        _setToggleClassAttr: { node: "menuNode", type: "class" },
+        _connectHandlers : [],
+
+        buildRendering: function(){
+            this.inherited(arguments);
+            var onClickHandler = this.connect(this.domNode, "onclick", "toggleNavBar");
+            this._connectHandlers.push(onClickHandler);
+        },
+        toggleNavBar: function(){
+            if(isActive)
+            {
+                this.set("toggleClass","");
+                isActive=false;
+            }else{
+                this.set("toggleClass","active");
+                isActive=true;
+            }
+        },*/
+
+         postMixInProperties: function () {
             this.inherited(arguments);
         },
+
         _fillContent: function (/*DomNode*/ source) {
+
+            var firstNode = true;
             var dest = this.containerNode;
             if(source && dest){
                 while(source.hasChildNodes()){
-                    var node=source.firstChild;
-                    dest.appendChild(node);
-                    console.debug('node '+node.nodeName );
-                    if(node.nodeName =='DIV')
-                    domConstruct.place('<li role=\"presentation\" class=\"active\"><a href=\"#\">'+node.title+'</a></li>',  this.tabNode);
+                    var node=source.firstChild;  // Firstchild= content pane
+                    source.removeChild(node);
+
+                    console.debug('node '+node.nodeName );   //HTML nodeName
+                    if(node.nodeName =='DIV'){
+                    var navButton;
+                     var selected = domAttr.get(node, "selected");
+
+                        if(selected){
+                            navButton = new NavButton({label:node.title, buttonClass:"active"});
+                            firstNode = false;
+                            dest.appendChild(node);
+                        }
+                        else{
+                            navButton  = new NavButton({label:node.title});
+                            domStyle.set(node, 'display', 'none');
+                            dest.appendChild(node);
+                        }
+
+                            domConstruct.place(navButton.menuNode, this.tabNode);
+
+                    }
                 }
             }
 

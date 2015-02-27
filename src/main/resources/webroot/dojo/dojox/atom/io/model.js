@@ -1031,7 +1031,7 @@ model.Service = declare(model.AtomItem,{
 	},
 	//builds a Service document.  each element of this, except for the namespace, is the href of
 	//a service that the server supports.  Some of the common services are:
-	//"create-entry" , "user-prefs" , "search-entries" , "edit-template" , "categories"
+	//"create-entry" , "user-prefs" , "search-entries" , "edit-templates" , "categories"
 	buildFromDom: function(/*DOMNode*/ node){
 		// summary:
 		//		Function to do construction of the Service data from the DOM node containing it.

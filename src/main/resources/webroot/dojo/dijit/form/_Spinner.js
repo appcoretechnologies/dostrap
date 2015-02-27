@@ -19,7 +19,7 @@ define([
 		//		Mixin for validation widgets with a spinner.
 		// description:
 		//		This class basically (conceptually) extends `dijit/form/ValidationTextBox`.
-		//		It modifies the template to have up/down arrows, and provides related handling code.
+		//		It modifies the templates to have up/down arrows, and provides related handling code.
 
 		// defaultTimeout: Number
 		//		Number of milliseconds before a held arrow key or up/down button becomes typematic

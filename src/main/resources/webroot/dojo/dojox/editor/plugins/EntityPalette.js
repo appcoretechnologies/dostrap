@@ -21,7 +21,7 @@ var EntityPalette = dojo.declare("dojox.editor.plugins.EntityPalette", [_Widget,
 	//		Can be used standalone, or as a popup.
 
 	// templateString: [protected] String
-	//		The basic template used to render the palette.
+	//		The basic templates used to render the palette.
 	//		Should generally be over-ridden to define different classes.
 	templateString: '<div class="dojoxEntityPalette">\n' +
 					'	<table>\n' +
@@ -111,7 +111,7 @@ var EntityPalette = dojo.declare("dojox.editor.plugins.EntityPalette", [_Widget,
 
 	buildRendering: function(){
 		// summary:
-		//		Instantiate the template, which makes a skeleton table which we'll insert the entities
+		//		Instantiate the templates, which makes a skeleton table which we'll insert the entities
 		this.inherited(arguments);
 
 		var i18n = dojo.i18n.getLocalization("dojox.editor.plugins", "latinEntities");

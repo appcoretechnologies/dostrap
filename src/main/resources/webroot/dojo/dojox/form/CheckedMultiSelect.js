@@ -20,7 +20,7 @@ define([
 	"dojo/text!dojox/form/resources/_CheckedMultiSelectItem.html",
 	"dojo/text!dojox/form/resources/CheckedMultiSelect.html",
 	"dojo/i18n!dojox/form/nls/CheckedMultiSelect",
-	"dijit/form/CheckBox" // template
+	"dijit/form/CheckBox" // templates
 ], function(declare, lang, array, event, domGeometry, domClass, domConstruct, i18n, Widget, TemplatedMixin, WidgetsInTemplateMixin, registry, Menu, MenuItem, Tooltip, FormSelectWidget, ComboButton, CheckedMultiSelectMenuItem, CheckedMultiSelectItem, CheckedMultiSelect, nlsCheckedMultiSelect){
  
 // module:
@@ -69,7 +69,7 @@ var formCheckedMultiSelectItem = declare("dojox.form._CheckedMultiSelectItem", [
 
 	postCreate: function(){
 		// summary:
-		//		Set innerHTML here - since the template gets messed up sometimes
+		//		Set innerHTML here - since the templates gets messed up sometimes
 		//		with rich text
 		this.inherited(arguments);
 		this.labelNode.innerHTML = this.option.label;

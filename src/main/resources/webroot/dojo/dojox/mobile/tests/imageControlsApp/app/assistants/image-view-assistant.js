@@ -13,7 +13,7 @@ dojo.declare("ImageViewAssistant", dojox.mobile.app.SceneAssistant, {
 		"images/square.jpg"
 	];
     
-    // Instantiate widgets in the template HTML.
+    // Instantiate widgets in the templates HTML.
     this.controller.parse();
     
 	var viewer = this.viewer = dijit.byId("imageView");

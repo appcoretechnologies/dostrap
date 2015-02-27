@@ -46,11 +46,11 @@ define(["./_base/kernel", "./query", "./_base/array", "./_base/lang", "./dom-cla
 			// summary:
 			//		normalizes data to an array of items to insert.
 			// description:
-			//		If content is an object, it can have special properties "template" and
-			//		"parse". If "template" is defined, then the template value is run through
+			//		If content is an object, it can have special properties "templates" and
+			//		"parse". If "templates" is defined, then the templates value is run through
 			//		dojo/string.substitute (if dojo/string.substitute() has been required elsewhere),
 			//		or if templateFunc is a function on the content, that function will be used to
-			//		transform the template into a final string to be used for for passing to dojo/dom-construct.toDom().
+			//		transform the templates into a final string to be used for for passing to dojo/dom-construct.toDom().
 			//		If content.parse is true, then it is remembered for later, for when the content
 			//		nodes are inserted into the DOM. At that point, the nodes will be parsed for widgets
 			//		(if dojo/parser has been required elsewhere).
@@ -63,7 +63,7 @@ define(["./_base/kernel", "./query", "./_base/array", "./_base/lang", "./dom-cla
 
 			var parse = content.parse === true;
 
-			//Do we have an object that needs to be run through a template?
+			//Do we have an object that needs to be run through a templates?
 			if(typeof content.template == "string"){
 				var templateFunc = content.templateFunc || (dojo.string && dojo.string.substitute);
 				content = templateFunc ? templateFunc(content.template, content) : content;
@@ -462,13 +462,13 @@ define(["./_base/kernel", "./query", "./_base/array", "./_base/lang", "./dom-cla
 			//		DOM node, HTML in string format, a NodeList or an Object. If a DOM node or
 			//		NodeList, the content will be cloned if the current NodeList has more than one
 			//		element. Only the DOM nodes are cloned, no event handlers. If it is an Object,
-			//		it should be an object with at "template" String property that has the HTML string
+			//		it should be an object with at "templates" String property that has the HTML string
 			//		to insert. If dojo.string has already been dojo.required, then dojo.string.substitute
-			//		will be used on the "template" to generate the final HTML string. Other allowed
+			//		will be used on the "templates" to generate the final HTML string. Other allowed
 			//		properties on the object are: "parse" if the HTML
 			//		string should be parsed for widgets (dojo.require("dojo.parser") to get that
-			//		option to work), and "templateFunc" if a template function besides dojo.string.substitute
-			//		should be used to transform the "template".
+			//		option to work), and "templateFunc" if a templates function besides dojo.string.substitute
+			//		should be used to transform the "templates".
 			// position:
 			//		can be one of:
 			//
@@ -511,7 +511,7 @@ define(["./_base/kernel", "./query", "./_base/array", "./_base/lang", "./dom-cla
 			//	|	require(["dojo/string", "dojo/query", "dojo/NodeList-dom"
 			//	|	], function(string, query){
 			//	|		query(".note").addContent({
-			//	|			template: '<b>${id}: </b><span>${name}</span>',
+			//	|			templates: '<b>${id}: </b><span>${name}</span>',
 			//	|			id: "user332",
 			//	|			name: "Mr. Anderson"
 			//	|		});
@@ -521,7 +521,7 @@ define(["./_base/kernel", "./query", "./_base/array", "./_base/lang", "./dom-cla
 			//	|	require(["dojo/string", "dojo/parser", "dojo/query", "dojo/NodeList-dom"
 			//	|	], function(string, parser, query){
 			//	|		var notes = query(".note").addContent({
-			//	|			template: '<button dojoType="dijit/form/Button">${text}</button>',
+			//	|			templates: '<button dojoType="dijit/form/Button">${text}</button>',
 			//	|			parse: true,
 			//	|			text: "Send"
 			//	|		});

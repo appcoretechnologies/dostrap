@@ -9,7 +9,7 @@ define([
 	"dojo/text!./Wizard/Wizard.html",
 	"dojo/i18n!dijit/nls/common",
 	"dojo/i18n!./nls/Wizard",
-	"dijit/form/Button"		// used by template
+	"dijit/form/Button"		// used by templates
 ], function (lang, declare, connect, StackContainer, _TemplatedMixin, _WidgetsInTemplateMixin, i18n, template) {
   
 var Wizard = declare("dojox.widget.Wizard", [StackContainer, _TemplatedMixin, _WidgetsInTemplateMixin], {

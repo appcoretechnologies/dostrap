@@ -34,7 +34,7 @@ define(["require", "dojo/when", "dojo/on", "dojo/dom-attr", "dojo/dom-style", "d
 		start: function(){
 			// summary:
 			//		start view object.
-			//		load view template, view controller implement and startup all widgets in view template.
+			//		load view templates, view controller implement and startup all widgets in view templates.
 			if(this._started){
 				return this;
 			}
@@ -137,7 +137,7 @@ define(["require", "dojo/when", "dojo/on", "dojo/dom-attr", "dojo/dom-style", "d
 
 		_startup: function(){
 			// summary:
-			//		startup widgets in view template.
+			//		startup widgets in view templates.
 			// tags:
 			//		private
 
@@ -153,7 +153,7 @@ define(["require", "dojo/when", "dojo/on", "dojo/dom-attr", "dojo/dom-style", "d
 
 		_startLayout: function(){
 			// summary:
-			//		startup widgets in view template.
+			//		startup widgets in view templates.
 			// tags:
 			//		private
 			this.app.log("  > in app/ViewBase _startLayout firing layout for name=[",this.name,"], parent.name=[",this.parent.name,"]");

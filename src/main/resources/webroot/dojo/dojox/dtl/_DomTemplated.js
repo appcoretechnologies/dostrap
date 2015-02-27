@@ -43,8 +43,8 @@ define([
 		setTemplate: function(/*String|dojo/url*/ template, /*dojox/dtl/Context?*/ context){
 			// summary:
 			//		Quickly switch between templated by location
-			// template:
-			//		The new template.
+			// templates:
+			//		The new templates.
 			// context:
 			//		The runtime context.
 			if(dojox.dtl.text._isTemplate(template)){
@@ -56,11 +56,11 @@ define([
 		},
 		render: function(/*dojox/dtl/Context?*/ context, /*dojox/dtl/DomTemplate?*/ tpl){
 			// summary:
-			//		Renders this template.
+			//		Renders this templates.
 			// context:
 			//		The runtime context.
 			// tpl:
-			//		The template to render. Optional.
+			//		The templates to render. Optional.
 			if(tpl){
 				this.template = tpl;
 			}

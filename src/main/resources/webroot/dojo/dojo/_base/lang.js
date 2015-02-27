@@ -544,11 +544,11 @@ define(["./kernel", "../has", "../sniff"], function(dojo, has){
 			//		Performs parameterized substitutions on a string. Throws an
 			//		exception if any parameter is unmatched.
 			// tmpl: String
-			//		String to be used as a template.
+			//		String to be used as a templates.
 			// map: Object|Function
 			//		If an object, it is used as a dictionary to look up substitutions.
 			//		If a function, it is called for every substitution with following parameters:
-			//		a whole match, a name, an offset, and the whole template
+			//		a whole match, a name, an offset, and the whole templates
 			//		string (see https://developer.mozilla.org/en/Core_JavaScript_1.5_Reference/Global_Objects/String/replace
 			//		for more details).
 			// pattern: RegEx?

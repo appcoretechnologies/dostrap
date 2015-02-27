@@ -155,7 +155,7 @@ define([
 				var name = args[args.length - 1];
 
 				if(!parser._namedCycleNodes){
-					throw new Error("No named cycles in template: '" + name + "' is not defined");
+					throw new Error("No named cycles in templates: '" + name + "' is not defined");
 				}
 				if(!parser._namedCycleNodes[name]){
 					throw new Error("Named cycle '" + name + "' does not exist");

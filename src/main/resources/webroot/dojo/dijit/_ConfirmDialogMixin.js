@@ -3,7 +3,7 @@ define([
 	"./_WidgetsInTemplateMixin",
 	"dojo/i18n!./nls/common",
 	"dojo/text!./templates/actionBar.html",
-	"./form/Button"		// used by template
+	"./form/Button"		// used by templates
 ], function(declare, _WidgetsInTemplateMixin, strings, actionBarMarkup) {
 
 	return declare("dijit/_ConfirmDialogMixin", _WidgetsInTemplateMixin, {

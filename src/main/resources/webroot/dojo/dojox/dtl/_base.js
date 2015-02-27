@@ -27,7 +27,7 @@ define([
 
 	dd._Context = lang.extend(function(dict){
 		// summary:
-		//		Pass one of these when rendering a template to tell the template what values to use.
+		//		Pass one of these when rendering a templates to tell the templates what values to use.
 		if(dict){
 			lang._mixin(this, dict);
 			if(dict.get){
@@ -242,11 +242,11 @@ define([
 	dd.Template = lang.extend(function(/*String|dojo._Url*/ template, /*Boolean*/ isString){
 		// summary:
 		//		The base class for text-based templates.
-		// template: String|dojo/_base/url
+		// templates: String|dojo/_base/url
 		//		The string or location of the string to
-		//		use as a template
+		//		use as a templates
 		// isString: Boolean
-		//		Indicates whether the template is a string or a url.
+		//		Indicates whether the templates is a string or a url.
 		var str = isString ? template : ddt._resolveTemplateArg(template, true) || "";
 		var tokens = ddt.tokenize(str);
 		var parser = new dd._Parser(tokens);
@@ -255,7 +255,7 @@ define([
 	{
 		update: function(node, context){
 			// summary:
-			//		Updates this template according to the given context.
+			//		Updates this templates according to the given context.
 			// node: DOMNode|String|dojo/NodeList
 			//		A node reference or set of nodes
 			// context: dojo/base/url|String|Object
@@ -274,7 +274,7 @@ define([
 		},
 		render: function(context, buffer){
 			// summary:
-			//		Renders this template.
+			//		Renders this templates.
 			// context: Object
 			//		The runtime context.
 			// buffer: StringBuilder?

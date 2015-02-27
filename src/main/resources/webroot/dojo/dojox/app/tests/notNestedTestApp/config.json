@@ -57,7 +57,7 @@
 			"defaultView": "Nav1"
 		},
 		"!phone" : {
-		//	"template": "notNestedTestApp/views/tablet/ViewScrollableLists.html",
+		//	"templates": "notNestedTestApp/views/tablet/ViewScrollableLists.html",
 		//	"controller": "notNestedTestApp/views/tablet/ViewScrollableLists",
 		//	"defaultView": "V2"
 			"defaultView": "Nav2+V2"

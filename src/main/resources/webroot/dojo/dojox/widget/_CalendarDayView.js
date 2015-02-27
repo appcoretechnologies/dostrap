@@ -19,7 +19,7 @@ define([
 		//		Instead, use dojox/widget._CalendarDay
 
 		// templateString: String
-		//		The template to be used to construct the widget.
+		//		The templates to be used to construct the widget.
 		templateString: template,
 
 		// datePart: String

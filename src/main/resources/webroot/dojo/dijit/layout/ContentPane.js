@@ -140,8 +140,8 @@ define([
 		// Flag to parser that I'll parse my contents, so it shouldn't.
 		stopParser: true,
 
-		// template: [private] Boolean
-		//		Flag from the parser that this ContentPane is inside a template
+		// templates: [private] Boolean
+		//		Flag from the parser that this ContentPane is inside a templates
 		//		so the contents are pre-parsed.
 		// TODO: this declaration can be commented out in 2.0
 		template: false,
@@ -184,8 +184,8 @@ define([
 		buildRendering: function(){
 			this.inherited(arguments);
 
-			// Since we have no template we need to set this.containerNode ourselves, to make getChildren() work.
-			// For subclasses of ContentPane that do have a template, does nothing.
+			// Since we have no templates we need to set this.containerNode ourselves, to make getChildren() work.
+			// For subclasses of ContentPane that do have a templates, does nothing.
 			if(!this.containerNode){
 				this.containerNode = this.domNode;
 			}

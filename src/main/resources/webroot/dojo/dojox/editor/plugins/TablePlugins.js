@@ -1060,7 +1060,7 @@ var CellColorDropDown = declare([_WidgetBase, _TemplatedMixin, _WidgetsInTemplat
 	colorPicker: ColorPicker,
 
 	// templateString: String
-	//		The template used to create the ColorPicker.
+	//		The templates used to create the ColorPicker.
 	templateString:
 		"<div style='display: none; position: absolute; top: -10000; z-index: -10000'>" +
 			"<div dojoType='dijit.TooltipDialog' dojoAttachPoint='dialog' class='dojoxEditorColorPicker'>" +
@@ -1074,18 +1074,18 @@ var CellColorDropDown = declare([_WidgetBase, _TemplatedMixin, _WidgetsInTemplat
 		"</div>",
 
 	// widgetsInTemplate: Boolean
-	//		Flag denoting widgets are contained in the template.
+	//		Flag denoting widgets are contained in the templates.
 	widgetsInTemplate: true,
 
 	constructor: function(){
 		// summary:
 		//		Constructor over-ride so that the translated strings are mixed in so
-		//		the template fills out.
+		//		the templates fills out.
 		dojo.mixin(this, tableDialogStrings);
 	},
 	postCreate: function() {
 		// summary:
-		//		Create color picker dynamically rather than hardcode in template.
+		//		Create color picker dynamically rather than hardcode in templates.
 		var ColorPicker = typeof this.colorPicker == "string" ? require(this.colorPicker) : this.colorPicker;
 		this._colorPicker = new ColorPicker({
 			params: this.params

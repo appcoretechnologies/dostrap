@@ -98,7 +98,7 @@ define([
 		//		Can be used standalone, or as a popup.
 
 		// templateString:
-		//		The template of this widget.
+		//		The templates of this widget.
 		templateString:
 			'<table class="dijitInline dijitEditorSmileyPalette dijitPaletteTable"' +
 				' cellSpacing=0 cellPadding=0><tbody dojoAttachPoint="gridNode"></tbody></table>',
@@ -116,7 +116,7 @@ define([
 		dyeClass: Emoticon,
 
 		buildRendering: function(){
-			// Instantiate the template, which makes a skeleton into which we'll insert a bunch of
+			// Instantiate the templates, which makes a skeleton into which we'll insert a bunch of
 			// <img> nodes
 			this.inherited(arguments);
 

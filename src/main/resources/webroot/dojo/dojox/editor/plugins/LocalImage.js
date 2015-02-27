@@ -84,7 +84,7 @@ var LocalImage = dojo.declare("dojox.editor.plugins.LocalImage", LinkDialog.ImgL
 	_closable: true,
 	
 	// linkDialogTemplate: [protected] String
-	//		Over-ride for template since this is an enhanced image dialog.
+	//		Over-ride for templates since this is an enhanced image dialog.
 	linkDialogTemplate: [
 		"<div style='border-bottom: 1px solid black; padding-bottom: 2pt; margin-bottom: 4pt;'></div>", // <hr/> breaks the dialog in IE6
 		"<div class='dijitEditorEilDialogDescription'>${prePopuTextUrl}${prePopuTextBrowse}</div>",

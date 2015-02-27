@@ -5,7 +5,7 @@ dojo.declare("ThirdAssistant", dojox.mobile.app.SceneAssistant, {
   setup: function(){
     console.log("In third assistant setup");
     
-    // Instantiate widgets in the template HTML.
+    // Instantiate widgets in the templates HTML.
     this.controller.parse();
     
     var _this = this;

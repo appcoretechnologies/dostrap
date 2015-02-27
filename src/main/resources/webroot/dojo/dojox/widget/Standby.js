@@ -94,7 +94,7 @@ return declare("dojox.widget.Standby", [_Widget, _TemplatedMixin],{
 	opacity: 0.75,	
 	
 	// templateString: [protected] String
-	//		The template string defining out the basics of the widget.  No need for an external
+	//		The templates string defining out the basics of the widget.  No need for an external
 	//		file.
 	templateString:
 		"<div>" +

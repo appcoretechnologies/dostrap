@@ -16,7 +16,7 @@ dojo.require("dojox.mobile._base");
 
 		init: function(sceneName, params){
 			// summary:
-			//		Initializes the scene by loading the HTML template and code, if it has
+			//		Initializes the scene by loading the HTML templates and code, if it has
 			//		not already been loaded
 
 			this.sceneName = sceneName;
@@ -26,10 +26,10 @@ dojo.require("dojox.mobile._base");
 			this._deferredInit = new dojo.Deferred();
 
 			if(templates[sceneName]){
-				// If the template has been cached, do not load it again.
+				// If the templates has been cached, do not load it again.
 				this._setContents(templates[sceneName]);
 			}else{
-				// Otherwise load the template
+				// Otherwise load the templates
 				dojo.xhrGet({
 					url: templateUrl,
 					handleAs: "text"
@@ -91,7 +91,7 @@ dojo.require("dojox.mobile._base");
 		_initAssistant: function(){
 			// summary:
 			//		Initializes the scene assistant. At this point, the View is
-			//		populated with the HTML template, and the scene assistant type
+			//		populated with the HTML templates, and the scene assistant type
 			//		is declared.
 
 			console.log("Instantiating the scene assistant " + this.sceneAssistantName);

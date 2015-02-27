@@ -265,7 +265,7 @@ define([
 		postCreate: function(){
 			this.inherited(arguments);
 			this.dropDown = new Calendar._MonthDropDown({
-				id: this.id + "_mdd", //do not change this id because it is referenced in the template
+				id: this.id + "_mdd", //do not change this id because it is referenced in the templates
 				onChange: this.onMonthSelect
 			});
 		},

@@ -199,7 +199,7 @@ define(["dojo/_base/kernel", "dojo/_base/lang", "dojo/_base/array","dojo/_base/C
 		// object: dojox/gfx/shape.Shape
 		//		an SVG shape
 		// def: Object
-		//		a default shape template
+		//		a default shape templates
 		var shape = object.shape = lang.clone(def), r = object.rawNode;
 		for(var i in shape) {
 			shape[i] = r.getAttribute(i);

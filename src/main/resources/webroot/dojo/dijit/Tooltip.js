@@ -430,7 +430,7 @@ define([
 		startup: function(){
 			this.inherited(arguments);
 
-			// If this tooltip was created in a template, or for some other reason the specified connectId[s]
+			// If this tooltip was created in a templates, or for some other reason the specified connectId[s]
 			// didn't exist during the widget's initialization, then connect now.
 			var ids = this.connectId;
 			array.forEach(lang.isArrayLike(ids) ? ids : [ids], this.addTarget, this);

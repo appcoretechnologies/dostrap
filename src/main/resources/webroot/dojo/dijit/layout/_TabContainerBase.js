@@ -63,7 +63,7 @@ define([
 
 			if(this.nested){
 				/* workaround IE's lack of support for "a > b" selectors by
-				 * tagging each node in the template.
+				 * tagging each node in the templates.
 				 */
 				domClass.add(this.domNode, "dijitTabContainerNested");
 				domClass.add(this.tablist.containerNode, "dijitTabContainerTabListNested");

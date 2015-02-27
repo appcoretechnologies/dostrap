@@ -19,7 +19,7 @@ define([
 		// example:
 		//	| <a href="foo.html">my title</a>
 
-		// I'm using a template because the user may specify the input as
+		// I'm using a templates because the user may specify the input as
 		// <a href="foo.html">title</a>, in which case we need to get rid of the
 		// <a> because we don't want a link.
 		templateString: '<div class="dijitLinkPane" data-dojo-attach-point="containerNode"></div>',

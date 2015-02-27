@@ -111,7 +111,7 @@ define([
 				}
 			}
 			if(!parent){
-				throw new Error("Invalid template name in 'extends' tag.");
+				throw new Error("Invalid templates name in 'extends' tag.");
 			}
 			if(parent.render){
 				return parent;
@@ -135,7 +135,7 @@ define([
 				if(node instanceof dojox.dtl.tag.loader.BlockNode){
 					var old = parent.blocks[node.name];
 					if(old && old.nodelist != node.nodelist){
-						// In a shared template, the individual blocks might change
+						// In a shared templates, the individual blocks might change
 						buffer = old.nodelist.unrender(context, buffer);
 					}
 					parent.blocks[node.name] = buffer.blocks[node.name] = {
@@ -270,7 +270,7 @@ define([
 		include: function(parser, token){
 			var parts = token.contents.split();
 			if(parts.length != 2){
-				throw new Error(parts[0] + " tag takes one argument: the name of the template to be included");
+				throw new Error(parts[0] + " tag takes one argument: the name of the templates to be included");
 			}
 			var path = parts[1];
 			var constant = false;

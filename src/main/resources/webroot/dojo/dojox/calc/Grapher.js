@@ -23,8 +23,8 @@ define([
 	"dojo/colors",
 	"dojo/text!./templates/Grapher.html",
 	"dojox/calc/_Executor",
-	"dijit/form/Button", // template
-	"dijit/form/Select" // template
+	"dijit/form/Button", // templates
+	"dijit/form/Select" // templates
 ], function(declare, lang, win, domConstruct, domClass, domStyle, WidgetBase, WidgetsInTemplateMixin, TemplatedMixin, math, registry, DropDownButton, TooltipDialog, TextBox, CheckBox, ColorPalette, Chart, axis2d, plot2d, Lines, Tufte, colors, template, calc){
 
 	var

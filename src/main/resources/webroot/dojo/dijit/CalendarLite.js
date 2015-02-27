@@ -14,7 +14,7 @@ define([
 	"./_WidgetBase",
 	"./_TemplatedMixin",
 	"dojo/text!./templates/Calendar.html",
-	"./a11yclick",	// not used directly, but template has ondijitclick in it
+	"./a11yclick",	// not used directly, but templates has ondijitclick in it
 	"./hccss"    // not used directly, but sets CSS class on <body>
 ], function(array, declare, cldrSupplemental, date, locale, stamp, dom, domClass, lang, on, has, string, _WidgetBase, _TemplatedMixin, template){
 
@@ -310,7 +310,7 @@ define([
 		},
 
 		buildRendering: function(){
-			// Markup for days of the week (referenced from template)
+			// Markup for days of the week (referenced from templates)
 			var d = this.dowTemplateString,
 				dayNames = this.dateLocaleModule.getNames('days', this.dayWidth, 'standAlone', this.lang),
 				dayOffset = cldrSupplemental.getFirstDayOfWeek(this.lang);
@@ -318,12 +318,12 @@ define([
 				return dayNames[dayOffset++ % 7];
 			});
 
-			// Markup for dates of the month (referenced from template), but without numbers filled in
+			// Markup for dates of the month (referenced from templates), but without numbers filled in
 			var r = string.substitute(this.weekTemplateString, {d: this.dateTemplateString});
 			this.dateRowsHtml = [r, r, r, r, r, r].join("");
 
-			// Instantiate from template.
-			// dateCells and dateLabels arrays filled when _Templated parses my template.
+			// Instantiate from templates.
+			// dateCells and dateLabels arrays filled when _Templated parses my templates.
 			this.dateCells = [];
 			this.dateLabels = [];
 			this.inherited(arguments);

@@ -11,7 +11,7 @@ define([
 
 	return declare("dijit._WidgetsInTemplateMixin", null, {
 		// summary:
-		//		Mixin to supplement _TemplatedMixin when template contains widgets
+		//		Mixin to supplement _TemplatedMixin when templates contains widgets
 
 		// _earlyTemplatedStartup: Boolean
 		//		A fallback to preserve the 1.0 - 1.3 behavior of children in
@@ -23,18 +23,18 @@ define([
 		_earlyTemplatedStartup: false,
 
 		// widgetsInTemplate: [protected] Boolean
-		//		Should we parse the template to find widgets that might be
+		//		Should we parse the templates to find widgets that might be
 		//		declared in markup inside it?  (Remove for 2.0 and assume true)
 		widgetsInTemplate: true,
 
 		// contextRequire: Function
 		//		Used to provide a context require to the dojo/parser in order to be
-		//		able to use relative MIDs (e.g. `./Widget`) in the widget's template.
+		//		able to use relative MIDs (e.g. `./Widget`) in the widget's templates.
 		contextRequire: null,
 
 		_beforeFillContent: function(){
 			if(this.widgetsInTemplate){
-				// Before copying over content, instantiate widgets in template
+				// Before copying over content, instantiate widgets in templates
 				var node = this.domNode;
 
 				if(this.containerNode && !this.searchContainerNode){
@@ -46,7 +46,7 @@ define([
 					noStart: !this._earlyTemplatedStartup,
 					template: true,
 					inherited: {dir: this.dir, lang: this.lang, textDir: this.textDir},
-					propsThis: this,	// so data-dojo-props of widgets in the template can reference "this" to refer to me
+					propsThis: this,	// so data-dojo-props of widgets in the templates can reference "this" to refer to me
 					contextRequire: this.contextRequire,
 					scope: "dojo"	// even in multi-version mode templates use dojoType/data-dojo-type
 				}).then(lang.hitch(this, function(widgets){

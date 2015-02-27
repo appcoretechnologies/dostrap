@@ -22,7 +22,7 @@ dojo.experimental("dojox.widget.Iterator"); // level: prototype, designed for di
 	|
 	|	var iter = new dojox.widget.Iterator({
 	|		store: store,
-	|		template: ""
+	|		templates: ""
 	|	});
 	|
 
@@ -35,7 +35,7 @@ dojo.experimental("dojox.widget.Iterator"); // level: prototype, designed for di
 	|
 	|	var iter = new dojox.widget.Iterator({
 	|		data: dataArr,
-	|		template: ""
+	|		templates: ""
 	|	});
 
 	example:
@@ -47,7 +47,7 @@ dojo.experimental("dojox.widget.Iterator"); // level: prototype, designed for di
 	|
 	|	var iter = new dojox.widget.Iterator({
 	|		data: dataArr,
-	|		template: ""
+	|		templates: ""
 	|	});
 
 */

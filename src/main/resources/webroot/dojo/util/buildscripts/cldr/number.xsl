@@ -183,7 +183,7 @@
 
 <xsl:template name="ignore" match="defaultNumberingSystem | otherNumberingSystems | currencies | miscPatterns"></xsl:template>
 
-  <!-- too bad that can only use standard xsl:call-template(name can not be variable) 
+  <!-- too bad that can only use standard xsl:call-templates(name can not be variable)
          error occurs if use <saxson:call-templates($templateToCall)  /> -->
  <xsl:template name="invoke_template_by_name">
      <xsl:param name="templateName"></xsl:param>

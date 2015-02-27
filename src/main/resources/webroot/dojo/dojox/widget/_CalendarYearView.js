@@ -13,7 +13,7 @@ define([
 		//		A Calendar view listing 12 years
 
 		// templateString: String
-		//		The template to be used to construct the widget.
+		//		The templates to be used to construct the widget.
 		templateString: template,
 
 		displayedYears: 6,

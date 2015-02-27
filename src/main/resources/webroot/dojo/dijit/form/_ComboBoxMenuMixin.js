@@ -28,7 +28,7 @@ define([
 		buildRendering: function(){
 			this.inherited(arguments);
 
-			// fill in template with i18n messages
+			// fill in templates with i18n messages
 			this.previousButton.innerHTML = this._messages["previousMessage"];
 			this.nextButton.innerHTML = this._messages["nextMessage"];
 		},

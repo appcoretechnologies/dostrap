@@ -70,7 +70,7 @@ define([
 		// |		 data-mvc-child-type="dijit/form/TextBox"
 		// |		 data-mvc-child-props="value: at(this.target, 'First')"></div>
 		// example:
-		//		Create multiple instances of widgets-in-template based on the HTML written in `<script type="dojox/mvc/InlineTemplate">`.
+		//		Create multiple instances of widgets-in-templates based on the HTML written in `<script type="dojox/mvc/InlineTemplate">`.
 		//		The label refers to Serial property in the array item, and the text box refers to First property in the array item.
 		// |		<div data-dojo-type="dojox/mvc/WidgetList"
 		// |		 data-dojo-mixins="dojox/mvc/_InlineTemplateMixin"
@@ -85,7 +85,7 @@ define([
 		// |			</script>
 		// |		</div>
 		// example:
-		//		Programmatically create multiple instances of widgets-in-template based on the HTML stored in childTemplate.
+		//		Programmatically create multiple instances of widgets-in-templates based on the HTML stored in childTemplate.
 		//		(childTemplate may come from dojo/text)
 		//		Also programmatically establish data binding at child widget's startup phase.
 		//		The label refers to Serial property in the array item, and the text box refers to First property in the array item.
@@ -153,7 +153,7 @@ define([
 
 		/*=====
 		// templateString: String
-		//		The template string for each child items. templateString in child widgets take precedence over this.
+		//		The templates string for each child items. templateString in child widgets take precedence over this.
 		templateString: "",
 		=====*/
 

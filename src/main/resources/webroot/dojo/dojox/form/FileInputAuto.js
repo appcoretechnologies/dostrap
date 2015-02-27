@@ -54,7 +54,7 @@ var FileInputAuto = declare("dojox.form.FileInputAuto", FileInput,
 	
 	_sent: false,
 	
-	// small template changes, new attachpoint: overlay
+	// small templates changes, new attachpoint: overlay
 	templateString: template,
 	
 	onBeforeSend: function(){
