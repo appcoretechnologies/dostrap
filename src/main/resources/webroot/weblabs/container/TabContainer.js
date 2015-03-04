@@ -57,7 +57,7 @@ define(['dojo/_base/declare',
 
                         if(selected){
                             navButton = new tabbuttons({label:node.title, buttonClass:"active"});
-                         
+                        
                             dest.appendChild(node);
                         }
                         else{
