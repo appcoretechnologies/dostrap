@@ -8,8 +8,7 @@ define(['dojo/_base/declare',
     "dojo/dom-construct",
     'weblabs/container/tabbuttons',
     "dojo/dom-style",
-    "dojo/dom-attr",
-	"dojo/_base/array"
+    "dojo/dom-attr"
 ], function (declare, _WidgetBase, _Templated, templateString, dom, domClass,_Container, domConstruct, tabbuttons,domStyle,domAttr) {
   var isActive= false;
 
@@ -39,43 +38,41 @@ define(['dojo/_base/declare',
          postMixInProperties: function () {
             this.inherited(arguments);
         },
-		startup: function(){
-			if(this._started){
-				return;
-			}
-alert("hi");
-			var children = this.getChildren();
 
-			// Setup each page panel to be initially hidden
-			array.forEach(children, this._setupChild, this);
+        _fillContent: function (/*DomNode*/ source) {
 
-			// Figure out which child to initially display, defaulting to first one
-			if(this.persist){
-				this.selectedChildWidget = registry.byId(cookie(this.id + "_selectedChild"));
-			}else{
-				array.some(children, function(child){
-					if(child.selected){
-						this.selectedChildWidget = child;
-					}
-					return child.selected;
-				}, this);
-			}
-			var selected = this.selectedChildWidget;
-			if(!selected && children[0]){
-				selected = this.selectedChildWidget = children[0];
-				selected.selected = true;
-			}
+          
+            var dest = this.containerNode;
+		
+            if(source && dest){
+                while(source.hasChildNodes()){
+                    var node=source.firstChild;  // Firstchild= content pane
+                    source.removeChild(node);
 
-			// Publish information about myself so any StackControllers can initialize.
-			// This needs to happen before this.inherited(arguments) so that for
-			// TabContainer, this._contentBox doesn't include the space for the tab labels.
-			topic.publish(this.id + "-startup", {children: children, selected: selected, textDir: this.textDir});
+                    console.debug('node '+node.nodeName );   //HTML nodeName
+                    if(node.nodeName =='DIV'){
+                    var navButton;
+                     var selected = domAttr.get(node, "selected");
+	
 
-			// Startup each child widget, and do initial layout like setting this._contentBox,
-			// then calls this.resize() which does the initial sizing on the selected child.
-			this.inherited(arguments);
-		}
-       
+                        if(selected){
+                            navButton = new tabbuttons({label:node.title, buttonClass:"active"});
+                         
+                            dest.appendChild(node);
+                        }
+                        else{
+                            navButton  = new tabbuttons({label:node.title});
+                            domStyle.set(node, 'display', 'none');
+                            dest.appendChild(node);
+                        }
+
+                            domConstruct.place(navButton.menuNode, this.tabNode);
+
+                    }
+                }
+            }
+
+        }
 
     });
 });
