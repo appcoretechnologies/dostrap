@@ -14,7 +14,7 @@ define([
 		templateString : template,
 		menuItemType: "",
 		disabled: "",
-		Label:"",
+		label:"",
 		_setMenuItemTypeAttr : function(val) {
 			var displayClass = "";
 			if (val == "divider") {
@@ -30,10 +30,12 @@ define([
 			//		Hook for set('label', ...) to work.
 			// description:
 			//		Set the label (text) of the button; takes an HTML string.
+		
 			this._set("label", val);
-			var labelNode = this.containerNode || this.focusNode;
+			var labelNode = this.containerNode;
 			labelNode.innerHTML = val;
 		},
+		
 		
 		_setDisabledAttr : function(val) {
 			var displayClass = "";
@@ -45,6 +47,7 @@ define([
 				domClass.add(this.menuItemNode, displayClass);
 			}
 			this._set("disabled", val);
+			
 		}
 	});
 

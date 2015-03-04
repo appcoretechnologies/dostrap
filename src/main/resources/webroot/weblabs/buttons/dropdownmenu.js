@@ -66,18 +66,7 @@ define([
 			}
 			this._set("disabled", val);
 		},
-			_setLabelAttr: function(/*String*/ val){
-			// summary:
-			//		Hook for set('label', ...) to work.
-			// description:
-			//		Set the label (text) of the button; takes an HTML string.
-			this._set("label", val);
-			var labelNode = this.dropdownMenuNode;
-			labelNode.innerHTML = val;
-			
-		},
-		
-			addChild: function(/*dijit/_WidgetBase*/ widget, /*int?*/ insertIndex){
+		addChild: function(/*dijit/_WidgetBase*/ widget, /*int?*/ insertIndex){
 			// summary:
 			//		Makes the given widget a child of this widget.
 			// description:
@@ -114,7 +103,19 @@ define([
 			if(this._started && !widget._started){
 				widget.startup();
 			}
-		} 
+		},
+			_setLabelAttr: function(/*String*/ val){
+			// summary:
+			//		Hook for set('label', ...) to work.
+			// description:
+			//		Set the label (text) of the button; takes an HTML string.
+			this._set("label", val);
+			var labelNode = this.dropdownMenuNode;
+			labelNode.innerHTML = val;
+			
+		}
+		
+			
 		
 	
 	});
