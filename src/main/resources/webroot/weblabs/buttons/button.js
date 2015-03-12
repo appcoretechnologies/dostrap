@@ -17,6 +17,7 @@ define(['dojo/_base/declare',
         type: "default",
 
         setButtonClass: function () {
+
             var buttonClass = "btn ";
             switch (this.size) {
                 case "small":

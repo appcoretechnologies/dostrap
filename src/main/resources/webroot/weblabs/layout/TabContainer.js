@@ -8,41 +8,70 @@ define(['dojo/_base/declare',
     "dojo/dom-construct",
     'weblabs/layout/navButton',
     "dojo/dom-style",
-    "dojo/dom-attr"
-], function (declare, _WidgetBase, _Templated, templateString, dom, domClass,_Container, domConstruct, NavButton,domStyle,domAttr) {
-  var isActive= false;
+    "dojo/dom-attr",
+    'dijit/dijit',
+    'dojo/_base/array'
+
+], function (declare, _WidgetBase, _Templated, templateString, dom, domClass,_Container, domConstruct, NavButton,domStyle,domAttr, dijit, array) {
+  var isActive= true;
 
     return declare([ _WidgetBase, _Templated, _Container], {
       //  widgetsInTemplate: true,
         showLabel: false,
         templateString: templateString,
-      /* toggleClass: "",
-        _setToggleClassAttr: { node: "menuNode", type: "class" },
-        _connectHandlers : [],
-
-        buildRendering: function(){
-            this.inherited(arguments);
-            var onClickHandler = this.connect(this.domNode, "onclick", "toggleNavBar");
-            this._connectHandlers.push(onClickHandler);
-        },
-        toggleNavBar: function(){
-            if(isActive)
-            {
-                this.set("toggleClass","");
-                isActive=false;
-            }else{
-                this.set("toggleClass","active");
-                isActive=true;
+        activeNode: null,
+        contentPane:null,
+        startup: function(){
+            if(this._started){
+                return;
             }
-        },*/
 
-         postMixInProperties: function () {
-            this.inherited(arguments);
+            var dest = this.getChildren();
+
+            // Setup each page panel to be initially hidden
+            array.forEach(dest, this.setupChild, this);
+           //var contentPane = dijit.byNode(child);
         },
 
-        _fillContent: function (/*DomNode*/ source) {
+           setupChild:function(child){
+              //  var node=child.firstChild;  // Firstchild= content pane
+                //child.removeChild(node);
 
-            var firstNode = true;
+                //console.debug('node '+node.nodeName );   //HTML nodeName
+               // if(node.nodeName =='DIV'){
+                    var navButton;
+                    var selected = child.selected;
+                    if(selected){
+                        navButton = new NavButton({label:child.title, buttonClass:"active", contentPane:child});
+
+                        //this.containerNode.appendChild(child.domNode); //we are attaching Child domNode into containerNode
+                            //dest.appendChild(child);
+                       // var contentPane = dijit.byNode(containerNode); // we get the widget of the particular node.
+                        firstNode = false;
+                       this.activeNode=navButton;
+                    }
+                    else{
+                        navButton  = new NavButton({label:child.title, contentPane:child});
+                        domStyle.set(child.domNode, 'display', 'none');
+                      //  this.containerNode.appendChild(child.domNode);
+                    }
+
+                    domConstruct.place(navButton.menuNode, this.tabNode);
+
+
+            },
+
+        setActiveNode: function(activeNode){
+        this.activeNode=activeNode;
+    },
+
+    getActiveNode: function(){
+        return this.activeNode;
+    },
+
+        //_fillContent: function (/*DomNode*/ source) {
+
+          /*  var firstNode = true;
             var dest = this.containerNode;
             if(source && dest){
                 while(source.hasChildNodes()){
@@ -56,10 +85,11 @@ define(['dojo/_base/declare',
 
                         if(selected){
                             navButton = new NavButton({label:node.title, buttonClass:"active"});
-                            firstNode = false;
                             dest.appendChild(node);
+                           var contentPane = dijit.byNode(node);
+                           firstNode = false;
                         }
-                        else{
+                     else{
                             navButton  = new NavButton({label:node.title});
                             domStyle.set(node, 'display', 'none');
                             dest.appendChild(node);
@@ -71,7 +101,7 @@ define(['dojo/_base/declare',
                 }
             }
 
-        }
+        }*/
 
     });
 });

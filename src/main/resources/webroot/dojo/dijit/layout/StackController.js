@@ -1,4 +1,4 @@
-define([
+domNodedefine([
 	"dojo/_base/array", // array.forEach array.indexOf array.map
 	"dojo/_base/declare", // declare
 	"dojo/dom-class",
