@@ -113,10 +113,10 @@ define(['dojo/_base/declare',
             console.debug("type" + this.type);
 
             if (source && (!this.params || !("label" in this.params))) {
-                var sourceLabel = source.innerHTML;
-                if (sourceLabel) {
+              var sourceLabel = source.innerHTML;
+              if (sourceLabel) {
                     this.label = sourceLabel; // _applyAttributes will be called after buildRendering completes to update the DOM
-                }
+             }
             }
         }
     });

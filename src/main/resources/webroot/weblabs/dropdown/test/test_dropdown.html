@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dojo Learning</title>
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <script src="../../../dojo/dojo/dojo.js" data-dojo-config="'cacheBust:new Date();parseOnLoad':true,'async':true,
+     'packages':[{'name':'weblabs','location':'./../../weblabs'}],'parseOnLoad':true"></script>
+</head>
+<script>
+    require()
+</script>
+<script>
+    require(["dojo/parser"]);
+</script>
+<body>
+<div data-dojo-type="weblabs/dropdown/dropdown" data-dojo-props='label:"Poojary", size:"medium",type:"danger"'>
+ <span data-dojo-type="weblabs/dropdown/menuItem"data-dojo-props='label:"Amit", size:"medium",type:"warning"'></span>
+    <span data-dojo-type="weblabs/dropdown/menuItem"data-dojo-props='label:"Anil", size:"medium",type:"default"'></span>
+</div>
+</body>
+</html>
