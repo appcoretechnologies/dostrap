@@ -1,12 +1,12 @@
 define(['dojo/_base/declare',
     'dijit/_WidgetBase',
     'dijit/_TemplatedMixin',
-    "dojo/text!./templates/menuItem.html"
+    "dojo/text!./templates/menuItem.html",
 ], function (declare, _WidgetBase, _Templated, templateString) {
     return declare([ _WidgetBase, _Templated], {
         templateString:templateString,
         label: "default",
-        buttonClass:"btn btn-danger",
+        buttonClass:"btn btn-default",
         size:"small",
         type:"default",
 
@@ -44,7 +44,7 @@ define(['dojo/_base/declare',
                     break;
             }
             this.buttonClass = buttonClass;
-           this.containerNode.className = this.buttonClass;
+            this.containerNode.className = this.buttonClass;
         },
         _setSizeAttr: function (/*String*/ size) {
             this.inherited(arguments);

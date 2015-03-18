@@ -7,15 +7,27 @@
      'packages':[{'name':'weblabs','location':'./../../weblabs'}],'parseOnLoad':true"></script>
 </head>
 <script>
-    require()
+    require(["weblabs/dropdown/dropdown", "weblabs/dropdown/menuItem"], //_Container should be added in dropdown widget to know wer we need to attach child
+            function(dropdown, menuItem){
+                var dropdown=new dropdown({label:"Amit"});
+                var menuItem= new menuItem({label:"Heroooooo"});
+                dropdown.addChild(menuItem);
+                dropdown.set("label", "Amit Poojary");
+                dropdown.set("size", "medium");
+                dropdown.set("type", "warning");
+                dropdown.placeAt("widgetContainer");
+    });
 </script>
+
 <script>
     require(["dojo/parser"]);
 </script>
+
 <body>
-<div data-dojo-type="weblabs/dropdown/dropdown" data-dojo-props='label:"Poojary", size:"medium",type:"danger"'>
- <span data-dojo-type="weblabs/dropdown/menuItem"data-dojo-props='label:"Amit", size:"medium",type:"warning"'></span>
-    <span data-dojo-type="weblabs/dropdown/menuItem"data-dojo-props='label:"Anil", size:"medium",type:"default"'></span>
+<div data-dojo-type="weblabs/dropdown/dropdown" data-dojo-props='label:"Amit", size:"medium",type:"danger"'>
+ <span data-dojo-type="weblabs/dropdown/menuItem"data-dojo-props='label:"Anil", size:"medium",type:"default"'></span>
+    <span data-dojo-type="weblabs/dropdown/menuItem"data-dojo-props='label:"Poojary", size:"medium",type:"default"'></span>
 </div>
+<div id="widgetContainer"></div>
 </body>
 </html>

@@ -2,16 +2,18 @@ define(['dojo/_base/declare',
     'dijit/_WidgetBase',
     'dijit/_TemplatedMixin',
     "dojo/text!./templates/dropdown.html",
-    'dojo/domReady!'
-], function (declare, _WidgetBase, _Templated, templateString, dom) {
+    'dojo/domReady!',
+    'dijit/_Container'
+], function (declare, _WidgetBase, _Templated, templateString, dom, _Container) {
     var isOpen=false;
-    return declare([ _WidgetBase, _Templated], {
+    return declare([ _WidgetBase, _Templated, _Container], {
         templateString:templateString,
         label: "default",
         buttonClass:"btn btn-danger dropdown-toggle",
         size:"small",
         type:"default",
         toggleClass: "dropdown",
+        buttonCaret:"caret",
         _setToggleClassAttr: { node: "menuNode", type: "class" },
         _connectHandlers : [],
 
@@ -32,7 +34,7 @@ define(['dojo/_base/declare',
         },
 
         setButtonClass:function(){
-            var buttonClass="btn dropdown-toggle";
+            var buttonClass="btn dropdown-toggle ";
             switch (this.size) {
                 case "small":
                     buttonClass += " btn-sm";
@@ -76,6 +78,18 @@ define(['dojo/_base/declare',
             this.inherited(arguments);
             this.type = Type;
             this.setButtonClass();
-        }
+        },
+        _setLabelAttr: function (/*String*/ content) {      //_set is called from _widgetBase.js
+            // summary:
+            //		Hook for set('label', ...) to work.
+            // description:
+            //		Set the label (text) of the button; takes an HTML string.
+            //		If the label is hidden (showLabel=false) then and no title has
+            //		been specified, then label is also set as title attribute of icon.
+            this.inherited(arguments);
+            this.labelNode.innerHTML = content;
+           // this.caretNode.className=this.buttonCaret;
+
+        },
     });
 });
