@@ -31,6 +31,10 @@ define([
 		footerclass:"",
 		
 		templateString: template,
+		
+		startup : function() {
+		 this.inherited(arguments);
+		},
 			_setBodyAttr: function(val){
 		
 			
