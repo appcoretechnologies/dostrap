@@ -15,8 +15,7 @@
 require([
   "dijit/dijit",
   "dijit/form/Button",
-  "weblabs/buttons/panel",
-  "weblabs/buttons/panelheader"
+  "weblabs/buttons/panel"
 ]);
 </script>
 
@@ -24,10 +23,22 @@ require([
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"></meta>
 </head>
 
-
-<div data-dojo-props= "content:'Body Content', header:'Header Content', footer:'Footer Content'"  data-dojo-type="weblabs/buttons/panel" >
-</div>
-
+<h1>Declarative Example for Panel</h1>
+	<hr></hr>
+<div data-dojo-props= "content:'Body Content', header:'Header Content', footer:'Footer Content'"  style="width: 250px" data-dojo-type="weblabs/buttons/panel" >
+</div> 
+	<h1>Programmatically Created  Panel</h1>
+	<hr></hr>
+	<div id="tc1-prog"></div>
+ <script>
+	require(["weblabs/buttons/panel", "dojo/domReady!"], function(Panel){
+	    var tc = new Panel({content:'Javascript based Panel example',
+							header:'Programatically Created Panel -  Header',
+							footer:'Programatically created Panel - Footer'},'tc1-prog');
+					   tc.startup();
+			});
+	</script> 
+	<br></br>
 
 
 </body>
