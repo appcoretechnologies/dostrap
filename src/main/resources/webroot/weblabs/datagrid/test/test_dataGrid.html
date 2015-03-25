@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Grid</title>
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <script src="../../../dojo/dojo/dojo.js" data-dojo-config="'cacheBust:new Date();parseOnLoad':true,'async':true,
+     'packages':[{'name':'weblabs','location':'./../../weblabs'}],'parseOnLoad':true"></script>
+</head>
+
+<script>
+    require(["dojo/parser"]);
+</script>
+
+<script>
+    var layout = [
+        {label: 'Index'},
+        {label: 'Date'}
+
+    ];
+</script>
+
+
+<body>
+    <span data-dojo-type="weblabs/datagrid/dataGrid" data-dojo-props="structure:layout"></span>
+</body>
+</html>
