@@ -26,27 +26,17 @@ define([
 		labelClass: "btn btn-default",
 		body:"",
 		header:"",
+		footer:"",
 		headerclass:"",
+		footerclass:"",
 		
 		templateString: template,
-		postCreate: function(){
-            		this.connect(this.domNode, "onclick", "alertME");
-        		},
-		alertME: function(){
-			alert(" publish: " );
-            		topic.publish("giri/topic", { msg:this.domNode});
-        	
-		var handle = topic.subscribe("giri/topic", function(e){
-    			alert(" received: " + e.msg.className);
-    			handle.remove();
-		});
-		},
-	
 		
+		startup : function() {
+		 this.inherited(arguments);
+		},
 			_setBodyAttr: function(val){
 		
-		
-			
 			
 		},
 		
@@ -54,8 +44,13 @@ define([
 			this._set("header", val);
 			var labelNode = this.headerNode;
 			labelNode.innerHTML = val;
-		}
-			
+		},
+		
+			_setFooterAttr: function(val){
+			this._set("footer", val);
+			var labelNode = this.footerNode;
+			labelNode.innerHTML = val;
+		}	
 
 
 		// Map widget attributes to DOMNode attributes.
