@@ -4,8 +4,7 @@
 <meta charset="utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <title>Untitled</title>
-  <!-- Bootstrap core CSS --><link href="../css/bootstrap.min.css" rel="stylesheet">
-<link href="../css/bootstrap-theme.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="../../css/bootstrap.css">
 
 <!-- <link rel="stylesheet" href="../dojo/dijit/themes/claro/claro.css"> -->
     <!-- Custom styles for this template -->
@@ -15,25 +14,10 @@
 require([
   "dijit/dijit",
   "dojo/parser",
-  "dojox/io/xhrScriptPlugin",
-  "dojo/data/ItemFileReadStore",
-  "dojox/data/CsvStore",
   "dijit/form/Button",
-  "dijit/form/ComboButton",
-  "dijit/Menu",
-  "dijit/MenuItem",
-  "dijit/form/DropDownButton",
-  "dijit/layout/BorderContainer",
-  "dijit/layout/ContentPane",
   "dijit/layout/AccordionContainer",
-  "dijit/MenuBar",
-  "dijit/MenuBar",
-  "dijit/PopupMenuBarItem",
-  "dijit/layout/TabContainer",
-   "dijit/MenuItem",
-   "weblabs/buttons/DropDown",
-    "weblabs/buttons/MenuItem",
-	"weblabs/buttons/DropDownMenu"
+   "weblabs/form/DropDown",
+    "weblabs/form/MenuItem"
 ]);
 </script>
 
@@ -43,16 +27,16 @@ require([
 <body data-maq-flow-layout="true" data-maq-comptype="sketchlofi" class="claro" data-maq-ws="collapse" data-maq-appstates="{}" data-maq-device="android_340x480" id="myapp">
 
 <div id="test"/>
-<div data-dojo-type="weblabs/buttons/DropDown" data-dojo-props="label: 'DropDown'">
-<span data-dojo-type="weblabs/buttons/MenuItem"  >Action One</span>
-<span data-dojo-type="weblabs/buttons/MenuItem">Some Other Action</span>
-<span data-dojo-type="weblabs/buttons/MenuItem" data-dojo-props="disabled:'disabled'">Something else here</span>
-<span data-dojo-type="weblabs/buttons/MenuItem" data-dojo-props="menuItemType: 'divider'">
+<div data-dojo-type="weblabs/form/dropdown" data-dojo-props="label: 'DropDown'">
+<span data-dojo-type="weblabs/form/MenuItem"  >Action One</span>
+<span data-dojo-type="weblabs/form/MenuItem">Some Other Action</span>
+<span data-dojo-type="weblabs/form/MenuItem" data-dojo-props="disabled:'disabled'">Something else here</span>
+<span data-dojo-type="weblabs/form/MenuItem" data-dojo-props="menuItemType: 'divider'">
 </span>
-<span data-dojo-type="weblabs/buttons/MenuItem" >Separate Link</span>
+<span data-dojo-type="weblabs/form/MenuItem" >Separate Link</span>
 
 </div>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 require(["dijit","weblabs/buttons/MenuItem","weblabs/buttons/dropdown","dojo/dom","weblabs/buttons/DropDownMenu"],
         function(dijit, MenuItem,dropdown,dom,DropDownMenu){
 	
@@ -74,6 +58,6 @@ require(["dijit","weblabs/buttons/MenuItem","weblabs/buttons/dropdown","dojo/dom
 	button.startup();
 	dom.byId("test").appendChild(dropdownmenu.domNode)
 	});
-</script>
+</script> -->
 </body>
 </html>

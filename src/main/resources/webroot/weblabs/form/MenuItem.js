@@ -5,12 +5,12 @@ define([
 "dojo/has", // has("dijit-legacy-requires")
 "dojo/_base/kernel", // kernel.deprecated
 "dojo/_base/lang", // lang.trim
-"dojo/ready", "dojo/text!weblabs/buttons/templates/MenuItem.html", "dijit/_WidgetBase",
+"dojo/ready", "dojo/text!weblabs/form/templates/MenuItem.html", "dijit/_WidgetBase",
 		"dijit/_TemplatedMixin", "dojo/topic", "require" ], function(declare,
 		domClass, has, kernel, lang, ready, template, _WidgetBase,
 		_TemplatedMixin, topic, require) {
 
-	var Button = declare([ _WidgetBase, _TemplatedMixin ], {
+	var Button = declare("weblabs.form.MenuItem",[ _WidgetBase, _TemplatedMixin ], {
 		templateString : template,
 		menuItemType: "",
 		disabled: "",

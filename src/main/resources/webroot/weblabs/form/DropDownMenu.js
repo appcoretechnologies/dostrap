@@ -6,7 +6,7 @@ define([
 	"dojo/_base/kernel", // kernel.deprecated
 	"dojo/_base/lang", // lang.trim
 	"dojo/ready",
-	"dojo/text!weblabs/buttons/templates/DropDownMenu.html",
+	"dojo/text!weblabs/form/templates/DropDownMenu.html",
 	"dijit/_WidgetBase",
 	"dijit/_TemplatedMixin",
 	"dojo/topic",
@@ -15,7 +15,7 @@ define([
 ], function( declare, domClass, has, kernel, lang, ready, template,_WidgetBase, _TemplatedMixin,topic,require,domConstruct){
 
 	var isOpen=false;
-	var Button =declare([_WidgetBase, _TemplatedMixin], {
+	var Button =declare("weblabs.form.DropDownMenu",[_WidgetBase, _TemplatedMixin], {
 		// summary:
 		//		Basically the same thing as a normal HTML button, but with special styling.
 		// description:

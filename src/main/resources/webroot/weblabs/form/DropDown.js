@@ -6,7 +6,7 @@ define([
 	"dojo/_base/kernel", // kernel.deprecated
 	"dojo/_base/lang", // lang.trim
 	"dojo/ready",
-	"dojo/text!weblabs/buttons/templates/DropDown.html",
+	"dojo/text!weblabs/form/templates/DropDown.html",
 	"dijit/_WidgetBase",
 	"dijit/_TemplatedMixin",
 	"dojo/topic",
@@ -15,7 +15,7 @@ define([
 ], function( declare, domClass, has, kernel, lang, ready, template,_WidgetBase, _TemplatedMixin,topic,require,domConstruct){
 
 	var isOpen=false;
-	var Button =declare([_WidgetBase, _TemplatedMixin], {
+	var Button =declare("weblabs.form.DropDown",[_WidgetBase, _TemplatedMixin], {
 		// summary:
 		//		Basically the same thing as a normal HTML button, but with special styling.
 		// description:
@@ -59,7 +59,7 @@ define([
 				if (this.dropdownButtonNode) {
 				domClass.add(this.dropdownButtonNode, displayClass);
 			}
-			}
+		}
 			
 			if (this.containerNode) {
 				domClass.replace(this.domNode, displayClass);
@@ -76,10 +76,6 @@ define([
 			labelNode.innerHTML = val;
 			
 		},
-		
-		
-	_setIconClassAttr: { node: "iconNode", type: "class" },
-	
 	});
 
 	
