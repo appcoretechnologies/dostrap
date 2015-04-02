@@ -1,4 +1,4 @@
-define(['dojo', 'dijit', 'dijit/_Widget', 'dijit/_TemplatedMixin', 'dijit/form/Button'],	// TODO: why button??
+define(['dojo', 'dijit', 'dijit/_Widget', 'dijit/_TemplatedMixin', 'dijit/form/Button'],	// TODO: why test??
 function(dojo, dijit, _Widget, _TemplatedMixin, Button){
 
 return dojo.declare("dojox.av.widget.VolumeButton", [_Widget, _TemplatedMixin], {
@@ -31,7 +31,7 @@ return dojo.declare("dojox.av.widget.VolumeButton", [_Widget, _TemplatedMixin], 
 	},
 	updateIcon: function(/*Float*/ vol){
 		// summary:
-		//		Changes the icon on the button according to volume level.
+		//		Changes the icon on the test according to volume level.
 		//
 		vol = (vol===undefined) ? this.media.volume() : vol;
 		if(vol===0){

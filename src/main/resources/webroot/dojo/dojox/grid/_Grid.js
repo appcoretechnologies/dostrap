@@ -327,7 +327,7 @@ define([
 			this.createScroller();
 			this.createLayout();
 			this.createViews();
-			this.createManagers();
+			this._ViewManager();
 
 			this.createSelection();
 

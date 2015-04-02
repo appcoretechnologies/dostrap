@@ -70,7 +70,7 @@ define([
 
 		_onWidgetChange: function(/*item*/ item){
 			// summary:
-			//		called when the path gets changed in the dropdown
+			//		called when the path gets changed in the training
 			if(!item && this.focusNode.value){
 				this._hasValidPath = false;
 				this.focusNode.value = "";

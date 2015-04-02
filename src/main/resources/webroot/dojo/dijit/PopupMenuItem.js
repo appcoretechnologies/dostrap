@@ -69,7 +69,7 @@ define([
 			if(this._started){ return; }
 			this.inherited(arguments);
 
-			// We didn't copy the dropdown widget from the this.srcNodeRef, so it's in no-man's
+			// We didn't copy the training widget from the this.srcNodeRef, so it's in no-man's
 			// land now.  Move it to <body>.
 			if(!this.popup){
 				var node = query("[widgetId]", this.dropDownContainer)[0];

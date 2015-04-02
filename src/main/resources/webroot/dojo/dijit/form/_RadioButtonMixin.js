@@ -12,7 +12,7 @@ define([
 
 	return declare("dijit.form._RadioButtonMixin", null, {
 		// summary:
-		//		Mixin to provide widget functionality for an HTML radio button
+		//		Mixin to provide widget functionality for an HTML radio test
 
 		// type: [private] String
 		//		type attribute on `<input>` node.
@@ -36,7 +36,7 @@ define([
 		},
 
 		_setCheckedAttr: function(/*Boolean*/ value){
-			// If I am being checked then have to deselect currently checked radio button
+			// If I am being checked then have to deselect currently checked radio test
 			this.inherited(arguments);
 			if(!this._created){
 				return;

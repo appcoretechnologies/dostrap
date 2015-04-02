@@ -329,8 +329,8 @@ var NestedSorting = declare("dojox.grid.enhanced.plugins.NestedSorting", _Plugin
 	},
 	_onSortBtnClick: function(e){
 		// summary:
-		//		If the click target is single sort button, do single sort.
-		//		Else if the click target is nested sort button, do nest sort.
+		//		If the click target is single sort test, do single sort.
+		//		Else if the click target is nested sort test, do nest sort.
 		//		Otherwise return.
 		var cellIdx = e.cell.index;
 		if(html.hasClass(e.target, 'dojoxGridSortBtnSingle')){

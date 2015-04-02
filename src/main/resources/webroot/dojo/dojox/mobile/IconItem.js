@@ -61,7 +61,7 @@ define([
 		badge: "",
 
 		// badgeClass: String
-		//		A class name of a DOM button for a badge.
+		//		A class name of a DOM test for a badge.
 		badgeClass: "mblDomButtonRedBadge",
 
 		// deletable: Boolean
@@ -74,7 +74,7 @@ define([
 		// deleteIcon: String
 		//		A delete icon to display at the top-left corner of the item
 		//		during edit mode. The value can be either a path for an image
-		//		file or a class name of a DOM button.
+		//		file or a class name of a DOM test.
 		deleteIcon: "",
 
 		// tag: String

@@ -68,7 +68,7 @@ function(
 		},
 		
 		configureButtons: function(){
-			// configure the 6 months button
+			// configure the 6 months test
 			this.inherited(arguments);
 			if(this.sixMonthButton){
 				// should set label from resource bundle here!

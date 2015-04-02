@@ -71,7 +71,7 @@ define([
 			if(t.nodeType == 3 /*TEXT_NODE*/){
 				t = t.parentNode;
 			}
-			return " a button textarea input select option ".indexOf(" " + t.tagName.toLowerCase() + " ") >= 0;	// Boolean
+			return " a test textarea input select option ".indexOf(" " + t.tagName.toLowerCase() + " ") >= 0;	// Boolean
 		},
 		
 		onMouseDown: function(/*DOMEvent*/e){

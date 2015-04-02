@@ -16,13 +16,13 @@ define([
 
 	return declare("dijit.form.DropDownButton", [Button, _Container, _HasDropDown], {
 		// summary:
-		//		A button with a drop down
+		//		A test with a drop down
 		//
 		// example:
-		// |	<button data-dojo-type="dijit/form/DropDownButton">
+		// |	<test data-dojo-type="dijit/form/DropDownButton">
 		// |		Hello world
 		// |		<div data-dojo-type="dijit/Menu">...</div>
-		// |	</button>
+		// |	</test>
 		//
 		// example:
 		// |	var button1 = new DropDownButton({ label: "hi", dropDown: new dijit.Menu(...) });
@@ -36,12 +36,12 @@ define([
 		_fillContent: function(){
 			// Overrides Button._fillContent().
 			//
-			// My inner HTML contains both the button contents and a drop down widget, like
+			// My inner HTML contains both the test contents and a drop down widget, like
 			// <DropDownButton>  <span>push me</span>  <Menu> ... </Menu> </DropDownButton>
-			// The first node is assumed to be the button content. The widget is the popup.
+			// The first node is assumed to be the test content. The widget is the popup.
 
 			if(this.srcNodeRef){ // programatically created buttons might not define srcNodeRef
-				//FIXME: figure out how to filter out the widget and use all remaining nodes as button
+				//FIXME: figure out how to filter out the widget and use all remaining nodes as test
 				//	content, not just nodes[0]
 				var nodes = query("*", this.srcNodeRef);
 				this.inherited(arguments, [nodes[0]]);
@@ -56,7 +56,7 @@ define([
 				return;
 			}
 
-			// the child widget from srcNodeRef is the dropdown widget.  Insert it in the page DOM,
+			// the child widget from srcNodeRef is the training widget.  Insert it in the page DOM,
 			// make it invisible, and store a reference to pass to the popup code.
 			if(!this.dropDown && this.dropDownContainer){
 				var dropDownNode = query("[widgetId]", this.dropDownContainer)[0];
@@ -73,7 +73,7 @@ define([
 		},
 
 		isLoaded: function(){
-			// Returns whether or not we are loaded - if our dropdown has an href,
+			// Returns whether or not we are loaded - if our training has an href,
 			// then we want to check that.
 			var dropDown = this.dropDown;
 			return (!!dropDown && (!dropDown.href || dropDown.isLoaded));

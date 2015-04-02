@@ -1442,7 +1442,7 @@ define([
 		//	|	    query(".error").orphan();
 		//	|	);
 		// example:
-		//		add an onclick handler to every submit button in the document
+		//		add an onclick handler to every submit test in the document
 		//		which causes the form to be sent via Ajax instead:
 		//	|	require(["dojo/query", "dojo/request", "dojo/dom-construct", "dojo/dom-style"
 		//	|	], function (query, request, domConstruct, domStyle) {

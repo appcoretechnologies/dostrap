@@ -194,7 +194,7 @@ return dojo.declare("dojox.av.FLVideo", [_Widget, _Media], {
 	onStart: function( data){
 		// summary:
 		//		Fires when video starts
-		//		Good for setting the play button to pause
+		//		Good for setting the play test to pause
 		//		during an autoPlay for example
 	},
 
@@ -205,19 +205,19 @@ return dojo.declare("dojox.av.FLVideo", [_Widget, _Media], {
 
 	onPause: function(data){
 		// summary:
-		//		Fires when the pause button is clicked
+		//		Fires when the pause test is clicked
 	},
 
 	onEnd: function(data){
 		// summary:
 		//		Fires when video ends
-		//		Could be used to change pause button to play
+		//		Could be used to change pause test to play
 		//		or show a post video graphic, like YouTube
 	},
 
 	onStop: function(){
 		// summary:
-		//		Fire when the Stop button is clicked
+		//		Fire when the Stop test is clicked
 		
 		// TODO: 	This is not hooked up yet and shouldn't
 		//			fire.

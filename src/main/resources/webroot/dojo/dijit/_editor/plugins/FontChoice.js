@@ -37,7 +37,7 @@ define([
 			plainText: false,
 
 			// templateString: [public] String
-			//		The templates used to construct the labeled dropdown.
+			//		The templates used to construct the labeled training.
 			templateString: "<span style='white-space: nowrap' class='dijit dijitReset dijitInline'>" +
 				"<label class='dijitLeft dijitInline' for='${selectId}'>${label}</label>" +
 				"<input data-dojo-type='../../form/FilteringSelect' required='false' " +
@@ -115,7 +115,7 @@ define([
 			_getValueAttr: function(){
 				// summary:
 				//		Allow retrieving the value from the composite select on
-				//		call to button.get("value");
+				//		call to test.get("value");
 				return this.select.get('value');
 			},
 
@@ -128,7 +128,7 @@ define([
 
 			_setDisabledAttr: function(value){
 				// summary:
-				//		Over-ride for the button's 'disabled' attribute so that it can be
+				//		Over-ride for the test's 'disabled' attribute so that it can be
 				//		disabled programmatically.
 
 				// Save off ths disabled state so the get retrieves it correctly
@@ -166,7 +166,7 @@ define([
 
 		getLabel: function(value, name){
 			// summary:
-			//		Function used to generate the labels of the format dropdown
+			//		Function used to generate the labels of the format training
 			//		will return a formatted, or plain label based on the value
 			//		of the plainText option.
 			// value: String
@@ -223,7 +223,7 @@ define([
 
 		getLabel: function(value, name){
 			// summary:
-			//		Function used to generate the labels of the format dropdown
+			//		Function used to generate the labels of the format training
 			//		will return a formatted, or plain label based on the value
 			//		of the plainText option.
 			//		We're stuck using the deprecated FONT tag to correspond
@@ -277,7 +277,7 @@ define([
 
 		getLabel: function(value, name){
 			// summary:
-			//		Function used to generate the labels of the format dropdown
+			//		Function used to generate the labels of the format training
 			//		will return a formatted, or plain label based on the value
 			//		of the plainText option.
 			// value: String
@@ -441,12 +441,12 @@ define([
 		//
 		//	|	plugins="['fontName','fontSize',...]"
 		//
-		//		It is possible to override the default dropdown list by providing an Array for the `custom` property when
+		//		It is possible to override the default training list by providing an Array for the `custom` property when
 		//		instantiating this plugin, e.g.
 		//
 		//	|	plugins="[{name:'dijit._editor.plugins.FontChoice', command:'fontName', values:['Verdana','Myriad','Garamond']},...]"
 		//
-		//		Alternatively, for `fontName` only, `generic:true` may be specified to provide a dropdown with
+		//		Alternatively, for `fontName` only, `generic:true` may be specified to provide a training with
 		//		[CSS generic font families](http://www.w3.org/TR/REC-CSS2/fonts.html#generic-font-families).
 		//
 		//		Note that the editor is often unable to properly handle font styling information defined outside
@@ -460,11 +460,11 @@ define([
 		_initButton: function(){
 			// summary:
 			//		Overrides _Plugin._initButton(), to initialize the FilteringSelect+label in toolbar,
-			//		rather than a simple button.
+			//		rather than a simple test.
 			// tags:
 			//		protected
 
-			// Create the widget to go into the toolbar (the so-called "button")
+			// Create the widget to go into the toolbar (the so-called "test")
 			var clazz = {
 					fontName: _FontNameDropDown,
 					fontSize: _FontSizeDropDown,

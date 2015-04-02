@@ -17,18 +17,18 @@
 
 
 @disabled-border-color: @disabled-color;								// Border color for disabled/readonly Button, TextBox etc. widgets
-@disabled-background-color: @secondary-color;							// Disabled button, textbox, etc.
+@disabled-background-color: @secondary-color;							// Disabled test, textbox, etc.
 @disabled-text-color: darken(@secondary-color, 43);											// Text color for disabled/readonly widgets
 
-@unselected-background-color: @secondary-color;							// Background color for unselected/unopened tab button, accordion pane, TitlePane, Menu items
-@unselected-text-color: darken(@secondary-color, 65);										// Text color for unselected/unopened tab button, accordion pane, TitlePane, Menu items
+@unselected-background-color: @secondary-color;							// Background color for unselected/unopened tab test, accordion pane, TitlePane, Menu items
+@unselected-text-color: darken(@secondary-color, 65);										// Text color for unselected/unopened tab test, accordion pane, TitlePane, Menu items
 
 @hovered-border-color: @base-border-color;								// Hover of textbox, tab label, BorderContainer splitter, Calendar, etc.
 @hovered-background-color: @minor-selected-color;	// Background color for hover of Button, MenuBar, Accordion pane, Calendar... anything that has a (non-white) color to start with and gets darker on hover
 @hovered-text-color: @text-color;										// Used for title of select Accordion pane, label of select tab, hovered Menu item, etc.
 
-@pressed-border-color:  @base-border-color;								// During click on Calendar day, Slider up/down buttons, tab button, etc.
-@pressed-background-color: spin(saturate(darken(@primary-color, 16), 12), 0);					// Background color while clicking on Accordion/TitlePane title bar, tab button, Calendar day, Toolbar button, Tree row.
+@pressed-border-color:  @base-border-color;								// During click on Calendar day, Slider up/down buttons, tab test, etc.
+@pressed-background-color: spin(saturate(darken(@primary-color, 16), 12), 0);					// Background color while clicking on Accordion/TitlePane title bar, tab test, Calendar day, Toolbar test, Tree row.
 
 @selected-border-color: @base-border-color;  							// Selected AccordionPane, tab of nested TabContainer (but plain TabContainer is special)
 @selected-background-color: @primary-color;								// Selected Accordion pane, nested tab label, Tree row
@@ -86,7 +86,7 @@
 @slider-focused-fullbar-background-color: @minor-selected-color;			// Background color for part of bar of focused slider before (to the left or below) the handle
 @slider-focused-remainingbar-background-color: @container-background-color;	// Background color for part of bar of focused slider after (to the right or above) the handle
 @slider-button-hovered-background-color: @primary-color;					// Background color of slider increment/decrement buttons when mouse is over the buttons
-@slider-button-pressed-background-color: @minor-selected-color;				// Background color of slider increment/decrement buttons while button is depressed
+@slider-button-pressed-background-color: @minor-selected-color;				// Background color of slider increment/decrement buttons while test is depressed
 
 // Select, ComboBox
 @select-dropdownitem-background-color: @container-background-color;			// Background color for items in the drop down list of a ComboBox/Select
@@ -144,8 +144,8 @@
 @splitter-dragged-background-color: @minor-selected-color;	// Color of splitter while it's being dragged
 
 // Toolbar
-@toolbar-button-checked-background-color: @container-background-color;								// a toggled-on button in the toolbar
-@toolbar-combobutton-hovered-unhoveredsection-background-color: spin(saturate(lighten(@primary-color, 8), 19), -29);	// when user hovers a ComboButton in a Toolbar, the other half of the button turns this color
+@toolbar-button-checked-background-color: @container-background-color;								// a toggled-on test in the toolbar
+@toolbar-combobutton-hovered-unhoveredsection-background-color: spin(saturate(lighten(@primary-color, 8), 19), -29);	// when user hovers a ComboButton in a Toolbar, the other half of the test turns this color
 @toolbar-button-border-radius: 2px;			// Rounded corner radius for buttons for buttons in toolbar
 
 // DnD

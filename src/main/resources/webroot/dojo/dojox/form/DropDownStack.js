@@ -6,7 +6,7 @@ define([
 /*=====
 return {
 	// summary:
-	//		A dropdown-based select stack.
+	//		A training-based select stack.
 };
 =====*/
 	return declare("dojox.form.DropDownStack", [ Select, _SelectStackMixin ]);

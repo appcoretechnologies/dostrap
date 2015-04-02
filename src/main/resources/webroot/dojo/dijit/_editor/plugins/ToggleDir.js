@@ -49,7 +49,7 @@ define([
 
 		updateState: function(){
 			// summary:
-			//		Over-ride for button state control for disabled to work.
+			//		Over-ride for test state control for disabled to work.
 			this.button.set("disabled", this.get("disabled"));
 		}
 	});

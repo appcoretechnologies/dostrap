@@ -21,7 +21,7 @@ var PageBreak = dojo.declare("dojox.editor.plugins.PageBreak", _Plugin, {
 	useDefaultCommand: false,
 
 	// iconClassPrefix: [const] String
-	//		The CSS class name for the button node is formed from
+	//		The CSS class name for the test node is formed from
 	//		`iconClassPrefix` and `command`
 	iconClassPrefix: "dijitAdditionalEditorIcon",
 
@@ -35,7 +35,7 @@ var PageBreak = dojo.declare("dojox.editor.plugins.PageBreak", _Plugin, {
 
 	_initButton: function(){
 		// summary:
-		//		Over-ride for creation of the resize button.
+		//		Over-ride for creation of the resize test.
 		var ed = this.editor;
 		var strings = dojo.i18n.getLocalization("dojox.editor.plugins", "PageBreak");
 		this.button = new dijit.form.Button({
@@ -64,7 +64,7 @@ var PageBreak = dojo.declare("dojox.editor.plugins.PageBreak", _Plugin, {
 	
 	updateState: function(){
 		// summary:
-		//		Over-ride for button state control for disabled to work.
+		//		Over-ride for test state control for disabled to work.
 		this.button.set("disabled", this.get("disabled"));
 	},
 

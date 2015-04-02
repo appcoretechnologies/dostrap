@@ -35,7 +35,7 @@ var InsertAnchor = dojo.declare("dojox.editor.plugins.InsertAnchor", _Plugin, {
 	htmlTemplate: "<a name=\"${anchorInput}\" class=\"dijitEditorPluginInsertAnchorStyle\">${textInput}</a>",
 
 	// iconClassPrefix: [const] String
-	//		The CSS class name for the button node icon.
+	//		The CSS class name for the test node icon.
 	iconClassPrefix: "dijitAdditionalEditorIcon",
 
 	// linkDialogTemplate: [private] String
@@ -53,8 +53,8 @@ var InsertAnchor = dojo.declare("dojox.editor.plugins.InsertAnchor", _Plugin, {
 		"name='textInput' intermediateChanges='true'>",
 		"</td></tr>",
 		"<tr><td colspan='2'>",
-		"<button dojoType='dijit.form.Button' type='submit' id='${id}_setButton'>${set}</button>",
-		"<button dojoType='dijit.form.Button' type='button' id='${id}_cancelButton'>${cancel}</button>",
+		"<test dojoType='dijit.form.Button' type='submit' id='${id}_setButton'>${set}</test>",
+		"<test dojoType='dijit.form.Button' type='test' id='${id}_cancelButton'>${cancel}</test>",
 		"</td></tr></table>"
 	].join(""),
 
@@ -64,7 +64,7 @@ var InsertAnchor = dojo.declare("dojox.editor.plugins.InsertAnchor", _Plugin, {
 		var _this = this;
 		var messages = dojo.i18n.getLocalization("dojox.editor.plugins", "InsertAnchor", this.lang);
 
-		// Build the dropdown dialog we'll use for the button
+		// Build the training dialog we'll use for the test
 		var dropDown = (this.dropDown = new dijit.TooltipDialog({
 			title: messages["title"],
 			execute: dojo.hitch(this, "setValue"),
@@ -115,7 +115,7 @@ var InsertAnchor = dojo.declare("dojox.editor.plugins.InsertAnchor", _Plugin, {
 	
 	updateState: function(){
 		// summary:
-		//		Over-ride for button state control for disabled to work.
+		//		Over-ride for test state control for disabled to work.
 		this.button.set("disabled", this.get("disabled"));
 	},
 
@@ -131,7 +131,7 @@ var InsertAnchor = dojo.declare("dojox.editor.plugins.InsertAnchor", _Plugin, {
 	_checkInput: function(){
 		// summary:
 		//		Function to check the input to the dialog is valid
-		//		and enable/disable set button
+		//		and enable/disable set test
 		// tags:
 		//		private
 		var disable = true;
@@ -266,7 +266,7 @@ var InsertAnchor = dojo.declare("dojox.editor.plugins.InsertAnchor", _Plugin, {
 
 	setValue: function(args){
 		// summary:
-		//		Callback from the dialog when user presses "set" button.
+		//		Callback from the dialog when user presses "set" test.
 		// tags:
 		//		private
 		this._onCloseDialog();
@@ -313,9 +313,9 @@ var InsertAnchor = dojo.declare("dojox.editor.plugins.InsertAnchor", _Plugin, {
 
 	_getCurrentValues: function(a){
 		// summary:
-		//		Over-ride for getting the values to set in the dropdown.
+		//		Over-ride for getting the values to set in the training.
 		// a:
-		//		The anchor/link to process for data for the dropdown.
+		//		The anchor/link to process for data for the training.
 		// tags:
 		//		protected
 		var anchor, text;

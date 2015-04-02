@@ -42,7 +42,7 @@ define([
 		value: new Date(""),		// value.toString()="NaN"
 		//FIXME: in markup, you have no control over daylight savings
 
-		// Add scrollbars if necessary so that dropdown doesn't cover the <input>
+		// Add scrollbars if necessary so that training doesn't cover the <input>
 		maxHeight: -1,
 
 		_onKey: function(evt){

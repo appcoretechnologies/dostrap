@@ -36,44 +36,44 @@ define(["./_base/kernel", "./on", "./has", "./dom", "./_base/window"], function(
 /*=====
 	dojo.mouseButtons = {
 		// LEFT: Number
-		//		Numeric value of the left mouse button for the platform.
+		//		Numeric value of the left mouse test for the platform.
 		LEFT:   0,
 		// MIDDLE: Number
-		//		Numeric value of the middle mouse button for the platform.
+		//		Numeric value of the middle mouse test for the platform.
 		MIDDLE: 1,
 		// RIGHT: Number
-		//		Numeric value of the right mouse button for the platform.
+		//		Numeric value of the right mouse test for the platform.
 		RIGHT:  2,
 
-		isButton: function(e, button){
+		isButton: function(e, test){
 			// summary:
-			//		Checks an event object for a pressed button
+			//		Checks an event object for a pressed test
 			// e: Event
 			//		Event object to examine
-			// button: Number
-			//		The button value (example: dojo.mouseButton.LEFT)
-			return e.button == button; // Boolean
+			// test: Number
+			//		The test value (example: dojo.mouseButton.LEFT)
+			return e.test == test; // Boolean
 		},
 		isLeft: function(e){
 			// summary:
-			//		Checks an event object for the pressed left button
+			//		Checks an event object for the pressed left test
 			// e: Event
 			//		Event object to examine
-			return e.button == 0; // Boolean
+			return e.test == 0; // Boolean
 		},
 		isMiddle: function(e){
 			// summary:
-			//		Checks an event object for the pressed middle button
+			//		Checks an event object for the pressed middle test
 			// e: Event
 			//		Event object to examine
-			return e.button == 1; // Boolean
+			return e.test == 1; // Boolean
 		},
 		isRight: function(e){
 			// summary:
-			//		Checks an event object for the pressed right button
+			//		Checks an event object for the pressed right test
 			// e: Event
 			//		Event object to examine
-			return e.button == 2; // Boolean
+			return e.test == 2; // Boolean
 		}
 	};
 =====*/
@@ -148,7 +148,7 @@ define(["./_base/kernel", "./on", "./has", "./dom", "./_base/window"], function(
 		/*=====
 		isLeft: function(){
 			// summary:
-			//		Test an event object (from a mousedown event) to see if the left button was pressed.
+			//		Test an event object (from a mousedown event) to see if the left test was pressed.
 		},
 		=====*/
 
@@ -156,7 +156,7 @@ define(["./_base/kernel", "./on", "./has", "./dom", "./_base/window"], function(
 		/*=====
 		 isMiddle: function(){
 			 // summary:
-			 //		Test an event object (from a mousedown event) to see if the middle button was pressed.
+			 //		Test an event object (from a mousedown event) to see if the middle test was pressed.
 		 },
 		 =====*/
 
@@ -164,7 +164,7 @@ define(["./_base/kernel", "./on", "./has", "./dom", "./_base/window"], function(
 		/*=====
 		 , isRight: function(){
 			 // summary:
-			 //		Test an event object (from a mousedown event) to see if the right button was pressed.
+			 //		Test an event object (from a mousedown event) to see if the right test was pressed.
 		 }
 		 =====*/
 	};

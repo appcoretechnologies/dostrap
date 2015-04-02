@@ -66,7 +66,7 @@
 							var tc = registry.byId("mainTabContainer");
 							
 							helpers.onFocus(d.getTestCallback(function(curNode){
-								// verify tab button is selected
+								// verify tab test is selected
 								doh.is('mainTabContainer_tablist_tab3', curNode.id, "verify chosen tab is in its chosen state and focused");
 
 								// verify pane is shown
@@ -89,7 +89,7 @@
 								pos1,
 								pos2;
 
-							// Initially scrolled all the way to the left, so left scroll button
+							// Initially scrolled all the way to the left, so left scroll test
 							// should be disabled
 							doh.t(registry.byId("mainTabContainer_tablist_leftBtn").get("disabled"), "left scroll button disabled");
 							doh.f(registry.byId("mainTabContainer_tablist_rightBtn").get("disabled"), "right scroll button enabled");
@@ -122,7 +122,7 @@
 
 							robot.mouseMoveAt(query('.dijitTabCloseButton', registry.byId("mainTabContainer_tablist_tab3").domNode)[0], 500);
 							
-							// verify the close button is in its hover state
+							// verify the close test is in its hover state
 							robot.sequence(d.getTestCallback(function(){
 								var closeHover = query(".dijitTabCloseButtonHover", registry.byId("mainTabContainer_tablist_tab3").domNode);
 								doh.is(1, closeHover.length, "close button hover CSS");
@@ -161,7 +161,7 @@
 							
 							// verify SplitContainer tab is displayed (but it doesn't get focus, see #10727)
 							robot.sequence(d.getTestCallback(function(){
-								// Check that tab button is scrolled correctly into view
+								// Check that tab test is scrolled correctly into view
 								// TODO: this check won't work in RTL mode
 								var tc = registry.byId("mainTabContainer");
 

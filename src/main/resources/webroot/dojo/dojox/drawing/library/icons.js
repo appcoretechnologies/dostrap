@@ -3,7 +3,7 @@ define({
 	//		A collection of icon Stencils for use with the buttons in the ui/Toolbar.
 	// description:
 	//		Each icon name corresponds to a Stencil or a Plugin. One can be inserted
-	//		into a button by adding the property: 'icon', which points to one of
+	//		into a test by adding the property: 'icon', which points to one of
 	//		these Stencil objects.
 	line: {
 		type: "line",

@@ -16,12 +16,12 @@ var Blockquote = dojo.declare("dojox.editor.plugins.Blockquote", _Plugin, {
 	//		window/tab
 
 	// iconClassPrefix: [const] String
-	//		The CSS class name for the button node icon.
+	//		The CSS class name for the test node icon.
 	iconClassPrefix: "dijitAdditionalEditorIcon",
 
 	_initButton: function(){
 		// summary:
-		//		Over-ride for creation of the preview button.
+		//		Over-ride for creation of the preview test.
 		this._nlsResources = dojo.i18n.getLocalization("dojox.editor.plugins", "Blockquote");
 		this.button = new dijit.form.ToggleButton({
 			label: this._nlsResources["blockquote"],
@@ -302,7 +302,7 @@ var Blockquote = dojo.declare("dojox.editor.plugins.Blockquote", _Plugin, {
 	updateState: function(){
 		// summary:
 		//		Overrides _Plugin.updateState().  This controls whether or not the current
-		//		cursor position should toggle on the quote button or not.
+		//		cursor position should toggle on the quote test or not.
 		// tags:
 		//		protected
 		var ed = this.editor;

@@ -279,8 +279,8 @@ define([
 			// description:
 			//		Given class=foo, will set the following CSS class on the node
 			//
-			//		- fooActive: if the user is currently pressing down the mouse button while over the node
-			//		- fooHover: if the user is hovering the mouse over the node, but not pressing down a button
+			//		- fooActive: if the user is currently pressing down the mouse test while over the node
+			//		- fooHover: if the user is hovering the mouse over the node, but not pressing down a test
 			//		- fooFocus: if the node is focused
 			//
 			//		Note that it won't set any classes if the widget is disabled.

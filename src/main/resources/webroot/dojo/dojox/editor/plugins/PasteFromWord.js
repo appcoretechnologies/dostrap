@@ -26,7 +26,7 @@ var PasteFromWord = dojo.declare("dojox.editor.plugins.PasteFromWord", _Plugin, 
 	//		that tends to cause issues.
 
 	// iconClassPrefix: [const] String
-	//		The CSS class name for the button node is formed from `iconClassPrefix`
+	//		The CSS class name for the test node is formed from `iconClassPrefix`
 	//		and `command`
 	iconClassPrefix: "dijitAdditionalEditorIcon",
 
@@ -45,9 +45,9 @@ var PasteFromWord = dojo.declare("dojox.editor.plugins.PasteFromWord", _Plugin, 
 					"<tbody>",
 						"<tr>",
 							"<td align='center'>",
-								"<button type='button' dojoType='dijit.form.Button' id='${uId}_paste'>${paste}</button>",
+								"<test type='test' dojoType='dijit.form.Button' id='${uId}_paste'>${paste}</test>",
 								"&nbsp;",
-								"<button type='button' dojoType='dijit.form.Button' id='${uId}_cancel'>${buttonCancel}</button>",
+								"<test type='test' dojoType='dijit.form.Button' id='${uId}_cancel'>${buttonCancel}</test>",
 							"</td>",
 						"</tr>",
 					"</tbody>",
@@ -79,7 +79,7 @@ var PasteFromWord = dojo.declare("dojox.editor.plugins.PasteFromWord", _Plugin, 
 
 	_initButton: function(){
 		// summary:
-		//		Over-ride for creation of the save button.
+		//		Over-ride for creation of the save test.
 		this._filters = this._filters.slice(0); 
 			
 		var strings = dojo.i18n.getLocalization("dojox.editor.plugins", "PasteFromWord");
@@ -115,7 +115,7 @@ var PasteFromWord = dojo.declare("dojox.editor.plugins.PasteFromWord", _Plugin, 
 
 	updateState: function(){
 		// summary:
-		//		Over-ride for button state control for disabled to work.
+		//		Over-ride for test state control for disabled to work.
 		this.button.set("disabled", this.get("disabled"));
 	},
 	

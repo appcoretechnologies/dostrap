@@ -144,7 +144,7 @@
 				when(parser.parse(), function(){
 					// Handle the programmatic creation of widgets here:
 
-					// create the select, textbox, output and button
+					// create the select, textbox, output and test
 					var sel = new Select({
 						store: store,
 						loadChildrenOnOpen: true,
@@ -165,7 +165,7 @@
 
 					sel.startup();
 
-					// create the filtering select, textbox, output and button
+					// create the filtering select, textbox, output and test
 					var filsel = new FilteringSelect({
 						store: store,
 						value: at(filctrl, "number")
@@ -186,7 +186,7 @@
 					filtext.startup();
 					filsel.startup();
 
-					// create the comboBox, textbox, output and button
+					// create the comboBox, textbox, output and test
 					var combo = new ComboBox({
 						store: store,
 						value: at(comboctrl, "number")
@@ -207,7 +207,7 @@
 					combotext.startup();
 					combo.startup();
 
-					// create the dijit.form.DateTextBox, textbox, output and button
+					// create the dijit.form.DateTextBox, textbox, output and test
 					var dateWid = new DateTextBox({
 						value: at(datectrl, "number"),
 						constraints: dummyDateWid.constraints
@@ -234,7 +234,7 @@
 					datetext.startup();
 					dateWid.startup();
 
-					// create the dijit.form.HorizontalSlider, textbox, output and button
+					// create the dijit.form.HorizontalSlider, textbox, output and test
 					var sliderWid = new HorizontalSlider({
 						style: {width: "190px"},
 						minimum: 0,
@@ -258,7 +258,7 @@
 					slidertext.startup();
 					sliderWid.startup();
 
-					// create the dijit.form.NumberSpinner, textbox, output and button
+					// create the dijit.form.NumberSpinner, textbox, output and test
 					var numspinWid = new NumberSpinner({value: at(numspinctrl, "number")}, ddom.byId("numspinsel"));
 
 					var numspintext = new TextBox({value: at(numspinctrl, "number").transform(number)}, ddom.byId("numspintext"));
@@ -276,7 +276,7 @@
 					numspintext.startup();
 					numspinWid.startup();
 
-					// create the dijit.form.SimpleTextarea, textbox, output and button
+					// create the dijit.form.SimpleTextarea, textbox, output and test
 					var simpTAWid = new SimpleTextarea({
 						style: {height: "20px", width: "180px"},
 						value: at(simpTActrl, "number")
@@ -297,7 +297,7 @@
 					simpTAtext.startup();
 					simpTAWid.startup();
 
-					// create the dijit.form.Textarea, textbox, output and button
+					// create the dijit.form.Textarea, textbox, output and test
 					var textareaWid = new Textarea({value: at(textareactrl, "number")}, ddom.byId("textareasel"));
 
 					var textareatext = new TextBox({value: at(textareactrl, "number")}, ddom.byId("textareatext"));

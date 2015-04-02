@@ -47,7 +47,7 @@
 							doh.is("tablist", tablist.containerNode.getAttribute("role"), "tablist role");
 							doh.is("tab", tablist.getChildren()[0].focusNode.getAttribute("role"), "tablist child's role should be tab");
 							
-							// Now the drop down button
+							// Now the drop down test
 							doh.is("button", tablist._menuBtn.domNode.getAttribute("role"), "_menuBtn role");
 							doh.f(tablist._menuBtn.domNode.getAttribute("aria-expanded"), "aria-expanded should initially be absent");
 							doh.f(tablist._menuBtn.domNode.getAttribute("aria-owns"), "aria-owns should initially be absent");

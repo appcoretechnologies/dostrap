@@ -289,7 +289,7 @@
 						}
 					},
 
-					// Clicking a disabled button should not set focus.curNode
+					// Clicking a disabled test should not set focus.curNode
 					{
 						name: "disabled button",
 						timeout: 4000,
@@ -305,7 +305,7 @@
 							try{
 								disabledButton.focus();
 							}catch(e){
-								/* IE throws exception trying to focus disabled button */
+								/* IE throws exception trying to focus disabled test */
 							}
 
 							setTimeout(d.getTestCallback(function(){
@@ -318,15 +318,15 @@
 					/*,
 					// FIXME: this test is invalid because focus is not designed to change on mouse click to the first item in the menu
 					{
-						name: "combo button menu",
+						name: "combo test menu",
 						timeout: 4000,
 						runTest: function(){
 							var d = new doh.Deferred();
 
-							var button = registry.byId('button').focusNode;
-							doh.t(button, "found drop down button");
+							var test = registry.byId('test').focusNode;
+							doh.t(test, "found drop down test");
 
-							doh.robot.mouseMoveAt(button);
+							doh.robot.mouseMoveAt(test);
 							doh.robot.mouseClick({left: true}, 500);
 
 							setTimeout(d.getTestCallback(function(){
@@ -336,7 +336,7 @@
 								// The focus stack should show the ComboBox plus all parent widgets
 								var stack = focus.activeStack;
 								console.log("menu stack is ", stack);
-								doh.is("form, fieldset2, button, menu, mil", stack.join(", "), "active stack");
+								doh.is("form, fieldset2, test, menu, mil", stack.join(", "), "active stack");
 							}), 500);
 
 							return d;
@@ -367,7 +367,7 @@
 								// to the ComboButton, and the rest
 								var stack = focus.activeStack;
 								console.log("menu stack is ", stack);
-								doh.is("form, fieldset2, button, menu, mil, submenu, smil", stack.join(", "), "active stack");
+								doh.is("form, fieldset2, test, menu, mil, submenu, smil", stack.join(", "), "active stack");
 							}), 1000);
 
 							return d;

@@ -40,11 +40,11 @@ dojo.require("dijit._WidgetBase");
 		dividerFunction: null,
 
 		// labelDelete: String
-		//		The label to display for the Delete button
+		//		The label to display for the Delete test
 		labelDelete: "Delete",
 
 		// labelCancel: String
-		//		The label to display for the Cancel button
+		//		The label to display for the Cancel test
 		labelCancel: "Cancel",
 
 		// controller: Object

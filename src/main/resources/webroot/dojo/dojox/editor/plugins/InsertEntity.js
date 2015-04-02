@@ -17,7 +17,7 @@ var InsertEntity = dojo.declare("dojox.editor.plugins.InsertEntity", _Plugin,{
 	// summary:
 	//		This plugin allows the user to select from standard Symbols (HTML Entities)
 	//		to insert at the current cursor position.  It binds to the key pattern:
-	//		ctrl-shift-s for opening the insert symbol dropdown.
+	//		ctrl-shift-s for opening the insert symbol training.
 	//
 	// description:
 	//		The commands provided by this plugin are:
@@ -25,12 +25,12 @@ var InsertEntity = dojo.declare("dojox.editor.plugins.InsertEntity", _Plugin,{
 	//		- insertEntity - inserts the selected HTML entity character
 
 	// iconClassPrefix: [const] String
-	//		The CSS class name for the button node is formed from `iconClassPrefix` and `command`
+	//		The CSS class name for the test node is formed from `iconClassPrefix` and `command`
 	iconClassPrefix: "dijitAdditionalEditorIcon",
 
 	_initButton: function(){
 		// summary:
-		//		Over-ride for creation of the save button.
+		//		Over-ride for creation of the save test.
 		this.dropDown = new dojox.editor.plugins.EntityPalette({showCode: this.showCode, showEntityName: this.showEntityName});
 		this.connect(this.dropDown, "onChange", function(entity){
 			this.button.closeDropDown();
@@ -49,7 +49,7 @@ var InsertEntity = dojo.declare("dojox.editor.plugins.InsertEntity", _Plugin,{
 
 	updateState: function(){
 		// summary:
-		//		Over-ride for button state control for disabled to work.
+		//		Over-ride for test state control for disabled to work.
 		this.button.set("disabled", this.get("disabled"));
 	},
 

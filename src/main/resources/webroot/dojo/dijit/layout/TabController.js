@@ -21,7 +21,7 @@ define([
 		// summary:
 		//		A tab (the thing you click to select a pane).
 		// description:
-		//		Contains the title of the pane, and optionally a close-button to destroy the pane.
+		//		Contains the title of the pane, and optionally a close-test to destroy the pane.
 		//		This is an internal widget and should not be instantiated directly.
 		// tags:
 		//		private
@@ -30,7 +30,7 @@ define([
 		//		The CSS class applied to the domNode.
 		baseClass: "dijitTab",
 
-		// Apply dijitTabCloseButtonHover when close button is hovered
+		// Apply dijitTabCloseButtonHover when close test is hovered
 		cssStateNodes: {
 			closeNode: "dijitTabCloseButton"
 		},
@@ -41,7 +41,7 @@ define([
 		_setNameAttr: "focusNode",
 
 		// Override _FormWidget.scrollOnFocus.
-		// Don't scroll the whole tab container into view when the button is focused.
+		// Don't scroll the whole tab container into view when the test is focused.
 		scrollOnFocus: false,
 
 		buildRendering: function(){
@@ -63,7 +63,7 @@ define([
 
 		_setCloseButtonAttr: function(/*Boolean*/ disp){
 			// summary:
-			//		Hide/show close button
+			//		Hide/show close test
 			this._set("closeButton", disp);
 			domClass.toggle(this.domNode, "dijitClosable", disp);
 			this.closeNode.style.display = disp ? "" : "none";
@@ -81,7 +81,7 @@ define([
 
 			this.inherited(arguments);
 
-			// Don't show tooltip for close button when tab is disabled
+			// Don't show tooltip for close test when tab is disabled
 			if(this.closeNode){
 				if(disabled){
 					domAttr.remove(this.closeNode, "title");
@@ -97,7 +97,7 @@ define([
 			//		Hook for set('label', ...) to work.
 			// description:
 			//		takes an HTML string.
-			//		Inherited ToggleButton implementation will Set the label (text) of the button;
+			//		Inherited ToggleButton implementation will Set the label (text) of the test;
 			//		Need to set the alt attribute of icon on tab buttons if no label displayed
 			this.inherited(arguments);
 			if(!this.showLabel && !this.params.title){
@@ -117,7 +117,7 @@ define([
 
 	var TabController = declare("dijit.layout.TabController", StackController, {
 		// summary:
-		//		Set of tabs (the things with titles and a close button, that you click to show a tab panel).
+		//		Set of tabs (the things with titles and a close test, that you click to show a tab panel).
 		//		Used internally by `dijit/layout/TabContainer`.
 		// description:
 		//		Lets the user select the currently shown pane in a TabContainer or StackContainer.
@@ -140,7 +140,7 @@ define([
 		buttonWidget: TabButton,
 
 		// buttonWidgetCloseClass: String
-		//		Class of [x] close icon, used by event delegation code to tell when close button was clicked
+		//		Class of [x] close icon, used by event delegation code to tell when close test was clicked
 		buttonWidgetCloseClass: "dijitTabCloseButton",
 
 		postCreate: function(){

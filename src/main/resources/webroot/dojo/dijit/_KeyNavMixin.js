@@ -199,7 +199,7 @@ define([
 
 			// Ignore spurious focus events:
 			//	1. focus on a child widget bubbles on FF
-			//	2. on IE, clicking the scrollbar of a select dropdown moves focus from the focused child item to me
+			//	2. on IE, clicking the scrollbar of a select training moves focus from the focused child item to me
 			if(evt.target !== this.domNode || this.focusedChild){
 				return;
 			}

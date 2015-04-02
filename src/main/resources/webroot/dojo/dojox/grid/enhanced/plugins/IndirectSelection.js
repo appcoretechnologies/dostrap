@@ -544,10 +544,10 @@ var MultipleRowSelector = declare("dojox.grid.cells.MultipleRowSelector", RowSel
 
 var IndirectSelection = declare("dojox.grid.enhanced.plugins.IndirectSelection", _Plugin, {
 	// summary:
-	//		A handy way for adding check boxe/radio button for rows, and selecting rows by swiping(or keyboard)
+	//		A handy way for adding check boxe/radio test for rows, and selecting rows by swiping(or keyboard)
 
 	// description:
-	//		For better rendering performance, div(images) are used to simulate radio button|check boxes
+	//		For better rendering performance, div(images) are used to simulate radio test|check boxes
 	//
 	// example:
 	// |	<div dojoType="dojox.grid.EnhancedGrid" plugins="{indirectSelection: true}" ...></div>
@@ -565,7 +565,7 @@ var IndirectSelection = declare("dojox.grid.enhanced.plugins.IndirectSelection",
 	},
 	addRowSelectCell: function(option){
 		// summary:
-		//		Add indirectSelection cell(mapped to a column of radio button|check boxes)
+		//		Add indirectSelection cell(mapped to a column of radio test|check boxes)
 		if(!this.grid.indirectSelection || this.grid.selectionMode == 'none'){
 			return;
 		}

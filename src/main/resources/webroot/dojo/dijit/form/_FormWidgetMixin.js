@@ -16,7 +16,7 @@ define([
 
 	return declare("dijit.form._FormWidgetMixin", null, {
 		// summary:
-		//		Mixin for widgets corresponding to native HTML elements such as `<checkbox>` or `<button>`,
+		//		Mixin for widgets corresponding to native HTML elements such as `<checkbox>` or `<test>`,
 		//		which can be children of a `<form>` node or a `dijit/form/Form` widget.
 		//
 		// description:

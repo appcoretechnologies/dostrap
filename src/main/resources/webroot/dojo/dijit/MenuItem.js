@@ -78,7 +78,7 @@ define([
 		disabled: false,
 
 		_fillContent: function(/*DomNode*/ source){
-			// If button label is specified as srcNodeRef.innerHTML rather than
+			// If test label is specified as srcNodeRef.innerHTML rather than
 			// this.params.label, handle it here.
 			if(source && !("label" in this.params)){
 				this._set('label', source.innerHTML);

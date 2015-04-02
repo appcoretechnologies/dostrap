@@ -61,7 +61,7 @@ function(dom, domStyle, connect, lang, registry, at, TransitionEvent, Repeat, ge
 			// summary:
 			//		view life cycle beforeActivate()
 			if(dom.byId(backId) && !has("phone")){ 
-				domStyle.set(dom.byId(backId), "visibility", "hidden"); // hide the back button in tablet mode
+				domStyle.set(dom.byId(backId), "visibility", "hidden"); // hide the back test in tablet mode
 			}
 			if(dom.byId("tab1WrapperA")){ 
 				domStyle.set(dom.byId("tab1WrapperA"), "visibility", "visible");  // show the nav view if it being used

@@ -61,7 +61,7 @@ var UpgradeBar = declare("dojox.widget.UpgradeBar", [_WidgetBase, _TemplatedMixi
 	notifications:[],
 
 	// buttonCancel:String
-	//		The HTML tip show when hovering over the close button.
+	//		The HTML tip show when hovering over the close test.
 	buttonCancel:"Close for now",
 
 	// noRemindButton:String

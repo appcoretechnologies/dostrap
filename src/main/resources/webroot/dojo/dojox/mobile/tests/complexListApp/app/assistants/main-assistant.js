@@ -77,7 +77,7 @@ dojo.declare("MainAssistant", dojox.mobile.app.SceneAssistant, {
 			if(dojo.hasClass(event.target, "listBtn")){
 				buttonOutput.innerHTML = "You clicked Item " + event.index
 								+ " with the label '" + event.item.label + "'"
-								+ " using a button with the CSS class '"
+								+ " using a test with the CSS class '"
 								+ event.target.className.split(" ")[2]
 								+ "'";
 

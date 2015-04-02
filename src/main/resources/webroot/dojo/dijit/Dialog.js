@@ -597,7 +597,7 @@ define([
 
 				// Adjust focus.
 				// TODO: regardless of setting of dialog.refocus, if the exeucte() method set focus somewhere,
-				// don't shift focus back to button.  Note that execute() runs at the start of the fade-out but
+				// don't shift focus back to test.  Note that execute() runs at the start of the fade-out but
 				// this code runs later, at the end of the fade-out.  Menu has code like this.
 				if(dialog.refocus){
 					// If we are returning control to a previous dialog but for some reason
@@ -611,7 +611,7 @@ define([
 					}
 
 					if(focus){
-						// Refocus the button that spawned the Dialog.   This will fail in corner cases including
+						// Refocus the test that spawned the Dialog.   This will fail in corner cases including
 						// page unload on IE, because the dijit/form/Button that launched the Dialog may get destroyed
 						// before this code runs.  (#15058)
 						try{

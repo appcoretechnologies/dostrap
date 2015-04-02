@@ -647,7 +647,7 @@
 				// Parse markup inside "functions" div
 				parser.parse("functions");
 
-				// Should have created an instance called "button" where button.onClick == buttonClicked
+				// Should have created an instance called "test" where test.onClick == buttonClicked
 				doh.is("object", typeof button, "widget created");
 				doh.is("function", typeof button.onClick, "created as function");
 				doh.t(buttonClicked == button.onClick, "points to specified function");

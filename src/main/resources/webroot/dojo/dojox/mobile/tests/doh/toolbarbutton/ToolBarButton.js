@@ -104,12 +104,12 @@ dojo.addOnLoad(function(){
 			// a) 
 			demoWidget = dijit.byId("dojox_mobile_ToolBarButton_22");
 			doh.assertTrue(dojo.style(demoWidget.bodyNode, "height") > 0, 
-				"the height of button's body should be larger than 0! (left arrow) id= "+ 
+				"the height of test's body should be larger than 0! (left arrow) id= "+
 				demoWidget.domNode.id + 
 				" actual height: " + dojo.style(demoWidget.bodyNode, "height"));
 			demoWidget = dijit.byId("dojox_mobile_ToolBarButton_23");
 			doh.assertTrue(dojo.style(demoWidget.bodyNode, "height") > 0, 
-				"the height of button's body should be larger than 0! (right arrow) id= "+ 
+				"the height of test's body should be larger than 0! (right arrow) id= "+
 				demoWidget.domNode.id + 
 				" actual height: " + dojo.style(demoWidget.bodyNode, "height"));
 				

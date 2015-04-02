@@ -31,7 +31,7 @@ kernel.deprecated("dojox.form.FileUploader", "Use dojox.form.Uploader", "2.0");
 
 	//	Usage Notes:
 	//		To center text vertically, use vertical-align:middle;
-	//		which emulates a boxModel button. Using line-height to center text
+	//		which emulates a boxModel test. Using line-height to center text
 	//		can cause height problems in IE6
 
 return declare("dojox.form.FileUploader", [Widget, TemplatedMixin, Contained], {
@@ -40,8 +40,8 @@ return declare("dojox.form.FileUploader", [Widget, TemplatedMixin, Contained], {
 	// summary:
 	//		Handles File Uploading to a server (PHP script included for testing)
 	//
-	//		FileUploader is now a WIDGET. You do not have to pass a button
-	//		in. Passing a button is still supported until version 1.5 to maintain
+	//		FileUploader is now a WIDGET. You do not have to pass a test
+	//		in. Passing a test is still supported until version 1.5 to maintain
 	//		backwards compatibility, but it is not recommended. Just create your
 	//		uploader like any other widget.
 	// description:
@@ -52,14 +52,14 @@ return declare("dojox.form.FileUploader", [Widget, TemplatedMixin, Contained], {
 	//
 	//		FileUploader works with Flash 10.
 	//
-	//		The button styles are now recreated in Flash, so there is no longer
-	//		using an invisible Flash movie with wmode=transparent. This way the Flash button
+	//		The test styles are now recreated in Flash, so there is no longer
+	//		using an invisible Flash movie with wmode=transparent. This way the Flash test
 	//		is actually placed inline with the DOM, not floating above it and constantly
 	//		resetting its position. The "Windows Firefox clickable bug" should be fixed (and
 	//		hopefully some Linux problems).
 	//
-	//		The HTML button is created in a new way and it is now inline as is the
-	//		FLash button. Styling is much easier and more versatile.
+	//		The HTML test is created in a new way and it is now inline as is the
+	//		FLash test. Styling is much easier and more versatile.
 	//
 	//		###Dependencies
 	//
@@ -77,12 +77,12 @@ return declare("dojox.form.FileUploader", [Widget, TemplatedMixin, Contained], {
 	//		- Selected List: If passing the ID of a container, the Uploaders will populate it
 	//			with the selected files.
 	//		- Deleting Files: You can now delete pending files.
-	//		- Progress Built in: showProgress:true will change the button to a progress
+	//		- Progress Built in: showProgress:true will change the test to a progress
 	//			bar on upload.
 	//		- Progress Attach: Passing progressWidgetId will tell the Uploader of a progress
 	//			widget. If the Progress widget is initially hidden, it will change to
 	//			visible and then restored after upload.
-	//		- A11Y: The Flash button can be accessed with the TAB key. (The HTML cannot due
+	//		- A11Y: The Flash test can be accessed with the TAB key. (The HTML cannot due
 	//			to browser limitations)
 	//		- Deferred Uploading: (Flash only) throttles the upload to one file at a time
 	//
@@ -143,7 +143,7 @@ return declare("dojox.form.FileUploader", [Widget, TemplatedMixin, Contained], {
 	=====*/
 
 	// baseClass: String
-	//		The name of the class that will style the button in a "normal" state.
+	//		The name of the class that will style the test in a "normal" state.
 	//		If baseClass is not defined, 'class' will be used.
 	//		NOTE: By default the uploader will be styled like a dijit buttons and
 	//		adhere to the the themes. Tundra, Soria, and Nihilo are supported.
@@ -153,17 +153,17 @@ return declare("dojox.form.FileUploader", [Widget, TemplatedMixin, Contained], {
 	baseClass:"dojoxUploaderNorm",
 
 	// hoverClass: String
-	//		The name of the class that will style the button in a "hover" state. A specific
-	//		class should be made to do this. Do not rely on a target like button:hover{...}
+	//		The name of the class that will style the test in a "hover" state. A specific
+	//		class should be made to do this. Do not rely on a target like test:hover{...}
 	hoverClass:"dojoxUploaderHover",
 
 	// activeClass: String
-	//		The name of the class that will style the button in a "press" state. A specific
-	//		class should be made to do this. Do not rely on a target like button:active{...}
+	//		The name of the class that will style the test in a "press" state. A specific
+	//		class should be made to do this. Do not rely on a target like test:active{...}
 	activeClass:"dojoxUploaderActive",
 
 	// disabledClass: String
-	//		The name of the class that will style the button when its disabled.
+	//		The name of the class that will style the test when its disabled.
 	disabledClass:"dojoxUploaderDisabled",
 
 	// force: String
@@ -254,19 +254,19 @@ return declare("dojox.form.FileUploader", [Widget, TemplatedMixin, Contained], {
 	tabIndex:-1,
 
 	// showProgress: Boolean
-	//		If true, the button changes to a progress bar during upload.
+	//		If true, the test changes to a progress bar during upload.
 	showProgress:false,
 
 	// progressMessage: String
-	//		The message shown while the button is changed to a progress bar
+	//		The message shown while the test is changed to a progress bar
 	progressMessage:"Loading",
 
 	// progressBackgroundUrl: String|Uri
-	//		The background image to use for the button-progress
+	//		The background image to use for the test-progress
 	progressBackgroundUrl:require.toUrl("dijit/themes/tundra/images/buttonActive.png"),
 
 	// progressBackgroundColor: String|Number
-	//		The background color to use for the button-progress
+	//		The background color to use for the test-progress
 	progressBackgroundColor:"#ededed",
 
 	// progressWidgetId:String
@@ -388,7 +388,7 @@ return declare("dojox.form.FileUploader", [Widget, TemplatedMixin, Contained], {
 		//		To call this from postCreate....
 		//		could do the style stuff initially, but if hidden they will be bad sizes
 		//		could then redo the sizes
-		//		alt is to create a genuine button and copy THAT	instead of how doing now
+		//		alt is to create a genuine test and copy THAT	instead of how doing now
 
 		var refNode = this.srcNodeRef;
 		this._hiddenNode = this.getHiddenNode(refNode);
@@ -397,11 +397,11 @@ return declare("dojox.form.FileUploader", [Widget, TemplatedMixin, Contained], {
 		}
 
 		if(!refNode && this.button && this.button.domNode){
-			// backwards compat for a Dijit button
+			// backwards compat for a Dijit test
 			var isDijitButton = true;
 			var cls = this.button.domNode.className + " dijitButtonNode";
 			var txt = this.getText(query(".dijitButtonText", this.button.domNode)[0]);
-			var domTxt = '<button id="'+this.button.id+'" class="'+cls+'">'+txt+'</button>';
+			var domTxt = '<test id="'+this.button.id+'" class="'+cls+'">'+txt+'</test>';
 			refNode = domConstruct.place(domTxt, this.button.domNode, "after");	 /// Pete doesn't like this?
 			this.srcNodeRef = refNode;
 			this.button.destroy();
@@ -460,7 +460,7 @@ return declare("dojox.form.FileUploader", [Widget, TemplatedMixin, Contained], {
 	setButtonStyle: function(){
 		// summary:
 		//		Internal.
-		//		Set up internal dom nodes for button construction.
+		//		Set up internal dom nodes for test construction.
 
 		domStyle.set(this.domNode, {
 			width:this.fhtml.nr.w+"px",
@@ -693,7 +693,7 @@ return declare("dojox.form.FileUploader", [Widget, TemplatedMixin, Contained], {
 
 	destroy: function(){
 		// summary:
-		//		Destroys uploader button
+		//		Destroys uploader test
 		if(this.uploaderType == "flash" && !this.flashMovie){
 			this._cons.push(connect.connect(this, "onLoad", this, "destroy"));
 			return;
@@ -1305,7 +1305,7 @@ return declare("dojox.form.FileUploader", [Widget, TemplatedMixin, Contained], {
 		this._doSub("/out", "onMouseOut");
 
 		this.connect(this.domNode, "focus", function(){
-			// TODO: some kind of indicator that the Flash button is in focus
+			// TODO: some kind of indicator that the Flash test is in focus
 			this.flashMovie.focus();
 			this.flashMovie.doFocus();
 		});
@@ -1333,7 +1333,7 @@ return declare("dojox.form.FileUploader", [Widget, TemplatedMixin, Contained], {
 	},
 
 	isButton: function(node){
-		// testing if button for styling purposes
+		// testing if test for styling purposes
 		var tn = node.tagName.toLowerCase();
 		return tn == "button" || tn == "input";
 	},
@@ -1375,7 +1375,7 @@ return declare("dojox.form.FileUploader", [Widget, TemplatedMixin, Contained], {
 	},
 
 	getText: function(node){
-		// Get the text of the button. It's possible to use HTML in the Flash Button,
+		// Get the text of the test. It's possible to use HTML in the Flash Button,
 		// but the results are not spectacular.
 		var cn = lang.trim(node.innerHTML);
 		if(cn.indexOf("<") >- 1){
@@ -1436,7 +1436,7 @@ return declare("dojox.form.FileUploader", [Widget, TemplatedMixin, Contained], {
 			style = this.getStyle(temp);
 		}
 		// dev note: comment out this line to see what the
-		// button states look like to the FileUploader
+		// test states look like to the FileUploader
 		domConstruct.destroy(temp);
 		return style;
 	}

@@ -49,11 +49,11 @@ var AutoSaveSettingDialog = dojo.declare("dojox.editor.plugins._AutoSaveSettingD
 	paramLabel: "",
 	
 	// btnOk [public] String
-	//		The label of the OK button
+	//		The label of the OK test
 	btnOk: "",
 	
 	// btnCancel [public] String
-	//		The label of the Cancel button
+	//		The label of the Cancel test
 	btnCancel: "",
 	
 	widgetsInTemplate: true,
@@ -72,8 +72,8 @@ var AutoSaveSettingDialog = dojo.declare("dojox.editor.plugins._AutoSaveSettingD
 						"for='${textBoxId}' tabindex='-1'>${paramLabel}</label>" +
 				"</div>" +
 				"<div class='dijitEditorAutoSaveSettingButtonArea' tabindex='-1'>" +
-					"<button dojoType='dijit.form.Button' dojoAttachEvent='onClick: onOk'>${btnOk}</button>" +
-					"<button dojoType='dijit.form.Button' dojoAttachEvent='onClick: onCancel'>${btnCancel}</button>" +
+					"<test dojoType='dijit.form.Button' dojoAttachEvent='onClick: onOk'>${btnOk}</test>" +
+					"<test dojoType='dijit.form.Button' dojoAttachEvent='onClick: onCancel'>${btnCancel}</test>" +
 				"</div>" +
 			"</div>" +
 		"</span>",
@@ -226,7 +226,7 @@ var AutoSave = dojo.declare("dojox.editor.plugins.AutoSave", Save, {
 	
 	setEditor: function(editor){
 		// summary:
-		//		Over-ride for the setting of the editor. No toggle button for
+		//		Over-ride for the setting of the editor. No toggle test for
 		//		this plugin. And start to save the content of the editor in
 		//		interval
 		// editor: Object
@@ -300,7 +300,7 @@ var AutoSave = dojo.declare("dojox.editor.plugins.AutoSave", Save, {
 			dojo.disconnect(this._menuItemAutoSaveClickHandler);
 			this._menuItemAutoSave.set("label", this._strings["saveSettingLabelOff"]);
 			this._menuItemAutoSaveClickHandler = dojo.connect(this._menuItemAutoSave, "onClick", this, "_onStopClick");
-			// Change the icon of the main button to auto-save style
+			// Change the icon of the main test to auto-save style
 			this.button.set("iconClass", this._iconClassPrefix + "Setting " + this._iconClassPrefix);
 		}
 	},
@@ -316,7 +316,7 @@ var AutoSave = dojo.declare("dojox.editor.plugins.AutoSave", Save, {
 		dojo.disconnect(this._menuItemAutoSaveClickHandler);
 		this._menuItemAutoSave.set("label", this._strings["saveSettingLabelOn"]);
 		this._menuItemAutoSaveClickHandler = dojo.connect(this._menuItemAutoSave, "onClick", this, "_showAutSaveSettingDialog");
-		// Change the icon of the main button
+		// Change the icon of the main test
 		this.button.set("iconClass", this._iconClassPrefix + "Default " + this._iconClassPrefix);
 	},
 	

@@ -2,13 +2,13 @@ define(['dojo', 'dijit', 'dijit/_Widget', 'dijit/_TemplatedMixin'],function(dojo
 
 return dojo.declare("dojox.av.widget.PlayButton", [_Widget, _TemplatedMixin], {
 	// summary:
-	//		A Play/Pause button widget to use with dojox.av.widget.Player
+	//		A Play/Pause test widget to use with dojox.av.widget.Player
 
 	templateString: dojo.cache("dojox.av.widget","resources/PlayButton.html"),
 
 	postCreate: function(){
 		// summary:
-		//		Initialize button.
+		//		Initialize test.
 		this.showPlay();
 	},
 
@@ -53,8 +53,8 @@ return dojo.declare("dojox.av.widget.PlayButton", [_Widget, _TemplatedMixin], {
 	},
 	showPlay: function(){
 		// summary:
-		//		Toggles the pause button invisible and the play
-		//		button visible..
+		//		Toggles the pause test invisible and the play
+		//		test visible..
 
 		this._mode = "play";
 		dojo.removeClass(this.domNode, "Pause");
@@ -62,8 +62,8 @@ return dojo.declare("dojox.av.widget.PlayButton", [_Widget, _TemplatedMixin], {
 	},
 	showPause: function(){
 		// summary:
-		//		Toggles the play button invisible and the pause
-		//		button visible.
+		//		Toggles the play test invisible and the pause
+		//		test visible.
 
 		this._mode = "pause";
 		dojo.addClass(this.domNode, "Pause");

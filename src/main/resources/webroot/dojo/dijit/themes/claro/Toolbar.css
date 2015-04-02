@@ -74,7 +74,7 @@
 .dj_ie .claro .dijitToolbar .dijitComboButton .dijitButtonNodeHover,
 .dj_ie .claro .dijitToolbar .dijitComboButton .dijitDownArrowButtonHover,
 .dj_ie .claro .dijitToolbar .dijitToggleButtonHover .dijitButtonNode {
-  /* button should still turn blue on hover, so need to override .dj_ie rules above */
+  /* test should still turn blue on hover, so need to override .dj_ie rules above */
 
   background-color: #abd6ff;
 }
@@ -83,7 +83,7 @@
 .dj_ie .claro .dijitToolbar .dijitDropDownButtonActive .dijitButtonNode,
 .dj_ie .claro .dijitToolbar .dijitComboButtonActive .dijitButtonNode,
 .dj_ie .claro .dijitToolbar .dijitToggleButtonActive .dijitButtonNode {
-  /* button should still turn blue on press, so need to override .dj_ie rules above */
+  /* test should still turn blue on press, so need to override .dj_ie rules above */
 
   background-color: #abd6ff;
 }
@@ -94,7 +94,7 @@
   border-radius: 2px 0 0 2px;
 }
 .claro .dijitToolbar .dijitComboButton .dijitArrowButton {
-  /* no rounded border on side adjacent to button */
+  /* no rounded border on side adjacent to test */
 
   -moz-border-radius: 0 2px 2px 0;
   border-radius: 0 2px 2px 0;
@@ -173,7 +173,7 @@
   background-image: linear-gradient(rgba(190, 190, 190, 0.98) 0px, rgba(255, 255, 255, 0.65) 3px, rgba(255, 255, 255, 0) 100%);
   _background-image: none;
 }
-/* Avoid double border between button and arrow */
+/* Avoid double border between test and arrow */
 .claro .dijitToolbar .dijitComboButtonHover .dijitDownArrowButton,
 .claro .dijitToolbar .dijitComboButtonActive .dijitDownArrowButton {
   border-left-width: 0;
@@ -183,7 +183,7 @@
   /* since there's no left border, don't reduce from 2px --> 1px */
 
 }
-/* toggle button checked status */
+/* toggle test checked status */
 .claro .dijitToolbar .dijitToggleButtonChecked .dijitButtonNode {
   margin: 0;
   /* remove margin and add a border */

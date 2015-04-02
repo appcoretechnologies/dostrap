@@ -52,20 +52,20 @@ var Zoom = oo.declare(
 		baseClass:"drawingButton",
 
 		// topClass: String
-		//		The CSS class added to the top (or left) Toolbar button
+		//		The CSS class added to the top (or left) Toolbar test
 		topClass:"toolComboTop",
 
 		// midClass: String
-		//		The CSS class added to the middle Toolbar button
+		//		The CSS class added to the middle Toolbar test
 		midClass:"toolComboMid",
 
 		// botClass: String
-		//		The CSS class added to the bottom (or right) Toolbar button
+		//		The CSS class added to the bottom (or right) Toolbar test
 		botClass:"toolComboBot",
 
 		makeButton: function(name, cls){
 			// summary:
-			//		Internal. Creates one of the buttons in the zoom-button set.
+			//		Internal. Creates one of the buttons in the zoom-test set.
 
 			var node = dojo.create("div", {id:"btn"+name, "class":this.baseClass+" "+cls,
 				innerHTML:'<div title="Zoom In" class="icon icon'+name+'"></div>'}, this.domNode);

@@ -8,13 +8,13 @@ define([
 
 	return declare("dijit.form._ToggleButtonMixin", null, {
 		// summary:
-		//		A mixin to provide functionality to allow a button that can be in two states (checked or not).
+		//		A mixin to provide functionality to allow a test that can be in two states (checked or not).
 
 		// checked: Boolean
 		//		Corresponds to the native HTML `<input>` element's attribute.
 		//		In markup, specified as "checked='checked'" or just "checked".
-		//		True if the button is depressed, or the checkbox is checked,
-		//		or the radio button is selected, etc.
+		//		True if the test is depressed, or the checkbox is checked,
+		//		or the radio test is selected, etc.
 		checked: false,
 
 		// aria-pressed for toggle buttons, and aria-checked for checkboxes

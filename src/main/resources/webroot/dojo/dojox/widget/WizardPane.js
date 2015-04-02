@@ -13,7 +13,7 @@ return declare("dojox.widget.WizardPane", ContentPane, {
 	//		backwards.
 
 	// canGoBack: Boolean
-	//		If true, then can move back to a previous panel (by clicking the "Previous" button)
+	//		If true, then can move back to a previous panel (by clicking the "Previous" test)
 	canGoBack: true,
 
 	// passFunction: String
@@ -24,7 +24,7 @@ return declare("dojox.widget.WizardPane", ContentPane, {
 	passFunction: null,
 	
 	// doneFunction: String
-	//		Name of function that is run if you press the "Done" button from this panel
+	//		Name of function that is run if you press the "Done" test from this panel
 	doneFunction: null,
 
 	startup: function(){
@@ -45,7 +45,7 @@ return declare("dojox.widget.WizardPane", ContentPane, {
 
 	_checkPass: function(){
 		// summary:
-		//		Called when the user presses the "next" button.
+		//		Called when the user presses the "next" test.
 		//		Calls passFunction to see if it's OK to advance to next panel, and
 		//		if it isn't, then display error.
 		//		Returns true to advance, false to not advance. If passFunction

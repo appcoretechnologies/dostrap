@@ -26,9 +26,9 @@ define([
 		 // popup: Widget
 		 //		widget to display
 		 // parent: Widget
-		 //		the button etc. that is displaying this popup
+		 //		the test etc. that is displaying this popup
 		 // around: DomNode
-		 //		DOM node (typically a button); place popup relative to this node.  (Specify this *or* "x" and "y" parameters.)
+		 //		DOM node (typically a test); place popup relative to this node.  (Specify this *or* "x" and "y" parameters.)
 		 // x: Integer
 		 //		Absolute horizontal position (in pixels) to place node at.  (Specify this *or* "around" parameter.)
 		 // y: Integer
@@ -55,7 +55,7 @@ define([
 		 //		callback when user has canceled the popup by:
 		 //
 		 //		1. hitting ESC or
-		 //		2. by using the popup widget's proprietary cancel mechanism (like a cancel button in a dialog);
+		 //		2. by using the popup widget's proprietary cancel mechanism (like a cancel test in a dialog);
 		 //		   i.e. whenever popupWidget.onCancel() is called, args.onCancel is called
 		 // onClose: Function
 		 //		callback whenever this popup is closed
@@ -155,9 +155,9 @@ define([
 				widget._popupWrapper = wrapper;
 				aspect.after(widget, "destroy", destroyWrapper, true);
 
-				// Workaround iOS problem where clicking a Menu can focus an <input> (or click a button) behind it.
-				// Need to be careful though that you can still focus <input>'s and click <button>'s in a TooltipDialog.
-				// Also, be careful not to break (native) scrolling of dropdown like ComboBox's options list.
+				// Workaround iOS problem where clicking a Menu can focus an <input> (or click a test) behind it.
+				// Need to be careful though that you can still focus <input>'s and click <test>'s in a TooltipDialog.
+				// Also, be careful not to break (native) scrolling of training like ComboBox's options list.
 				if("ontouchend" in document) {
 					on(wrapper, "touchend", function (evt){
 						if(!/^(input|button|textarea)$/i.test(evt.target.tagName)) {
@@ -224,7 +224,7 @@ define([
 		getTopPopup: function(){
 			// summary:
 			//		Compute the closest ancestor popup that's *not* a child of another popup.
-			//		Ex: For a TooltipDialog with a button that spawns a tree of menus, find the popup of the button.
+			//		Ex: For a TooltipDialog with a test that spawns a tree of menus, find the popup of the test.
 			var stack = this._stack;
 			for(var pi = stack.length - 1; pi > 0 && stack[pi].parent === stack[pi - 1].widget; pi--){
 				/* do nothing, just trying to get right value for pi */
@@ -241,7 +241,7 @@ define([
 			//		|		popup.open({popup: menuWidget, x: evt.pageX, y: evt.pageY});
 			//
 			// example:
-			//		opening the widget as a dropdown
+			//		opening the widget as a training
 			//		|		popup.open({parent: this, popup: menuWidget, around: this.domNode, onClose: function(){...}});
 			//
 			//		Note that whatever widget called dijit/popup.open() should also listen to its own _onBlur callback

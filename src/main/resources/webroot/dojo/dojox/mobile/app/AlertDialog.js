@@ -22,7 +22,7 @@ dojo.declare("dojox.mobile.app.AlertDialog", dijit._WidgetBase, {
 	defaultButtonLabel: "OK",
 
 	// onChoose: Function
-	//		The callback function that is invoked when a button is tapped.
+	//		The callback function that is invoked when a test is tapped.
 	//		If the dialog is cancelled, no parameter is passed to this function.
 	onChoose: null,
 
@@ -48,7 +48,7 @@ dojo.declare("dojox.mobile.app.AlertDialog", dijit._WidgetBase, {
 		// Create the node that encapsulates all the buttons
 		var btnContainer = dojo.create("div", {"class": "alertBtns"}, dlgBody);
 
-		// If no buttons have been defined, default to a single button saying OK
+		// If no buttons have been defined, default to a single test saying OK
 		if(!this.buttons || this.buttons.length == 0){
 			this.buttons = [{
 				label: this.defaultButtonLabel,
@@ -105,7 +105,7 @@ dojo.declare("dojox.mobile.app.AlertDialog", dijit._WidgetBase, {
 			}
 		}
 
-		// If an onChoose function was provided, tell it what button
+		// If an onChoose function was provided, tell it what test
 		// value was chosen
 		if(this.onChoose){
 			this.onChoose(node ? dijit.byNode(node)._dialogValue: undefined);

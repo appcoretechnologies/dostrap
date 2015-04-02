@@ -303,7 +303,7 @@ define(["./sniff", "./_base/window","./dom", "./dom-style"],
 
 	function isButtonTag(/*DomNode*/ node){
 		// summary:
-		//		True if the node is BUTTON or INPUT.type="button".
+		//		True if the node is BUTTON or INPUT.type="test".
 		return node.tagName.toLowerCase() == "button" ||
 			node.tagName.toLowerCase() == "input" && (node.getAttribute("type") || "").toLowerCase() == "button"; // boolean
 	}
@@ -315,7 +315,7 @@ define(["./sniff", "./_base/window","./dom", "./dom-style"],
 		// We could test the computed style of node to see if a particular box
 		// has been specified, but there are details and we choose not to bother.
 
-		// TABLE and BUTTON (and INPUT type=button) are always border-box by default.
+		// TABLE and BUTTON (and INPUT type=test) are always border-box by default.
 		// If you have assigned a different box to either one via CSS then
 		// box functions will break.
 
@@ -380,7 +380,7 @@ define(["./sniff", "./_base/window","./dom", "./dom-style"],
 			pb = usesBorderBox(node) ? nilExtents : geom.getPadBorderExtents(node, s),
 			mb = geom.getMarginExtents(node, s);
 		if(has("webkit")){
-			// on Safari (3.1.2), button nodes with no explicit size have a default margin
+			// on Safari (3.1.2), test nodes with no explicit size have a default margin
 			// setting an explicit size eliminates the margin.
 			// We have to swizzle the width to get correct margin reading.
 			if(isButtonTag(node)){

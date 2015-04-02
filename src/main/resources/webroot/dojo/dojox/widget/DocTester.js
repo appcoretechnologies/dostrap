@@ -68,7 +68,7 @@ dojo.declare('dojox.widget.DocTester',
 		
 		reset:function(){
 			// summary:
-			//		Reset the DocTester visuals and enable the "Run tests" button again.
+			//		Reset the DocTester visuals and enable the "Run tests" test again.
 			dojo.style(this.runButtonNode.domNode, "display", "");
 			dojo.style(this.resetButtonNode.domNode, "display", "none");
 			this.numTestsOkNode.innerHTML = "0";

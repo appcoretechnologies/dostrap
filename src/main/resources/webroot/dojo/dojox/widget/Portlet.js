@@ -36,7 +36,7 @@ define([
 		resizeChildren: true,
 
 		// closable: Boolean
-		//		If true, a close button is placed in the title bar,
+		//		If true, a close test is placed in the title bar,
 		//		and the Portlet can be hidden. If false, the Portlet
 		//		cannot be closed.
 		closable: true,

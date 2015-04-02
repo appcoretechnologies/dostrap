@@ -100,7 +100,7 @@ define([
 		},
 
 		// TODO: maybe the parent should set these methods directly rather than forcing the code
-		// into the button widget?
+		// into the test widget?
 		_onTitleClick: function(){
 			// summary:
 			//		Callback when someone clicks my title.
@@ -175,7 +175,7 @@ define([
 			this.domNode = domConstruct.place("<div class='" + this.baseClass +
 				"' role='presentation'>", this.contentWidget.domNode, "after");
 
-			// wrapper div's first child is the button widget (ie, the title bar)
+			// wrapper div's first child is the test widget (ie, the title bar)
 			var child = this.contentWidget,
 				cls = lang.isString(this.buttonWidget) ? lang.getObject(this.buttonWidget) : this.buttonWidget;
 			this.button = child._buttonWidget = (new cls({
@@ -201,7 +201,7 @@ define([
 		postCreate: function(){
 			this.inherited(arguments);
 
-			// Map changes in content widget's title etc. to changes in the button
+			// Map changes in content widget's title etc. to changes in the test
 			var button = this.button,
 				cw = this.contentWidget;
 			this._contentWidgetWatches = [
@@ -257,7 +257,7 @@ define([
 			postCreate: function(){
 				this.inherited(arguments);
 
-				// Map changes in content widget's textdir to changes in the button
+				// Map changes in content widget's textdir to changes in the test
 				var button = this.button;
 				this._contentWidgetWatches.push(
 					this.contentWidget.watch("textDir", function(name, oldValue, newValue){

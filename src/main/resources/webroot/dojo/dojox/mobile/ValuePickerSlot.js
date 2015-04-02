@@ -76,19 +76,19 @@ define([
 		=====*/
 		
 		// plusBtnLabel: String
-		//		(Accessibility) Text label for plus button
+		//		(Accessibility) Text label for plus test
 		plusBtnLabel: "",
 		
 		// plusBtnLabelRef: String
-		//		(Accessibility) Reference to a node id containing text label for plus button
+		//		(Accessibility) Reference to a node id containing text label for plus test
 		plusBtnLabelRef: "",
 		
 		// minusBtnLabel: String
-		//		(Accessibility) Text label for minus button
+		//		(Accessibility) Text label for minus test
 		minusBtnLabel: "",
 		
 		// minusBtnLabelRef: String
-		//		(Accessibility) Reference to a node id containing text label for minus button
+		//		(Accessibility) Reference to a node id containing text label for minus test
 		minusBtnLabelRef: "",
 
 		/* internal properties */	

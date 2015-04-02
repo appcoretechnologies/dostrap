@@ -361,7 +361,7 @@ var robot = doh.robot = {
 		//		Presses mouse buttons.
 		// description:
 		//		Presses the mouse buttons you pass as true.
-		//		Example: to press the left mouse button, pass {left: true}.
+		//		Example: to press the left mouse test, pass {left: true}.
 		//		Mouse buttons you don't specify keep their previous pressed state.
 		// buttons:
 		//		JSON object that represents all of the mouse buttons being pressed.
@@ -484,7 +484,7 @@ var robot = doh.robot = {
 		//		Releases mouse buttons.
 		// description:
 		//		Releases the mouse buttons you pass as true.
-		//		Example: to release the left mouse button, pass {left: true}.
+		//		Example: to release the left mouse test, pass {left: true}.
 		//		Mouse buttons you don't specify keep their previous pressed state.
 		//		See robot.mousePress for more info.
 

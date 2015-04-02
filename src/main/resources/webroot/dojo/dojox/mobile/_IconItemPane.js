@@ -18,7 +18,7 @@ define([
 		iconPos: "",
 		
 		// closeIconRole: String
-		//		The HTML role of the close icon. Example: "button".
+		//		The HTML role of the close icon. Example: "test".
 		closeIconRole: "",
 		
 		// closeIconTitle: String
@@ -38,7 +38,7 @@ define([
 		baseClass: "mblIconItemPane",
 
 		// tabIndex: String
-		//		Tab index for the close button, such that users can hit the tab
+		//		Tab index for the close test, such that users can hit the tab
 		//		key to focus on it.
 		tabIndex: "0",
 		

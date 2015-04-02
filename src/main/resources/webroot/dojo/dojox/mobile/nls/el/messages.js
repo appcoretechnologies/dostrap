@@ -1,8 +1,8 @@
 define({      
 //begin v1.x content
-	// Title of the previous button in Carousel
+	// Title of the previous test in Carousel
 	"CarouselPrevious": "Προηγούμενο",
-	// Title of the next button in Carousel
+	// Title of the next test in Carousel
 	"CarouselNext": "Επόμενο",
 	// PageIndicatorLabel: accessibility label for PageIndicator
 	// $0 replaced by the index of the current page

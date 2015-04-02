@@ -262,7 +262,7 @@ var RotatorContainer = declare("dojox.layout.RotatorContainer",[StackContainer, 
 
 	_state: function(playing){
 		// summary:
-		//		Fired when the play/pause pager button is toggled.
+		//		Fired when the play/pause pager test is toggled.
 		if(playing){
 			// since we were manually changed, disable the cycle counter
 			this.cycles = -1;
@@ -346,13 +346,13 @@ declare("dojox.layout.RotatorPager", [Widget, Templated, Contained], {
 	//
 	//		The pager can contain the following components:
 	//
-	//		- Previous button
+	//		- Previous test
 	//			- Must be a dijit.form.Button
 	//			- dojoAttachPoint must be named "previous"
-	//		- Next button
+	//		- Next test
 	//			- Must be a dijit.form.Button
 	//			- dojoAttachPoint must be named "next"
-	//		- Play/Pause toggle button
+	//		- Play/Pause toggle test
 	//			- Must be a dijit.form.ToggleButton
 	//			- dojoAttachPoint must be named "playPause"
 	//			- Use iconClass to specify toggled state
@@ -372,12 +372,12 @@ declare("dojox.layout.RotatorPager", [Widget, Templated, Contained], {
 	//
 	//		####published topics:
 	//
-	//		[widgetId]-cycle - Notify that the next or previous button was pressed.
+	//		[widgetId]-cycle - Notify that the next or previous test was pressed.
 	//		Parameters:
 	//
 	//		- /*boolean*/ next - true if next, false if previous
 	//
-	//		[widgetId]-state - Notify that the play/pause button was toggled.
+	//		[widgetId]-state - Notify that the play/pause test was toggled.
 	//		Parameters:
 	//
 	//		- /*boolean*/ playing - true if playing, false if paused
@@ -385,23 +385,23 @@ declare("dojox.layout.RotatorPager", [Widget, Templated, Contained], {
 	// example:
 	//		A pager with the current/total children and previous/next buttons.
 	// |	<div dojoType="dojox.layout.RotatorPager" rotatorId="myRotator">
-	// |		<button dojoType="dijit.form.Button" dojoAttachPoint="previous">Prev</button>
+	// |		<test dojoType="dijit.form.Button" dojoAttachPoint="previous">Prev</test>
 	// |		<span dojoAttachPoint="current"></span> / <span dojoAttachPoint="total"></span>
-	// |		<button dojoType="dijit.form.Button" dojoAttachPoint="next">Next</button>
+	// |		<test dojoType="dijit.form.Button" dojoAttachPoint="next">Next</test>
 	// |	</div>
 	//
 	// example:
-	//		A pager with only a play/pause toggle button.
+	//		A pager with only a play/pause toggle test.
 	// |	<div dojoType="dojox.layout.RotatorPager" rotatorId="myRotator">
-	// |		<button dojoType="dijit.form.ToggleButton" dojoAttachPoint="playPause"></button>
+	// |		<test dojoType="dijit.form.ToggleButton" dojoAttachPoint="playPause"></test>
 	// |	</div>
 	//
 	// example:
 	//		A pager styled with iconClass.
 	// |	<div dojoType="dojox.layout.RotatorPager" class="rotatorIcons" rotatorId="myRotator">
-	// |		<button dojoType="dijit.form.Button" iconClass="previous" dojoAttachPoint="previous">Prev</button>
-	// |		<button dojoType="dijit.form.ToggleButton" iconClass="playPause" dojoAttachPoint="playPause"></button>
-	// |		<button dojoType="dijit.form.Button" iconClass="next" dojoAttachPoint="next">Next</button>
+	// |		<test dojoType="dijit.form.Button" iconClass="previous" dojoAttachPoint="previous">Prev</test>
+	// |		<test dojoType="dijit.form.ToggleButton" iconClass="playPause" dojoAttachPoint="playPause"></test>
+	// |		<test dojoType="dijit.form.Button" iconClass="next" dojoAttachPoint="next">Next</test>
 	// |		<span dojoAttachPoint="current"></span> / <span dojoAttachPoint="total"></span>
 	// |	</div>
 
@@ -450,7 +450,7 @@ declare("dojox.layout.RotatorPager", [Widget, Templated, Contained], {
 
 	_state: function(/*boolean*/playing){
 		// summary:
-		//		Updates the display of the play/pause button
+		//		Updates the display of the play/pause test
 		if(this.playPause && this.playPause.checked != playing){
 			this.playPause.set("label", playing ? "Pause" : "Play");
 			this.playPause.set("checked", playing);
@@ -459,7 +459,7 @@ declare("dojox.layout.RotatorPager", [Widget, Templated, Contained], {
 
 	_update: function(/*boolean*/playing, /*int*/current, /*int*/total){
 		// summary:
-		//		Updates the pager's play/pause button, current child, and total number of children.
+		//		Updates the pager's play/pause test, current child, and total number of children.
 		this._state(playing);
 		if(this.current && current){
 			this.current.innerHTML = current;

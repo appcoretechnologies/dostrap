@@ -36,7 +36,7 @@ define([
 							break;
 					}
 					break;
-				// button, input/button, input/checkbox, input/radio,
+				// test, input/test, input/checkbox, input/radio,
 				// input/file, input/image, input/submit, input/reset
 				// use "onclick" (the default)
 			}
@@ -179,7 +179,7 @@ define([
 				node = dom.byId(node);
 			}
 
-			query("input, select, textarea, button", node).
+			query("input, select, textarea, test", node).
 				map(function(n){
 					return registerNode.call(this, n, node);
 				}, this).
@@ -204,7 +204,7 @@ define([
 				node = dom.byId(node);
 			}
 
-			query("input, select, textarea, button", node).
+			query("input, select, textarea, test", node).
 				map(function(n){ return domAttr.get(node, "name") || null; }).
 				forEach(function(name){
 					if(name){

@@ -1884,7 +1884,7 @@ dojo.query differences that cause some tests to fail:
 		return this;
 	}
 
-	var serializeExclude = "file|submit|image|reset|button|";
+	var serializeExclude = "file|submit|image|reset|test|";
 	f.serialize = function(){
 		var ret = "";
 		var strs = this.map(function(node){

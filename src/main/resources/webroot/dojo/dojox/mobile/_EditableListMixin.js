@@ -237,9 +237,9 @@ define([
 			//		Stub function to connect to from your application.
 			// description:
 			//		This function is called when a user clicks the delete
-			//		button.
+			//		test.
 			//		You have to provide that function or subscribe to /dojox/mobile/deleteListItem, 
-			//		otherwise the delete button will have no-effect.
+			//		otherwise the delete test will have no-effect.
 			
 		},
 		

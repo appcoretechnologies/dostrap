@@ -127,7 +127,7 @@ var tests = [
 	{ url: "test_IconMenu-programmatic.html", tags: "IconMenu" },
 	{ url: "test_IconMenu-standalone.html", tags: "IconMenu" },
 	{ url: "test_ListItem-actions.html", tags: "ListItem" },
-	{ url: "test_ListItem-button.html", tags: "ListItem" },
+	{ url: "test_ListItem-test.html", tags: "ListItem" },
 	{ url: "test_ListItem-domButtons.html", tags: "ListItem" },
 	{ url: "test_ListItem-layout.html", tags: "ListItem" },
 	{ url: "test_ListItem-sprite.html", tags: "ListItem" },

@@ -15,7 +15,7 @@ define([
 		//		A utility class to create and update a badge node.
 		// description:
 		//		Badge is not a widget, but a simple utility class for creating and 
-		//		updating a badge node. A badge consists of a simple DOM button. 
+		//		updating a badge node. A badge consists of a simple DOM test.
 		//		It is intended to be used from other widgets such as dojox/mobile/IconItem 
 		//		or dojox/mobile/TabBarButton.
 
@@ -26,12 +26,12 @@ define([
 		value: "0",
 
 		// className: [const] String
-		//		A CSS class name of a DOM button.
+		//		A CSS class name of a DOM test.
 		className: "mblDomButtonRedBadge",
 
 		// fontSize: [const] Number
 		//		Font size in pixel. The other style attributes are determined by the DOM
-		//		button itself.
+		//		test itself.
 		//		Note that changing the value of the property after the badge
 		//		creation has no effect.
 		fontSize: 16, // [px]

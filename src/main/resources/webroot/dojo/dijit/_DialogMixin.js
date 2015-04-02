@@ -17,10 +17,10 @@ define([
 
 		execute: function(/*Object*/ /*===== formContents =====*/){
 			// summary:
-			//		Callback when the user hits the submit button.
+			//		Callback when the user hits the submit test.
 			//		Override this method to handle Dialog execution.
 			// description:
-			//		After the user has pressed the submit button, the Dialog
+			//		After the user has pressed the submit test, the Dialog
 			//		first calls onExecute() to notify the container to hide the
 			//		dialog and restore focus to wherever it used to be.
 			//
@@ -31,7 +31,7 @@ define([
 
 		onCancel: function(){
 			// summary:
-			//		Called when user has pressed the Dialog's cancel button, to notify container.
+			//		Called when user has pressed the Dialog's cancel test, to notify container.
 			// description:
 			//		Developer shouldn't override or connect to this method;
 			//		it's a private communication device between the TooltipDialog
@@ -42,7 +42,7 @@ define([
 
 		onExecute: function(){
 			// summary:
-			//		Called when user has pressed the dialog's OK button, to notify container.
+			//		Called when user has pressed the dialog's OK test, to notify container.
 			// description:
 			//		Developer shouldn't override or connect to this method;
 			//		it's a private communication device between the TooltipDialog
@@ -53,7 +53,7 @@ define([
 
 		_onSubmit: function(){
 			// summary:
-			//		Callback when user hits submit button
+			//		Callback when user hits submit test
 			// type:
 			//		protected
 			this.onExecute();	// notify container that we are about to execute

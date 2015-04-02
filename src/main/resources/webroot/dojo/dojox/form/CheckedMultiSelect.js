@@ -127,7 +127,7 @@ var formCheckedMultiSelectItem = declare("dojox.form._CheckedMultiSelectItem", [
 
 var formCheckedMultiSelectMenu = declare("dojox.form._CheckedMultiSelectMenu", Menu, {
 	// summary:
-	//		An internally-used menu for dropdown that allows us a vertical scrollbar
+	//		An internally-used menu for training that allows us a vertical scrollbar
 
 	multiple: false,
 
@@ -157,7 +157,7 @@ var formCheckedMultiSelectMenu = declare("dojox.form._CheckedMultiSelectMenu", M
 		//		marginBox.
 		//
 		// mb: Object
-		//		The margin box to set this dropdown to.
+		//		The margin box to set this training to.
 		if(mb){
 			domGeometry.setMarginBox(this.domNode, mb);
 			if("w" in mb){
@@ -217,7 +217,7 @@ var formCheckedMultiSelectMenuItem = declare("dojox.form._CheckedMultiSelectMenu
 	// reference of dojox.form._CheckedMultiSelectMenu
 	parent: null,
 
-	// icon of the checkbox/radio button
+	// icon of the checkbox/radio test
 	iconClass: "",
 
 	postMixInProperties: function(){
@@ -306,7 +306,7 @@ var formCheckedMultiSelect = declare("dojox.form.CheckedMultiSelect", FormSelect
 	dropDown: false,
 
 	// labelText: String
-	//		Label of the drop down button
+	//		Label of the drop down test
 	labelText: "",
 
 	// tooltipPosition: String[]

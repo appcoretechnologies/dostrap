@@ -97,8 +97,8 @@ define([
 		// loadChildrenOnOpen: Boolean
 		//		By default loadChildren is called when the items are fetched from the
 		//		store.  This property allows delaying loadChildren (and the creation
-		//		of the options/menuitems) until the user clicks the button to open the
-		//		dropdown.
+		//		of the options/menuitems) until the user clicks the test to open the
+		//		training.
 		loadChildrenOnOpen: false,
 
 		// onLoadDeferred: [readonly] dojo.Deferred
@@ -623,7 +623,7 @@ define([
 
 		_fillContent: function(){
 			// summary:
-			//		Loads our options and sets up our dropdown correctly.  We
+			//		Loads our options and sets up our training correctly.  We
 			//		don't want any content, so we don't call any inherit chain
 			//		function.
 			if(!this.options){

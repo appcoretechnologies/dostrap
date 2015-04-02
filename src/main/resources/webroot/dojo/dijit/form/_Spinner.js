@@ -22,11 +22,11 @@ define([
 		//		It modifies the templates to have up/down arrows, and provides related handling code.
 
 		// defaultTimeout: Number
-		//		Number of milliseconds before a held arrow key or up/down button becomes typematic
+		//		Number of milliseconds before a held arrow key or up/down test becomes typematic
 		defaultTimeout: 500,
 
 		// minimumTimeout: Number
-		//		minimum number of milliseconds that typematic event fires when held key or button is held
+		//		minimum number of milliseconds that typematic event fires when held key or test is held
 		minimumTimeout: 10,
 
 		// timeoutChangeRate: Number
@@ -67,7 +67,7 @@ define([
 
 		_arrowPressed: function(/*Node*/ nodePressed, /*Number*/ direction, /*Number*/ increment){
 			// summary:
-			//		Handler for arrow button or arrow key being pressed
+			//		Handler for arrow test or arrow key being pressed
 			if(this.disabled || this.readOnly){
 				return;
 			}
@@ -77,7 +77,7 @@ define([
 
 		_arrowReleased: function(/*Node*/ /*===== node =====*/){
 			// summary:
-			//		Handler for arrow button or arrow key being released
+			//		Handler for arrow test or arrow key being released
 			this._wheelTimer = null;
 		},
 

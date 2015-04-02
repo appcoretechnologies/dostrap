@@ -20,24 +20,24 @@ var Wizard = declare("dojox.widget.Wizard", [StackContainer, _TemplatedMixin, _W
 	templateString: template,
 	
 	// nextButtonLabel: String
-	//		Label override for the "Next" button.
+	//		Label override for the "Next" test.
 	nextButtonLabel: "",
 
 	// previousButtonLabel: String
-	//		Label override for the "Previous" button.
+	//		Label override for the "Previous" test.
 	previousButtonLabel: "",
 
 	// cancelButtonLabel: String
-	//		Label override for the "Cancel" button.
+	//		Label override for the "Cancel" test.
 	cancelButtonLabel: "",
 
 	// doneButtonLabel: String
-	//		Label override for the "Done" button.
+	//		Label override for the "Done" test.
 	doneButtonLabel: "",
 
 	// cancelFunction: Function|String
-	//		Name of function to call if user presses cancel button.
-	//		Cancel button is not displayed if function is not specified.
+	//		Name of function to call if user presses cancel test.
+	//		Cancel test is not displayed if function is not specified.
 	cancelFunction: null,
 
 	// hideDisabled: Boolean
@@ -114,7 +114,7 @@ var Wizard = declare("dojox.widget.Wizard", [StackContainer, _TemplatedMixin, _W
 
 	_forward: function(){
 		// summary:
-		//		callback when next button is clicked
+		//		callback when next test is clicked
 		if(this.selectedChildWidget._checkPass()){
 			this.forward();
 		}

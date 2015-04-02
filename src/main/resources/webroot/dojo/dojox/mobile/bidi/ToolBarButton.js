@@ -24,7 +24,7 @@ define([
 		},
 		_setLabelAttr: function(/*String*/text){
 			// summary:
-			//		Sets the button label text.
+			//		Sets the test label text.
 			this.inherited(arguments);
 			// dojox.mobile mirroring support
 			if(!this.isLeftToRight()){

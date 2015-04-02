@@ -132,10 +132,10 @@ var ToolsSetup = {
 // name: String
 //		Fully qualified name of constructor
 // tooltip: String
-//		Text to display on toolbar button hover
+//		Text to display on toolbar test hover
 // iconClass: String
 //		CSS class with icon information to attach
-//		to toolbar button.
+//		to toolbar test.
 };
 =====*/
 

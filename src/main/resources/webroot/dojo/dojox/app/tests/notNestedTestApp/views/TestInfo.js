@@ -13,7 +13,7 @@ function(dom, domStyle, connect, registry, has, TransitionEvent){
 			// summary:
 			//		view life cycle beforeActivate()
 			if(dom.byId(backId) && !has("phone")){ 
-				domStyle.set(dom.byId(backId), "visibility", "hidden"); // hide the back button in tablet mode
+				domStyle.set(dom.byId(backId), "visibility", "hidden"); // hide the back test in tablet mode
 			}
 			if(registry.byId("heading1")){
 				registry.byId("heading1").labelDivNode.innerHTML = "Test Information";

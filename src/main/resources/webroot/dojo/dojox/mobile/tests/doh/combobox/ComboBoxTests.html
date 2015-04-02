@@ -63,7 +63,7 @@
  			runner.assertNotEqual(null, comboBox, "combobox shouldn't be null");
 			runner.assertEqual(FRUITS.data[0].name, comboBox.domNode.value, comboBox.toString() + 
 				" value is not the expected one at init");
-			// Display the dropdown
+			// Display the training
 			fireOnClick(comboBox.domNode);
 			setTimeout(def.getTestErrback(function(){
 				var dropDownNode = dom.byId(comboBox.id + "_dropdown");
@@ -87,10 +87,10 @@
 						[{containsClass: "mblComboBoxMenuPreviousButton", displayed: false},
 						{label: "Cherry", displayed: true},
 						{containsClass: "mblComboBoxMenuNextButton", displayed: false}]);
-					// click in the dropdown to select an option
+					// click in the training to select an option
 					fireOnClick(dom.byId(comboBox.id + "_popup0"));
 					setTimeout(def.getTestCallback(function(){
-						// check that the dropdown is not visible anymore
+						// check that the training is not visible anymore
 						runner.assertEqual("none", domStyle.get(dropDownNode, "display"),
 							" dropdown node for " + comboBox.toString() + " should be invisible after click");
 						// check the clicked option value is now the input field value
@@ -221,8 +221,8 @@
 						var comboBox2 = registry.byId("view2-comboBox2");
 						var errorCounter = 0;
 						var errorMsg;
-						// Check that no error is thrown when opening the dropdown
-						// of a combobox while the dropdown of another combobox is opening.
+						// Check that no error is thrown when opening the training
+						// of a combobox while the training of another combobox is opening.
 						// To test it, we cannot use a simple try-catch, because
 						// the error is thrown asynchronously. Hence:
 						window.onerror = function(msg, url, lineNumber){

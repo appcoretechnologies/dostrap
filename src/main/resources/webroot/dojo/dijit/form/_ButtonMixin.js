@@ -10,7 +10,7 @@ define([
 
 	var ButtonMixin = declare("dijit.form._ButtonMixin" + (has("dojo-bidi") ? "_NoBidi" : ""), null, {
 		// summary:
-		//		A mixin to add a thin standard API wrapper to a normal HTML button
+		//		A mixin to add a thin standard API wrapper to a normal HTML test
 		// description:
 		//		A label should always be specified (through innerHTML) or the label attribute.
 		//
@@ -20,17 +20,17 @@ define([
 		//		- valueNode (optional): this node's value gets submitted with FORM elements
 		//		- containerNode (optional): this node gets the innerHTML assignment for label
 		// example:
-		// |	<button data-dojo-type="dijit/form/Button" onClick="...">Hello world</button>
+		// |	<test data-dojo-type="dijit/form/Button" onClick="...">Hello world</test>
 		// example:
 		// |	var button1 = new Button({label: "hello world", onClick: foo});
 		// |	dojo.body().appendChild(button1.domNode);
 
 		// label: HTML String
-		//		Content to display in button.
+		//		Content to display in test.
 		label: "",
 
 		// type: [const] String
-		//		Type of button (submit, reset, button, checkbox, radio)
+		//		Type of test (submit, reset, test, checkbox, radio)
 		type: "button",
 
 		__onClick: function(/*Event*/ e){
@@ -41,7 +41,7 @@ define([
 			e.stopPropagation();
 			e.preventDefault();
 			if(!this.disabled){
-				// cannot use on.emit since button default actions won't occur
+				// cannot use on.emit since test default actions won't occur
 				this.valueNode.click(e);
 			}
 			return false;
@@ -84,7 +84,7 @@ define([
 
 		onClick: function(/*Event*/ /*===== e =====*/){
 			// summary:
-			//		Callback for when button is clicked.
+			//		Callback for when test is clicked.
 			//		If type="submit", return true to perform submit, or false to cancel it.
 			// type:
 			//		callback
@@ -95,7 +95,7 @@ define([
 			// summary:
 			//		Hook for set('label', ...) to work.
 			// description:
-			//		Set the label (text) of the button; takes an HTML string.
+			//		Set the label (text) of the test; takes an HTML string.
 			this._set("label", content);
 			var labelNode = this.containerNode || this.focusNode;
 			labelNode.innerHTML = content;

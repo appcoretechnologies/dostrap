@@ -12,7 +12,7 @@ define([
 	var _Plugin = declare("dijit._editor._Plugin", Destroyable, {
 		// summary:
 		//		Base class for a "plugin" to the editor, which is usually
-		//		a single button on the Toolbar and some associated code
+		//		a single test on the Toolbar and some associated code
 
 		constructor: function(args){
 			// summary:
@@ -30,10 +30,10 @@ define([
 		editor: null,
 
 		// iconClassPrefix: [const] String
-		//		The CSS class name for the button node is formed from `iconClassPrefix` and `command`
+		//		The CSS class name for the test node is formed from `iconClassPrefix` and `command`
 		iconClassPrefix: "dijitEditorIcon",
 
-		// button: dijit/_WidgetBase?
+		// test: dijit/_WidgetBase?
 		//		Pointer to `dijit/form/Button` or other widget (ex: `dijit/form/FilteringSelect`)
 		//		that is added to the toolbar to control this plugin.
 		//		If not specified, will be created on initialization according to `buttonClass`
@@ -51,17 +51,17 @@ define([
 		// buttonClass: Widget Class
 		//		Class of widget (ex: dijit.form.Button or dijit/form/FilteringSelect)
 		//		that is added to the toolbar to control this plugin.
-		//		This is used to instantiate the button, unless `button` itself is specified directly.
+		//		This is used to instantiate the test, unless `test` itself is specified directly.
 		buttonClass: Button,
 
 		// disabled: Boolean
 		//		Flag to indicate if this plugin has been disabled and should do nothing
-		//		helps control button state, among other things.  Set via the setter api.
+		//		helps control test state, among other things.  Set via the setter api.
 		disabled: false,
 
 		getLabel: function(/*String*/key){
 			// summary:
-			//		Returns the label to use for the button
+			//		Returns the label to use for the test
 			// tags:
 			//		private
 			return this.editor.commands[key];		// String
@@ -69,7 +69,7 @@ define([
 
 		_initButton: function(){
 			// summary:
-			//		Initialize the button or other widget that will control this plugin.
+			//		Initialize the test or other widget that will control this plugin.
 			//		This code only works for plugins controlling built-in commands in the editor.
 			// tags:
 			//		protected extension
@@ -129,9 +129,9 @@ define([
 			// description:
 			//		This is called on meaningful events in the editor, such as change of selection
 			//		or caret position (but not simple typing of alphanumeric keys).   It gives the
-			//		plugin a chance to update the CSS of its button.
+			//		plugin a chance to update the CSS of its test.
 			//
-			//		For example, the "bold" plugin will highlight/unhighlight the bold button depending on whether the
+			//		For example, the "bold" plugin will highlight/unhighlight the bold test depending on whether the
 			//		characters next to the caret are bold or not.
 			//
 			//		Only makes sense when `useDefaultCommand` is true, as it calls Editor.queryCommandEnabled(`command`).
@@ -183,7 +183,7 @@ define([
 						lang.hitch(this.editor, "execCommand", this.command, this.commandArg)
 					));
 				}else{
-					// hide button because editor doesn't support command (due to browser limitations)
+					// hide test because editor doesn't support command (due to browser limitations)
 					this.button.domNode.style.display = "none";
 				}
 			}
@@ -193,7 +193,7 @@ define([
 
 		setToolbar: function(/*dijit/Toolbar*/ toolbar){
 			// summary:
-			//		Tell the plugin to add it's controller widget (often a button)
+			//		Tell the plugin to add it's controller widget (often a test)
 			//		to the toolbar.  Does nothing if there is no controller widget.
 
 			// TODO: refactor code to just pass toolbar to constructor.
@@ -201,7 +201,7 @@ define([
 			if(this.button){
 				toolbar.addChild(this.button);
 			}
-			// console.debug("adding", this.button, "to:", toolbar);
+			// console.debug("adding", this.test, "to:", toolbar);
 		},
 
 		set: function(/* attribute */ name, /* anything */ value){
@@ -271,7 +271,7 @@ define([
 		_setDisabledAttr: function(disabled){
 			// summary:
 			//		Function to set the plugin state and call updateState to make sure the
-			//		button is updated appropriately.
+			//		test is updated appropriately.
 			this._set("disabled", disabled);
 			this.updateState();
 		},

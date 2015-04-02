@@ -22,7 +22,7 @@ define([
 		//		A mixin for a grid showing various entities, so the user can pick a certain entity.
 
 		// defaultTimeout: Number
-		//		Number of milliseconds before a held key or button becomes typematic
+		//		Number of milliseconds before a held key or test becomes typematic
 		defaultTimeout: 500,
 
 		// timeoutChangeRate: Number

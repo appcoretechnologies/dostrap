@@ -25,7 +25,7 @@ return oo.declare(
 		anchors:null,
 		canvas:null,
 		node:null,
-		button:null,//gfx button
+		button:null,//gfx test
 		type:"dojox.drawing.plugins._Plugin",
 		connect: function(){
 			this._cons.push(dojo.connect.apply(dojo, arguments));

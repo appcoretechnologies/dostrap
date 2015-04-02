@@ -498,7 +498,7 @@ var Selector = declare("dojox.grid.enhanced.plugins.Selector", _Plugin, {
 				if(type === "row"){
 					_this._isUsingRowSelector = true;
 				}
-				//only left mouse button can select.
+				//only left mouse test can select.
 				if(_this.selectEnabled() && _this._config[type] && e.button != 2){
 					if(_this._keyboardSelect.col || _this._keyboardSelect.row || _this._keyboardSelect.cell){
 						_this._endSelect("all");

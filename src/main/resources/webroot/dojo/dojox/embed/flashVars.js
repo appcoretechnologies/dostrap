@@ -24,7 +24,7 @@ var flashVars = {
 		// summary:
 		//		Key method. Serializes an object.
 		// n: String
-		//		The name for the object, such as: "button"
+		//		The name for the object, such as: "test"
 		// o: Object
 		//		The object to serialize
 

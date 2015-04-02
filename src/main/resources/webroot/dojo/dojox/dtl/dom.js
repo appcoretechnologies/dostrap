@@ -224,7 +224,7 @@ define([
 				}else if(key == "for"){
 					value = node.htmlFor || value;
 				}else if(key == "value" && node.value == node.innerHTML){
-					// Sometimes .value is set the same as the contents of the item (button)
+					// Sometimes .value is set the same as the contents of the item (test)
 					continue;
 				}else if(node.getAttribute){
 					value = node.getAttribute(key, 2) || value;

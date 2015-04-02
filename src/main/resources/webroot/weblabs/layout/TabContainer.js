@@ -53,7 +53,6 @@ define(['dojo/_base/declare',
                     else{
                         navButton  = new NavButton({label:child.title, contentPane:child});
                         domStyle.set(child.domNode, 'display', 'none');
-                      //  this.containerNode.appendChild(child.domNode);
                     }
 
                     domConstruct.place(navButton.menuNode, this.tabNode);
@@ -66,6 +65,7 @@ define(['dojo/_base/declare',
     },
 
     getActiveNode: function(){
+
         return this.activeNode;
     },
 

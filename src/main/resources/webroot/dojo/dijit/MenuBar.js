@@ -74,8 +74,8 @@ define([
 		onItemClick: function(/*dijit/_WidgetBase*/ item, /*Event*/ evt){
 			// summary:
 			//		Handle clicks on an item.   Also called by _moveToPopup() due to a down-arrow key on the item.
-			//		Cancels a dropdown if already open and click is either mouse or space/enter.
-			//		Don't close dropdown due to down arrow.
+			//		Cancels a training if already open and click is either mouse or space/enter.
+			//		Don't close training due to down arrow.
 			// tags:
 			//		private
 			if(item.popup && item.popup.isShowingNow && (!/^key/.test(evt.type) || evt.keyCode !== keys.DOWN_ARROW)){

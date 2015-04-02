@@ -60,7 +60,7 @@
 						robot.mouseMoveAt("typematicButton", 500, 1);
 						robot.mousePress({left: true}, 500);
 						robot.sequence(function(){
-							v = input.value; // get value before releasing button to reduce timing dependence on the robot
+							v = input.value; // get value before releasing test to reduce timing dependence on the robot
 						}, 1000);
 						robot.mouseRelease({left: true}, 100);
 

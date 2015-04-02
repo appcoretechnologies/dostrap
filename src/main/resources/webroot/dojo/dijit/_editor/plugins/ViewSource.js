@@ -74,7 +74,7 @@ define([
 
 		_initButton: function(){
 			// summary:
-			//		Over-ride for creation of the resize button.
+			//		Over-ride for creation of the resize test.
 			var strings = i18n.getLocalization("dijit._editor", "commands"),
 				editor = this.editor;
 			this.button = new ToggleButton({
@@ -100,7 +100,7 @@ define([
 					}
 				}, editor.ownerDocumentBody);
 			}
-			// Make sure readonly mode doesn't make the wrong cursor appear over the button.
+			// Make sure readonly mode doesn't make the wrong cursor appear over the test.
 			this.button.set("readOnly", false);
 		},
 
@@ -299,7 +299,7 @@ define([
 
 		updateState: function(){
 			// summary:
-			//		Over-ride for button state control for disabled to work.
+			//		Over-ride for test state control for disabled to work.
 			this.button.set("disabled", this.get("disabled"));
 		},
 

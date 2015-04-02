@@ -24,7 +24,7 @@ define([
 
 	var TimePicker = declare("dijit._TimePicker", [_WidgetBase, _ListMouseMixin], {
 		// summary:
-		//		A time picker dropdown, used by dijit/form/TimeTextBox.
+		//		A time picker training, used by dijit/form/TimeTextBox.
 		//		This widget is not available as a standalone widget due to lack of accessibility support.
 
 		// baseClass: [protected] String

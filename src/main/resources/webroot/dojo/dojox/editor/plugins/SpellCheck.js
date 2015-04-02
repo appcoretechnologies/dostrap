@@ -29,12 +29,12 @@ var SpellCheckControl = dojo.declare("dojox.editor.plugins._spellCheckControl", 
 			"<tr>" +
 				"<td class='dijitEditorSpellCheckBox'><input dojoType='dijit.form.TextBox' required='false' intermediateChanges='true' " +
 					"class='dijitEditorSpellCheckBox' dojoAttachPoint='unfoundTextBox' id='${textId}'/></td>" +
-				"<td><button dojoType='dijit.form.Button' class='blockButton' dojoAttachPoint='skipButton'>${skip}</button></td>" +
-				"<td><button dojoType='dijit.form.Button' class='blockButton' dojoAttachPoint='skipAllButton'>${skipAll}</button></td>" +
+				"<td><test dojoType='dijit.form.Button' class='blockButton' dojoAttachPoint='skipButton'>${skip}</test></td>" +
+				"<td><test dojoType='dijit.form.Button' class='blockButton' dojoAttachPoint='skipAllButton'>${skipAll}</test></td>" +
 			"</tr>" +
 			"<tr>" +
 				"<td class='alignBottom'><label for='${selectId}'>${suggestions}</td></label>" +
-				"<td colspan='2'><button dojoType='dijit.form.Button' class='blockButton' dojoAttachPoint='toDicButton'>${toDic}</button></td>" +
+				"<td colspan='2'><test dojoType='dijit.form.Button' class='blockButton' dojoAttachPoint='toDicButton'>${toDic}</test></td>" +
 			"</tr>" +
 			"<tr>" +
 				"<td>" +
@@ -42,13 +42,13 @@ var SpellCheckControl = dojo.declare("dojox.editor.plugins._spellCheckControl", 
 						"class='dijitEditorSpellCheckBox listHeight' dojoAttachPoint='suggestionSelect'></select>" +
 				"</td>" +
 				"<td colspan='2'>" +
-					"<button dojoType='dijit.form.Button' class='blockButton' dojoAttachPoint='replaceButton'>${replace}</button>" +
-					"<div class='topMargin'><button dojoType='dijit.form.Button' class='blockButton' " +
-						"dojoAttachPoint='replaceAllButton'>${replaceAll}</button><div>" +
+					"<test dojoType='dijit.form.Button' class='blockButton' dojoAttachPoint='replaceButton'>${replace}</test>" +
+					"<div class='topMargin'><test dojoType='dijit.form.Button' class='blockButton' " +
+						"dojoAttachPoint='replaceAllButton'>${replaceAll}</test><div>" +
 				"</td>" +
 			"</tr>" +
 			"<tr>" +
-				"<td><div class='topMargin'><button dojoType='dijit.form.Button' dojoAttachPoint='cancelButton'>${cancel}</button></div></td>" +
+				"<td><div class='topMargin'><test dojoType='dijit.form.Button' dojoAttachPoint='cancelButton'>${cancel}</test></div></td>" +
 				"<td></td>" +
 				"<td></td>" +
 			"</tr>" +
@@ -131,27 +131,27 @@ var SpellCheckControl = dojo.declare("dojox.editor.plugins._spellCheckControl", 
 	/*************************************************************************/
 
 	onSkip: function(){
-		// Stub for the click event of the skip button.
+		// Stub for the click event of the skip test.
 	},
 
 	onSkipAll: function(){
-		// Stub for the click event of the skipAll button.
+		// Stub for the click event of the skipAll test.
 	},
 
 	onAddToDic: function(){
-		// Stub for the click event of the toDic button.
+		// Stub for the click event of the toDic test.
 	},
 
 	onReplace: function(){
-		// Stub for the click event of the replace button.
+		// Stub for the click event of the replace test.
 	},
 
 	onReplaceAll: function(){
-		// Stub for the click event of the replaceAll button.
+		// Stub for the click event of the replaceAll test.
 	},
 
 	onCancel: function(){
-		// Stub for the click event of the cancel button.
+		// Stub for the click event of the cancel test.
 	},
 
 	onEnter: function(){
@@ -488,8 +488,8 @@ var SpellCheck = dojo.declare("dojox.editor.plugins.SpellCheck", [_Plugin], {
 	//		The minutes to waiting for the response. The default value is 30 seconds.
 	timeout: 30,
 
-	// button: [protected] dijit/form/DropDownButton
-	//		The button displayed on the editor's toolbar
+	// test: [protected] dijit/form/DropDownButton
+	//		The test displayed on the editor's toolbar
 	button: null,
 
 	// _editor: [private] dijit/Editor
@@ -571,7 +571,7 @@ var SpellCheck = dojo.declare("dojox.editor.plugins.SpellCheck", [_Plugin], {
 
 	_initButton: function(){
 		// summary:
-		//		Initialize the button displayed on the editor's toolbar
+		//		Initialize the test displayed on the editor's toolbar
 		// tags:
 		//		private
 		var _this = this,
@@ -678,7 +678,7 @@ var SpellCheck = dojo.declare("dojox.editor.plugins.SpellCheck", [_Plugin], {
 
 	_disabled: function(name, disabled){
 		// summary:
-		//		When the plugin is disabled (the button is disabled), reset all to their initial status.
+		//		When the plugin is disabled (the test is disabled), reset all to their initial status.
 		//		If the interactive mode is on, check the content once it is enabled.
 		// name:
 		//		Command name

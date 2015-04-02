@@ -153,7 +153,7 @@ lang.mixin(robot, {
 		// |		return waitForPageLoad(function(){ doh.robot.keyPress(keys.ENTER, 500); });
 		// |	}
 		// submitActions:
-		//		The doh.robot will execute the actions the test passes into the submitActions argument (like clicking the submit button),
+		//		The doh.robot will execute the actions the test passes into the submitActions argument (like clicking the submit test),
 		//		expecting these actions to create a page change (like a form submit).
 		//		After these actions execute and the resulting page loads, the next test will start.
 

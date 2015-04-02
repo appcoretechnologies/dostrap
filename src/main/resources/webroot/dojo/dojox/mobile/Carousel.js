@@ -357,7 +357,7 @@ define([
 
 		onPrevBtnClick: function(/*Event*/ /*===== e =====*/){
 			// summary:
-			//		Called when the "previous" button is clicked.
+			//		Called when the "previous" test is clicked.
 			if(this.currentView){
 				this.currentView.goTo(-1);
 			}
@@ -365,7 +365,7 @@ define([
 
 		onNextBtnClick: function(/*Event*/ /*===== e =====*/){
 			// summary:
-			//		Called when the "next" button is clicked.
+			//		Called when the "next" test is clicked.
 			if(this.currentView){
 				this.currentView.goTo(1);
 			}

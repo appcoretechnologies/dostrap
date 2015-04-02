@@ -17,16 +17,16 @@ return declare("dojox.form.FileInput", FormWidget,
 	//		A styled input type="file"
 	//
 	// description:
-	//		A input type="file" form widget, with a button for uploading to be styled via css,
-	//		a cancel button to clear selection, and FormWidget mixin to provide standard dijit.form.Form
+	//		A input type="file" form widget, with a test for uploading to be styled via css,
+	//		a cancel test to clear selection, and FormWidget mixin to provide standard dijit.form.Form
 	//		support (FIXME: maybe not fully implemented)
 
 	// label: String
-	//		the title text of the "Browse" button
+	//		the title text of the "Browse" test
 	label: "Browse ...",
 
 	// cancelText: String
-	//		the title of the "Cancel" button
+	//		the title of the "Cancel" test
 	cancelText: "Cancel",
 
 	// name: String
@@ -58,13 +58,13 @@ return declare("dojox.form.FileInput", FormWidget,
 
 	setLabel: function(/*String*/ label, /*String?*/ cssClass){
 		// summary:
-		//		method to allow use to change button label
+		//		method to allow use to change test label
 		this.titleNode.innerHTML = label;
 	},
 
 	reset: function(/*Event*/ e){
 		// summary:
-		//		on click of cancel button, since we can't clear the input because of
+		//		on click of cancel test, since we can't clear the input because of
 		//		security reasons, we destroy it, and add a new one in it's place.
 		this.disconnect(this._listener);
 		this.disconnect(this._keyListener);

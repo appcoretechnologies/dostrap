@@ -206,13 +206,13 @@
 				});
 				accordion.startup();
 
-				// Change title of a pane, should change corresponding button label			
+				// Change title of a pane, should change corresponding test label
 				registry.byId("b").set("title", "b changed");
 				var titles = query(".dijitAccordionText", accordion.domNode);
 				t.is(3, titles.length, "number of titles");
 				t.is("b changed", titles[1].innerHTML);
 
-				// Change tooltip of a pane, should change corresponding button tooltip			
+				// Change tooltip of a pane, should change corresponding test tooltip
 				registry.byId("c").set("tooltip", "c tooltip changed");
 				titles = query(".dijitAccordionText", accordion.domNode);
 				t.is(3, titles.length, "number of titles");

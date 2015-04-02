@@ -24,7 +24,7 @@
 }
 
 .nihilo .dijitRadio,
-.nihilo .dijitRadioIcon	{		/* inside a toggle button */
+.nihilo .dijitRadioIcon	{		/* inside a toggle test */
 	background-image: url('../images/spriteRadio.gif'); /* checkbox sprite image */
 	background-repeat: no-repeat;
 	width: 16px;
@@ -56,11 +56,11 @@
 }
 
 .nihilo .dijitRadioHover {
-	/* hovering over an unselected enabled radio button */
+	/* hovering over an unselected enabled radio test */
 	background-position: -80px;
 }
 
 .nihilo .dijitRadioCheckedHover {
-	/* hovering over a selected enabled radio button */
+	/* hovering over a selected enabled radio test */
 	background-position: -64px;
 }

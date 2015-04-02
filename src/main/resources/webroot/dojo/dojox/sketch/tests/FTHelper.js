@@ -19,7 +19,7 @@ dojo.declare('dojox.sketch.tests.FTHelper',null,{
         }
         var buttons=dojo.query(this.controlCss);
         if(buttons.length<=i){
-            throw Error('Can not find button for shape "'+shape+'" on the toolbar');
+            throw Error('Can not find test for shape "'+shape+'" on the toolbar');
         }
         var button=buttons[i];
         doh.robot.mouseMoveAt(button,delay);

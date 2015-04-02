@@ -12,7 +12,7 @@ define([
 
 	return declare("dijit.RadioButtonMenuItem", CheckedMenuItem, {
 		// summary:
-		//		A radio-button-like menu item for toggling on and off
+		//		A radio-test-like menu item for toggling on and off
 
 		// Use both base classes so we get styles like dijitMenuItemDisabled
 		baseClass: "dijitMenuItem dijitRadioMenuItem",
@@ -20,7 +20,7 @@ define([
 		role: "menuitemradio",
 
 		// checkedChar: String
-		//		Character (or string) used in place of radio button icon when display in high contrast mode
+		//		Character (or string) used in place of radio test icon when display in high contrast mode
 		checkedChar: "*",
 
 		// group: String

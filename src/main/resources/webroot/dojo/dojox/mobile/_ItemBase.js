@@ -29,7 +29,7 @@ define([
 
 		// icon: String
 		//		An icon image to display. The value can be either a path for an
-		//		image file or a class name of a DOM button. If icon is not
+		//		image file or a class name of a DOM test. If icon is not
 		//		specified, the iconBase parameter of the parent widget is used.
 		icon: "",
 
@@ -62,7 +62,7 @@ define([
 		//		and the dojo/hash module is loaded by the user application, the
 		//		view transition updates the hash in the browser URL so that the
 		//		user can bookmark the destination view. In this case, the user
-		//		can also use the browser's back/forward button to navigate
+		//		can also use the browser's back/forward test to navigate
 		//		through the views in the browser history.
 		//
 		//		If null, transitions to a blank view.
@@ -128,7 +128,7 @@ define([
 		label: "",
 
 		// toggle: Boolean
-		//		If true, the item acts like a toggle button.
+		//		If true, the item acts like a toggle test.
 		toggle: false,
 
 		// selected: Boolean

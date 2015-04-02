@@ -51,10 +51,9 @@ var isActive=true;
 
            // this.setcontentPane();
         },
+
         setClass: function(classname ) {
             this.menuNode.className=classname;
-
-
         },
        /* setcontentPane: function(){
             this.contentPane=contentPane;

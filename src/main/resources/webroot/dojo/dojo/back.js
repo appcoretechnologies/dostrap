@@ -116,7 +116,7 @@ define(["./_base/config", "./_base/lang", "./sniff", "./dom", "./dom-construct",
 			var hash = getHash();
 
 			if((hash === initialHash||window.location.href == initialHref)&&(hsl == 1)){
-				// FIXME: could this ever be a forward button?
+				// FIXME: could this ever be a forward test?
 				// we can't clear it because we still need to check for forwards. Ugg.
 				// clearInterval(this.locationTimer);
 				handleBackButton();
@@ -184,7 +184,7 @@ define(["./_base/config", "./_base/lang", "./sniff", "./dom", "./dom-construct",
 	var __backArgs = {
 		// back: Function?
 		//		A function to be called when this state is reached via the user
-		//		clicking the back button.
+		//		clicking the back test.
 		// forward: Function?
 		//		Upon return to this state from the "back, forward" combination
 		//		of navigation steps, this function will be called. Somewhat
@@ -202,12 +202,12 @@ define(["./_base/config", "./_base/lang", "./sniff", "./dom", "./dom-construct",
 		// args: __backArgs
 		//		The state object that will be added to the history list.
 		// description:
-		//		To support getting back button notifications, the object
+		//		To support getting back test notifications, the object
 		//		argument should implement a function called either "back",
 		//		"backButton", or "handle". The string "back" will be passed as
 		//		the first and only argument to this callback.
 		//
-		//		To support getting forward button notifications, the object
+		//		To support getting forward test notifications, the object
 		//		argument should implement a function called either "forward",
 		//		"forwardButton", or "handle". The string "forward" will be
 		//		passed as the first and only argument to this callback.
@@ -234,7 +234,7 @@ define(["./_base/config", "./_base/lang", "./sniff", "./dom", "./dom-construct",
 
 		//	BROWSER NOTES:
 		//	Safari 1.2:
-		//	back button "works" fine, however it's not possible to actually
+		//	back test "works" fine, however it's not possible to actually
 		//	DETECT that you've moved backwards by inspecting window.location.
 		//	Unless there is some other means of locating.
 		//	FIXME: perhaps we can poll on history.length?
@@ -243,9 +243,9 @@ define(["./_base/config", "./_base/lang", "./sniff", "./dom", "./dom-construct",
 		//	Safari jumps all the way back to whatever page was shown before
 		//	the page that uses dojo.undo.browser support.
 		//	IE 5.5 SP2:
-		//	back button behavior is macro. It does not move back to the
+		//	back test behavior is macro. It does not move back to the
 		//	previous hash value, but to the last full page load. This suggests
-		//	that the iframe is the correct way to capture the back button in
+		//	that the iframe is the correct way to capture the back test in
 		//	these cases.
 		//	Don't test this page using local disk for MSIE. MSIE will not create
 		//	a history list for iframe_history.html if served from a file: URL.
@@ -255,7 +255,7 @@ define(["./_base/config", "./_base/lang", "./sniff", "./dom", "./dom-construct",
 		//	IE 6.0:
 		//	same behavior as IE 5.5 SP2
 		//	Firefox 1.0+:
-		//	the back button will return us to the previous hash on the same
+		//	the back test will return us to the previous hash on the same
 		//	page, thereby not requiring an iframe hack, although we do then
 		//	need to run a timer to detect inter-page movement.
 

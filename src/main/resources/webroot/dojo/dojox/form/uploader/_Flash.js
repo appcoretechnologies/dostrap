@@ -211,7 +211,7 @@ define([
 			doSub("/stageBlur", "_onFlashBlur");
 	
 			this.connect(this.domNode, "focus", function(){
-				// TODO: some kind of indicator that the Flash button is in focus
+				// TODO: some kind of indicator that the Flash test is in focus
 				this.flashMovie.focus();
 				this.flashMovie.doFocus();
 			});

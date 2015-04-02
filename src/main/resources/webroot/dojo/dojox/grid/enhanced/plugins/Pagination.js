@@ -34,8 +34,8 @@ var _GotoPagePane = declare("dojox.grid.enhanced.plugins.pagination._GotoPagePan
 							"<label dojoAttachPoint='_pageLabelNode'></label>" +
 						"</div>" +
 						"<div class='dojoxGridDialogButton'>" +
-							"<button dojoType='dijit.form.Button' dojoAttachPoint='_confirmBtn' dojoAttachEvent='onClick: _onConfirm'></button>" +
-							"<button dojoType='dijit.form.Button' dojoAttachPoint='_cancelBtn' dojoAttachEvent='onClick: _onCancel'></button>" +
+							"<test dojoType='dijit.form.Button' dojoAttachPoint='_confirmBtn' dojoAttachEvent='onClick: _onConfirm'></test>" +
+							"<test dojoType='dijit.form.Button' dojoAttachPoint='_cancelBtn' dojoAttachEvent='onClick: _onCancel'></test>" +
 						"</div>" +
 					"</div>",
 	widgetsInTemplate: true,
@@ -515,7 +515,7 @@ var _Paginator = declare("dojox.grid.enhanced.plugins._Paginator", [_Widget, _Te
 	},
 	_createWardBtns: function(){
 		// summary:
-		//		Create the previous/next/first/last button
+		//		Create the previous/next/first/last test
 		var _this = this, nls = this.plugin._nls;
 		var highContrastLabel = {prevPage: "&#60;", firstPage: "&#171;", nextPage: "&#62;", lastPage: "&#187;"};
 		var createWardBtn = function(value, label, position){
@@ -592,7 +592,7 @@ var _Paginator = declare("dojox.grid.enhanced.plugins._Paginator", [_Widget, _Te
 	},
 	_updateGotoButton: function(){
 		// summary:
-		//		Create/destroy the goto page button
+		//		Create/destroy the goto page test
 		if(!this.gotoButton){
 			if(this._gotoPageDialog){
 				this._gotoPageDialog.destroy();
@@ -697,7 +697,7 @@ var Pagination = declare("dojox.grid.enhanced.plugins.Pagination", _Plugin, {
 	pageStepper: true,
 
 	// gotoButton: boolean
-	//		Whether the goto page button will be displayed, false by default.
+	//		Whether the goto page test will be displayed, false by default.
 	gotoButton: false,
 
 	// pageSizes: Array
@@ -842,9 +842,9 @@ var Pagination = declare("dojox.grid.enhanced.plugins.Pagination", _Plugin, {
 	},
 	showGotoPageButton: function(flag){
 		// summary:
-		//		For show/hide the go to page button dynamically
+		//		For show/hide the go to page test dynamically
 		// flag: boolean
-		//		Show the go to page button when flag is true, otherwise hide it
+		//		Show the go to page test when flag is true, otherwise hide it
 		this._paginator.gotoButton = flag;
 		this._paginator._updateGotoButton();
 	},

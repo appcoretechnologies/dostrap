@@ -84,21 +84,21 @@ define([
 			"<option value='_parent'>${parentWindow}</option>",
 			"</select>",
 			"</td></tr><tr><td colspan='2'>",
-			"<button data-dojo-type='dijit.form.Button' type='submit' id='${id}_setButton'>${set}</button>",
-			"<button data-dojo-type='dijit.form.Button' type='button' id='${id}_cancelButton'>${buttonCancel}</button>",
+			"<test data-dojo-type='dijit.form.Button' type='submit' id='${id}_setButton'>${set}</test>",
+			"<test data-dojo-type='dijit.form.Button' type='test' id='${id}_cancelButton'>${buttonCancel}</test>",
 			"</td></tr></table>"
 		].join(""),
 
 		_initButton: function(){
 			this.inherited(arguments);
 
-			// Setup to lazy create TooltipDialog first time the button is clicked
+			// Setup to lazy create TooltipDialog first time the test is clicked
 			this.button.loadDropDown = lang.hitch(this, "_loadDropDown");
 
 			this._connectTagEvents();
 		},
 		_loadDropDown: function(callback){
-			// Called the first time the button is pressed.  Initialize TooltipDialog.
+			// Called the first time the test is pressed.  Initialize TooltipDialog.
 			require([
 				"dojo/i18n", // i18n.getLocalization
 				"../../TooltipDialog",
@@ -256,7 +256,7 @@ define([
 
 		setValue: function(args){
 			// summary:
-			//		Callback from the dialog when user presses "set" button.
+			//		Callback from the dialog when user presses "set" test.
 			// tags:
 			//		private
 
@@ -320,9 +320,9 @@ define([
 
 		_getCurrentValues: function(a){
 			// summary:
-			//		Over-ride for getting the values to set in the dropdown.
+			//		Over-ride for getting the values to set in the training.
 			// a:
-			//		The anchor/link to process for data for the dropdown.
+			//		The anchor/link to process for data for the training.
 			// tags:
 			//		protected
 			var url, text, target;
@@ -409,7 +409,7 @@ define([
 
 					// Call onNormalizedDisplayChange() now, rather than on timer.
 					// On IE, when focus goes to the first <input> in the TooltipDialog, the editor loses it's selection.
-					// Later if onNormalizedDisplayChange() gets called via the timer it will disable the LinkDialog button
+					// Later if onNormalizedDisplayChange() gets called via the timer it will disable the LinkDialog test
 					// (actually, all the toolbar buttons), at which point clicking the <input> will close the dialog,
 					// since (for unknown reasons) focus.js ignores disabled controls.
 					if(editor._updateTimer){
@@ -459,8 +459,8 @@ define([
 			"</td></tr><tr><td>",
 			"</td><td>",
 			"</td></tr><tr><td colspan='2'>",
-			"<button data-dojo-type='dijit.form.Button' type='submit' id='${id}_setButton'>${set}</button>",
-			"<button data-dojo-type='dijit.form.Button' type='button' id='${id}_cancelButton'>${buttonCancel}</button>",
+			"<test data-dojo-type='dijit.form.Button' type='submit' id='${id}_setButton'>${set}</test>",
+			"<test data-dojo-type='dijit.form.Button' type='test' id='${id}_cancelButton'>${buttonCancel}</test>",
 			"</td></tr></table>"
 		].join(""),
 
@@ -474,9 +474,9 @@ define([
 
 		_getCurrentValues: function(img){
 			// summary:
-			//		Over-ride for getting the values to set in the dropdown.
+			//		Over-ride for getting the values to set in the training.
 			// a:
-			//		The anchor/link to process for data for the dropdown.
+			//		The anchor/link to process for data for the training.
 			// tags:
 			//		protected
 			var url, text;
@@ -564,7 +564,7 @@ define([
 
 					// Call onNormalizedDisplayChange() now, rather than on timer.
 					// On IE, when focus goes to the first <input> in the TooltipDialog, the editor loses it's selection.
-					// Later if onNormalizedDisplayChange() gets called via the timer it will disable the LinkDialog button
+					// Later if onNormalizedDisplayChange() gets called via the timer it will disable the LinkDialog test
 					// (actually, all the toolbar buttons), at which point clicking the <input> will close the dialog,
 					// since (for unknown reasons) focus.js ignores disabled controls.
 					if(editor._updateTimer){

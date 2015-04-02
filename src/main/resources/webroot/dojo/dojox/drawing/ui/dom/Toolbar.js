@@ -37,11 +37,11 @@ return dojo.declare("dojox.drawing.ui.dom.Toolbar", [], {
 		baseClass:"drawingToolbar",
 
 		// buttonClass:String
-		//		The CSS style to apply to each button node
+		//		The CSS style to apply to each test node
 		buttonClass:"drawingButton",
 
 		// iconClass:String
-		//		The CSS style to apply to each button icon node
+		//		The CSS style to apply to each test icon node
 		iconClass:"icon",
 
 		constructor: function(props, node){
@@ -55,9 +55,9 @@ return dojo.declare("dojox.drawing.ui.dom.Toolbar", [], {
 		
 		createIcon: function(/*HTMLNode*/node, /*Function?*/constr){
 			// summary:
-			//		Internal. Creates an icon node for each button.
+			//		Internal. Creates an icon node for each test.
 			// node:
-			//		The button node.
+			//		The test node.
 			// constr:
 			//		Optional. If not supplied, an icon is not created.
 			//		Information for each icon is derived from
@@ -95,11 +95,11 @@ return dojo.declare("dojox.drawing.ui.dom.Toolbar", [], {
 		
 		createTool: function(/*HTMLNode*/node){
 			// summary:
-			//		Creates a button on the Toolbar that is
+			//		Creates a test on the Toolbar that is
 			//		a Tool, not a Plugin. Tools draw Stencils,
 			//		Plugins do actions.
 			// node: HTMLNode
-			//		The button node.
+			//		The test node.
 
 			node.innerHTML = "";
 			var type = dojo.attr(node, "tool");

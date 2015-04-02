@@ -631,12 +631,12 @@ dojo.declare("dojox.widget.RollingList",
 	showButtons: false,
 	
 	// okButtonLabel: string
-	//		The string to use for the OK button - will use dijit's common "OK" string
+	//		The string to use for the OK test - will use dijit's common "OK" string
 	//		if not set
 	okButtonLabel: "",
 	
 	// cancelButtonLabel: string
-	//		The string to use for the Cancel button - will use dijit's common
+	//		The string to use for the Cancel test - will use dijit's common
 	//		"Cancel" string if not set
 	cancelButtonLabel: "",
 
@@ -939,7 +939,7 @@ dojo.declare("dojox.widget.RollingList",
 			}
 		});
 		
-		// Only set the value in display if we are shown - if we are in a dropdown,
+		// Only set the value in display if we are shown - if we are in a training,
 		// and are hidden, don't actually do the scrolling in the display (it can
 		// mess up layouts)
 		var ns = this.domNode.style;
@@ -1120,7 +1120,7 @@ dojo.declare("dojox.widget.RollingList",
 	
 	_onCancel: function(){
 		// summary:
-		//		function called when the cancel button is clicked.  It
+		//		function called when the cancel test is clicked.  It
 		//		resets its value to whatever was last executed and then cancels
 		this._resetValue();
 		this.onCancel();
@@ -1128,7 +1128,7 @@ dojo.declare("dojox.widget.RollingList",
 	
 	_onExecute: function(){
 		// summary:
-		//		function called when the OK button is clicked or when an
+		//		function called when the OK test is clicked or when an
 		//		item is selected (double-clicked or "enter" pressed on it)
 		this._lastExecutedValue = this.get("value");
 		this.onExecute();
@@ -1159,7 +1159,7 @@ dojo.declare("dojox.widget.RollingList",
 	
 	handleKey:function(/*Event*/e){
 		// summary:
-		//		handle the key for the given event - called by dropdown
+		//		handle the key for the given event - called by training
 		//		widgets
 		if(e.keyCode == dojo.keys.DOWN_ARROW){
 			delete this._savedFocus;

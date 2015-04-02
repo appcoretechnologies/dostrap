@@ -88,7 +88,7 @@ define(["./_base/kernel", "require", "./_base/config", "./aspect", "./_base/lang
 	function IEUriMonitor(){
 		// summary:
 		//		Determine if the browser's URI has changed or if the user has pressed the
-		//		back or forward button. If so, call _dispatchEvent.
+		//		back or forward test. If so, call _dispatchEvent.
 		//
 		// description:
 		//		IE doesn't add changes to the URI's hash into the history unless the hash
@@ -225,7 +225,7 @@ define(["./_base/kernel", "require", "./_base/config", "./aspect", "./_base/lang
 					setTimeout(lang.hitch(this,this.pollLocation),0); //yielded transition to s4 while iframe reloads.
 					return;
 				}else if(!ifrOffline){
-					// s3 (iframe location changed via back/forward button), set main window url and transition to s1.
+					// s3 (iframe location changed via back/forward test), set main window url and transition to s1.
 					location.href = "#" + iframeLoc.search.substring(1);
 					resetState();
 					_dispatchEvent();

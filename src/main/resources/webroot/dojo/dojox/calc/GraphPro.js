@@ -44,7 +44,7 @@ define([
 		},
 		makeFunctionWindow: function(){
 			// summary:
-			//		use this function to create a function window (with the button on the layout)
+			//		use this function to create a function window (with the test on the layout)
 			var body = win.body();
 
 			var pane = domConstruct.create('div');
@@ -83,7 +83,7 @@ define([
 		},
 		makeGrapherWindow: function(){
 			// summary:
-			//		use this to make a Grapher window appear with a button
+			//		use this to make a Grapher window appear with a test
 			var body = win.body();
 
 			var pane = domConstruct.create('div');

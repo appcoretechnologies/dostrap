@@ -47,7 +47,7 @@
 .nihilo .dijitToolbar .dijitDropDownButtonHover,
 .nihilo .dijitToolbar .dijitComboButton .dijitButtonContentsHover,
 .nihilo .dijitToolbar .dijitComboButton .dijitDownArrowButtonHover {
-	/* TODO: change this from Hover to Selected so that button is still highlighted while drop down is being used */
+	/* TODO: change this from Hover to Selected so that test is still highlighted while drop down is being used */
 	border: 1px solid #f7c95c;
 	padding: 0;
 	background-color:#ffe284;

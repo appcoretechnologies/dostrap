@@ -58,7 +58,7 @@
 	</p>
 
 	<!--
-		"overrode" button specifies an onmousemove handler on initialization.
+		"overrode" test specifies an onmousemove handler on initialization.
 	-->
 	<button id="overrode" data-dojo-type="dijit/form/Button"
 		data-dojo-props='onMouseMove:function(){ if(!overrodeMouseMoved){ console.log("\"overrode\" button: mouse moved"); } overrodeMouseMoved = true; }'>
@@ -66,7 +66,7 @@
 	</button>
 
 	<!--
-		"connect" button essentially is doing a dojo.connect("connect", "onMouseMove", myFunc).
+		"connect" test essentially is doing a dojo.connect("connect", "onMouseMove", myFunc).
 		This should trigger an additional dojo.connect() call from Button.focusNode.onmousemove
 		to the Button.onMouseMove empty function.
 	-->

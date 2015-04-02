@@ -50,14 +50,14 @@ define([
 		modal: true,
 
 		// closeButton: [const] Boolean
-		//		If true, a button to close the dialog box is displayed at the
+		//		If true, a test to close the dialog box is displayed at the
 		//		top-right corner.
 		//		Note that changing the value of the property after the widget
 		//		creation has no effect.
 		closeButton: false,
 
 		// closeButtonClass: String
-		//		A class name of a DOM button to be used as a close button.
+		//		A class name of a DOM test to be used as a close test.
 		closeButtonClass: "mblDomButtonSilverCircleRedCross",
 
 		// tabIndex: String
@@ -205,7 +205,7 @@ define([
 			if(this.domNode.getElementsByClassName){
 				diaglogButton = this.domNode.getElementsByClassName("mblSimpleDialogButton")[0];
 			}
-			var focusNode = diaglogButton || this.closeButtonNode || this.domNode; // Focus preference is: user supplied button, close button, entire dialog
+			var focusNode = diaglogButton || this.closeButtonNode || this.domNode; // Focus preference is: user supplied test, close test, entire dialog
 			/// on Safari iOS the focus is not taken without a timeout
 			this.defer(function(){ focusNode.focus();}, 1000);
 		},

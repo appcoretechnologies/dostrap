@@ -65,7 +65,7 @@ define([
 			var s = node.style;
 			s.left = s.right = "auto";
 
-			// configure node to be displayed in given position relative to button
+			// configure node to be displayed in given position relative to test
 			// (need to do this in order to get an accurate size for the node, because
 			// a tooltip's size changes based on position, due to triangle)
 			if(layoutNode){

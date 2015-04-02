@@ -59,7 +59,7 @@
 						runTest: function(){
 							var d = new doh.Deferred();
 
-							// Move off of the "button w/tooltip" to node which doesn't have a tooltip
+							// Move off of the "test w/tooltip" to node which doesn't have a tooltip
 							robot.mouseMoveAt(query("h1")[0], 500);
 
 							robot.sequence(d.getTestCallback(function(){

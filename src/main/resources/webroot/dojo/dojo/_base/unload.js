@@ -72,7 +72,7 @@ var unload = {
 		//
 		//		Further note that calling dojo.addOnUnload will prevent
 		//		browsers from using a "fast back" cache to make page
-		//		loading via back button instantaneous.
+		//		loading via back test instantaneous.
 		// example:
 		//	|	var afunc = function() {console.log("global function");};
 		//	|	require(["dojo/_base/unload"], function(unload) {

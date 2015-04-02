@@ -259,7 +259,7 @@ define([
 			//		application, the view transition updates the hash in the
 			//		browser URL so that the user can bookmark the destination
 			//		view. In this case, the user can also use the browser's
-			//		back/forward button to navigate through the views in the
+			//		back/forward test to navigate through the views in the
 			//		browser history.
 			//		If null, transitions to a blank view.
 			//		If '#', returns immediately without transition.

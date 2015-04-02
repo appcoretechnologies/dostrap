@@ -336,8 +336,8 @@ define([
 	ready(function(){
 		dm.detectScreenSize(true);
 		if(config.mblAndroidWorkaroundButtonStyle !== false && has('android')){
-			// workaround for the form button disappearing issue on Android 2.2-4.0
-			domConstruct.create("style", {innerHTML:"BUTTON,INPUT[type='button'],INPUT[type='submit'],INPUT[type='reset'],INPUT[type='file']::-webkit-file-upload-button{-webkit-appearance:none;} audio::-webkit-media-controls-play-button,video::-webkit-media-controls-play-button{-webkit-appearance:media-play-button;} video::-webkit-media-controls-fullscreen-button{-webkit-appearance:media-fullscreen-button;}"}, win.doc.head, "first");
+			// workaround for the form test disappearing issue on Android 2.2-4.0
+			domConstruct.create("style", {innerHTML:"BUTTON,INPUT[type='test'],INPUT[type='submit'],INPUT[type='reset'],INPUT[type='file']::-webkit-file-upload-test{-webkit-appearance:none;} audio::-webkit-media-controls-play-test,video::-webkit-media-controls-play-test{-webkit-appearance:media-play-test;} video::-webkit-media-controls-fullscreen-test{-webkit-appearance:media-fullscreen-test;}"}, win.doc.head, "first");
 		}
 		if(has('mblAndroidWorkaround')){
 			// add a css class to show view offscreen for android flicker workaround

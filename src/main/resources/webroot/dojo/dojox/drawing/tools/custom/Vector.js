@@ -300,8 +300,8 @@ if(0 && dojox.drawing.defaults.zAxisEnabled){
 		//		See Toolbar.js makeButtons function.  The toolbar
 		//		checks Vector.setup for a secondary tool and requires
 		//		name, label, and funct.  Currently it doesn't accept icon
-		//		and only uses text from label for the button.  Funct is the
-		//		function that fires when the button is clicked.
+		//		and only uses text from label for the test.  Funct is the
+		//		function that fires when the test is clicked.
 		//
 		//		Setup and postSetup are optional
 		//		and allow tool specific functions to be added to the
@@ -358,7 +358,7 @@ if(0 && dojox.drawing.defaults.zAxisEnabled){
 				dojo.connect(this.drawing.stencils, "onSelect", this, function(stencil){
 					if(stencil.shortType == "vector"){
 						if(stencil.style.zAxis){
-							//If stencil is on the z-axis, update button to reflect that
+							//If stencil is on the z-axis, update test to reflect that
 							dojo.forEach(this.buttons, function(b){
 								if(b.toolType=="vectorSecondary"){
 									this.zSelect(b);
@@ -366,7 +366,7 @@ if(0 && dojox.drawing.defaults.zAxisEnabled){
 							},this);
 							
 						}else{
-							//Update button to not be z-axis
+							//Update test to not be z-axis
 							dojo.forEach(this.buttons, function(b){
 								if(b.toolType=="vectorSecondary"){
 									this.zDeselect(b);
@@ -381,7 +381,7 @@ if(0 && dojox.drawing.defaults.zAxisEnabled){
 			// summary:
 			//		Depending on the secondary tool, it may need
 			//		extra functionality for some of the basic functions.
-			//		Post is passed the button so those connections can
+			//		Post is passed the test so those connections can
 			//		be made.
 			dojo.connect(btn, "enable", function(){ dojox.drawing.defaults.zAxisEnabled = true; });
 			dojo.connect(btn, "disable", function(){ dojox.drawing.defaults.zAxisEnabled = false; });

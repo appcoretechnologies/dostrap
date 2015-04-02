@@ -57,11 +57,11 @@ define([
 
 		// commands: string
 		//		A comma-separated list of commands. Valid commands are:
-		//		  prev			An icon button to go to the previous pane.
-		//		  next			An icon button to go to the next pane.
-		//		  play/pause	A play and pause toggle icon button.
+		//		  prev			An icon test to go to the previous pane.
+		//		  next			An icon test to go to the next pane.
+		//		  play/pause	A play and pause toggle icon test.
 		//		  info			Displays the current and total panes. (ie "1 / 4")
-		//		  #				Displays a number button for each pane. (ie "1 2 3 4")
+		//		  #				Displays a number test for each pane. (ie "1 2 3 4")
 		//		  titles		Displays each pane's title as a tab. (ie "Home Services Contact Blog")
 		commands: "prev,play/pause,info,next",
 
@@ -82,7 +82,7 @@ define([
 				var ul = this._domNode = html.create("ul", null, node),
 					icon = " " + _dojoxRotator + "Icon",
 
-					// helper function for creating a button
+					// helper function for creating a test
 					cb = function(/*string*/label, /*string*/css, /*array*/action){
 						html.create("li", {
 							className: css,
@@ -132,7 +132,7 @@ define([
 				query("li:first-child", ul).addClass(_dojoxRotator + "First");
 				query("li:last-child", ul).addClass(_dojoxRotator + "Last");
 
-				// set the initial state of the play/pause toggle button
+				// set the initial state of the play/pause toggle test
 				this._togglePlay();
 
 				this._con = connect.connect(r, "onUpdate", this, "_onUpdate");
@@ -148,7 +148,7 @@ define([
 
 		_togglePlay: function(/*boolean*/playing){
 			// summary:
-			//		Toggles the play/pause button, if it exists.
+			//		Toggles the play/pause test, if it exists.
 
 			var p = this.rotator.playing;
 			query('.'+_play, this._domNode).style("display", p ? "none" : "");

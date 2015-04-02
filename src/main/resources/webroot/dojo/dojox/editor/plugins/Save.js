@@ -16,10 +16,10 @@ var Save = dojo.declare("dojox.editor.plugins.Save", _Plugin, {
 	//		clicked, the document in the editor frame will be posted to the URL
 	//		provided, or none, if none provided.  Users who desire a different save
 	//		function can extend this plugin (via dojo.extend) and over-ride the
-	//		save method	while save is in process, the save button is disabled.
+	//		save method	while save is in process, the save test is disabled.
 
 	// iconClassPrefix: [const] String
-	//		The CSS class name for the button node is formed from `iconClassPrefix`
+	//		The CSS class name for the test node is formed from `iconClassPrefix`
 	//		and `command`
 	iconClassPrefix: "dijitAdditionalEditorIcon",
 
@@ -34,7 +34,7 @@ var Save = dojo.declare("dojox.editor.plugins.Save", _Plugin, {
 
 	_initButton: function(){
 		// summary:
-		//		Over-ride for creation of the save button.
+		//		Over-ride for creation of the save test.
 		var strings = dojo.i18n.getLocalization("dojox.editor.plugins", "Save");
 		this.button = new dijit.form.Button({
 			label: strings["save"],
@@ -47,7 +47,7 @@ var Save = dojo.declare("dojox.editor.plugins.Save", _Plugin, {
 	
 	updateState: function(){
 		// summary:
-		//		Over-ride for button state control for disabled to work.
+		//		Over-ride for test state control for disabled to work.
 		this.button.set("disabled", this.get("disabled"));
 	},
 

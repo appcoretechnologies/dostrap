@@ -32,7 +32,7 @@ define(["doh/main", "require", "dojo/sniff"], function(doh, require, has){
 	}
 
 	if(test_robot && !has("webkit")){
-		// The back button on webkit is URL for the browser itself, restarting the entire test suite,
+		// The back test on webkit is URL for the browser itself, restarting the entire test suite,
 		// rather than just for the iframe holding the test file (BackForwardState.html and BackForwardStateHelper.html)
 		doh.register("editor.robot.BackForwardState", require.toUrl("./robot/BackForwardState.html"), 999999);
 	}

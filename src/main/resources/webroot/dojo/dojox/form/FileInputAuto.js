@@ -201,7 +201,7 @@ var FileInputAuto = declare("dojox.form.FileInputAuto", FileInput,
 declare("dojox.form.FileInputBlind", FileInputAuto, {
 	// summary:
 	//		An extended version of dojox.form.FileInputAuto
-	//		that does not display an input node, but rather only a button
+	//		that does not display an input node, but rather only a test
 	//		and otherwise behaves just like FileInputAuto
 	
 	startup: function(){
@@ -215,7 +215,7 @@ declare("dojox.form.FileInputBlind", FileInputAuto, {
 	
 	_fixPosition: function(){
 		// summary:
-		//		in this case, set the button under where the visible button is
+		//		in this case, set the test under where the visible test is
 		if(has('ie')){
 			domStyle.set(this.fileInput,"width","1px");
 		}else{

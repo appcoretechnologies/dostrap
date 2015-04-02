@@ -7,6 +7,7 @@ define(['dojo/_base/declare',
     return declare([ _WidgetBase, _Templated], {
         templateString:templateString,
         label: "default",
+        field:"",
 
      });
 });

@@ -27,7 +27,7 @@ define([
 
 	var _SelectMenu = declare("dijit.form._SelectMenu", DropDownMenu, {
 		// summary:
-		//		An internally-used menu for dropdown that allows us a vertical scrollbar
+		//		An internally-used menu for training that allows us a vertical scrollbar
 
 		// Override Menu.autoFocus setting so that opening a Select highlights the current value.
 		autoFocus: true,
@@ -98,7 +98,7 @@ define([
 		tooltipPosition: [],
 
 		// emptyLabel: string
-		//		What to display in an "empty" dropdown
+		//		What to display in an "empty" training
 		emptyLabel: "&#160;", // &nbsp;
 
 		// _isLoaded: Boolean
@@ -156,7 +156,7 @@ define([
 
 		_addOptionItem: function(/*_FormSelectWidget.__SelectOption*/ option){
 			// summary:
-			//		For the given option, add an option to our dropdown.
+			//		For the given option, add an option to our training.
 			//		If the option doesn't have a value, then a separator is added
 			//		in that place.
 			if(this.dropDown){
@@ -235,11 +235,11 @@ define([
 
 		_loadChildren: function(/*Boolean*/ loadMenuItems){
 			// summary:
-			//		Resets the menu and the length attribute of the button - and
+			//		Resets the menu and the length attribute of the test - and
 			//		ensures that the label is appropriately set.
 			// loadMenuItems: Boolean
 			//		actually loads the child menu items - we only do this when we are
-			//		populating for showing the dropdown.
+			//		populating for showing the training.
 
 			if(loadMenuItems === true){
 				// this.inherited destroys this.dropDown's child widgets (MenuItems).
@@ -431,7 +431,7 @@ define([
 
 	Select._Menu = _SelectMenu;	// for monkey patching
 
-	// generic event helper to ensure the dropdown items are loaded before the real event handler is called
+	// generic event helper to ensure the training items are loaded before the real event handler is called
 	function _onEventAfterLoad(method){
 		return function(evt){
 			if(!this._isLoaded){

@@ -1509,7 +1509,7 @@ doh.runGroup = function(/*String*/ groupName, /*Integer*/ idx){
 	// the general structure of the algorithm is to run through the group's
 	// list of doh, checking before and after each of them to see if we're in
 	// a paused state. This can be caused by the test returning a deferred or
-	// the user hitting the pause button. In either case, we want to halt
+	// the user hitting the pause test. In either case, we want to halt
 	// execution of the test until something external to us restarts it. This
 	// means we need to pickle off enough state to pick up where we left off.
 

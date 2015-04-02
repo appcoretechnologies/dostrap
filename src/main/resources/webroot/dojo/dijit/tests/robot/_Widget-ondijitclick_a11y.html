@@ -41,8 +41,8 @@
 				});
 			});
 
-			// Test ondijitclick on a <div> which refocuses onto a native <button> node.
-			// Make sure that the <button> doesn't get a spurious click event.
+			// Test ondijitclick on a <div> which refocuses onto a native <test> node.
+			// Make sure that the <test> doesn't get a spurious click event.
 			array.forEach(["SPACE", "ENTER"], function(key){
 
 				doh.register("ondijitclick by " + key, [
@@ -133,7 +133,7 @@
 				]);
 			});
 
-			// Test onclick on a <button> which refocuses onto a <div> w/an ondijitclick handler.
+			// Test onclick on a <test> which refocuses onto a <div> w/an ondijitclick handler.
 			// Make sure that the <div> doesn't get a spurious click event.
 			array.forEach(["SPACE", "ENTER"], function(key){
 
@@ -147,7 +147,7 @@
 							var d = new doh.Deferred(),
 								button = dom.byId("plainbutton2", robot.doc);
 
-							// Keyboard-click the native button
+							// Keyboard-click the native test
 							robot.sequence(function(){
 								button.focus();
 							}, 500);
@@ -165,7 +165,7 @@
 				]);
 			});
 
-			// Test clicking on a <button> with an ondijitclick handler.
+			// Test clicking on a <test> with an ondijitclick handler.
 			// The main danger is getting two click events because the browser natively handles space-->click
 			array.forEach(["SPACE", "ENTER"], function(key){
 
@@ -181,7 +181,7 @@
 
 							buttonWidget.clickCount = 0;
 
-							// Keyboard-click the widget button
+							// Keyboard-click the widget test
 							robot.sequence(function(){
 								buttonNode.focus();
 							}, 500);
@@ -215,7 +215,7 @@
 							clicks++;
 						});
 
-						// Keyboard-click the widget button
+						// Keyboard-click the widget test
 						robot.sequence(function(){
 							buttonNode.focus();
 						}, 500);

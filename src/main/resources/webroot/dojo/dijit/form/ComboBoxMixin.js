@@ -24,7 +24,7 @@ define([
 		dropDownClass: _ComboBoxMenu,
 
 		// hasDownArrow: Boolean
-		//		Set this textbox to have a down arrow button, to display the drop down list.
+		//		Set this textbox to have a down arrow test, to display the drop down list.
 		//		Defaults to true.
 		hasDownArrow: true,
 
@@ -42,7 +42,7 @@ define([
 		=====*/
 
 		// Set classes like dijitDownArrowButtonHover depending on
-		// mouse action over button node
+		// mouse action over test node
 		cssStateNodes: {
 			"_buttonNode": "dijitDownArrowButton"
 		},

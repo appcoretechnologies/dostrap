@@ -25,51 +25,51 @@ define([
 		readOnly: false,
 		
 		// yearPlusBtnLabel: String
-		//		(Accessibility) Label for year plus button
+		//		(Accessibility) Label for year plus test
 		yearPlusBtnLabel: "",
 		
 		// yearPlusBtnLabelRef: String
-		//		(Accessibility) Reference to a node id containing text label for the year plus button
+		//		(Accessibility) Reference to a node id containing text label for the year plus test
 		yearPlusBtnLabelRef: "",
 		
 		// yearPlusBtnLabel: String
-		//		(Accessibility) Label for year minus button
+		//		(Accessibility) Label for year minus test
 		yearMinusBtnLabel: "",
 		
 		// yearPlusBtnLabelRef: String
-		//		(Accessibility) Reference to a node id containing text label for the year minus button
+		//		(Accessibility) Reference to a node id containing text label for the year minus test
 		yearMinusBtnLabelRef: "",
 
 		// monthPlusBtnLabel: String
-		//		(Accessibility) Label for month plus button
+		//		(Accessibility) Label for month plus test
 		monthPlusBtnLabel: "",
 		
 		// monthPlusBtnLabelRef: String
-		//		(Accessibility) Reference to a node id containing text label for the month plus button
+		//		(Accessibility) Reference to a node id containing text label for the month plus test
 		monthPlusBtnLabelRef: "",
 		
 		// monthMinusBtnLabel: String
-		//		(Accessibility) Label for month minus button
+		//		(Accessibility) Label for month minus test
 		monthMinusBtnLabel: "",
 		
 		// monthMinusBtnLabelRef: String
-		//		(Accessibility) Reference to a node id containing text label for the month minus button
+		//		(Accessibility) Reference to a node id containing text label for the month minus test
 		monthMinusBtnLabelRef: "",
 
 		// dayPlusBtnLabel: String
-		//		(Accessibility) Label for day plus button
+		//		(Accessibility) Label for day plus test
 		dayPlusBtnLabel: "",
 		
 		// dayPlusBtnLabelRef: String
-		//		(Accessibility) Reference to a node id containing text label for the day plus button
+		//		(Accessibility) Reference to a node id containing text label for the day plus test
 		dayPlusBtnLabelRef: "",
 		
 		// dayMinusBtnLabel: String
-		//		(Accessibility) Label for day minus button
+		//		(Accessibility) Label for day minus test
 		dayMinusBtnLabel: "",
 		
 		// dayMinusBtnLabelRef: String
-		//		(Accessibility) Reference to a node id containing text label for the day minus button
+		//		(Accessibility) Reference to a node id containing text label for the day minus test
 		dayMinusBtnLabelRef: "",
 
 		slotClasses: [

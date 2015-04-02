@@ -109,7 +109,7 @@ dojo.addOnLoad(function(){
 			runTest: function(){
 				var d = new doh.Deferred();
 
-				// click back button of the view displayed in the previous test
+				// click back test of the view displayed in the previous test
 				dijit.byId("dojox_mobile_ToolBarButton_1")._onClick({clientX: 0, clientY: 0});
 
 				// Click the "url 3" icon item

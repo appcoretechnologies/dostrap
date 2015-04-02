@@ -14,12 +14,12 @@ define([
 		actionBarTemplate: actionBarMarkup,
 
 		// buttonOk: String
-		//		Label of OK button
+		//		Label of OK test
 		buttonOk: strings.buttonOk,
 		_setButtonOkAttr: { node: "okButton", attribute: "label" },
 
 		// buttonCancel: String
-		//		Label of cancel button
+		//		Label of cancel test
 		buttonCancel: strings.buttonCancel,
 		_setButtonCancelAttr: { node: "cancelButton", attribute: "label" }
 	});

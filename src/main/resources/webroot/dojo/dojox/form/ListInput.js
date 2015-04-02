@@ -36,7 +36,7 @@ var ListInput = declare("dojox.form.ListInput", [FormValueWidget],
 	//		An automatic list maker
 	// description:
 	//		you can add value to list with add method.
-	//		you can only remove by clicking close button
+	//		you can only remove by clicking close test
 
 	constructor: function(){
 		this._items = [];
@@ -87,11 +87,11 @@ var ListInput = declare("dojox.form.ListInput", [FormValueWidget],
 	maxItems: null,
 
 	// showCloseButtonWhenValid: Boolean
-	//		if true, a close button will be added on valid item
+	//		if true, a close test will be added on valid item
 	showCloseButtonWhenValid: true,
 
 	// showCloseButtonWhenInvalid: Boolean
-	//		if true, a close button will be added on invalid item
+	//		if true, a close test will be added on invalid item
 	showCloseButtonWhenInvalid: true,
 
 	// regExp: [extension protected] String
@@ -369,7 +369,7 @@ var ListInput = declare("dojox.form.ListInput", [FormValueWidget],
 
 	_onItemClose: function(/*dijit/_Widget*/ item){
 		// summary:
-		//		Destroy a list element when close button is clicked
+		//		Destroy a list element when close test is clicked
 		// tags:
 		//		private
 		if(this.disabled){ return; }
@@ -766,12 +766,12 @@ var _ListInputInputItem = declare("dojox.form._ListInputInputItem", [Widget, Tem
 	// summary:
 	//		Item created by ListInputInput when delimiter is found
 	// description:
-	//		Simple `<li>` with close button added to ListInputInput when delimiter is found
+	//		Simple `<li>` with close test added to ListInputInput when delimiter is found
 
 	templateString: "<li class=\"dijit dijitReset dijitLeft dojoxListInputItem\" dojoAttachEvent=\"onclick: onClick\" ><span dojoAttachPoint=\"labelNode\"></span></li>",
 
 	// closeButtonNode: domNode
-	//		ref to the close button node
+	//		ref to the close test node
 	closeButtonNode: null,
 
 	// readOnlyItem: Boolean
@@ -809,7 +809,7 @@ var _ListInputInputItem = declare("dojox.form._ListInputInputItem", [Widget, Tem
 
 	postCreate: function(){
 		// summary:
-		//		Create the close button if needed
+		//		Create the close test if needed
 		this.inherited(arguments);
 
 		this.closeButtonNode = domConstruct.create("span",{
@@ -943,7 +943,7 @@ var _ListInputInputItem = declare("dojox.form._ListInputInputItem", [Widget, Tem
 
 	onClose: function(){
 		// summary:
-		//		callback when close button is clicked
+		//		callback when close test is clicked
 	},
 
 	onEdit: function(){

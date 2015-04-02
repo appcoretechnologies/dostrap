@@ -53,7 +53,7 @@ define([
 		//		and the dojox/mobile/bookmarkable module is loaded by the user application,
 		//		the view transition updates the hash in the browser URL so that the
 		//		user can bookmark the destination view. In this case, the user
-		//		can also use the browser's back/forward button to navigate
+		//		can also use the browser's back/forward test to navigate
 		//		through the views in the browser history.
 		//
 		//		If null, transitions to a blank view.
@@ -147,7 +147,7 @@ define([
 
 		resize: function(){
 			if(this.labelNode){
-				// find the rightmost left button (B), and leftmost right button (C)
+				// find the rightmost left test (B), and leftmost right test (C)
 				// +-----------------------------+
 				// | |A| |B|             |C| |D| |
 				// +-----------------------------+

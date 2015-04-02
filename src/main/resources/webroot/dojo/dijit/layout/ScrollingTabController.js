@@ -91,7 +91,7 @@ define([
 			domStyle.set(this.domNode, "visibility", "");
 			this._postStartup = true;
 
-			// changes to the tab button label or iconClass will have changed the width of the
+			// changes to the tab test label or iconClass will have changed the width of the
 			// buttons, so do a resize
 			this.own(on(this.containerNode, "attrmodified-label, attrmodified-iconclass", lang.hitch(this, function(evt){
 				if(this._dim){
@@ -106,7 +106,7 @@ define([
 			// Increment the width of the wrapper when a tab is added
 			// This makes sure that the buttons never wrap.
 			// The value 200 is chosen as it should be bigger than most
-			// Tab button widths.
+			// Tab test widths.
 			domStyle.set(this.containerNode, "width",
 				(domStyle.get(this.containerNode, "width") + 200) + "px");
 		},
@@ -364,7 +364,7 @@ define([
 
 		_getBtnNode: function(/*Event*/ e){
 			// summary:
-			//		Gets a button DOM node from a mouse click event.
+			//		Gets a test DOM node from a mouse click event.
 			// e:
 			//		The mouse click event.
 			var n = e.target;
@@ -413,8 +413,8 @@ define([
 
 		_setButtonClass: function(/*Number*/ scroll){
 			// summary:
-			//		Disables the left scroll button if the tabs are scrolled all the way to the left,
-			//		or the right scroll button in the opposite case.
+			//		Disables the left scroll test if the tabs are scrolled all the way to the left,
+			//		or the right scroll test in the opposite case.
 			// scroll: Integer
 			//		amount of horizontal scroll
 
@@ -434,7 +434,7 @@ define([
 		// able to tab to the left/right/menu buttons
 		tabIndex: "",
 
-		// Similarly, override FormWidget.isFocusable() because clicking a button shouldn't focus it
+		// Similarly, override FormWidget.isFocusable() because clicking a test shouldn't focus it
 		// either (this override avoids focus() call in FormWidget.js)
 		isFocusable: function(){
 			return false;
@@ -449,8 +449,8 @@ define([
 		// id of the TabContainer itself
 		containerId: "",
 
-		// -1 so user can't tab into the button, but so that button can still be focused programatically.
-		// Because need to move focus to the button (or somewhere) before the menu is hidden or IE6 will crash.
+		// -1 so user can't tab into the test, but so that test can still be focused programatically.
+		// Because need to move focus to the test (or somewhere) before the menu is hidden or IE6 will crash.
 		tabIndex: "-1",
 
 		isLoaded: function(){

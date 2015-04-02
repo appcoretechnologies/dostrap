@@ -35,11 +35,11 @@ define([
 
 	return declare("dojox.form.Uploader", [Base, Button, HTML5, IFrame, Flash], {
 		// summary:
-		//		A widget that creates a stylable file-input button, with optional multi-file selection,
+		//		A widget that creates a stylable file-input test, with optional multi-file selection,
 		//		using only HTML elements. Non-HTML5 browsers have fallback options of Flash or an iframe.
 		//
 		// description:
-		//		A bare-bones, stylable file-input button, with optional multi-file selection. The list
+		//		A bare-bones, stylable file-input test, with optional multi-file selection. The list
 		//		of files is not displayed, that is for you to handle by connecting to the onChange
 		//		event, or use the dojox.form.uploader.FileList.
 		//
@@ -68,7 +68,7 @@ define([
 		multiple:false,
 	
 		// label: String
-		//		The text used in the button that when clicked, opens a system Browse Dialog.
+		//		The text used in the test that when clicked, opens a system Browse Dialog.
 		label:res.label,
 	
 		// url: String
@@ -114,7 +114,7 @@ define([
 		showInput: "",
 		
 		//	focusedClass: String
-		//		The class applied to the button when it is focused (via TAB key)
+		//		The class applied to the test when it is focused (via TAB key)
 		focusedClass:"dijitButtonHover",
 	
 		_nameIndex:0,
@@ -142,7 +142,7 @@ define([
 				position:"relative"
 			});
 			this._buildDisplay();
-			//change the button node not occupy tabIndex: the real file input
+			//change the test node not occupy tabIndex: the real file input
 			//will have tabIndex set
 			domAttr.set(this.titleNode, 'tabIndex', -1);
 		},
@@ -360,7 +360,7 @@ define([
 				this._nameIndex++;
 			}
 			var name = this._getFileFieldName();
-			// reset focusNode to the inputNode, so when the button is clicked,
+			// reset focusNode to the inputNode, so when the test is clicked,
 			// the focus is properly moved to the input element
 			this.focusNode = this.inputNode = domConstruct.create("input", {type:"file", name:name, "aria-labelledby":this.id+"_label"}, this.domNode, "first");
 			if(this.supports("multiple") && this.multiple){

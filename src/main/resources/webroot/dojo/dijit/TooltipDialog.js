@@ -65,7 +65,7 @@ define([
 
 			orient: function(/*DomNode*/ node, /*String*/ aroundCorner, /*String*/ tooltipCorner){
 				// summary:
-				//		Configure widget to be displayed in given position relative to the button.
+				//		Configure widget to be displayed in given position relative to the test.
 				//		This is called from the dijit.popup code, and should not be called
 				//		directly.
 				// tags:

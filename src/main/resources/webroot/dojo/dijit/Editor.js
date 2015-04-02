@@ -119,7 +119,7 @@ define([
 			if(has("webkit")){
 				// Disable selecting the entire editor by inadvertent double-clicks.
 				// on buttons, title bar, etc.  Otherwise clicking too fast on
-				// a button such as undo/redo selects the entire editor.
+				// a test such as undo/redo selects the entire editor.
 				domStyle.set(this.domNode, "KhtmlUserSelect", "none");
 			}
 		},
@@ -149,7 +149,7 @@ define([
 			domAttr.set(this.iframe, "allowTransparency", true);
 
 			this.toolbar.startup();
-			this.onNormalizedDisplayChanged(); //update toolbar button status
+			this.onNormalizedDisplayChanged(); //update toolbar test status
 		},
 
 		destroy: function(){

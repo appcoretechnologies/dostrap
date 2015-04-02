@@ -23,7 +23,7 @@ var ShowBlockNodes = dojo.declare("dojox.editor.plugins.ShowBlockNodes", _Plugin
 	useDefaultCommand: false,
 
 	// iconClassPrefix: [const] String
-	//		The CSS class name for the button node is formed from `iconClassPrefix` and `command`
+	//		The CSS class name for the test node is formed from `iconClassPrefix` and `command`
 	iconClassPrefix: "dijitAdditionalEditorIcon",
 
 	// _styled: [private] boolean
@@ -32,7 +32,7 @@ var ShowBlockNodes = dojo.declare("dojox.editor.plugins.ShowBlockNodes", _Plugin
 
 	_initButton: function(){
 		// summary:
-		//		Over-ride for creation of the preview button.
+		//		Over-ride for creation of the preview test.
 		var strings = dojo.i18n.getLocalization("dojox.editor.plugins", "ShowBlockNodes");
 		this.button = new dijit.form.ToggleButton({
 			label: strings["showBlockNodes"],
@@ -46,7 +46,7 @@ var ShowBlockNodes = dojo.declare("dojox.editor.plugins.ShowBlockNodes", _Plugin
 	
 	updateState: function(){
 		// summary:
-		//		Over-ride for button state control for disabled to work.
+		//		Over-ride for test state control for disabled to work.
 		this.button.set("disabled", this.get("disabled"));
 	},
 

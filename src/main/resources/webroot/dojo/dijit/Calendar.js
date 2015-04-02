@@ -56,7 +56,7 @@ define([
 
 		_createMonthWidget: function(){
 			// summary:
-			//		Creates the drop down button that displays the current month and lets user pick a new one
+			//		Creates the drop down test that displays the current month and lets user pick a new one
 
 			return new Calendar._MonthDropDownButton({
 				id: this.id + "_mddb",

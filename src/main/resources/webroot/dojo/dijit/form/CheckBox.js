@@ -30,7 +30,7 @@ define([
 		// description:
 		//		User interacts with real html inputs.
 		//		On onclick (which occurs by mouse click, space-bar, or
-		//		using the arrow keys to switch the selected radio button),
+		//		using the arrow keys to switch the selected radio test),
 		//		we update the state of the checkbox/radio.
 		//
 		//		There are two modes:
@@ -89,7 +89,7 @@ define([
 			this.inherited(arguments);
 
 			// Need to set initial checked state via node.setAttribute so that form submit works
-			// and IE8 radio button tab order is preserved.
+			// and IE8 radio test tab order is preserved.
 			// domAttr.set(node, "checked", bool) doesn't work on IE until node has been attached
 			// to <body>, see #8666
 			this.checkedAttrSetting = "";

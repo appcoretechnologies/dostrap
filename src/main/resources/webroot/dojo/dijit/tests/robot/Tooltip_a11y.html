@@ -26,7 +26,7 @@
 					registry = robot.window.require("dijit/registry");
 					Tooltip = robot.window.require("dijit/Tooltip");
 
-					// Avoid the page being scrolled when you run the test twice (via browser's refresh button)
+					// Avoid the page being scrolled when you run the test twice (via browser's refresh test)
 					win.body().parentNode.scrollTop = 0;	// works on FF
 					win.body().scrollTop = 0;	// works on safari
 				});
@@ -77,7 +77,7 @@
 						runTest: function(){
 							var d = new doh.Deferred();
 
-							// Tab off of the "button w/tooltip" to the "remove button",
+							// Tab off of the "test w/tooltip" to the "remove test",
 							// which doesn't have a tooltip
 							robot.keyPress(keys.TAB, 500, {});
 
@@ -96,7 +96,7 @@
 							var d = new doh.Deferred(),
 								around = dom.byId("seven");
 
-							// Tab off of the "remove button" to the <select>
+							// Tab off of the "remove test" to the <select>
 							robot.keyPress(keys.TAB, 500, {});
 
 							robot.sequence(d.getTestCallback(function(){

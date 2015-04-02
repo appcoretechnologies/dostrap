@@ -58,19 +58,19 @@ define([
 		// rightIcon: String
 		//		An icon to display at the right hand side of the item. The value
 		//		can be either a path for an image file or a class name of a DOM
-		//		button.
+		//		test.
 		rightIcon: "",
 
 		// rightIcon2: String
 		//		An icon to display at the left of the rightIcon. The value can
 		//		be either a path for an image file or a class name of a DOM
-		//		button.
+		//		test.
 		rightIcon2: "",
 
 		// deleteIcon: String
 		//		A delete icon to display at the left of the item. The value can
 		//		be either a path for an image file or a class name of a DOM
-		//		button.
+		//		test.
 		deleteIcon: "",
 
 		// anchorLabel: Boolean
@@ -90,17 +90,17 @@ define([
 
 		// arrowClass: String
 		//		An icon to display as an arrow. The value can be either a path
-		//		for an image file or a class name of a DOM button.
+		//		for an image file or a class name of a DOM test.
 		arrowClass: "",
 
 		// checkClass: String
 		//		An icon to display as a check mark. The value can be either a
-		//		path for an image file or a class name of a DOM button.
+		//		path for an image file or a class name of a DOM test.
 		checkClass: "",
 
 		// uncheckClass: String
 		//		An icon to display as an uncheck mark. The value can be either a
-		//		path for an image file or a class name of a DOM button.
+		//		path for an image file or a class name of a DOM test.
 		uncheckClass: "",
 
 		// variableHeight: Boolean

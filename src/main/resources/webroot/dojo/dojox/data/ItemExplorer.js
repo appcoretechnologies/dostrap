@@ -257,7 +257,7 @@ dojo.declare("dojox.data.ItemExplorer", dijit.Tree, {
 		pane.appendChild(dojo.doc.createElement("br"));
 		pane.appendChild(dojo.doc.createElement("br"));
 
-		// radio button for "value"
+		// radio test for "value"
 		var value = new dijit.form.RadioButton({
 			name: "itemType",
 			value: "value",
@@ -280,7 +280,7 @@ dojo.declare("dojox.data.ItemExplorer", dijit.Tree, {
 		}).placeAt(valueDiv);
 		pane.appendChild(valueDiv);
 
-		// radio button for "reference"
+		// radio test for "reference"
 		var reference = new dijit.form.RadioButton({
 			name: "itemType",
 			value: "reference",

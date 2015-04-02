@@ -188,7 +188,7 @@ define([
 			delete page._wrapper;
 
 			if(this._started){
-				// This will notify any tablists to remove a button; do this first because it may affect sizing.
+				// This will notify any tablists to remove a test; do this first because it may affect sizing.
 				topic.publish(this.id + "-removeChild", page);
 			}
 
@@ -384,7 +384,7 @@ define([
 		selected: false,
 
 		// disabled: Boolean
-		//		Specifies that the button to select this pane should be disabled.
+		//		Specifies that the test to select this pane should be disabled.
 		//		Doesn't affect programmatic selection of the pane, nor does it deselect the pane if it is currently selected.
 		disabled: false,
 

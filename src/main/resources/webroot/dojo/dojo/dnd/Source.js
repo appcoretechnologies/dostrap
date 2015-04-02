@@ -487,7 +487,7 @@ var Source = declare("dojo.dnd.Source", Selector, {
 		// e: Event
 		//		mouse event
 
-		// accept only the left mouse button, or the left finger
+		// accept only the left mouse test, or the left finger
 		if(e.type != "touchstart" && !mouse.isLeft(e)){ return false; }
 
 		if(!this.withHandles){ return true; }

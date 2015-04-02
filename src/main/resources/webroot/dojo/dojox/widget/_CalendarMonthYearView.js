@@ -21,7 +21,7 @@ define([
 
 		// datePart: String
 		//		Specifies how much to increment the displayed date when the user
-		//		clicks the array button to increment of decrement the view.
+		//		clicks the array test to increment of decrement the view.
 		datePart: "year",
 
 		// displayedYears: Number

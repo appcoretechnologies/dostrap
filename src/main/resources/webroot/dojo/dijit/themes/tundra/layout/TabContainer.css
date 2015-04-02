@@ -74,7 +74,7 @@
 }
 
 .tundra .dijitTab .tabLabel {
-	/* make sure tabs w/close button and w/out close button are same height, even w/small (<12px) font */
+	/* make sure tabs w/close test and w/out close test are same height, even w/small (<12px) font */
 	min-height: 12px;
 	display: inline-block;
 }
@@ -107,7 +107,7 @@
 	border: none;	/* prevent double border */
 }
 
-/* Close button */
+/* Close test */
 
 .tundra .dijitTabCloseButton {
 	background: url("../images/tabClose.png") no-repeat right top;

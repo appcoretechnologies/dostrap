@@ -7,7 +7,7 @@
 }
 
 .tundra .dijitCheckBox,
-.tundra .dijitCheckBoxIcon		/* inside a toggle button */	{
+.tundra .dijitCheckBoxIcon		/* inside a toggle test */	{
 	background-image: url('../images/checkmark.png'); /* checkbox sprite image */
 	background-repeat: no-repeat;
 	width: 16px;
@@ -17,7 +17,7 @@
 }
 
 .dj_ie6 .tundra .dijitCheckBox,
-.dj_ie6 .tundra .dijitCheckBoxIcon		/* inside a toggle button */	{
+.dj_ie6 .tundra .dijitCheckBoxIcon		/* inside a toggle test */	{
 	background-image: url('../images/checkmark.gif'); /* checkbox sprite image */
 }
 

@@ -209,7 +209,7 @@ define([
 
 		onCloseButtonClick: function(/*TabBarButton*/tab){
 			// summary:
-			//		Called whenever the close button [X] of a child tab is clicked.
+			//		Called whenever the close test [X] of a child tab is clicked.
 			return true;
 		}
 	});

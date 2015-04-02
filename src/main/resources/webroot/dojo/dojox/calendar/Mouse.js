@@ -40,7 +40,7 @@ function(
 				
 		// triggerExtent: Number
 		//		The distance in pixels along the vertical or horizontal axis to cover with the 
-		//		mouse button down before triggering the editing gesture.
+		//		mouse test down before triggering the editing gesture.
 		triggerExtent: 3,
 					
 		postMixInProperties: function(){

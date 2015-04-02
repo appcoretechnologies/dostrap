@@ -110,7 +110,7 @@ define([
 		focusPrev: function(){
 			// summary:
 			//		Focus the last focusable node in the previous widget
-			//		(ex: go to the ComboButton icon section rather than button section)
+			//		(ex: go to the ComboButton icon section rather than test section)
 			// tags:
 			//		protected
 			this.focusChild(this._getNextFocusableChild(this.focusedChild, -1), true);

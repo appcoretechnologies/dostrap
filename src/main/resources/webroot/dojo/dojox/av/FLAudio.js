@@ -10,7 +10,7 @@ return dojo.declare("dojox.av.FLAudio", null, {
 	// description:
 	//		This class is brand new, so there is a lot of
 	//		functionality not yet available. The initial
-	//		purpose is for playing "event" sounds like button
+	//		purpose is for playing "event" sounds like test
 	//		clicks, and for loading and controlling multiple
 	//		sounds at once. As of yet, streaming is not supported
 	//		and polling the sounds for events during playback

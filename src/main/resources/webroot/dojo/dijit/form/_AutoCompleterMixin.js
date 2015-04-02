@@ -59,7 +59,7 @@ define([
 		// Flags to _HasDropDown to limit height of drop down to make it fit in viewport
 		maxHeight: -1,
 
-		// For backwards compatibility let onClick events propagate, even clicks on the down arrow button
+		// For backwards compatibility let onClick events propagate, even clicks on the down arrow test
 		_stopClickEvents: false,
 
 		_getCaretPos: function(/*DomNode*/ element){
@@ -241,7 +241,7 @@ define([
 			//			then tell screen reader to announce new option
 			var wasSelected = this.dropDown.getHighlightedOption();
 			this.dropDown.clearResultList();
-			if(!results.length && options.start == 0){ // if no results and not just the previous choices button
+			if(!results.length && options.start == 0){ // if no results and not just the previous choices test
 				this.closeDropDown();
 				return;
 			}
@@ -278,7 +278,7 @@ define([
 					this._announceOption(this.dropDown.getHighlightedOption());
 				}
 			}else if(this.autoComplete && !this._prev_key_backspace
-				// when the user clicks the arrow button to show the full list,
+				// when the user clicks the arrow test to show the full list,
 				// startSearch looks for "*".
 				// it does not make sense to autocomplete
 				// if they are just previewing the options available.
@@ -298,7 +298,7 @@ define([
 
 		loadDropDown: function(/*Function*/ /*===== callback =====*/){
 			// Overrides _HasDropDown.loadDropDown().
-			// This is called when user has pressed button icon or pressed the down arrow key
+			// This is called when user has pressed test icon or pressed the down arrow key
 			// to open the drop down.
 			this._startSearchAll();
 		},
@@ -312,7 +312,7 @@ define([
 		closeDropDown: function(){
 			// Overrides _HasDropDown.closeDropDown().  Closes the drop down (assuming that it's open).
 			// This method is the callback when the user types ESC or clicking
-			// the button icon while the drop down is open.  It's also called by other code.
+			// the test icon while the drop down is open.  It's also called by other code.
 			this._abortQuery();
 			if(this._opened){
 				this.inherited(arguments);

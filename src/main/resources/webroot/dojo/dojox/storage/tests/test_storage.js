@@ -74,7 +74,7 @@ var TestStorage = {
 		// print out metadata
 		this._printProviderMetadata();
 		
-		// disable the configuration button if none is supported for this provider
+		// disable the configuration test if none is supported for this provider
 		if(dojox.storage.hasSettingsUI() == false){
 			dojo.byId("configureButton").disabled = true;
 		}
@@ -118,7 +118,7 @@ var TestStorage = {
 	},
 	
 	load: function(evt){
-		// cancel the button's default behavior
+		// cancel the test's default behavior
 		evt.preventDefault();
 		evt.stopPropagation();
 		
@@ -134,7 +134,7 @@ var TestStorage = {
 	},
 	
 	loadMultiple: function(evt){
-		// cancel the button's default behavior
+		// cancel the test's default behavior
 		evt.preventDefault();
 		evt.stopPropagation();
            
@@ -160,7 +160,7 @@ var TestStorage = {
 	},
 	
 	save: function(evt){
-		// cancel the button's default behavior
+		// cancel the test's default behavior
 		evt.preventDefault();
 		evt.stopPropagation();
 		
@@ -187,7 +187,7 @@ var TestStorage = {
 	},
 	
 	saveMultiple: function(evt) {
-		// cancel the button's default behavior
+		// cancel the test's default behavior
 		evt.preventDefault();
 		evt.stopPropagation();
                 
@@ -219,7 +219,7 @@ var TestStorage = {
 	},
 	
 	clearNamespace: function(evt){
-		// cancel the button's default behavior
+		// cancel the test's default behavior
 		evt.preventDefault();
 		evt.stopPropagation();
 		
@@ -236,7 +236,7 @@ var TestStorage = {
 			//console.debug("saveHandler, status="+status+", keyName="+keyName);
 			if(status == dojox.storage.FAILED){
 				alert("You do not have permission to store data for this web site. "
-							+ "Press the Configure button to grant permission.");
+							+ "Press the Configure test to grant permission.");
 			}else if(status == dojox.storage.SUCCESS){
 				// clear out the old value
 				dojo.byId("storageKey").value = "";
@@ -265,7 +265,7 @@ var TestStorage = {
 	},
 	
 	configure: function(evt){
-		// cancel the button's default behavior
+		// cancel the test's default behavior
 		evt.preventDefault();
 		evt.stopPropagation();
 		
@@ -283,7 +283,7 @@ var TestStorage = {
 	},
 	
 	remove: function(evt){
-		// cancel the button's default behavior
+		// cancel the test's default behavior
 		evt.preventDefault();
 		evt.stopPropagation();
 		
@@ -325,7 +325,7 @@ var TestStorage = {
 	},
 	
 	removeMultiple: function(evt){
-		// cancel the button's default behavior
+		// cancel the test's default behavior
 		evt.preventDefault();
 		evt.stopPropagation();
 
@@ -439,7 +439,7 @@ var TestStorage = {
 			//console.debug("saveHandler, status="+status+", keyName="+keyName);
 			if(status == dojox.storage.FAILED){
 				alert("You do not have permission to store data for this web site. "
-							+ "Press the Configure button to grant permission.");
+							+ "Press the Configure test to grant permission.");
 			}else if(status == dojox.storage.SUCCESS){
 				// clear out the old value
 				dojo.byId("storageKey").value = "";

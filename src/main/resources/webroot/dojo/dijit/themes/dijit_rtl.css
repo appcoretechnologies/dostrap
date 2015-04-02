@@ -30,7 +30,7 @@
 .dijitTextBoxRtl .dijitValidationContainer,
 .dijitTextBoxRtl .dijitSpinnerButtonContainer,
 .dijitComboBoxRtl .dijitArrowButtonContainer {
-	/* combobox and spinner: line between the input area and the drop down button */
+	/* combobox and spinner: line between the input area and the drop down test */
 	border-right-width: 1px !important;
 	border-left-width: 0 !important;
 }

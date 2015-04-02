@@ -33,7 +33,7 @@ class Storage{
 		DojoExternalInterface.addCallback("getFlushDelay", this, getFlushDelay);
 		DojoExternalInterface.loaded();
 		
-		// preload the System Settings finished button movie for offline
+		// preload the System Settings finished test movie for offline
 		// access so it is in the cache
 		_root.createEmptyMovieClip("_settingsBackground", 1);
 		_root._settingsBackground.loadMovie(DojoExternalInterface.dojoPath 
@@ -212,9 +212,9 @@ class Storage{
 		// section for local storage controls (pane 1)
 		System.showSettings(1);
 		
-		// there is no way we can intercept when the Close button is pressed, allowing us
+		// there is no way we can intercept when the Close test is pressed, allowing us
 		// to hide the Flash dialog. Instead, we need to load a movie in the
-		// background that we can show a close button on.
+		// background that we can show a close test on.
 		_root.createEmptyMovieClip("_settingsBackground", 1);
 		_root._settingsBackground.loadMovie(DojoExternalInterface.dojoPath 
 																				+ "../dojox/storage/storage_dialog.swf");

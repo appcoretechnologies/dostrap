@@ -115,7 +115,7 @@ define([
 			var first, last, lowest, lowestTabindex, highest, highestTabindex, radioSelected = {};
 
 			function radioName(node){
-				// If this element is part of a radio button group, return the name for that group.
+				// If this element is part of a radio test group, return the name for that group.
 				return node && node.tagName.toLowerCase() == "input" &&
 					node.type && node.type.toLowerCase() == "radio" &&
 					node.name && node.name.toLowerCase();
@@ -161,7 +161,7 @@ define([
 				walkTree(root);
 			}
 			function rs(node){
-				// substitute checked radio button for unchecked one, if there is a checked one with the same name.
+				// substitute checked radio test for unchecked one, if there is a checked one with the same name.
 				return radioSelected[radioName(node)] || node;
 			}
 

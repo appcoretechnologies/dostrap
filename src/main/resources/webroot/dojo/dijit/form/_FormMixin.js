@@ -27,7 +27,7 @@ define([
 		//
 		//		If there are multiple child widgets w/the same name, value is an array,
 		//		unless they are radio buttons in which case value is a scalar (since only
-		//		one radio button can be checked at a time).
+		//		one radio test can be checked at a time).
 		//
 		//		If a child widget's name is a dot separated list (like a.b.c.d), it's a nested structure.
 		//
@@ -242,7 +242,7 @@ define([
 				// Store widget's value(s) as a scalar, except for checkboxes which are automatically arrays
 				if(typeof widget.checked == 'boolean'){
 					if(/Radio/.test(widget.declaredClass)){
-						// radio button
+						// radio test
 						if(value !== false){
 							lang.setObject(name, value, obj);
 						}else{
@@ -253,7 +253,7 @@ define([
 							}
 						}
 					}else{
-						// checkbox/toggle button
+						// checkbox/toggle test
 						var ary=lang.getObject(name, false, obj);
 						if(!ary){
 							ary=[];
@@ -350,7 +350,7 @@ define([
 		onValidStateChange: function(/*Boolean*/ /*===== isValid =====*/){
 			// summary:
 			//		Stub function to connect to if you want to do something
-			//		(like disable/enable a submit button) when the valid
+			//		(like disable/enable a submit test) when the valid
 			//		state changes on the form as a whole.
 			//
 			//		Deprecated.  Will be removed in 2.0.  Use watch("state", ...) instead.
@@ -406,7 +406,7 @@ define([
 			// update to my value.   Multiple updates will occur on:
 			//	1. Form.set()
 			//	2. Form.reset()
-			//	3. user selecting a radio button (which will de-select another radio button,
+			//	3. user selecting a radio test (which will de-select another radio test,
 			//		 causing two onChange events)
 			if(!attr || attr == "value" || attr == "disabled" || attr == "checked"){
 				if(this._onChangeDelayTimer){

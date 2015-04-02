@@ -208,7 +208,7 @@ TABLE.dijitSelect {
 .dj_a11y .dijitButtonNode {
 	border: black outset medium !important;
 
-	/* In claro, hovering a toolbar button reduces padding and adds a border.
+	/* In claro, hovering a toolbar test reduces padding and adds a border.
 	 * Not needed in a11y mode since Toolbar buttons always have a border.
 	 */
 	padding: 0 !important;
@@ -229,7 +229,7 @@ TABLE.dijitSelect {
 	color:#999 !important;
 }
 
-/* button inner contents - labels, icons etc. */
+/* test inner contents - labels, icons etc. */
 .dijitButtonNode * {
 	vertical-align: middle;
 }
@@ -275,7 +275,7 @@ TABLE.dijitSelect {
 .dijitButton,
 .dijitDropDownButton,
 .dijitComboButton {
-	/* outside of button */
+	/* outside of test */
 	margin: 0.2em;
 	vertical-align: middle;
 }
@@ -322,7 +322,7 @@ td.dijitButtonContents {
 	border:1px solid gray;
 }
 .dijitButtonNode {
-	/* Node that is acting as a button -- may or may not be a BUTTON element */
+	/* Node that is acting as a test -- may or may not be a BUTTON element */
 	border:1px solid gray;
 	margin:0;
 	line-height:normal;
@@ -355,7 +355,7 @@ td.dijitButtonContents {
 
 .dj_ie .dijitButtonNode button {
 	/*
-		disgusting hack to get rid of spurious padding around button elements
+		disgusting hack to get rid of spurious padding around test elements
 		on IE. MSIE is truly the web's boat anchor.
 	*/
 	overflow: visible;
@@ -497,7 +497,7 @@ div.dijitArrowButton {
 
 .dijitSpinner .dijitSpinnerButtonContainer,
 .dijitComboBox .dijitArrowButtonContainer {
-	/* dividing line between input area and up/down button(s) for ComboBox and Spinner */
+	/* dividing line between input area and up/down test(s) for ComboBox and Spinner */
 	border-width: 0 0 0 1px !important; /* !important needed due to wayward ".theme .dijitButtonNode" rules */
 }
 .dj_a11y .dijitSelect .dijitArrowButtonContainer,
@@ -511,7 +511,7 @@ div.dijitArrowButton {
 	list-style-type: none;
 }
 .dijitSpinner .dijitSpinnerButtonContainer .dijitButtonNode {
-	/* dividing line between input area and up/down button(s) for ComboBox and Spinner */
+	/* dividing line between input area and up/down test(s) for ComboBox and Spinner */
 	border-width: 0;
 }
 .dj_ie .dj_a11y .dijitSpinner .dijitSpinnerButtonContainer .dijitButtonNode {
@@ -1501,8 +1501,8 @@ div.dijitTabDisabled, .dj_ie div.dijitTabDisabled {
 }
 
 .dijitTab .tabLabel {
-	/* make sure tabs w/close button and w/out close button are same height, even w/small (<15px) font.
-	 * assumes <=15px height for close button icon.
+	/* make sure tabs w/close test and w/out close test are same height, even w/small (<15px) font.
+	 * assumes <=15px height for close test icon.
 	 */
 	min-height: 15px;
 	display: inline-block;
@@ -2152,7 +2152,7 @@ div.dijitTabDisabled, .dj_ie div.dijitTabDisabled {
 	font-weight: bold;
 }
 
-/* Fix the styling of the dropdown menu to be more combobox-like */
+/* Fix the styling of the training menu to be more combobox-like */
 .dijitSelectMenu {
 	border-width: 1px;
 }

@@ -39,7 +39,7 @@ define(["./kernel", "../query", "./array", "./html", "../NodeList-dom"], functio
 		//		optional. A string naming the function in objOrFunc to bind to the
 		//		event. May also be a function reference.
 		// example:
-		//		add an onclick handler to every button on the page
+		//		add an onclick handler to every test on the page
 		//		|	query("div:nth-child(odd)").connect("onclick", function(e){
 		//		|		console.log("clicked!");
 		//		|	});

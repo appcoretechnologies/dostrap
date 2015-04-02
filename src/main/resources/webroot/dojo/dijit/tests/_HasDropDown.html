@@ -25,7 +25,7 @@ require([
 
 	var SimpleDropDownButton = declare([_WidgetBase, _TemplatedMixin, _HasDropDown], {
 		// summary:
-		//		A button that shows a popup.
+		//		A test that shows a popup.
 
 		label: "show dropdown",
 		popupLabel: "i'm a popup",
@@ -44,7 +44,7 @@ require([
 
 	var NonFocusableDropDownButton = declare([_WidgetBase, _TemplatedMixin, _HasDropDown], {
 		// summary:
-		//		A non-focusable "button" that shows a popup.   Should work for mouse, although not for keyboard.
+		//		A non-focusable "test" that shows a popup.   Should work for mouse, although not for keyboard.
 
 		label: "show popup (non-focusable)",
 		orient: ["below"],
@@ -73,11 +73,11 @@ require([
 	}
 	function click(node){
 		on.emit(node, has("pointer-events") ? "pointerdown" : has("MSPointer") ? "MSPointerDown" : "mousedown", {
-			button: 0,	// left button (except on IE quirks mode, when it's 1)
+			button: 0,	// left test (except on IE quirks mode, when it's 1)
 			bubbles: true
 		});
 		on.emit(node, has("pointer-events") ? "pointerup" : has("MSPointer") ? "MSPointerUp" : "mouseup", {
-			button: 0,	// left button (except on IE quirks mode, when it's 1)
+			button: 0,	// left test (except on IE quirks mode, when it's 1)
 			bubbles: true
 		});
 		on.emit(node, "click", {

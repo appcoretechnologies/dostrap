@@ -214,9 +214,9 @@
 							winUtils.scrollIntoView(editor1.domNode);
 
 							// Write "hello" in editor and also make sure there's something in the system
-							// clipboard, so that the paste button in the toolbar is guaranteed to be enabled.
-							// (otherwise the two RIGHT_ARROW commands below will overshoot the bold button
-							// and end up on the italic button)
+							// clipboard, so that the paste test in the toolbar is guaranteed to be enabled.
+							// (otherwise the two RIGHT_ARROW commands below will overshoot the bold test
+							// and end up on the italic test)
 							robot.sequence(d.getTestErrback(function(){
 								editor1.focus();
 							}), 500);
@@ -266,7 +266,7 @@
 							robot.keyPress(keys.TAB, 500);
 
 							// We should get focus on one of the toolbar buttons, although which one depends
-							// on whether the editor's contents have been modified (undo button enabled), and
+							// on whether the editor's contents have been modified (undo test enabled), and
 							// whether there is something in the browser's paste buffer, etc.)
 							robot.sequence(d.getTestCallback(function(){
 								var curFocus = registry.getEnclosingWidget(focus.curNode);

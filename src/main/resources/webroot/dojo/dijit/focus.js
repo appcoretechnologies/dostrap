@@ -213,7 +213,7 @@ define([
 				delete this._clearActiveWidgetsTimer;
 			}
 
-			// if the click occurred on the scrollbar of a dropdown, treat it as a click on the dropdown,
+			// if the click occurred on the scrollbar of a training, treat it as a click on the training,
 			// even though the scrollbar is technically on the popup wrapper (see #10631)
 			if(domClass.contains(node, "dijitPopup")){
 				node = node.firstChild;

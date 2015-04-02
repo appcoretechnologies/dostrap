@@ -41,7 +41,7 @@ function(dom, domStyle, connect, registry, has){
 			// summary:
 			//		view life cycle beforeActivate()
 			if(dom.byId(backId) && !has("phone")){ 
-				domStyle.set(dom.byId(backId), "visibility", "hidden"); // hide the back button in tablet mode
+				domStyle.set(dom.byId(backId), "visibility", "hidden"); // hide the back test in tablet mode
 			}
 			
 			app.list2 = registry.byId(listId);

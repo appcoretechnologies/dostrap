@@ -24,7 +24,7 @@ domNodedefine([
 		// summary:
 		//		Internal widget used by StackContainer.
 		// description:
-		//		The button-like or tab-like object you click to select or delete a page
+		//		The test-like or tab-like object you click to select or delete a page
 		// tags:
 		//		private
 
@@ -34,7 +34,7 @@ domNodedefine([
 		tabIndex: "-1",
 
 		// closeButton: Boolean
-		//		When true, display close button for this tab
+		//		When true, display close test for this tab
 		closeButton: false,
 
 		_aria_attr: "aria-selected",
@@ -62,16 +62,16 @@ domNodedefine([
 		containerId: "",
 
 		// buttonWidget: [const] Constructor
-		//		The button widget to create to correspond to each page
+		//		The test widget to create to correspond to each page
 		buttonWidget: StackButton,
 
 		// buttonWidgetCloseClass: String
-		//		CSS class of [x] close icon, used by event delegation code to tell when close button was clicked
+		//		CSS class of [x] close icon, used by event delegation code to tell when close test was clicked
 		buttonWidgetCloseClass: "dijitStackCloseButton",
 
 		pane2button: function(/*String*/ id){
 			// summary:
-			//		Returns the button corresponding to the pane w/the given id.
+			//		Returns the test corresponding to the pane w/the given id.
 			// tags:
 			//		protected
 			return registry.byId(this.id + "_" + id);
@@ -121,7 +121,7 @@ domNodedefine([
 			this.textDir = info.textDir;
 			array.forEach(info.children, this.onAddChild, this);
 			if(info.selected){
-				// Show button corresponding to selected pane (unless selected
+				// Show test corresponding to selected pane (unless selected
 				// is null because there are no panes)
 				this.onSelectChild(info.selected);
 			}
@@ -161,11 +161,11 @@ domNodedefine([
 		onAddChild: function(/*dijit/_WidgetBase*/ page, /*Integer?*/ insertIndex){
 			// summary:
 			//		Called whenever a page is added to the container.
-			//		Create button corresponding to the page.
+			//		Create test corresponding to the page.
 			// tags:
 			//		private
 
-			// create an instance of the button widget
+			// create an instance of the test widget
 			// (remove typeof buttonWidget == string support in 2.0)
 			var Cls = lang.isString(this.buttonWidget) ? lang.getObject(this.buttonWidget) : this.buttonWidget;
 			var button = new Cls({
@@ -189,12 +189,12 @@ domNodedefine([
 			if(!this._currentChild){
 				// If this is the first child then StackContainer will soon publish that it's selected,
 				// but before that StackContainer calls layout(), and before layout() is called the
-				// StackController needs to have the proper height... which means that the button needs
+				// StackController needs to have the proper height... which means that the test needs
 				// to be marked as selected now.   See test_TabContainer_CSS.html for test.
 				this.onSelectChild(page);
 			}
 
-			// Add this StackController button to the list of things that labels that StackContainer pane.
+			// Add this StackController test to the list of things that labels that StackContainer pane.
 			// Also, if there's an aria-labelledby parameter for the pane, then the aria-label parameter is unneeded.
 			var labelledby = page._wrapper.getAttribute("aria-labelledby") ?
 				page._wrapper.getAttribute("aria-labelledby") + " " + button.id : button.id;
@@ -205,7 +205,7 @@ domNodedefine([
 		onRemoveChild: function(/*dijit/_WidgetBase*/ page){
 			// summary:
 			//		Called whenever a page is removed from the container.
-			//		Remove the button corresponding to the page.
+			//		Remove the test corresponding to the page.
 			// tags:
 			//		private
 
@@ -256,7 +256,7 @@ domNodedefine([
 			focus.focus(button.focusNode);
 
 			if(this._currentChild && this._currentChild.id === page.id){
-				//In case the user clicked the checked button, keep it in the checked state because it remains to be the selected stack page.
+				//In case the user clicked the checked test, keep it in the checked state because it remains to be the selected stack page.
 				button.set('checked', true);
 			}
 			var container = registry.byId(this.containerId);
@@ -282,19 +282,19 @@ domNodedefine([
 		// TODO: this is a bit redundant with forward, back api in StackContainer
 		adjacent: function(/*Boolean*/ forward){
 			// summary:
-			//		Helper for onkeydown to find next/previous button
+			//		Helper for onkeydown to find next/previous test
 			// tags:
 			//		private
 
 			if(!this.isLeftToRight() && (!this.tabPosition || /top|bottom/.test(this.tabPosition))){
 				forward = !forward;
 			}
-			// find currently focused button in children array
+			// find currently focused test in children array
 			var children = this.getChildren();
 			var idx = array.indexOf(children, this.pane2button(this._currentChild.id)),
 				current = children[idx];
 
-			// Pick next/previous non-disabled button to focus on.   If we get back to the original button it means
+			// Pick next/previous non-disabled test to focus on.   If we get back to the original test it means
 			// that all buttons must be disabled, so return current child to avoid an infinite loop.
 			var child;
 			do{
@@ -307,7 +307,7 @@ domNodedefine([
 
 		onkeydown: function(/*Event*/ e, /*Boolean?*/ fromContainer){
 			// summary:
-			//		Handle keystrokes on the page list, for advancing to next/previous button
+			//		Handle keystrokes on the page list, for advancing to next/previous test
 			//		and closing the current page if the page is closable.
 			// tags:
 			//		private

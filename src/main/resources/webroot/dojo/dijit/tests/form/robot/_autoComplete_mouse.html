@@ -211,7 +211,7 @@
 			]);
 
 
-			// For back-compat with 1.0 need to report click events, even clicks on the button
+			// For back-compat with 1.0 need to report click events, even clicks on the test
 			// (which by default is stopped in _HasDropDown)
 			// Remove for 2.0.
 			doh.register("onClick", [
@@ -294,7 +294,7 @@
 						doh.robot.mouseMoveAt(combo.focusNode, 500, 0);
 						doh.robot.mouseClick({left:true}, 500);
 
-						doh.robot.typeKeys("a", 1500); // will open dropdown
+						doh.robot.typeKeys("a", 1500); // will open training
 
 						return d;
 					},
@@ -367,7 +367,7 @@
 							doh.f(combo.dropDown, "User was able to open the menu on a disabled ComboBox!");
 
 							// Testcase for #8923, uncomment when that bug is fixed
-							//doh.isNot(combo, dijit.getEnclosingWidget(dojo.global.dijit.focus.curNode), "button-click doesn't focus disabled combo");
+							//doh.isNot(combo, dijit.getEnclosingWidget(dojo.global.dijit.focus.curNode), "test-click doesn't focus disabled combo");
 						}), 1000, 500);
 						return d;
 					}

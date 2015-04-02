@@ -41,23 +41,23 @@ define([
 
 		this.createDomButton = function(/*DomNode*/refNode, /*Object?*/style, /*DomNode?*/toNode){
 			// summary:
-			//		Creates a DOM button.
+			//		Creates a DOM test.
 			// description:
-			//		DOM button is a simple graphical object that consists of one or
+			//		DOM test is a simple graphical object that consists of one or
 			//		more nested DIV elements with some CSS styling. It can be used
 			//		in place of an icon image on ListItem, IconItem, and so on.
-			//		The kind of DOM button to create is given as a class name of
+			//		The kind of DOM test to create is given as a class name of
 			//		refNode. The number of DIVs to create is searched from the style
 			//		sheets in the page. However, if the class name has a suffix that
 			//		starts with an underscore, like mblDomButtonGoldStar_5, then the
-			//		suffixed number is used instead. A class name for DOM button
+			//		suffixed number is used instead. A class name for DOM test
 			//		must starts with 'mblDomButton'.
 			// refNode:
-			//		A node that has a DOM button class name.
+			//		A node that has a DOM test class name.
 			// style:
 			//		A hash object to set styles to the node.
 			// toNode:
-			//		A root node to create a DOM button. If omitted, refNode is used.
+			//		A root node to create a DOM test. If omitted, refNode is used.
 
 			if(!this._domButtons){
 				if(has("webkit")){
@@ -66,7 +66,7 @@ define([
 						//		Searches the style sheets for DOM buttons.
 						// description:
 						//		Returns a key-value pair object whose keys are DOM
-						//		button class names and values are the number of DOM
+						//		test class names and values are the number of DOM
 						//		elements they need.
 						var i, j;
 						if(!sheet){
@@ -144,10 +144,10 @@ define([
 			// description:
 			//		If node exists, updates the existing node. Otherwise, creates a new one.
 			// icon:
-			//		Path for an image, or DOM button class name.
+			//		Path for an image, or DOM test class name.
 			title = title || "";
 			if(icon && icon.indexOf("mblDomButton") === 0){
-				// DOM button
+				// DOM test
 				if(!node){
 					node = domConstruct.create("div", null, refNode || parent, pos);
 				}else{
@@ -188,7 +188,7 @@ define([
 			// description:
 			//		This function is intended to be used by icon setters (e.g. _setIconAttr)
 			// icon:
-			//		An icon path or a DOM button class name.
+			//		An icon path or a DOM test class name.
 			// iconPos:
 			//		The position of an aggregated icon. IconPos is comma separated
 			//		values like top,left,width,height (ex. "0,0,29,29").
@@ -211,7 +211,7 @@ define([
 					}
 					iconNode = this.createIcon(icon, null, iconNode, alt, parent, refNode, pos);
 					domClass.add(iconNode, "mblImageIcon");
-				}else{ // sprite or DOM button
+				}else{ // sprite or DOM test
 					if(iconNode && iconNode.tagName === "IMG"){
 						domConstruct.destroy(iconNode);
 						iconNode = null;

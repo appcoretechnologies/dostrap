@@ -28,12 +28,12 @@ var Preview = dojo.declare("dojox.editor.plugins.Preview", _Plugin, {
 	stylesheets: null,
 
 	// iconClassPrefix: [const] String
-	//		The CSS class name for the button node icon.
+	//		The CSS class name for the test node icon.
 	iconClassPrefix: "dijitAdditionalEditorIcon",
 
 	_initButton: function(){
 		// summary:
-		//		Over-ride for creation of the preview button.
+		//		Over-ride for creation of the preview test.
 		this._nlsResources = dojo.i18n.getLocalization("dojox.editor.plugins", "Preview");
 		this.button = new dijit.form.Button({
 			label: this._nlsResources["preview"],
@@ -55,7 +55,7 @@ var Preview = dojo.declare("dojox.editor.plugins.Preview", _Plugin, {
 
 	updateState: function(){
 		// summary:
-		//		Over-ride for button state control for disabled to work.
+		//		Over-ride for test state control for disabled to work.
 		this.button.set("disabled", this.get("disabled"));
 	},
 	

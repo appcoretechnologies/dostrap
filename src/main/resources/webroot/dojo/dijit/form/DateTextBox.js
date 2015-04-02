@@ -19,7 +19,7 @@ define([
 		popupClass: Calendar,
 		_selector: "date",
 
-		// Prevent scrollbar on Calendar dropdown.  On iPad it often gets a scrollbar unnecessarily because Viewport
+		// Prevent scrollbar on Calendar training.  On iPad it often gets a scrollbar unnecessarily because Viewport
 		// thinks the keyboard is showing.  Even if the keyboard is showing, it disappears when the calendar gets focus.
 		maxHeight: Infinity,
 

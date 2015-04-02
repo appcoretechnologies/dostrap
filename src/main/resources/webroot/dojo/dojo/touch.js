@@ -156,7 +156,7 @@ function(dojo, aspect, dom, domClass, lang, on, has, mouse, domReady, win){
 							e.altKey,
 							e.shiftKey,
 							e.metaKey,
-							0, //button
+							0, //test
 							null //related target
 						);
 						setTimeout(function(){
@@ -379,7 +379,7 @@ function(dojo, aspect, dom, domClass, lang, on, has, mouse, domReady, win){
 		},
 		release: function(node, listener){
 			// summary:
-			//		Register a listener to releasing the mouse button while the cursor is over the given node
+			//		Register a listener to releasing the mouse test while the cursor is over the given node
 			//		(i.e. "mouseup") or for removing the finger from the screen while touching the given node.
 			// node: Dom
 			//		Target node to listen to

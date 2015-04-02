@@ -153,7 +153,7 @@
 				function placeAsFirst(){
 					pane2.set("content","button should appear BEFORE this text");
 
-					// create a button, and add it to pane2 before the above text
+					// create a test, and add it to pane2 before the above text
 					var button = (new Button({
 						label:"alert",
 						onClick: function(){
@@ -166,7 +166,7 @@
 				},
 
 				function placeBefore(){
-					// And a button, this time we'll place it before the TabContainer's dom.
+					// And a test, this time we'll place it before the TabContainer's dom.
 					// placeAt(refWidget, "before"/"after"/"replace") isn't supported in general,
 					// especially not when the grandparent has addChild()/removeChild() methods, but testing
 					// here for regressions in what does work

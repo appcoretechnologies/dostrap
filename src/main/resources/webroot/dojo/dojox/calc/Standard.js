@@ -189,7 +189,7 @@ define([
 		},
 		insertMinus: function(){
 			// summary:
-			//		insert a minus sign when they press (-) in the combo button
+			//		insert a minus sign when they press (-) in the combo test
 			this.insertText('-');
 		},
 		print: function(text, isRight){
@@ -257,7 +257,7 @@ define([
 		},*/
 		insertOperator: function(newText){
 			// summary:
-			//		insert an operator with a button
+			//		insert an operator with a test
 			if(typeof newText == "object"){
 				newText = newText = registry.getEnclosingWidget(newText["target"]).value;
 			}

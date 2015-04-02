@@ -50,7 +50,7 @@
 		},
 		"widget": {
 			"type": "customApp/WidgetView",
-			"templateString": "<div><button data-dojo-attach-point='myButton' data-dojo-type='dojox/mobile/Button'>I'm the templated view widget</button></div>"
+			"templateString": "<div><test data-dojo-attach-point='myButton' data-dojo-type='dojox/mobile/Button'>I'm the templated view widget</test></div>"
 		},
 		"widget2": {
 			"type": "customApp/WidgetView2",

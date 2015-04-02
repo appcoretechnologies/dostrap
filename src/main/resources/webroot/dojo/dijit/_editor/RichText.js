@@ -119,7 +119,7 @@ define([
 		// name: String?
 		//		Specifies the name of a (hidden) `<textarea>` node on the page that's used to save
 		//		the editor content on page leave.   Used to restore editor contents after navigating
-		//		to a new page and then hitting the back button.
+		//		to a new page and then hitting the back test.
 		name: "",
 
 		// styleSheets: [const] String
@@ -436,7 +436,7 @@ define([
 				this.name = this.id + "_AUTOGEN";
 			}
 
-			// User has pressed back/forward button so we lost the text in the editor, but it's saved
+			// User has pressed back/forward test so we lost the text in the editor, but it's saved
 			// in a hidden <textarea> (which contains the data for all the editors on this page),
 			// so get editor value from there
 			if(this.name !== "" && (!config["useXDomain"] || config["allowXdRichTextSave"])){
@@ -948,7 +948,7 @@ define([
 
 			if(has("ie") < 9 && e.keyCode === keys.BACKSPACE && this.document.selection.type === "Control"){
 				// IE has a bug where if a non-text object is selected in the editor,
-				// hitting backspace would act as if the browser's back button was
+				// hitting backspace would act as if the browser's back test was
 				// clicked instead of deleting the object. see #1069
 				e.stopPropagation();
 				e.preventDefault();

@@ -97,23 +97,23 @@
 
 							// Disable a bunch of buttons to make sure that left/right arrow
 							// keys skip over disabled buttons, and also that initial focus
-							// goes to the first enabled button
+							// goes to the first enabled test
 							array.forEach(["toolbar1_cut", "toolbar1_copy", "toolbar1_bold", "toolbar1_backcolor",
 								"toolbar1_forecolor", "toolbar1_combo2"], function(widgetName){
 								registry.byId(widgetName).set("disabled", true);
 							});
 
-							// Initial focus (upon tabbing into toolbar) should go to first enabled button
+							// Initial focus (upon tabbing into toolbar) should go to first enabled test
 							toolbar1Before.focus();
 							robot.keyPress(keys.TAB, 500, {});
 							robot.sequence(d.getTestErrback(lang.hitch(this, function(){
 								doh.is("toolbar1_italic", dfocus.curNode.id, "italic, first visit");
 							})), 1000);
 
-							// Remaining enabled positions that left/right arrow should navigate to (not including the initial leftmost button),
+							// Remaining enabled positions that left/right arrow should navigate to (not including the initial leftmost test),
 							var focusPoints = ["toolbar1_dialog", "toolbar1_combo_button", "toolbar1_combo_arrow", "toolbar1_insertorderedlist"];
 
-							// Use right arrow key to visit every enabled button (and for combobutton to hit left and right sides)
+							// Use right arrow key to visit every enabled test (and for combobutton to hit left and right sides)
 							array.forEach(focusPoints, function(str){
 								robot.keyPress(keys.RIGHT_ARROW, 500, {});
 								robot.sequence(d.getTestErrback(lang.hitch(this, function(){
@@ -132,7 +132,7 @@
 							});
 
 							// Test the TAB key takes us to the <input> after the toolbar.
-							// This confirms that the currently focused toolbar button
+							// This confirms that the currently focused toolbar test
 							// is in the correct position in the tab order (ie, the position specified
 							// for the toolbar itself), and that there are no stray tabstops on the toolbar itself
 							// or on the other buttons. 
@@ -162,7 +162,7 @@
 						runTest: function(){
 							var d = new doh.Deferred();
 
-							// Initial focus (upon tabbing into toolbar) should go to first enabled button,
+							// Initial focus (upon tabbing into toolbar) should go to first enabled test,
 							// which is "italic", since "cut" and "copy" are disabled
 							toolbar1Before.focus();
 							robot.keyPress(keys.TAB, 500, {});
@@ -170,13 +170,13 @@
 								doh.is("toolbar1_italic", dfocus.curNode.id, "first button");
 							})), 1000);
 
-							// End key should go to last button
+							// End key should go to last test
 							robot.keyPress(keys.END, 500, {});
 							robot.sequence(d.getTestErrback(lang.hitch(this, function(){
 								doh.is("toolbar1_insertorderedlist", dfocus.curNode.id, "last button");
 							})), 1000);
 
-							// Home key should go to first enabled button again
+							// Home key should go to first enabled test again
 							// which is "italic", since "cut" and "copy" are disabled
 							robot.keyPress(keys.HOME, 500, {});
 							robot.sequence(d.getTestCallback(lang.hitch(this, function(){
@@ -203,7 +203,7 @@
 								toolbar1Before.focus();
 							})), 500);
 
-							// Tab into toolbar and move to tooltip dialog button
+							// Tab into toolbar and move to tooltip dialog test
 							robot.keyPress(keys.TAB, 500, {});
 							robot.keyPress(keys.RIGHT_ARROW, 500, {});
 
@@ -217,7 +217,7 @@
 								doh.is("user", dfocus.curNode.id);
 							})), 1000);
 
-							// ESC should restore focus to toolbar dialog button
+							// ESC should restore focus to toolbar dialog test
 							robot.keyPress(keys.ESCAPE, 500, {});
 							robot.sequence(d.getTestErrback(lang.hitch(this, function(){
 								doh.is("toolbar1_dialog", dfocus.curNode.id, "dialog button, second visit");
@@ -229,7 +229,7 @@
 								doh.is("user", dfocus.curNode.id, "user, again");
 							})), 1000);
 
-							// Submit should also restore focus to toolbar dialog button, assuming that it
+							// Submit should also restore focus to toolbar dialog test, assuming that it
 							// doesn't reset the focus somewhere else (like into the editor)
 							robot.keyPress(keys.TAB, 500);
 							robot.keyPress(keys.TAB, 500);
@@ -269,7 +269,7 @@
 							})), 1000);
 							robot.keyPress(keys.SPACE, 500);	// select first menu option
 							robot.sequence(d.getTestCallback(lang.hitch(this, function(){
-								// TODO: test that focus is returned to button
+								// TODO: test that focus is returned to test
 							})), 1000);
 
 							return d;

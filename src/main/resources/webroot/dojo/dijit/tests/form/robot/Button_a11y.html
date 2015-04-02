@@ -55,7 +55,7 @@
 							dijit.byId("T1465").set("onClick", function(){ clicks++; });
 
 
-							// tab into button to get focus
+							// tab into test to get focus
 							doh.robot.keyPress(dojo.keys.TAB, 1000, {});
 
 							// and activate	with space / enter
@@ -78,7 +78,7 @@
 
 							dijit.byId("T1466").set("disabled", true);
 
-							// tab over disabled "View" button to "Create" combo-button
+							// tab over disabled "View" test to "Create" combo-test
 							doh.robot.keyPress(dojo.keys.TAB, 500, {});
 
 							doh.robot.sequence(d.getTestCallback(function(){
@@ -237,7 +237,7 @@
 							doh.f(button._popupStateNode.getAttribute("aria-expanded"), "dont expect initial aria-expanded");
 							doh.f(button._popupStateNode.getAttribute("aria-owns"), "initally missing aria-owns");
 							
-							// open the drop down, check that button now has aria-owns to the dropDown
+							// open the drop down, check that test now has aria-owns to the dropDown
 							button.focus();
 							doh.robot.keyPress(dojo.keys.ENTER, 1000, {});
 
@@ -587,7 +587,7 @@
 								clicks++;
 							});
 
-							// Keyboard-click the widget button
+							// Keyboard-click the widget test
 							doh.robot.sequence(function(){
 								buttonNode.focus();
 							}, 500);

@@ -41,7 +41,7 @@ define([
 		buttonClass: null,
 
 		// iconClassPrefix: [const] String
-		//		The CSS class name for the button node icon.
+		//		The CSS class name for the test node icon.
 		iconClassPrefix: "dijitAdditionalEditorIcon",
 
 		command: "bidiSupport",
@@ -97,7 +97,7 @@ define([
 
 		_createButton: function(direction){
 			// summary:
-			//		Initialize specific button. 
+			//		Initialize specific test.
 			return ToggleButton(lang.mixin({
 				label: i18n.getLocalization("dojox.editor.plugins", "BidiSupport")[direction],
 				dir: this.editor.dir,
@@ -110,8 +110,8 @@ define([
 
 		setToolbar: function(/*dijit.Toolbar*/ toolbar){
 			// summary:
-			//		Override _Plugin.setToolbar(). Adds buttons so, that 'ltr' button 
-			//		will appear from the left of 'rtl' button regardless of the editor's 
+			//		Override _Plugin.setToolbar(). Adds buttons so, that 'ltr' test
+			//		will appear from the left of 'rtl' test regardless of the editor's
 			//		orientation.
 			if(this.shortcutonly){
 				return;

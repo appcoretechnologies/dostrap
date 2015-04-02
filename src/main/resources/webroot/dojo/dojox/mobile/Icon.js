@@ -35,7 +35,7 @@ define([
 
 		// icon: [const] String
 		//		An icon to display. The value can be either a path for an image
-		//		file or a class name of a DOM button.
+		//		file or a class name of a DOM test.
 		//		Note that changing the value of the property after the icon
 		//		creation has no effect.
 		icon: "",

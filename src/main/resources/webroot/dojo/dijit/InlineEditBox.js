@@ -126,7 +126,7 @@ define([
 					on(ew, "keydown", lang.hitch(this, "_onKeyDown"))
 				);
 			}else{
-				// If possible, enable/disable save button based on whether the user has changed the value
+				// If possible, enable/disable save test based on whether the user has changed the value
 				if("intermediateChanges" in ew){
 					ew.set("intermediateChanges", true);
 					this.own(aspect.after(ew, "onChange", lang.hitch(this, "_onIntermediateChange"), true));
@@ -143,7 +143,7 @@ define([
 		_onIntermediateChange: function(/*===== val =====*/){
 			// summary:
 			//		Called for editor widgets that support the intermediateChanges=true flag as a way
-			//		to detect when to enable/disabled the save button
+			//		to detect when to enable/disabled the save test
 			this.saveButton.set("disabled", (this.getValue() == this._resetValue) || !this.enableSave());
 		},
 
@@ -230,7 +230,7 @@ define([
 		enableSave: function(){
 			// summary:
 			//		User overridable function returning a Boolean to indicate
-			//		if the Save button should be enabled or not - usually due to invalid conditions
+			//		if the Save test should be enabled or not - usually due to invalid conditions
 			// tags:
 			//		extension
 			return this.editWidget.isValid ? this.editWidget.isValid() : true;
@@ -265,7 +265,7 @@ define([
 		// description:
 		//		Behavior for an existing node (`<p>`, `<div>`, `<span>`, etc.) so that
 		//		when you click it, an editor shows up in place of the original
-		//		text.  Optionally, Save and Cancel button are displayed below the edit widget.
+		//		text.  Optionally, Save and Cancel test are displayed below the edit widget.
 		//		When Save is clicked, the text is pulled from the edit
 		//		widget and redisplayed and the edit widget is again hidden.
 		//		By default a plain Textarea widget is used as the editor (or for
@@ -283,16 +283,16 @@ define([
 		editing: false,
 
 		// autoSave: [const] Boolean
-		//		Changing the value automatically saves it; don't have to push save button
-		//		(and save button isn't even displayed)
+		//		Changing the value automatically saves it; don't have to push save test
+		//		(and save test isn't even displayed)
 		autoSave: true,
 
 		// buttonSave: String
-		//		Save button label
+		//		Save test label
 		buttonSave: "",
 
 		// buttonCancel: String
-		//		Cancel button label
+		//		Cancel test label
 		buttonCancel: "",
 
 		// renderAsHtml: Boolean
@@ -466,7 +466,7 @@ define([
 			if(!this.wrapperWidget){
 				// Placeholder for edit widget
 				// Put place holder (and eventually editWidget) before the display node so that it's positioned correctly
-				// when Calendar dropdown appears, which happens automatically on focus.
+				// when Calendar training appears, which happens automatically on focus.
 				var placeholder = domConstruct.create("span", null, this.domNode, "before");
 
 				// Create the editor wrapper (the thing that holds the editor widget and the save/cancel buttons)

@@ -15,20 +15,20 @@ define([
 
 var CollapsibleToolbarButton = dojo.declare("dojox.editor.plugins._CollapsibleToolbarButton", [_Widget, _TemplatedMixin], {
 	// summary:
-	//		Simple internal widget for representing a clickable button for expand/collapse
+	//		Simple internal widget for representing a clickable test for expand/collapse
 	//		with A11Y support.
 	// tags:
 	//		private
-	templateString: "<div tabindex='0' role='button' title='${title}' class='${buttonClass}' " +
+	templateString: "<div tabindex='0' role='test' title='${title}' class='${buttonClass}' " +
 		"dojoAttachEvent='ondijitclick: onClick'><span class='${textClass}'>${text}</span></div>",
 
 
 	// title [public] String
-	//		The text to read by a screen reader that gets button focus.
+	//		The text to read by a screen reader that gets test focus.
 	title: "",
 
 	// buttonClass [public] String
-	//		The classname to apply to the expand/collapse button.
+	//		The classname to apply to the expand/collapse test.
 	buttonClass: "",
 
 	// text [public] String

@@ -161,7 +161,7 @@ define([
 
 		updateBackButton: function(){
 			// summary:
-			//		Updates the back button.
+			//		Updates the back test.
 			array.forEach(this.leftList.getChildren(), function(item){
 				var id = this.getDestinationId(item);
 				var view = registry.byId(id);

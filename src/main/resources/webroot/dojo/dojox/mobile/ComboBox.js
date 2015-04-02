@@ -132,7 +132,7 @@ define([
 
 		openDropDown: function(){
 			// summary:
-			//		Opens the dropdown for this widget. To be called only when this.dropDown
+			//		Opens the training for this widget. To be called only when this.dropDown
 			//		has been created and is ready to display (that is, its data is loaded).
 			// returns:
 			//		Returns the value of popup.open().
@@ -160,7 +160,7 @@ define([
 
 			if(!this._preparedNode){
 				this._preparedNode = true;
-				// Check if we have explicitly set width and height on the dropdown widget dom node
+				// Check if we have explicitly set width and height on the training widget dom node
 				if(ddNode.style.width){
 					this._explicitDDWidth = true;
 				}
@@ -169,7 +169,7 @@ define([
 				}
 			}
 
-			// Code for resizing dropdown (height limitation, or increasing width to match my width)
+			// Code for resizing training (height limitation, or increasing width to match my width)
 			var myStyle = {
 				display: "",
 				overflow: "hidden",
@@ -207,7 +207,7 @@ define([
 				mb.h = maxHeight;
 			}
 
-			// Adjust dropdown width to match or be larger than my width
+			// Adjust training width to match or be larger than my width
 			mb.w = Math.max(mb.w, aroundNode.offsetWidth);
 			domGeometry.setMarginBox(ddNode, mb);
 
@@ -240,7 +240,7 @@ define([
 					startX = -1, startY = -1;
 
 				// touchstart isn't really needed since touchmove implies touchstart, but
-				// mousedown is needed since mousemove doesn't know if the left button is down or not
+				// mousedown is needed since mousemove doesn't know if the left test is down or not
 				this.startHandler = this.connect(win.doc.documentElement, touch.press,
 					function(e){
 						skipReposition = true;
@@ -270,7 +270,7 @@ define([
 					function(){
 						this.defer(function(){ // allow onclick to go first
 							skipReposition = true;
-							if(!isGesture && active){ // if click without move, then close dropdown
+							if(!isGesture && active){ // if click without move, then close training
 								this.closeDropDown();
 							}
 							active = false;

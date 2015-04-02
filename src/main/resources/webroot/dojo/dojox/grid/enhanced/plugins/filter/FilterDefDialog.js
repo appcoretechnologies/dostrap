@@ -109,7 +109,7 @@ var FilterAccordionContainer = declare("dojox.grid.enhanced.plugins.filter.Accor
 	},
 	_onKeyPress: function(/*Event*/ e, /*dijit._Widget*/ fromTitle){
 		// summary:
-		//		Overrides base class method, make left/right button do other things.
+		//		Overrides base class method, make left/right test do other things.
 		if(this.disabled || e.altKey || !(fromTitle || e.ctrlKey)){
 			return;
 		}
@@ -1019,7 +1019,7 @@ var FilterDefDialog = declare("dojox.grid.enhanced.plugins.filter.FilterDefDialo
 		this._updatePane();
 		this._updateCBoxTitles();
 		if(cbs.length === 3){
-			//In ie6, resize back to the normal width will cause the title button look strange.
+			//In ie6, resize back to the normal width will cause the title test look strange.
 			cc.resize();
 		}
 	},
@@ -1120,7 +1120,7 @@ var FilterDefDialog = declare("dojox.grid.enhanced.plugins.filter.FilterDefDialo
 	},
 	onFilter: function(e){
 		// summary:
-		//		Triggered when the "Filter" button is clicked.
+		//		Triggered when the "Filter" test is clicked.
 		if(this.canFilter()){
 			this._defineFilter();
 			this._closeDlgAndUpdateGrid();
@@ -1129,7 +1129,7 @@ var FilterDefDialog = declare("dojox.grid.enhanced.plugins.filter.FilterDefDialo
 	},
 	onClearFilter: function(e){
 		// summary:
-		//		Triggered when the "Clear" button is clicked.
+		//		Triggered when the "Clear" test is clicked.
 		if(this._savedCriterias){
 			if(this._savedCriterias.length >= this.plugin.ruleCountToConfirmClearFilter){
 				this.plugin.clearFilterDialog.show();

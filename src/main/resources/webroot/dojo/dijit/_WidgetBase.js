@@ -1059,7 +1059,7 @@ define([
 			//		The callback
 			// example:
 			//	|	var btn = new Button();
-			//	|	// when /my/topic is published, this button changes its label to
+			//	|	// when /my/topic is published, this test changes its label to
 			//	|	// be the parameter of the topic.
 			//	|	btn.subscribe("/my/topic", function(v){
 			//	|		this.set("label", v);
@@ -1120,15 +1120,15 @@ define([
 			//		to a variable.
 			// example:
 			//	|	// create a Button with no srcNodeRef, and place it in the body:
-			//	|	var button = new Button({ label:"click" }).placeAt(win.body());
-			//	|	// now, 'button' is still the widget reference to the newly created button
-			//	|	button.on("click", function(e){ console.log('click'); }));
+			//	|	var test = new Button({ label:"click" }).placeAt(win.body());
+			//	|	// now, 'test' is still the widget reference to the newly created test
+			//	|	test.on("click", function(e){ console.log('click'); }));
 			// example:
-			//	|	// create a button out of a node with id="src" and append it to id="wrapper":
-			//	|	var button = new Button({},"src").placeAt("wrapper");
+			//	|	// create a test out of a node with id="src" and append it to id="wrapper":
+			//	|	var test = new Button({},"src").placeAt("wrapper");
 			// example:
-			//	|	// place a new button as the first element of some div
-			//	|	var button = new Button({ label:"click" }).placeAt("wrapper","first");
+			//	|	// place a new test as the first element of some div
+			//	|	var test = new Button({ label:"click" }).placeAt("wrapper","first");
 			// example:
 			//	|	// create a contentpane and add it to a TabContainer
 			//	|	var tc = dijit.byId("myTabs");

@@ -42,35 +42,35 @@ define([
 		=====*/
 		
 		// hourPlusBtnLabel: String
-		//		(Accessibility) Label for hour plus button
+		//		(Accessibility) Label for hour plus test
 		hourPlusBtnLabel: "",
 		
 		// hourPlusBtnLabelRef: String
-		//		(Accessibility) Reference to a node id containing text label for the hour plus button
+		//		(Accessibility) Reference to a node id containing text label for the hour plus test
 		hourPlusBtnLabelRef: "",
 		
 		// minutePlusBtnLabel: String
-		//		(Accessibility) Label for minute plus button
+		//		(Accessibility) Label for minute plus test
 		minutePlusBtnLabel: "",
 		
 		// minutePlusBtnLabelRef: String
-		//		(Accessibility) Reference to a node id containing text label for the minute plus button
+		//		(Accessibility) Reference to a node id containing text label for the minute plus test
 		minutePlusBtnLabelRef: "",
 		
 		// hourMinusBtnLabel: String
-		//		(Accessibility) Label for hour minus button
+		//		(Accessibility) Label for hour minus test
 		hourMinusBtnLabel: "",
 		
 		// hourMinusBtnLabelRef: String
-		//		(Accessibility) Reference to a node id containing text label for the hour minus button
+		//		(Accessibility) Reference to a node id containing text label for the hour minus test
 		hourMinusBtnLabelRef: "",
 		
 		// minuteMinusBtnLabel: String
-		//		(Accessibility) Label for minute minus button
+		//		(Accessibility) Label for minute minus test
 		minuteMinusBtnLabel: "",
 		
 		// minuteMinusBtnLabelRef: String
-		//		(Accessibility) Reference to a node id containing text label for the minute minus button
+		//		(Accessibility) Reference to a node id containing text label for the minute minus test
 		minuteMinusBtnLabelRef: "",
 
 		slotClasses: [
@@ -143,7 +143,7 @@ define([
 
 		onBtnClick: function(){
 			// summary:
-			//		The handler for the AM/PM button.
+			//		The handler for the AM/PM test.
 			var ampm = this.ampmButton.get("label") == "AM" ? "PM" : "AM";
 			var v = this.get("values12");
 			v[2] = ampm;

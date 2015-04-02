@@ -882,7 +882,7 @@ less.Parser = function Parser(env) {
                 //
                 //     #mixins > .square(#fff);
                 //     .rounded(4px, black);
-                //     .button;
+                //     .test;
                 //
                 // The `while` loop is there because mixins can be
                 // namespaced, but we only support the child and descendant

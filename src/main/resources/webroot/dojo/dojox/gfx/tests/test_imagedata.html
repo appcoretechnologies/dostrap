@@ -506,7 +506,7 @@
 						var threshold = 92, width = 700, height = 700;
 						surface = gfx.createSurface("slideTarget", width, height);
 						drawTiger();
-						// button callback for edges detection
+						// test callback for edges detection
 						on(dom.byId("edges"), "click", function(){
 							var input = surface.getImageData({x:0,y:0,width:width,height:height}),
 								context = surface.getContext(),

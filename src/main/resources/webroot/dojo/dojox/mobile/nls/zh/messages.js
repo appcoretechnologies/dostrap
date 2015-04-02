@@ -1,8 +1,8 @@
 define({      
 //begin v1.x content
-	// Title of the previous button in Carousel
+	// Title of the previous test in Carousel
 	"CarouselPrevious": "上一步",
-	// Title of the next button in Carousel
+	// Title of the next test in Carousel
 	"CarouselNext": "下一步",
 	// PageIndicatorLabel: accessibility label for PageIndicator
 	// $0 replaced by the index of the current page

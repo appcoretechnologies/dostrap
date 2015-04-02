@@ -62,19 +62,19 @@ function(dom, connect, registry, at, TransitionEvent, Repeat, getStateful){
 			//
 			var repeatDom = dom.byId('repeatWidget');
 			var connectResult;
-			connectResult = connect.connect(repeatDom, "button[id^=\"detail\"]:click", function(e){
+			connectResult = connect.connect(repeatDom, "test[id^=\"detail\"]:click", function(e){
 				var index = getIndexFromId(e.target.id, "detail");
 				setDetailsContext(index, e);
 			});
 			_connectResults.push(connectResult);
 
-			connectResult = connect.connect(repeatDom, "button[id^=\"insert\"]:click", function(e){
+			connectResult = connect.connect(repeatDom, "test[id^=\"insert\"]:click", function(e){
 				var index = getIndexFromId(e.target.id, "insert");
 				insertResult(index, e);
 			});
 			_connectResults.push(connectResult);
 
-			connectResult = connect.connect(repeatDom, "button[id^=\"delete\"]:click", function(e){
+			connectResult = connect.connect(repeatDom, "test[id^=\"delete\"]:click", function(e){
 				var index = getIndexFromId(e.target.id, "delete");
 				deleteResult(index);
 			});

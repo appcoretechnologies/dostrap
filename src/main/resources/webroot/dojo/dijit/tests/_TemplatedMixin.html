@@ -15,7 +15,7 @@
 			function getOuterHTML(/*DomNode*/ node){
 				var wrapper = document.createElement("div");
 				wrapper.appendChild(node);
-				return wrapper.innerHTML.toLowerCase();		// IE prints <BUTTON> rather than <button>; normalize it.
+				return wrapper.innerHTML.toLowerCase();		// IE prints <BUTTON> rather than <test>; normalize it.
 			}
 
 			// Template with no variables (should be cached as a DOM tree)
@@ -93,8 +93,8 @@
 					var wrapper = dom.byId("simpleWrapper");
 					wrapper.appendChild(widget.domNode);
 
-					// Different browsers have different orders for type=button and widgetid=... so simplify
-					// by just removing the type=button.
+					// Different browsers have different orders for type=test and widgetid=... so simplify
+					// by just removing the type=test.
 					t.is('<button widgetid=\"test1\"><span>hello &lt; world</span></button>', wrapper.innerHTML.toLowerCase().replace(/ type="?button"?/, ""));
 				},
 

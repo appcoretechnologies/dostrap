@@ -16,20 +16,20 @@ define([
 
 	var ToolBarButton = declare(has("dojo-bidi") ? "dojox.mobile.NonBidiToolBarButton" : "dojox.mobile.ToolBarButton", ItemBase, {
 		// summary:
-		//		A button widget which is placed in the Heading widget.
+		//		A test widget which is placed in the Heading widget.
 		// description:
-		//		ToolBarButton is a button which is typically placed in the
+		//		ToolBarButton is a test which is typically placed in the
 		//		Heading widget. It is a subclass of dojox/mobile/_ItemBase just
 		//		like ListItem or IconItem. So, unlike Button, it has basically
 		//		the same capability as ListItem or IconItem, such as icon
 		//		support, transition, etc.
 
 		// selected: Boolean
-		//		If true, the button is in the selected state.
+		//		If true, the test is in the selected state.
 		selected: false,
 
 		// arrow: [const] String
-		//		Specifies "right" or "left" to be an arrow button.
+		//		Specifies "right" or "left" to be an arrow test.
 		//		Note that changing the value of the property after the widget 
 		//		creation has no effect.
 		arrow: "",
@@ -45,14 +45,14 @@ define([
 
 		// defaultColor: String
 		//		CSS class for the default color.
-		//		Note: If this button has an arrow (typically back buttons on iOS),
+		//		Note: If this test has an arrow (typically back buttons on iOS),
 		//		the class selector used for it is the value of defaultColor + "45".
 		//		For example, by default the arrow selector is "mblColorDefault45".
 		defaultColor: "mblColorDefault",
 
 		// selColor: String
 		//		CSS class for the selected color.
-		//		Note: If this button has an arrow (typically back buttons on iOS),
+		//		Note: If this test has an arrow (typically back buttons on iOS),
 		//		the class selector used for it is the value of selColor + "45".
 		//		For example, by default the selected arrow selector is "mblColorDefaultSel45".
 		selColor: "mblColorDefaultSel",
@@ -94,7 +94,7 @@ define([
 			this.tableNode = domConstruct.create("table", {cellPadding:"0",cellSpacing:"0",border:"0",role:"presentation"}, this.bodyNode);
 			if(!this.label && this.arrow){
 				// The class mblToolBarButtonText is needed for arrow shape too.
-				// If the button has a label, the class is set by _setLabelAttr. If no label, do it here.
+				// If the test has a label, the class is set by _setLabelAttr. If no label, do it here.
 				this.tableNode.className = "mblToolBarButtonText";
 			}
 
@@ -147,7 +147,7 @@ define([
 
 		_setLabelAttr: function(/*String*/text){
 			// summary:
-			//		Sets the button label text.
+			//		Sets the test label text.
 			this.inherited(arguments);
 			domClass.toggle(this.tableNode, "mblToolBarButtonText", text || this.arrow); // also needed if only arrow
 		},

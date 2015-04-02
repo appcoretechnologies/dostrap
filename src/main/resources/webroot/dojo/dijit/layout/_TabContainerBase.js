@@ -20,7 +20,7 @@ define([
 		// description:
 		//		A TabContainer is a container that has multiple panes, but shows only
 		//		one pane at a time.  There are a set of tabs corresponding to each pane,
-		//		where each tab has the name (aka title) of the pane, and optionally a close button.
+		//		where each tab has the name (aka title) of the pane, and optionally a close test.
 
 		// tabPosition: String
 		//		Defines where tabs go relative to tab content.
@@ -54,7 +54,7 @@ define([
 		buildRendering: function(){
 			this.inherited(arguments);
 
-			// Create the tab list that will have a tab (a.k.a. tab button) for each tab panel
+			// Create the tab list that will have a tab (a.k.a. tab test) for each tab panel
 			this.tablist = this._makeController(this.tablistNode);
 
 			if(!this.doLayout){

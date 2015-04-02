@@ -11,7 +11,7 @@ define([
 	return {
 		switchToData: function(){
 			// summary:
-			//		Called when the "Update Model" button is pressed on the Generate View page.
+			//		Called when the "Update Model" test is pressed on the Generate View page.
 
 			dom.byId("outerModelArea").style.display = "";
 			try {
@@ -25,7 +25,7 @@ define([
 		
 		switchToGenerated: function(){
 			// summary:
-			//		Called when the "Update View" button is pressed on the Generate Simple Form. 
+			//		Called when the "Update View" test is pressed on the Generate Simple Form.
 
 			dom.byId("outerModelArea").style.display = "none";
 			dom.byId("viewArea").style.display = "";

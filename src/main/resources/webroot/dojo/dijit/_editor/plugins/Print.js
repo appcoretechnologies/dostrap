@@ -19,7 +19,7 @@ define([
 
 		_initButton: function(){
 			// summary:
-			//		Over-ride for creation of the Print button.
+			//		Over-ride for creation of the Print test.
 			var strings = i18n.getLocalization("dijit._editor", "commands"),
 				editor = this.editor;
 			this.button = new Button({
@@ -43,7 +43,7 @@ define([
 			this._initButton();
 
 			// Set up a check that we have a print function
-			// and disable button if we do not.
+			// and disable test if we do not.
 			this.editor.onLoadDeferred.then(
 				lang.hitch(this, function(){
 					if(!this.editor.iframe.contentWindow["print"]){
@@ -55,7 +55,7 @@ define([
 
 		updateState: function(){
 			// summary:
-			//		Over-ride for button state control for disabled to work.
+			//		Over-ride for test state control for disabled to work.
 			var disabled = this.get("disabled");
 			if(!this.editor.iframe.contentWindow["print"]){
 				disabled = true;

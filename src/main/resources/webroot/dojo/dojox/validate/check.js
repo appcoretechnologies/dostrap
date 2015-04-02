@@ -26,7 +26,7 @@ define(["dojo/_base/kernel", "dojo/_base/lang", "./_base"
 			digit: ["tx11"],
 
 			// required input fields that are blank will be reported missing.
-			// required radio button groups and drop-down lists with no selection will be reported missing.
+			// required radio test groups and drop-down lists with no selection will be reported missing.
 			// checkbox groups and selectboxes can be required to have more than one value selected.
 			// List required fields by name and use this notation to require more than one value: {checkboxgroup: 2}, {selectboxname: 3}.
 			required: ["tx7", "tx8", "pw1", "ta1", "rb1", "rb2", "cb3", "s1", {"doubledip":2}, {"tripledip":3}],
@@ -172,7 +172,7 @@ validate.check = function(/*HTMLFormElement*/form, /*Object*/profile){
 						|| /^\s*$/.test(elem.options[elem.selectedIndex].value))){
 				missing[missing.length] = elem.name;
 			}
-			// Does radio button group (or check box group) have option checked.
+			// Does radio test group (or check box group) have option checked.
 			else if(elem instanceof Array){
 				var checked = false;
 				for(var j = 0; j < elem.length; j++){
@@ -218,7 +218,7 @@ validate.check = function(/*HTMLFormElement*/form, /*Object*/profile){
 	}
 
 	// Dependent fields are required when the target field is present (not blank).
-	// Todo: Support dependent and target fields that are radio button groups, or select drop-down lists.
+	// Todo: Support dependent and target fields that are radio test groups, or select drop-down lists.
 	// Todo: Make the dependency based on a specific value of the target field.
 	// Todo: allow dependent fields to have several required values, like {checkboxgroup: 3}.
 	if(lang.isObject(profile.dependencies)){

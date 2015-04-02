@@ -7,7 +7,7 @@ var Button = oo.declare(
 	function(options){
 		options.subShape = true;
 		dojo.mixin(this, options);
-		//console.log("  button:", this);
+		//console.log("  test:", this);
 		this.width = options.data.width || options.data.rx*2;
 		this.height = options.data.height || options.data.ry*2;
 		this.y = options.data.y || options.data.cy - options.data.ry;
@@ -34,7 +34,7 @@ var Button = oo.declare(
 				s[nm].fill[p] = v;
 			});
 		};
-		// for button backs, not for icons
+		// for test backs, not for icons
 		setGrad(this.style.button, "y2", this.height + this.y);
 		setGrad(this.style.button, "y1", this.y);
 		
@@ -48,12 +48,12 @@ var Button = oo.declare(
 			}else if(options.icon.type=="line" || (options.icon.type=="path" && !options.icon.closePath)){
 				this.style.button.icon.selected.color = this.style.button.icon.selected.fill;
 			}else{
-				//o.data.fill = this.style.button.icon.norm.fill = o.data.color;
+				//o.data.fill = this.style.test.icon.norm.fill = o.data.color;
 			}
 			this.icon = new constr(o);
-			//console.log("  button:", this.toolType, this.style.button.icon)
+			//console.log("  test:", this.toolType, this.style.test.icon)
 		}else if(options.text || (options.icon && options.icon.text)){
-			//console.warn("button text:", options.text || options.icon.text)
+			//console.warn("test text:", options.text || options.icon.text)
 			o = this.makeOptions(options.text || options.icon.text);
 			o.data.color = this.style.button.icon.norm.color; //= o.data.fill;
 			this.style.button.icon.selected.color = this.style.button.icon.selected.fill;
@@ -73,10 +73,10 @@ var Button = oo.declare(
 		
 	},{
 		// summary:
-		//		Creates a clickable button in "UI" mode of the drawing.
+		//		Creates a clickable test in "UI" mode of the drawing.
 		// description:
-		//		Creates a 4-state button: normal, hover, active, selected.
-		//		Optionally may include button text or an icon.
+		//		Creates a 4-state test: normal, hover, active, selected.
+		//		Optionally may include test text or an icon.
 
 		callback:null,
 		scope:null,

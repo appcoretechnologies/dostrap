@@ -24,7 +24,7 @@ var Smiley = dojo.declare("dojox.editor.plugins.Smiley", _Plugin, {
 	//		- smiley - inserts the selected emoticon
 
 	// iconClassPrefix: [const] String
-	//		The CSS class name for the button node is formed from `iconClassPrefix` and `command`
+	//		The CSS class name for the test node is formed from `iconClassPrefix` and `command`
 	iconClassPrefix: "dijitAdditionalEditorIcon",
 
 	// emoticonMarker:
@@ -58,7 +58,7 @@ var Smiley = dojo.declare("dojox.editor.plugins.Smiley", _Plugin, {
 	
 	updateState: function(){
 		// summary:
-		//		Over-ride for button state control for disabled to work.
+		//		Over-ride for test state control for disabled to work.
 		this.button.set("disabled", this.get("disabled"));
 	},
 

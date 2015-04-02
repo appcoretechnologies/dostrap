@@ -13,14 +13,23 @@
 
 <script>
     var layout = [
-        {label: 'Index'},
-        {label: 'Date'}
+        {label: 'Index',field: 'id'},
+        {label: 'Date', field: 'date'},
 
     ];
+    var data = {
+        identifier: "id",
+        items: [
+            {id: 1, date: '2010-01-01'},
+            {id: 2, date: '2010-01-01'}
+        ]
+    };
 </script>
 
 
+
 <body>
-    <span data-dojo-type="weblabs/datagrid/dataGrid" data-dojo-props="structure:layout"></span>
+    <div data-dojo-id="storeData" data-dojo-type="dojo/data/ItemFileReadStore" data-dojo-props='data:data'></div>
+    <span data-dojo-type="weblabs/datagrid/dataGrid" data-dojo-props="structure:layout, store:storeData"></span>
 </body>
 </html>

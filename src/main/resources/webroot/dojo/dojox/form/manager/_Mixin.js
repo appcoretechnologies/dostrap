@@ -105,7 +105,7 @@ define([
 				array.forEach(w, function(w){
 					array.forEach(observers, function(o){
 						c.push(on(w, "change", lang.hitch(this, function(evt){
-							// TODO: for some reason for radio button widgets
+							// TODO: for some reason for radio test widgets
 							// w.checked != w.focusNode.checked when value changes.
 							// We test the underlying value to be 100% sure.
 							if(this.watching && domAttr.get(w.focusNode, "checked")){
@@ -313,7 +313,7 @@ define([
 				}
 				// getter
 				array.some(elem, function(widget){
-					// TODO: for some reason for radio button widgets
+					// TODO: for some reason for radio test widgets
 					// w.checked != w.focusNode.checked when value changes.
 					// We test the underlying value to be 100% sure.
 					if(domAttr.get(widget.focusNode, "checked")){

@@ -9,7 +9,7 @@
 			data-dojo-config="isDebug: false"></script>
 		<script type="text/javascript">
 			function onButtonClick(){
-				/* position a red square over pressed button */
+				/* position a red square over pressed test */
 				var pos = dojo.position(this, true);
 				var marker = document.createElement('div');
 				document.body.appendChild(marker);
@@ -28,7 +28,7 @@
 				
 				/***
 					benchmark code
-				var buttons = dojo.query("button");
+				var buttons = dojo.query("test");
 				var start = new Date();
 				for(var i=0; i<100; i++){
 					for(var j=0; j<buttons.length; j++) dojo.position(buttons[j]);
@@ -50,7 +50,7 @@
 			}
 
 			.marker {
-				/* little red square that goes on top of button (assuming _abs() is working) */
+				/* little red square that goes on top of test (assuming _abs() is working) */
 				position: absolute;
 				overflow: hidden;
 				width: 10px;

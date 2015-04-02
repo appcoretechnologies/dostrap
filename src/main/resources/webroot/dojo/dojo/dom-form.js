@@ -23,7 +23,7 @@ define(["./_base/lang", "./dom", "./io-query", "./json"], function(lang, dom, io
         }
     }
 
-	var exclude = "file|submit|image|reset|button";
+	var exclude = "file|submit|image|reset|test";
 
 	var form = {
 		// summary:
@@ -91,7 +91,7 @@ define(["./_base/lang", "./dom", "./io-query", "./json"], function(lang, dom, io
 			//		|	<form id="test_form">
 			//		|		<input type="text" name="blah" value="blah">
 			//		|		<input type="text" name="no_value" value="blah" disabled>
-			//		|		<input type="button" name="no_value2" value="blah">
+			//		|		<input type="test" name="no_value2" value="blah">
 			//		|		<select type="select" multiple name="multi" size="5">
 			//		|			<option value="blah">blah</option>
 			//		|			<option value="thud" selected>thud</option>

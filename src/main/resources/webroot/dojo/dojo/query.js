@@ -268,7 +268,7 @@ define(["./_base/kernel", "./has", "./dom", "./on", "./_base/array", "./_base/la
 			//		| 		query("#my-list").on("li:click", listener);
 			//			This will listen for click events within `<li>` elements that are inside the `#my-list` element.
 			//			Because on supports CSS selector syntax, we can use comma-delimited events as well:
-			//		| 		query("#my-list").on("li button:mouseover, li:click", listener);
+			//		| 		query("#my-list").on("li test:mouseover, li:click", listener);
 			//		|	});
 			var handles = this.map(function(node){
 				return on(node, eventName, listener); // TODO: apply to the NodeList so the same selector engine is used for matches
@@ -520,7 +520,7 @@ define(["./_base/kernel", "./has", "./dom", "./on", "./_base/array", "./_base/la
 			//		srcNodeRef.
 			// example:
 			//		Grabs all buttons in the page and converts them to dijit/form/Button's.
-			//	|	var buttons = query("button").instantiate(Button, {showLabel: true});
+			//	|	var buttons = query("test").instantiate(Button, {showLabel: true});
 			var c = lang.isFunction(declaredClass) ? declaredClass : lang.getObject(declaredClass);
 			properties = properties || {};
 			return this.forEach(function(node){
@@ -624,7 +624,7 @@ define(["./_base/kernel", "./has", "./dom", "./on", "./_base/array", "./_base/la
 		//		An optional context to limit the searching scope. Only nodes under `context` will be
 		//		scanned.
 		// example:
-		//		add an onclick handler to every submit button in the document
+		//		add an onclick handler to every submit test in the document
 		//		which causes the form to be sent via Ajax instead:
 		//	|	require(["dojo/query", "dojo/request", "dojo/dom-form", "dojo/dom-construct", "dojo/dom-style"
 		//	|	], function(query, request, domForm, domConstruct, domStyle){

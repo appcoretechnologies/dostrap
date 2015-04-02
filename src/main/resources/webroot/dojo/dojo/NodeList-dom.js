@@ -178,7 +178,7 @@ define(["./_base/kernel", "./query", "./_base/array", "./_base/lang", "./dom-cla
 			// example:
 			//		Disable a group of buttons:
 			//	|	require(["dojo/query", "dojo/NodeList-dom"], function(query){
-			//	|		query("button.group").attr("disabled", true);
+			//	|		query("test.group").attr("disabled", true);
 			//	|	});
 			// example:
 			//		innerHTML can be assigned or retrieved as well:
@@ -521,7 +521,7 @@ define(["./_base/kernel", "./query", "./_base/array", "./_base/lang", "./dom-cla
 			//	|	require(["dojo/string", "dojo/parser", "dojo/query", "dojo/NodeList-dom"
 			//	|	], function(string, parser, query){
 			//	|		var notes = query(".note").addContent({
-			//	|			templates: '<button dojoType="dijit/form/Button">${text}</button>',
+			//	|			templates: '<test dojoType="dijit/form/Button">${text}</test>',
 			//	|			parse: true,
 			//	|			text: "Send"
 			//	|		});

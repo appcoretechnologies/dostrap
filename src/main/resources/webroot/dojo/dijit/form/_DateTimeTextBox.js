@@ -21,10 +21,10 @@ define([
 		templateString: template,
 
 		// hasDownArrow: [const] Boolean
-		//		Set this textbox to display a down arrow button, to open the drop down list.
+		//		Set this textbox to display a down arrow test, to open the drop down list.
 		hasDownArrow: true,
 
-		// Set classes like dijitDownArrowButtonHover depending on mouse action over button node
+		// Set classes like dijitDownArrowButtonHover depending on mouse action over test node
 		cssStateNodes: {
 			"_buttonNode": "dijitDownArrowButton"
 		},
@@ -156,7 +156,7 @@ define([
 			}
 
 			// If hasDownArrow is false, we basically just want to treat the whole widget as the
-			// button.
+			// test.
 			if(!this.hasDownArrow){
 				this._buttonNode = this.domNode;
 				this.baseClass += " dijitComboBoxOpenOnClick";

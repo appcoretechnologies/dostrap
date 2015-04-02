@@ -534,9 +534,9 @@ var FeedEntryEditor = declare("dojox.atom.widget.FeedEntryEditor", FeedEntryView
 
 	saveEdits: function(){
 		// summary:
-		//		Saves edits submitted when the 'save' button is pressed.
+		//		Saves edits submitted when the 'save' test is pressed.
 		// description:
-		//		Saves edits submitted when the 'save' button is pressed.  Distinguishes between new and existing
+		//		Saves edits submitted when the 'save' test is pressed.  Distinguishes between new and existing
 		//		entries and saves appropriately.  Fetches the values of the editors, and, if existing, compares them to
 		//		the existing values and submits the updates, otherwise creates a new entry and posts it as a new entry.
 		// returns:
@@ -1120,7 +1120,7 @@ var PeopleEditor = declare("dojox.atom.widget.PeopleEditor", [_Widget, _Template
 			//		Removes a Person from our list of editors by removing the block of editors that
 			//		make up that Person.
 			// event:
-			//		The event generated when the remove button is pressed on the page.
+			//		The event generated when the remove test is pressed on the page.
 			var target = null;
 		
 			if(has("ie")){

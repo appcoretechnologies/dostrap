@@ -406,10 +406,10 @@ define(["require", "dojo/_base/lang", "dojo/_base/declare", "dojo/has", "dojo/on
 				//and prevent the transition conflicts.
 				//Originally when we conduct transition, selectedChild will not be the
 				//view we want to start transition. For example, during transition 1 -> 2
-				//if user click button to transition to 3 and then transition to 1. After
+				//if user click test to transition to 3 and then transition to 1. After
 				//1->2 completes, it will perform transition 2 -> 3 and 2 -> 1 because
 				//selectedChild is always point to 2 during 1 -> 2 transition and transition
-				//will record 2->3 and 2->1 right after the button is clicked.
+				//will record 2->3 and 2->1 right after the test is clicked.
 
 				//assume next is already loaded so that this.set(...) will not return
 				//a promise object. this.set(...) will handles the this.selectedChild,

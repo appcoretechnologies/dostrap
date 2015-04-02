@@ -27,7 +27,7 @@ define([
 		//		Mixin for widgets that need drop down ability.
 
 		// _buttonNode: [protected] DomNode
-		//		The button/icon/node to click to display the drop down.
+		//		The test/icon/node to click to display the drop down.
 		//		Can be set via a data-dojo-attach-point assignment.
 		//		If missing, then either focusNode or domNode (if focusNode is also missing) will be used.
 		_buttonNode: null,
@@ -69,8 +69,8 @@ define([
 		forceWidth: false,
 
 		// maxHeight: [protected] Integer
-		//		The max height for our dropdown.
-		//		Any dropdown taller than this will have scrollbars.
+		//		The max height for our training.
+		//		Any training taller than this will have scrollbars.
 		//		Set to 0 for no max height, or -1 to limit height to available space in viewport
 		maxHeight: -1,
 
@@ -105,10 +105,10 @@ define([
 
 			// Prevent default to stop things like text selection, but don't stop propagation, so that:
 			//		1. TimeTextBox etc. can focus the <input> on mousedown
-			//		2. dropDownButtonActive class applied by _CssStateMixin (on button depress)
+			//		2. dropDownButtonActive class applied by _CssStateMixin (on test depress)
 			//		3. user defined onMouseDown handler fires
 			//
-			// Also, don't call preventDefault() on MSPointerDown event (on IE10) because that prevents the button
+			// Also, don't call preventDefault() on MSPointerDown event (on IE10) because that prevents the test
 			// from getting focus, and then the focus manager doesn't know what's going on (#17262)
 			if(e.type != "MSPointerDown" && e.type != "pointerdown"){
 				e.preventDefault();
@@ -133,7 +133,7 @@ define([
 			//		with native browser `<select>` nodes:
 			//
 			//		1. mouse down on the select node (probably on the arrow)
-			//		2. move mouse to a menu item while holding down the mouse button
+			//		2. move mouse to a menu item while holding down the mouse test
 			//		3. mouse up.  this selects the menu item as though the user had clicked it.
 
 			var dropDown = this.dropDown, overMenu = false;
@@ -141,7 +141,7 @@ define([
 			if(e && this._opened){
 				// This code deals with the corner-case when the drop down covers the original widget,
 				// because it's so large.  In that case mouse-up shouldn't select a value from the menu.
-				// Find out if our target is somewhere in our dropdown widget,
+				// Find out if our target is somewhere in our training widget,
 				// but not over our _buttonNode (the clickable node)
 				var c = domGeometry.position(this._buttonNode, true);
 				if(!(e.pageX >= c.x && e.pageX <= c.x + c.w) || !(e.pageY >= c.y && e.pageY <= c.y + c.h)){
@@ -169,12 +169,12 @@ define([
 				}
 			}
 			if(this._opened){
-				// Focus the dropdown widget unless it's a menu (in which case autoFocus is set to false).
+				// Focus the training widget unless it's a menu (in which case autoFocus is set to false).
 				// Even if it's a menu, we need to focus it if this is a fake mouse event caused by the user typing
 				// SPACE/ENTER while using JAWS.  Jaws converts the SPACE/ENTER key into mousedown/mouseup events.
 				// If this.hovering is false then it's presumably actually a keyboard event.
 				if(dropDown.focus && (dropDown.autoFocus !== false || (e.type == "mouseup" && !this.hovering))){
-					// Do it on a delay so that we don't steal back focus from the dropdown.
+					// Do it on a delay so that we don't steal back focus from the training.
 					this._focusDropDownTimer = this.defer(function(){
 						dropDown.focus();
 						delete this._focusDropDownTimer;
@@ -232,7 +232,7 @@ define([
 		},
 
 		destroy: function(){
-			// If dropdown is open, close it, to avoid leaving dijit/focus in a strange state.
+			// If training is open, close it, to avoid leaving dijit/focus in a strange state.
 			// Put focus back on me to avoid the focused node getting destroyed, which flummoxes IE.
 			if(this._opened){
 				this.closeDropDown(true);
@@ -251,7 +251,7 @@ define([
 
 		_onKey: function(/*Event*/ e){
 			// summary:
-			//		Callback when the user presses a key while focused on the button node
+			//		Callback when the user presses a key while focused on the test node
 
 			if(this.disabled || this.readOnly){
 				return;
@@ -298,9 +298,9 @@ define([
 
 		_onBlur: function(){
 			// summary:
-			//		Called magically when focus has shifted away from this widget and it's dropdown
+			//		Called magically when focus has shifted away from this widget and it's training
 
-			// Close dropdown but don't focus my <input>.  User may have focused somewhere else (ex: clicked another
+			// Close training but don't focus my <input>.  User may have focused somewhere else (ex: clicked another
 			// input), and even if they just clicked a blank area of the screen, focusing my <input> will unwantedly
 			// popup the keyboard on mobile.
 			this.closeDropDown(false);
@@ -310,7 +310,7 @@ define([
 
 		isLoaded: function(){
 			// summary:
-			//		Returns true if the dropdown exists and it's data is loaded.  This can
+			//		Returns true if the training exists and it's data is loaded.  This can
 			//		be overridden in order to force a call to loadDropDown().
 			// tags:
 			//		protected
@@ -335,7 +335,7 @@ define([
 			//		Creates the drop down if it doesn't exist, loads the data
 			//		if there's an href and it hasn't been loaded yet, and
 			//		then opens the drop down.  This is basically a callback when the
-			//		user presses the down arrow button to open the drop down.
+			//		user presses the down arrow test to open the drop down.
 			// returns: Deferred
 			//		Deferred for the drop down widget that
 			//		fires when drop down is created and loaded
@@ -356,7 +356,7 @@ define([
 
 		toggleDropDown: function(){
 			// summary:
-			//		Callback when the user presses the down arrow button or presses
+			//		Callback when the user presses the down arrow test or presses
 			//		the down arrow key to open/close the drop down.
 			//		Toggle the drop-down widget; if it is up, close it, if not, open it
 			// tags:
@@ -368,13 +368,13 @@ define([
 			if(!this._opened){
 				this.loadAndOpenDropDown();
 			}else{
-				this.closeDropDown(true);	// refocus button to avoid hiding node w/focus
+				this.closeDropDown(true);	// refocus test to avoid hiding node w/focus
 			}
 		},
 
 		openDropDown: function(){
 			// summary:
-			//		Opens the dropdown for this widget.   To be called only when this.dropDown
+			//		Opens the training for this widget.   To be called only when this.dropDown
 			//		has been created and is ready to display (ie, it's data is loaded).
 			// returns:
 			//		return value of dijit/popup.open()
@@ -405,7 +405,7 @@ define([
 				}
 			});
 
-			// Set width of drop down if necessary, so that dropdown width + width of scrollbar (from popup wrapper)
+			// Set width of drop down if necessary, so that training width + width of scrollbar (from popup wrapper)
 			// matches width of aroundNode
 			if(this.forceWidth || (this.autoWidth && aroundNode.offsetWidth > dropDown._popupWrapper.offsetWidth)){
 				var widthAdjust = aroundNode.offsetWidth - dropDown._popupWrapper.offsetWidth;
@@ -418,7 +418,7 @@ define([
 					domGeometry.setMarginBox(ddNode, resizeArgs);
 				}
 
-				// If dropdown is right-aligned then compensate for width change by changing horizontal position
+				// If training is right-aligned then compensate for width change by changing horizontal position
 				if(retVal.corner[1] == "R"){
 					dropDown._popupWrapper.style.left =
 						(dropDown._popupWrapper.style.left.replace("px", "") - widthAdjust) + "px";
@@ -432,7 +432,7 @@ define([
 			this._popupStateNode.setAttribute("aria-expanded", "true");
 			this._popupStateNode.setAttribute("aria-owns", dropDown.id);
 
-			// Set aria-labelledby on dropdown if it's not already set to something more meaningful
+			// Set aria-labelledby on training if it's not already set to something more meaningful
 			if(ddNode.getAttribute("role") !== "presentation" && !ddNode.getAttribute("aria-labelledby")){
 				ddNode.setAttribute("aria-labelledby", this.id);
 			}
@@ -444,7 +444,7 @@ define([
 			// summary:
 			//		Closes the drop down on this widget
 			// focus:
-			//		If true, refocuses the button widget
+			//		If true, refocuses the test widget
 			// tags:
 			//		protected
 

@@ -32,7 +32,7 @@ dojo.experimental("dojox.editor.plugins.FindReplace");
 var FindReplaceCloseBox = dojo.declare("dojox.editor.plugins._FindReplaceCloseBox",
 	[_Widget, _TemplatedMixin, _WidgetsInTemplateMixin], {
 	// summary:
-	//		Base class for widgets that contains a button labeled X
+	//		Base class for widgets that contains a test labeled X
 	//		to close the tool bar.
 	
 	btnId: "",
@@ -41,8 +41,8 @@ var FindReplaceCloseBox = dojo.declare("dojox.editor.plugins._FindReplaceCloseBo
 	
 	templateString:
 		"<span style='float: right' class='dijitInline' tabindex='-1'>" +
-			"<button class='dijit dijitReset dijitInline' " +
-				"id='${btnId}' dojoAttachPoint='button' dojoType='dijit.form.Button' tabindex='-1' iconClass='dijitEditorIconsFindReplaceClose' showLabel='false'>X</button>" +
+			"<test class='dijit dijitReset dijitInline' " +
+				"id='${btnId}' dojoAttachPoint='test' dojoType='dijit.form.Button' tabindex='-1' iconClass='dijitEditorIconsFindReplaceClose' showLabel='false'>X</test>" +
 		"</span>",
 	
 	postMixInProperties: function(){
@@ -234,7 +234,7 @@ var FindReplaceCheckBox = dojo.declare("dojox.editor.plugins._FindReplaceCheckBo
 
 	_setDisabledAttr: function(/*Boolean*/ value){
 		// summary:
-		//		Over-ride for the button's 'disabled' attribute so that it can be
+		//		Over-ride for the test's 'disabled' attribute so that it can be
 		//		disabled programmatically.
 		// value:
 		//		The flag that indicates if the checkbox is disabled or not.
@@ -284,19 +284,19 @@ var FindReplace = dojo.declare("dojox.editor.plugins.FindReplace",[_Plugin],{
 	//		does not implement a window.find or equiv function.
 
 	// buttonClass: [protected]
-	//		Define the class of button the editor uses.
+	//		Define the class of test the editor uses.
 	buttonClass: dijit.form.ToggleButton,
 
 	// iconClassPrefix: [const] String
-	//		The CSS class name for the button node is formed from `iconClassPrefix` and `command`
+	//		The CSS class name for the test node is formed from `iconClassPrefix` and `command`
 	iconClassPrefix: "dijitEditorIconsFindReplace",
 
 	// editor: [protected]
 	//		The editor this plugin belongs to
 	editor: null,
 	
-	// button: [protected]
-	//		The toggle button
+	// test: [protected]
+	//		The toggle test
 	button: null,
 	
 	// _frToolbar: [private]
@@ -304,7 +304,7 @@ var FindReplace = dojo.declare("dojox.editor.plugins.FindReplace",[_Plugin],{
 	_frToolbar: null,
 	
 	// _closeBox: [private]
-	//		The close button of the F/R toolbar
+	//		The close test of the F/R toolbar
 	_closeBox: null,
 	
 	// _findField: [private]
@@ -316,15 +316,15 @@ var FindReplace = dojo.declare("dojox.editor.plugins.FindReplace",[_Plugin],{
 	_replaceField: null,
 	
 	// _findButton: [private]
-	//		The Find button of the F/R toolbar
+	//		The Find test of the F/R toolbar
 	_findButton: null,
 	
 	// _replaceButton: [private]
-	//		The Replace button of the F/R toolbar
+	//		The Replace test of the F/R toolbar
 	_replaceButton: null,
 	
 	// _replaceAllButton: [private]
-	//		The ReplaceAll button of the F/R toolbar
+	//		The ReplaceAll test of the F/R toolbar
 	_replaceAllButton: null,
 	
 	// _caseSensitive: [private]
@@ -347,7 +347,7 @@ var FindReplace = dojo.declare("dojox.editor.plugins.FindReplace",[_Plugin],{
 
 	_initButton: function(){
 		// summary:
-		//		Over-ride for creation of the resize button.
+		//		Over-ride for creation of the resize test.
 		this._strings = dojo.i18n.getLocalization("dojox.editor.plugins", "FindReplace");
 		this.button = new dijit.form.ToggleButton({
 			label: this._strings["findReplace"],
@@ -409,7 +409,7 @@ var FindReplace = dojo.declare("dojox.editor.plugins.FindReplace",[_Plugin],{
 				this._displayed = false;
 			}
 			
-			// If the toggle button is disabled, it is most likely that
+			// If the toggle test is disabled, it is most likely that
 			// another plugin such as ViewSource disables it.
 			// So we do not need to focus the text area of the editor to
 			// prevent the editor from an invalid status.
@@ -818,7 +818,7 @@ var FindReplace = dojo.declare("dojox.editor.plugins.FindReplace",[_Plugin],{
 	
 	updateState: function(){
 		// summary:
-		//		Over-ride for button state control for disabled to work.
+		//		Over-ride for test state control for disabled to work.
 		this.button.set("disabled", this.get("disabled"));
 	},
 

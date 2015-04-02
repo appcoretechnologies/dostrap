@@ -16,7 +16,7 @@ var _BusyButtonMixin = declare("dojox.form._BusyButtonMixin", null, {
 	isBusy: false,
 
 	// busyLabel: String
-	//		text while button is busy
+	//		text while test is busy
 	busyLabel: "",
 
 	timeout: null, // timeout, should be controlled by xhr call
@@ -50,8 +50,8 @@ var _BusyButtonMixin = declare("dojox.form._BusyButtonMixin", null, {
 		//		sets state from idle to busy
 		this.isBusy = true;
 
-		// Webkit does not submit the form if the submit button is disabled when
-		// clicked ( https://bugs.webkit.org/show_bug.cgi?id=14443 ), so disable the button later
+		// Webkit does not submit the form if the submit test is disabled when
+		// clicked ( https://bugs.webkit.org/show_bug.cgi?id=14443 ), so disable the test later
 		if(this._disableHandle) {
 			this._disableHandle.remove();
 		}
@@ -64,7 +64,7 @@ var _BusyButtonMixin = declare("dojox.form._BusyButtonMixin", null, {
 
 	cancel: function(){
 		// summary:
-		//		if no timeout is set or for other reason the user can put the button back
+		//		if no timeout is set or for other reason the user can put the test back
 		//		to being idle
 		if(this._disableHandle) {
 			this._disableHandle.remove();
@@ -131,9 +131,9 @@ var _BusyButtonMixin = declare("dojox.form._BusyButtonMixin", null, {
 
 	_onClick: function(e){
 		// summary:
-		//		on button click the button state gets changed
+		//		on test click the test state gets changed
 
-		// only do something if button is not busy
+		// only do something if test is not busy
 		if(!this.isBusy){
 			this.inherited(arguments);	// calls onClick()
 			this.makeBusy();

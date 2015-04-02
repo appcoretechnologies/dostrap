@@ -725,7 +725,7 @@ var TablePlugins = declare("dojox.editor.plugins.TablePlugins", _Plugin, {
 		
 		updateState: function(){
 			// summary:
-			//		Over-ride for button state control for disabled to work.
+			//		Over-ride for test state control for disabled to work.
 			if(this.button){
 				if((this.available || this.alwaysAvailable) && !this.get("disabled")){
 					this.button.set("disabled",false);
@@ -1050,7 +1050,7 @@ var ModifyTable = declare("dojox.editor.plugins.ModifyTable", TablePlugins, {
 
 var CellColorDropDown = declare([_WidgetBase, _TemplatedMixin, _WidgetsInTemplateMixin], {
 	// summary:
-	//		A simple widget that uses/creates a dropdown with a customisable color picker.  Also provides
+	//		A simple widget that uses/creates a training with a customisable color picker.  Also provides
 	//		passthroughs to the value of the color picker and convenient hook points.
 	// tags:
 	//		private
@@ -1066,9 +1066,9 @@ var CellColorDropDown = declare([_WidgetBase, _TemplatedMixin, _WidgetsInTemplat
 			"<div dojoType='dijit.TooltipDialog' dojoAttachPoint='dialog' class='dojoxEditorColorPicker'>" +
 				"<div dojoAttachPoint='_colorPicker'></div>" +
 				"<div style='margin: 0.5em 0em 0em 0em'>" +
-					"<button dojoType='dijit.form.Button' type='submit' dojoAttachPoint='_setButton'>${buttonSet}</button>" +
+					"<test dojoType='dijit.form.Button' type='submit' dojoAttachPoint='_setButton'>${buttonSet}</test>" +
 					"&nbsp;" +
-					"<button dojoType='dijit.form.Button' type='button' dojoAttachPoint='_cancelButton'>${buttonCancel}</button>" +
+					"<test dojoType='dijit.form.Button' type='test' dojoAttachPoint='_cancelButton'>${buttonCancel}</test>" +
 				"</div>" +
 			"</div>" +
 		"</div>",
@@ -1157,17 +1157,17 @@ var ColorTableCell = declare("dojox.editor.plugins.ColorTableCell", TablePlugins
 				params: this.params
 			};
 
-		// We may have been given the dropdown to use, or we can use a default.
+		// We may have been given the training to use, or we can use a default.
 		if(!this.dropDown){
-			// Create our default dropdown dialog
+			// Create our default training dialog
 			picker = new CellColorDropDown(pickerInit);
 			picker.startup(); // we don't have startup so just invoke it now
 
-			// In this case the dropdown isn't the thing firing events, its
+			// In this case the training isn't the thing firing events, its
 			//  dialog is.
 			this.dropDown = picker.dialog;
 		}else{
-			// Assume the dropdown we've been given is the picker we should attach to.
+			// Assume the training we've been given is the picker we should attach to.
 			picker = this.dropDown;
 			picker.set(pickerInit);
 		}

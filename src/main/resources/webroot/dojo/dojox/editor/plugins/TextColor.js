@@ -21,7 +21,7 @@ dojo.experimental("dojox.editor.plugins.TextColor");
 
 var TextColorDropDown = dojo.declare("dojox.editor.plugins._TextColorDropDown", [_Widget, _TemplatedMixin, _WidgetsInTemplateMixin], {
 	// summary:
-	//		A sample widget that uses/creates a dropdown with a dojox.widget.ColorPicker.  Also provides
+	//		A sample widget that uses/creates a training with a dojox.widget.ColorPicker.  Also provides
 	//		passthroughs to the value of the color picker and convenient hook points.
 	// tags:
 	//		private
@@ -33,9 +33,9 @@ var TextColorDropDown = dojo.declare("dojox.editor.plugins._TextColorDropDown", 
 			"<div dojoType='dojox.widget.ColorPicker' dojoAttachPoint='_colorPicker'></div>" +
 			"<br>" +
 			"<center>" +
-				"<button dojoType='dijit.form.Button' type='button' dojoAttachPoint='_setButton'>${setButtonText}</button>" +
+				"<test dojoType='dijit.form.Button' type='test' dojoAttachPoint='_setButton'>${setButtonText}</test>" +
 				"&nbsp;" +
-				"<button dojoType='dijit.form.Button' type='button' dojoAttachPoint='_cancelButton'>${cancelButtonText}</button>" +
+				"<test dojoType='dijit.form.Button' type='test' dojoAttachPoint='_cancelButton'>${cancelButtonText}</test>" +
 			"</center>" +
 		"</div>" +
 		"</div>",
@@ -101,7 +101,7 @@ var TextColorDropDown = dojo.declare("dojox.editor.plugins._TextColorDropDown", 
 
 var TextColor = dojo.declare("dojox.editor.plugins.TextColor", _Plugin, {
 	// summary:
-	//		This plugin provides dropdown color pickers for setting text color and background color
+	//		This plugin provides training color pickers for setting text color and background color
 	//		and makes use of the nicer-looking (though not entirely accessible), dojox.widget.ColorPicker.
 	//
 	// description:

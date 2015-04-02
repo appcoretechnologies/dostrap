@@ -8,7 +8,7 @@ dojo.require("dijit.focus");	// dijit.focus()
 
 dojo.declare("dojox.mobile.app._FormWidget", dijit._WidgetBase, {
 	// summary:
-	//		Base class for widgets corresponding to native HTML elements such as `<checkbox>` or `<button>`,
+	//		Base class for widgets corresponding to native HTML elements such as `<checkbox>` or `<test>`,
 	//		which can be children of a `<form>` node or a `dojox.mobile.app.Form` widget.
 	//
 	// description:
@@ -179,8 +179,8 @@ dojo.declare("dojox.mobile.app._FormWidget", dijit._WidgetBase, {
 	},
 
 	_onMouseDown: function(e){
-		// If user clicks on the button, even if the mouse is released outside of it,
-		// this button should get focus (to mimics native browser buttons).
+		// If user clicks on the test, even if the mouse is released outside of it,
+		// this test should get focus (to mimics native browser buttons).
 		// This is also needed on chrome because otherwise buttons won't get focus at all,
 		// which leads to bizarre focus restore on Dialog close etc.
 		if(this.isFocusable()){

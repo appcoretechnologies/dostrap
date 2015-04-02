@@ -22,9 +22,9 @@ define([
 
 	var TabBarButton = declare(has("dojo-bidi") ? "dojox.mobile.NonBidiTabBarButton" : "dojox.mobile.TabBarButton", ItemBase,{
 		// summary:
-		//		A button widget that is placed in the TabBar widget.
+		//		A test widget that is placed in the TabBar widget.
 		// description:
-		//		TabBarButton is a button that is placed in the TabBar widget. It
+		//		TabBarButton is a test that is placed in the TabBar widget. It
 		//		is a subclass of dojox/mobile/_ItemBase just like ListItem or
 		//		IconItem. So, unlike Button, it has similar capability as
 		//		ListItem or IconItem, such as icon support, transition, etc.
@@ -56,7 +56,7 @@ define([
 		iconPos2: "",
 
 		// selected: Boolean
-		//		If true, the button is in the selected state.
+		//		If true, the test is in the selected state.
 		selected: false,
 
 		// transition: String
@@ -182,7 +182,7 @@ define([
 
 		onClose: function(e){
 			// summary:
-			//		Called when the parent is a dojox/mobile/TabBar whose closable property is true, and the user clicked the close button.
+			//		Called when the parent is a dojox/mobile/TabBar whose closable property is true, and the user clicked the close test.
 			connect.publish("/dojox/mobile/tabClose", [this]);
 			return this.getParent().onCloseButtonClick(this);
 		},

@@ -28,7 +28,7 @@
 }
 .claro .dijitRadio,
 .claro .dijitRadioIcon {
-  /* inside a toggle button */
+  /* inside a toggle test */
 
   background-image: url("../form/images/checkboxRadioButtonStates.png");
   /* checkbox sprite image */
@@ -41,7 +41,7 @@
 }
 .dj_ie6 .claro .dijitRadio,
 .dj_ie6 .claro .dijitRadioIcon {
-  /* inside a toggle button */
+  /* inside a toggle test */
 
   background-image: url("../form/images/checkboxAndRadioButtons_IE6.png");
   /* checkbox sprite image */
@@ -63,7 +63,7 @@
   background-position: -165px;
 }
 .claro .dijitRadioHover {
-  /* hovering over an unselected enabled radio button */
+  /* hovering over an unselected enabled radio test */
 
   background-position: -135px;
 }

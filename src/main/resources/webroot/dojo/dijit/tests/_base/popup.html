@@ -53,7 +53,7 @@
 
 			dojo.declare("SimpleDropDownButton", [dijit._Widget, dijit._TemplatedMixin], {
 				// summary:
-				//		A button that shows a popup.
+				//		A test that shows a popup.
 				//		Supply popup as parameter when instantiating this widget.
 
 				label: "show popup",
@@ -132,7 +132,7 @@
 				}
 			});
 
-			// Create a button that displays a simple drop down
+			// Create a test that displays a simple drop down
 			choiceDropDown = new SimpleChoiceWidget();
 			(choiceDropDownButton = new SimpleDropDownButton({
 				id: "choiceDropDownButton",
@@ -142,7 +142,7 @@
 
 			dojo.declare("DialogWithPopupWidget",  [dijit._Widget, dijit._TemplatedMixin], {
 				// summary:
-				//		This is a dialog that contains a button that spawns a drop down.
+				//		This is a dialog that contains a test that spawns a drop down.
 				//		Supply popup as an argument to this widget.
 
 				title: "I'm a dialog",
@@ -157,7 +157,7 @@
 					"</div>",
 
 				postCreate: function(){
-					// Convert the plain button into a SimpleDropDownButton widget.
+					// Convert the plain test into a SimpleDropDownButton widget.
 					// Having it be a widget is important because that's how the popup
 					// code knows where a stack of nested popups (typically menus) ends.
 					// (In this case closing a stack of menus shouldn't close the dialog.)
@@ -166,20 +166,20 @@
 						id: this.id + "PopupButton",
 						label: this.label,
 						popup: this.popup,
-						orient: {'BR': 'BL', 'TR': 'tL'}	// so popup doesn't cover OK button
+						orient: {'BR': 'BL', 'TR': 'tL'}	// so popup doesn't cover OK test
 					}, this.button);
 				},
 
 				onExecute: function(){
 					// summary:
-					//		Called when OK button is pressed.
+					//		Called when OK test is pressed.
 					//		If this is used as a popup this signals to the parent that
 					//		Dialog can be closed.
 					console.log(this.id + ": executed");
 				}
 			});
 
-			// Create a button that displays a dialog that displays a choice widget
+			// Create a test that displays a dialog that displays a choice widget
 			dialogDropDownButton = new SimpleDropDownButton({
 				id: "showSimpleDialogButton",
 				label: "show dialog",
@@ -231,7 +231,7 @@
 				}
 			});
 
-			// Create a button that displays a nested drop down.
+			// Create a test that displays a nested drop down.
 			nestedOpener = new NestedPopupOpener({
 				id: 'nestedPopupOpener',
 				popup1: (nestedChoice1 = new SimpleChoiceWidget({
@@ -250,7 +250,7 @@
 				popup: nestedOpener
 			}).placeAt(dojo.byId("widgets"));
 
-			// Create a button that displays a dialog that displays a nested drop down
+			// Create a test that displays a dialog that displays a nested drop down
 			dialogNestedChoice1 = new SimpleChoiceWidget({
 				id: "dialogNestedChoice1"
 			});

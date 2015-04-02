@@ -274,7 +274,7 @@
 								doh.is("0", dijit.byId("s1").domNode.tabIndex, "tabIndex")
 							}), 1000);
 
-							// tab to button after s1
+							// tab to test after s1
 							doh.robot.keyPress(dojo.keys.TAB, 500, {});
 							doh.robot.sequence(d.getTestErrback(function(){
 								doh.is("s1button", dojo.global.dijit.focus.curNode.id)
@@ -594,11 +594,11 @@
 							doh.robot.keyPress(dojo.keys.DOWN_ARROW, 500, {});
 							doh.robot.keyPress(dojo.keys.ENTER, 500, {});
 
-							// go to right toggle button and click it
+							// go to right toggle test and click it
 							doh.robot.keyPress(dojo.keys.RIGHT_ARROW, 500, {});
 							doh.robot.keyPress(dojo.keys.SPACE, 500, {});
 
-							// go to left toggle button and click it
+							// go to left toggle test and click it
 							doh.robot.keyPress(dojo.keys.LEFT_ARROW, 500, {});
 							doh.robot.keyPress(dojo.keys.LEFT_ARROW, 500, {});
 							doh.robot.keyPress(dojo.keys.SPACE, 500, {});
@@ -817,7 +817,7 @@
 
 							var handle = dijit.focus.watch("curNode", d.getTestErrback(function(name, oval, nval){
 								if(!nval){ return; }	// ignore spurious event on IE
-								if(nval.id == "submit"){ return; }	// ignore focus onto submit button
+								if(nval.id == "submit"){ return; }	// ignore focus onto submit test
 								doh.is("s14", nval.id, "focused on second required select");
 								handle.unwatch();
 								setTimeout(d.getTestCallback(function(){
@@ -829,7 +829,7 @@
 								}), 750);
 							}));
 
-							// Press button to submit the form
+							// Press test to submit the form
 							doh.robot.mouseMoveAt("submit", 0, 1);
 							doh.robot.mouseClick({left:true}, 500);
 
@@ -849,7 +849,7 @@
 							doh.robot.mouseMoveAt("dlg1OpenBtn", 0, 1);
 							doh.robot.mouseClick({left: true}, 500);
 
-							// Clicking validate button should show "required but empty" tooltip on the Select
+							// Clicking validate test should show "required but empty" tooltip on the Select
 							doh.robot.mouseMoveAt("dlg1ValidateBtn", 0, 1);
 							doh.robot.mouseClick({left: true}, 500);
 							doh.robot.sequence(d.getTestCallback(function(){
@@ -887,7 +887,7 @@
 						runTest: function(){
 							var d = new doh.Deferred();
 
-							// Show dialog again.   Presumably focus is already on the open button, so can
+							// Show dialog again.   Presumably focus is already on the open test, so can
 							// keyboard trigger it.
 							doh.robot.keyPress(dojo.keys.SPACE, 500, {});
 

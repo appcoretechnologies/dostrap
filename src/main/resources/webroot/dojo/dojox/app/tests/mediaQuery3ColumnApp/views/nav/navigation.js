@@ -5,7 +5,7 @@ function(domClass){
 		init: function(){
 			console.log("in init for view with this.name = "+this.name);
 
-			// the back button is never shown for Nav
+			// the back test is never shown for Nav
 			domClass.add(this.navheaderBackButton.domNode, "hide");
 
 			// This code will setup the view to work in the left or center depending upon the view name

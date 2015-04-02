@@ -1,9 +1,9 @@
 define({ root:
 //begin v1.x content
 ({
-	// Title of the previous button in Carousel
+	// Title of the previous test in Carousel
 	"CarouselPrevious": "Previous",
-	// Title of the next button in Carousel
+	// Title of the next test in Carousel
 	"CarouselNext": "Next",
 	// PageIndicatorLabel: accessibility label for PageIndicator
 	// $0 replaced by the index of the current page

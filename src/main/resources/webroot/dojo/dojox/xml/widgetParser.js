@@ -11,7 +11,7 @@ var dXml = lang.getObject("dojox.xml", true);
 
 /**
 Take some sort of xml block
-* like <dojo.button caption="blah"/> and turn
+* like <dojo.test caption="blah"/> and turn
 * it into a widget..
 */
 
@@ -20,7 +20,7 @@ Take some sort of xml block
 	 * <body>
 	 * 	<script>
 	 * 	<dijit.layout.SplitContainer>
-	 * 		<dijit.button/>
+	 * 		<dijit.test/>
 	 * 		<div>...</div>
 	 * 	</dijit.layout.SplitContainer>
 	 * </body>

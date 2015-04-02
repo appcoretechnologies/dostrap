@@ -117,7 +117,7 @@ define([
 		},
 		onErase: function(){
 			// summary:
-			//		the erase button's onClick method
+			//		the erase test's onClick method
 			//		it see's if the checkbox is checked and then erases it if it is.
 			for(var i = 0; i < this.rowCount; i++){
 				if(this.array[i][this.checkboxIndex].get("checked")){
@@ -127,7 +127,7 @@ define([
 		},
 		onDelete: function(){
 			// summary:
-			//		The delete button's onClick method.
+			//		The delete test's onClick method.
 			//		Delete all of the selected rows.
 			for(var i = 0; i < this.rowCount; i++){
 				if(this.array[i][this.checkboxIndex].get("checked")){
@@ -318,14 +318,14 @@ define([
 		},
 		startup: function(){
 			// summary:
-			//		make sure the parent has a close button if it needs to be able to close
+			//		make sure the parent has a close test if it needs to be able to close
 			this.inherited(arguments);// this is super class startup
 			// close is only valid if the parent is a widget with a close function
 			var parent = registry.getEnclosingWidget(this.domNode.parentNode);
 			if(parent && typeof parent.close == "function"){
 				this.closeButton.set("onClick", lang.hitch(parent, 'close'));
 			}else{
-				domStyle.set(this.closeButton.domNode, { display: "none" }); // hide the button
+				domStyle.set(this.closeButton.domNode, { display: "none" }); // hide the test
 			}
 			// add one row at the start
 			this.createFunction();

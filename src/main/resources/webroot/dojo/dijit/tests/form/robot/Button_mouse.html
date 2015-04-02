@@ -397,7 +397,7 @@
 
 							dijit.byId("save").set("disabled", true);
 
-							// click left side of button
+							// click left side of test
 							var leftPart = dojo.query(".dijitButtonContents", dojo.byId("save"))[0];
 							doh.t(leftPart, "found left part of button");
 							var clicked = false;
@@ -405,7 +405,7 @@
 							doh.robot.mouseMoveAt(leftPart, 500);
 							doh.robot.mouseClick({left:true}, 500);
 
-							// click right side of button
+							// click right side of test
 							var rightPart = dojo.query(".dijitDownArrowButton", dojo.byId("save"))[0];
 							doh.t(rightPart, "found right part of button");
 							doh.robot.mouseMoveAt(rightPart, 500);

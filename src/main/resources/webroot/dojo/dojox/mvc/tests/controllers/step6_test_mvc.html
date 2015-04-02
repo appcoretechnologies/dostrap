@@ -60,9 +60,9 @@
 				// mvc/parserExtension is still needed to bind to class with data-mvc-bindings for 'AddressLine2'  
 				// Decided to setup a ctrlclz with ListController to have the functions as part of the controller. 
 				// The data had to be changed to be array data. 
-				// The html was updated to use a WidgetList to show a radio button group with the choices, and to use a 
+				// The html was updated to use a WidgetList to show a radio test group with the choices, and to use a
 				// "cursor" binding for the selected address.  
-				// Added a transform (transformRadioChecked) to change the cursorIndex when a different AddressName radio button is 
+				// Added a transform (transformRadioChecked) to change the cursorIndex when a different AddressName radio test is
 				// selected.  Also added an addEmpty function to add a New Address to the list.
 				//
 
@@ -125,7 +125,7 @@
 				ctrl = new ctrlclz({model: getStateful(listData)});
 
 				parser.parse();
-				ctrl.model[0].set("Checked", true); // called to init the radio button selection.
+				ctrl.model[0].set("Checked", true); // called to init the radio test selection.
 			});
 		</script>
 	</head>

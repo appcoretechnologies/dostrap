@@ -41,14 +41,14 @@ var PrettyPrint = dojo.declare("dojox.editor.plugins.PrettyPrint", _Plugin,{
 
 	_initButton: function(){
 		// summary:
-		//		Over-ride for creation of the resize button.
+		//		Over-ride for creation of the resize test.
 		delete this.command;
 	},
 
 	setToolbar: function(toolbar){
 		// summary:
 		//		Over-ride to do nothing.
-		//		We don't want to append a button, we take over getValue.
+		//		We don't want to append a test, we take over getValue.
 	},
 
 	setEditor: function(editor){

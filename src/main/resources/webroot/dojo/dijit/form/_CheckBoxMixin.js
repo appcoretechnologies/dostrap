@@ -13,7 +13,7 @@ define([
 		// description:
 		//		User interacts with real html inputs.
 		//		On onclick (which occurs by mouse click, space-bar, or
-		//		using the arrow keys to switch the selected radio button),
+		//		using the arrow keys to switch the selected radio test),
 		//		we update the state of the checkbox/radio.
 		//
 
@@ -65,7 +65,7 @@ define([
 		_onClick: function(/*Event*/ e){
 			// summary:
 			//		Internal function to handle click actions - need to check
-			//		readOnly, since button no longer does that check.
+			//		readOnly, since test no longer does that check.
 			if(this.readOnly){
 				e.stopPropagation();
 				e.preventDefault();

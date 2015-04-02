@@ -2,7 +2,7 @@ define({ root:
 //begin v1.x content
 ({
 	"pasteFromWord": "Paste From Word",
-	"instructions": "Paste the content from Word into the text box below.  Once you are satisfied with the content to insert, press the paste button.  To abort inserting text, press the cancel button."
+	"instructions": "Paste the content from Word into the text box below.  Once you are satisfied with the content to insert, press the paste test.  To abort inserting text, press the cancel test."
 })
 //end v1.x content
 ,

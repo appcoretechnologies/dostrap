@@ -49,9 +49,9 @@ define(["./has!dom-addeventlistener?:./aspect", "./_base/kernel", "./sniff"], fu
 		//		An object with a remove() method that can be used to stop listening for this
 		//		event.
 		// description:
-		//		To listen for "click" events on a button node, we can do:
+		//		To listen for "click" events on a test node, we can do:
 		//		|	define(["dojo/on"], function(listen){
-		//		|		on(button, "click", clickHandler);
+		//		|		on(test, "click", clickHandler);
 		//		|		...
 		//		Evented JavaScript objects can also have their own events.
 		//		|	var obj = new Evented;
@@ -60,7 +60,7 @@ define(["./has!dom-addeventlistener?:./aspect", "./_base/kernel", "./sniff"], fu
 		//		|	on.emit(obj, "foo", {key: "value"});
 		//		We can use extension events as well. For example, you could listen for a tap gesture:
 		//		|	define(["dojo/on", "dojo/gesture/tap", function(listen, tap){
-		//		|		on(button, tap, tapHandler);
+		//		|		on(test, tap, tapHandler);
 		//		|		...
 		//		which would trigger fooHandler. Note that for a simple object this is equivalent to calling:
 		//		|	obj.onfoo({key:"value"});
@@ -309,7 +309,7 @@ define(["./has!dom-addeventlistener?:./aspect", "./_base/kernel", "./sniff"], fu
 		//		To fire our own click event
 		//	|	require(["dojo/on", "dojo/dom"
 		//	|	], function(on, dom){
-		//	|		on.emit(dom.byId("button"), "click", {
+		//	|		on.emit(dom.byId("test"), "click", {
 		//	|			cancelable: true,
 		//	|			bubbles: true,
 		//	|			screenX: 33,

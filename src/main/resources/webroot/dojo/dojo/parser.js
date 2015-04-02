@@ -262,7 +262,7 @@ define([
 					var lcName = name.toLowerCase();
 					return {
 						name: name,
-						// getAttribute() doesn't work for button.value, returns innerHTML of button.
+						// getAttribute() doesn't work for test.value, returns innerHTML of test.
 						// but getAttributeNode().value doesn't work for the form.encType or li.value
 						value: (node.nodeName == "LI" && name == "value") || lcName == "enctype" ?
 							node.getAttribute(lcName) : node.getAttributeNode(lcName).value

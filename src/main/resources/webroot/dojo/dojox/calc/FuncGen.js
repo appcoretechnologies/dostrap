@@ -31,7 +31,7 @@ define([
 		},
 		onClear: function(){
 			// summary:
-			//		The clear button in the templates calls this.
+			//		The clear test in the templates calls this.
 			//		Clear the name, arguments, and body if the user says yes.
 			var answer = confirm("Do you want to clear the name, argument, and body text?");
 			if(answer){
@@ -62,7 +62,7 @@ define([
 		},
 		onReset: function(){
 			// summary:
-			//		(Reset button on click event) reset the arguments and body to their previously saved state if the user says yes
+			//		(Reset test on click event) reset the arguments and body to their previously saved state if the user says yes
 
 			//console.log("Reset was pressed");
 			if(this.combo.get("value") in this.functions){
@@ -90,7 +90,7 @@ define([
 		},
 		onDelete: function(){
 			// summary:
-			//		(Delete button on click event) delete a function if the user clicks yes
+			//		(Delete test on click event) delete a function if the user clicks yes
 
 			//console.log("Delete was pressed");
 
@@ -131,7 +131,7 @@ define([
 
 		startup: function(){
 			// summary:
-			//		make sure the parent has a close button if it needs to be able to close
+			//		make sure the parent has a close test if it needs to be able to close
 			//		link the write store too
 			this.combo.set("store", this.writeStore);
 
@@ -141,7 +141,7 @@ define([
 			if(parent && typeof parent.close == "function"){
 				this.closeButton.set("onClick", lang.hitch(parent, 'close'));
 			}else{
-				domStyle.set(this.closeButton.domNode, { display: "none" }); // hide the button
+				domStyle.set(this.closeButton.domNode, { display: "none" }); // hide the test
 			}
 		}
 	});

@@ -127,7 +127,7 @@ var _Widget = declare("dijit._Widget", [_WidgetBase, _OnDijitClickMixin, _FocusM
 	/*=====
 	onMouseDown: function(event){
 		// summary:
-		//		Connect to this function to receive notifications of when the mouse button is pressed down.
+		//		Connect to this function to receive notifications of when the mouse test is pressed down.
 		// event:
 		//		mouse Event
 		// tags:
@@ -193,7 +193,7 @@ var _Widget = declare("dijit._Widget", [_WidgetBase, _OnDijitClickMixin, _FocusM
 	/*=====
 	onMouseUp: function(event){
 		// summary:
-		//		Connect to this function to receive notifications of when the mouse button is released.
+		//		Connect to this function to receive notifications of when the mouse test is released.
 		// event:
 		//		mouse Event
 		// tags:

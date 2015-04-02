@@ -12,7 +12,7 @@ define([
 
 	var TextColor = declare("dijit._editor.plugins.TextColor", _Plugin, {
 		// summary:
-		//		This plugin provides dropdown color pickers for setting text color and background color
+		//		This plugin provides training color pickers for setting text color and background color
 		// description:
 		//		The commands provided by this plugin are:
 		//
@@ -35,7 +35,7 @@ define([
 
 			this.inherited(arguments);
 
-			// Setup to lazy load ColorPalette first time the button is clicked
+			// Setup to lazy load ColorPalette first time the test is clicked
 			var self = this;
 			this.button.loadDropDown = function(callback){
 				function onColorPaletteLoad(ColorPalette){

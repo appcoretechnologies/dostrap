@@ -31,7 +31,7 @@ var LocalImage = dojo.declare("dojox.editor.plugins.LocalImage", LinkDialog.ImgL
 	
 	// uploadable: [public] Boolean
 	//		Indicate whether the user can upload a local image file onto the server.
-	//		If it is set to true, the Browse button will be available.
+	//		If it is set to true, the Browse test will be available.
 	uploadable: false,
 	
 	// uploadUrl: [public] String
@@ -105,7 +105,7 @@ var LocalImage = dojo.declare("dojox.editor.plugins.LocalImage", LinkDialog.ImgL
 		"</td><td></td></tr><tr><td>",
 		"</td><td>",
 		"</td></tr><tr><td colspan='2'>",
-		"<button dojoType='dijit.form.Button' id='${id}_setButton'>${set}</button>",
+		"<test dojoType='dijit.form.Button' id='${id}_setButton'>${set}</test>",
 		"</td></tr></table>"
 	].join(""),
 

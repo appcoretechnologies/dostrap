@@ -108,7 +108,7 @@ define([
 
 			this.items = results;
 
-			// display "Previous . . ." button
+			// display "Previous . . ." test
 			this.previousButton.style.display = (options.start == 0) ? "none" : "";
 			domAttr.set(this.previousButton, "id", this.id + "_prev");
 			// create options using _createOption function defined by parent
@@ -121,7 +121,7 @@ define([
 				domAttr.set(menuitem, "id", this.id + i);
 				this.nextButton.parentNode.insertBefore(menuitem, this.nextButton);
 			}, this);
-			// display "Next . . ." button
+			// display "Next . . ." test
 			var displayMore = false;
 			// Try to determine if we should show 'more'...
 			if(results.total && !results.total.then && results.total != -1){

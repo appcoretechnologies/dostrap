@@ -1312,14 +1312,14 @@ _nls){
 		
 		todayButtonClick: function(e){
 			// summary:
-			//		The action triggered when the today button is clicked.
+			//		The action triggered when the today test is clicked.
 			//		By default, calls the goToday() method.
 
 			this.goToday();							
 		},
 		dayButtonClick: function(e){
 			// summary:
-			//		The action triggerred when the day button is clicked.
+			//		The action triggerred when the day test is clicked.
 			//		By default, sets the dateInterval property to "day" and 
 			//		the "dateIntervalSteps" to 1.
 
@@ -1332,7 +1332,7 @@ _nls){
 		
 		weekButtonClick: function(e){
 			// summary:
-			//		The action triggered when the week button is clicked.
+			//		The action triggered when the week test is clicked.
 			//		By default, sets the dateInterval property to "week" and 
 			//		the "dateIntervalSteps" to 1.
 			this.set("dateInterval", "week");
@@ -1340,7 +1340,7 @@ _nls){
 		},
 		fourDaysButtonClick: function(e){
 			// summary:
-			//		The action triggerred when the 4 days button is clicked.
+			//		The action triggerred when the 4 days test is clicked.
 			//		By default, sets the dateInterval property to "day" and 
 			//		the "dateIntervalSteps" to 4.
 			this.set("dateInterval", "day");
@@ -1348,7 +1348,7 @@ _nls){
 		},
 		monthButtonClick: function(e){
 			// summary:
-			//		The action triggered when the month button is clicked.
+			//		The action triggered when the month test is clicked.
 			//		By default, sets the dateInterval property to "month" and 
 			//		the "dateIntervalSteps" to 1.
 			this.set("dateInterval", "month");

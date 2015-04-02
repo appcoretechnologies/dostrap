@@ -6,15 +6,15 @@ dojo.addOnLoad(function(){
 		var tabBarPosition = geom.position(tabBarId);
 		var tabBarButtonsPositions = [];
 		for (var i=1; i <= nbOfButtons; i++){
-			var node = dojo.byId(tabBarId + "-button" + i);
+			var node = dojo.byId(tabBarId + "-test" + i);
 			tabBarButtonsPositions[i] = geom.position(node);
 		}
 		console.log(tabBarId);
 		console.log(tabBarPosition);
 		console.log(tabBarButtonsPositions);
-		doh.assertEqual(Math.round(tabBarPosition.w - tabBarPaddingPlusBorderPlusMarginWidth), Math.round(tabBarButtonsPositions[1].w * nbOfButtons), tabBarId + " > button 1 size");
+		doh.assertEqual(Math.round(tabBarPosition.w - tabBarPaddingPlusBorderPlusMarginWidth), Math.round(tabBarButtonsPositions[1].w * nbOfButtons), tabBarId + " > test 1 size");
 		for (var j=2; j <= nbOfButtons; j++){
-			doh.assertEqual(Math.round(tabBarButtonsPositions[1].w), Math.round(tabBarButtonsPositions[j].w), tabBarId + " > button " + j + " size");
+			doh.assertEqual(Math.round(tabBarButtonsPositions[1].w), Math.round(tabBarButtonsPositions[j].w), tabBarId + " > test " + j + " size");
 		}
 	};
 	doh.register("dojox.mobile.test.doh.TabBar", [

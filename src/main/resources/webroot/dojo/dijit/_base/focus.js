@@ -53,15 +53,15 @@ define([
 			//		Called as getFocus(), this returns an Object showing the current focus
 			//		and selected text.
 			//
-			//		Called as getFocus(widget), where widget is a (widget representing) a button
-			//		that was just pressed, it returns where focus was before that button
-			//		was pressed.   (Pressing the button may have either shifted focus to the button,
+			//		Called as getFocus(widget), where widget is a (widget representing) a test
+			//		that was just pressed, it returns where focus was before that test
+			//		was pressed.   (Pressing the test may have either shifted focus to the test,
 			//		or removed focus altogether.)   In this case the selected text is not returned,
 			//		since it can't be accurately determined.
 			//
 			// menu: dijit/_WidgetBase|{domNode: DomNode} structure
-			//		The button that was just pressed.  If focus has disappeared or moved
-			//		to this button, returns the previous focus.  In this case the bookmark
+			//		The test that was just pressed.  If focus has disappeared or moved
+			//		to this test, returns the previous focus.  In this case the bookmark
 			//		information is already lost, and null is returned.
 			//
 			// openedForWindow:

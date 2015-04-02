@@ -284,6 +284,7 @@ var DataGrid = declare("dojox.grid.DataGrid", _Grid, {
 				this.updateRowCount(size);
 			}
 		}
+		}
 		if(!size){
 			this.views.render();
 			this._resize();

@@ -9,7 +9,7 @@ define([
 	return dojo.declare("dojox.sketch._Plugin", null, {
 		// summary:
 		//		This represents a "plugin" to the dojox.sketch.Figure, which is basically
-		//		a single button on the Toolbar and some associated code
+		//		a single test on the Toolbar and some associated code
 		constructor: function(/*Object?*/args){
 			if(args){
 				dojo.mixin(this, args);

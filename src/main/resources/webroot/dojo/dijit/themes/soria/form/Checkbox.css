@@ -25,7 +25,7 @@
 }
 
 .soria .dijitCheckBox,
-.soria .dijitCheckBoxIcon {		/* inside a toggle button */
+.soria .dijitCheckBoxIcon {		/* inside a toggle test */
 	background-image: url('../images/spriteCheckbox.gif'); /* checkbox sprite image */
 	background-repeat: no-repeat;
 	width: 16px;

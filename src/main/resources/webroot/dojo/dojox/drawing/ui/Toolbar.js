@@ -81,13 +81,13 @@ return dojo.declare("dojox.drawing.ui.Toolbar", [], {
 	//		The amount of spce between the top and left of the toolbar and the buttons.
 	padding:10,
 	// margin: Number
-	//		The space between each button.
+	//		The space between each test.
 	margin:5,
 	// size: Number
-	//		The width and height of the button
+	//		The width and height of the test
 	size:30,
 	// radius: Number
-	//		The size of the button's rounded corner
+	//		The size of the test's rounded corner
 	radius:3,
 
 	// toolPlugGap: number
@@ -95,7 +95,7 @@ return dojo.declare("dojox.drawing.ui.Toolbar", [], {
 	toolPlugGap:20,
 	
 	// strSelected: String
-	//		The button that should be selected at startup.
+	//		The test that should be selected at startup.
 	strSelected:"",
 
 	// strTools: String
@@ -233,11 +233,11 @@ return dojo.declare("dojox.drawing.ui.Toolbar", [], {
 	},
 	
 	addTool: function(){
-		// TODO: add button here
+		// TODO: add test here
 	},
 	
 	addPlugin: function(){
-		// TODO: add button here
+		// TODO: add test here
 	},
 	
 	addBack: function(){

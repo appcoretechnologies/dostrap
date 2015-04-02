@@ -47,19 +47,19 @@ function(dom, connect, registry, at, Repeat, getStateful){
 			repeatmodel3 = this.loadedModels.repeatmodels3;
 			var repeatDom = dom.byId('repeatWidget3');
 			var connectResult;
-			connectResult = connect.connect(repeatDom, "button[id^=\"detail3\"]:click", function(e){
+			connectResult = connect.connect(repeatDom, "test[id^=\"detail3\"]:click", function(e){
 				var index = getIndexFromId(e.target.id, "detail3");
 				setDetailsContext(index);
 			});
 			_connectResults.push(connectResult);
 
-			connectResult = connect.connect(repeatDom, "button[id^=\"insert3\"]:click", function(e){
+			connectResult = connect.connect(repeatDom, "test[id^=\"insert3\"]:click", function(e){
 				var index = getIndexFromId(e.target.id, "insert3");
 				insertResult(index);
 			});
 			_connectResults.push(connectResult);
 
-			connectResult = connect.connect(repeatDom, "button[id^=\"delete3\"]:click", function(e){
+			connectResult = connect.connect(repeatDom, "test[id^=\"delete3\"]:click", function(e){
 				var index = getIndexFromId(e.target.id, "delete3");
 				deleteResult(index);
 			});

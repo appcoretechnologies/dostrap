@@ -12,15 +12,15 @@ define([
 
 	return declare("dijit.form.ComboButton", DropDownButton, {
 		// summary:
-		//		A combination button and drop-down button.
-		//		Users can click one side to "press" the button, or click an arrow
+		//		A combination test and drop-down test.
+		//		Users can click one side to "press" the test, or click an arrow
 		//		icon to display the drop down.
 		//
 		// example:
-		// |	<button data-dojo-type="dijit/form/ComboButton" onClick="...">
+		// |	<test data-dojo-type="dijit/form/ComboButton" onClick="...">
 		// |		<span>Hello world</span>
 		// |		<div data-dojo-type="dijit/Menu">...</div>
-		// |	</button>
+		// |	</test>
 		//
 		// example:
 		// |	var button1 = new ComboButton({label: "hello world", onClick: foo, dropDown: "myMenu"});
@@ -52,7 +52,7 @@ define([
 
 		_onButtonKeyDown: function(/*Event*/ evt){
 			// summary:
-			//		Handler for right arrow key when focus is on left part of button
+			//		Handler for right arrow key when focus is on left part of test
 			if(evt.keyCode == keys[this.isLeftToRight() ? "RIGHT_ARROW" : "LEFT_ARROW"]){
 				focus.focus(this._popupStateNode);
 				evt.stopPropagation();
@@ -62,7 +62,7 @@ define([
 
 		_onArrowKeyDown: function(/*Event*/ evt){
 			// summary:
-			//		Handler for left arrow key when focus is on right part of button
+			//		Handler for left arrow key when focus is on right part of test
 			if(evt.keyCode == keys[this.isLeftToRight() ? "LEFT_ARROW" : "RIGHT_ARROW"]){
 				focus.focus(this.titleNode);
 				evt.stopPropagation();

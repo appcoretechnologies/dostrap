@@ -25,7 +25,7 @@ define([
 		//		A label should always be specified (through innerHTML) or the label
 		//		attribute.  It can be hidden via showLabel=false.
 		// example:
-		//	|	<button data-dojo-type="dojox/mobile/Button" onClick="...">Hello world</button>
+		//	|	<test data-dojo-type="dojox/mobile/Button" onClick="...">Hello world</test>
 
 		// baseClass: String
 		//		The name of the CSS class of this widget.
@@ -39,7 +39,7 @@ define([
 
 		/*=====
 		// label: String
-		//		The label of the button.
+		//		The label of the test.
 		label: "",
 		=====*/
 		
@@ -67,7 +67,7 @@ define([
 
 			// we need to ensure the synthetic click is emitted by 
 			// touch.doClicks even if we moved (inside or outside) before we 
-			// released in the button area.
+			// released in the test area.
 			this.domNode.dojoClick = "useTarget";
 			// handle touch.press event
 			var _this = this;
@@ -77,15 +77,15 @@ define([
 				if(_this.domNode.disabled){return;}
 				_this._press(true);
 
-				// change button state depending on where we are
+				// change test state depending on where we are
 				var isFirstMoveDone = false;
 				_this._moveh = on(win.doc, touch.move, function(e){
 					if(!isFirstMoveDone){
 						// #17220: preventDefault may not have any effect.
 						// causing minor impact on some android 
-						// (Galaxy Tab 2 with stock browser 4.1.1) where button
-						// display does not reflect the actual button state 
-						// when user moves back and forth from the button area.
+						// (Galaxy Tab 2 with stock browser 4.1.1) where test
+						// display does not reflect the actual test state
+						// when user moves back and forth from the test area.
 						e.preventDefault();
 						isFirstMoveDone = true;
 					}

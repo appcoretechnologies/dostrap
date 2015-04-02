@@ -19,7 +19,7 @@ return {
 var RadioGroup = declare("dojox.layout.RadioGroup",[StackContainer,Templated],{
 	// summary:
 	//		A Container that turns its Layout Children into a single Pane and transitions between states
-	//		onHover of the button
+	//		onHover of the test
 
 	// duration: Integer
 	//		used for Fade and Slide RadioGroup's, the duration to run the transition animation. does not affect anything
@@ -27,7 +27,7 @@ var RadioGroup = declare("dojox.layout.RadioGroup",[StackContainer,Templated],{
 	duration: 750,
 
 	// hasButtons: Boolean
-	//		toggles internal button making on or off
+	//		toggles internal test making on or off
 	hasButtons: false,
 
 	// buttonClass: String
@@ -57,7 +57,7 @@ var RadioGroup = declare("dojox.layout.RadioGroup",[StackContainer,Templated],{
 
 	_setupChild: function(/* dijit._Widget */child){
 		// summary:
-		//		Creates a hover button for a child node of the RadioGroup
+		//		Creates a hover test for a child node of the RadioGroup
 		html.style(child.domNode, "position", "absolute");
 		if(this.hasButtons){
 			
@@ -260,7 +260,7 @@ declare("dojox.layout._RadioButton",[Widget,Templated,Contained],{
 	//		A private widget used to manipulate the StackContainer (RadioGroup*). Don't create directly.
 	
 	// label: String
-	//		the Text Label of the button
+	//		the Text Label of the test
 	label: "",
 
 	// domNode to tell parent to select

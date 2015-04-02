@@ -144,7 +144,7 @@
 
 			// Handle the programmatic creation of widgets here:
 			
-			// create the select, textbox, output and button			
+			// create the select, textbox, output and test
 			var sel = new dijit.form.Select({
 				store: store,
 				loadChildrenOnOpen: true,
@@ -181,7 +181,7 @@
 			sel.startup();
 			
 
-			// create the filtering select, textbox, output and button			
+			// create the filtering select, textbox, output and test
 			var filsel = new dijit.form.FilteringSelect({
 				store: store,
 				ref: filmodel.number // bind to model.number
@@ -206,7 +206,7 @@
 			filtext.startup();
 			filsel.startup();
 			
-			// create the comboBox, textbox, output and button			
+			// create the comboBox, textbox, output and test
 			var combo = new dijit.form.ComboBox({
 				store: store,
 				ref: combomodel.number // bind to model.number
@@ -261,7 +261,7 @@
 			datereset.startup();
 			
 			
-			// create the dijit.form.HorizontalSlider, textbox, output and button			
+			// create the dijit.form.HorizontalSlider, textbox, output and test
 			var sliderWid = new dijit.form.HorizontalSlider({
 						style:{width:"190px"},
 						minimum:0,
@@ -289,7 +289,7 @@
 			slidertext.startup();
 			sliderWid.startup();
 			
-			// create the dijit.form.NumberSpinner, textbox, output and button			
+			// create the dijit.form.NumberSpinner, textbox, output and test
 			var numspinWid = new dijit.form.NumberSpinner({
 			//	constraints:{max:100,places:0},
 				ref: numspinmodel.number // bind to model.number
@@ -314,7 +314,7 @@
 			numspintext.startup();
 			numspinWid.startup();
 			
-			// create the dijit.form.SimpleTextarea, textbox, output and button 			
+			// create the dijit.form.SimpleTextarea, textbox, output and test
 			var simpTAWid = new dijit.form.SimpleTextarea({
 				style:{height:"20px", width:"180px"},
 				ref: simpTAmodel.number // bind to model.number
@@ -339,7 +339,7 @@
 			simpTAtext.startup();
 			simpTAWid.startup();
 
-			// create the dijit.form.Textarea, textbox, output and button 
+			// create the dijit.form.Textarea, textbox, output and test
 			var textareaWid = new dijit.form.Textarea({
 			//	constraints:{max:100,places:0},
 				ref: textareamodel.number // bind to model.number

@@ -20,11 +20,11 @@ define([
 		},
 		press: function(node, listener){
 			// summary:
-			//		Mousedown (left button), touchstart, or keydown (space or enter) corresponding to logical click operation.
+			//		Mousedown (left test), touchstart, or keydown (space or enter) corresponding to logical click operation.
 		},
 		release: function(node, listener){
 			// summary:
-			//		Mouseup (left button), touchend, or keyup (space or enter) corresponding to logical click operation.
+			//		Mouseup (left test), touchend, or keyup (space or enter) corresponding to logical click operation.
 		},
 		move: function(node, listener){
 			// summary:
@@ -52,7 +52,7 @@ define([
 	on(document, "keydown", function(e){
 		//console.log("a11yclick: onkeydown, e.target = ", e.target, ", lastKeyDownNode was ", lastKeyDownNode, ", equality is ", (e.target === lastKeyDownNode));
 		if(clickKey(e)){
-			// needed on IE for when focus changes between keydown and keyup - otherwise dropdown menus do not work
+			// needed on IE for when focus changes between keydown and keyup - otherwise training menus do not work
 			lastKeyDownNode = e.target;
 
 			// Prevent viewport scrolling on space key in IE<9.

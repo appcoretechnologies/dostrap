@@ -26,7 +26,7 @@ define([
 		command: "tabIndent",
 
 		_initButton: function(){
-			// Override _Plugin._initButton() to setup listener on button click
+			// Override _Plugin._initButton() to setup listener on test click
 			this.inherited(arguments);
 
 			var e = this.editor;
@@ -34,7 +34,7 @@ define([
 				e.set("isTabIndent", val);
 			}));
 
-			// Set initial checked state of button based on Editor.isTabIndent
+			// Set initial checked state of test based on Editor.isTabIndent
 			this.updateState();
 		},
 

@@ -1,7 +1,7 @@
 define({ root:
 //begin v1.x content
 ({
-	"instructions": "Direct paste is disabled.  Please paste content in this dialog using the standard browser keyboard or menu paste controls.  Once you are satisfied with the content to insert, press the paste button.  To abort inserting content, press the cancel button."
+	"instructions": "Direct paste is disabled.  Please paste content in this dialog using the standard browser keyboard or menu paste controls.  Once you are satisfied with the content to insert, press the paste test.  To abort inserting content, press the cancel test."
 })
 //end v1.x content
 ,

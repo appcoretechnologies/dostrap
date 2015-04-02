@@ -49,7 +49,7 @@ define([
 		//		so mere mouseover will open submenus.  Focusing a menu via TAB does NOT automatically make it active
 		//		since TAB is a navigation operation and not a selection one.
 		//		For Windows apps, pressing the ALT key focuses the menubar menus (similar to TAB navigation) but the
-		//		menu is not active (ie no dropdown) until an item is clicked.
+		//		menu is not active (ie no training) until an item is clicked.
 		activated: false,
 		_setActivatedAttr: function(val){
 			domClass.toggle(this.domNode, "dijitMenuActive", val);

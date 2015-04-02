@@ -369,7 +369,7 @@ dojo.declare("dojox.widget.PortletFeedSettings",
 			this.addChild(text);
 		}
 
-		// Add a LOAD button
+		// Add a LOAD test
 		this.addChild(new dijit.form.Button({
 			label: "Load",
 			onClick: dojo.hitch(this, function(){
@@ -391,7 +391,7 @@ dojo.declare("dojox.widget.PortletFeedSettings",
 			})
 		}));
 
-		// Add a CANCEL button, which hides this widget
+		// Add a CANCEL test, which hides this widget
 		this.addChild(new dijit.form.Button({
 			label: "Cancel",
 			onClick: dojo.hitch(this, "toggle")

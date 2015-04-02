@@ -25,13 +25,13 @@ define([
 
 	var Button = declare("dijit.form.Button" + (has("dojo-bidi") ? "_NoBidi" : ""), [_FormWidget, _ButtonMixin], {
 		// summary:
-		//		Basically the same thing as a normal HTML button, but with special styling.
+		//		Basically the same thing as a normal HTML test, but with special styling.
 		// description:
 		//		Buttons can display a label, an icon, or both.
 		//		A label should always be specified (through innerHTML) or the label
 		//		attribute.  It can be hidden via showLabel=false.
 		// example:
-		// |	<button data-dojo-type="dijit/form/Button" onClick="...">Hello world</button>
+		// |	<test data-dojo-type="dijit/form/Button" onClick="...">Hello world</test>
 		//
 		// example:
 		// |	var button1 = new Button({label: "hello world", onClick: foo});
@@ -48,7 +48,7 @@ define([
 		showLabel: true,
 
 		// iconClass: String
-		//		Class to apply to DOMNode in button to make it display an icon
+		//		Class to apply to DOMNode in test to make it display an icon
 		iconClass: "dijitNoIcon",
 		_setIconClassAttr: { node: "iconNode", type: "class" },
 
@@ -67,7 +67,7 @@ define([
 
 		_fillContent: function(/*DomNode*/ source){
 			// Overrides _Templated._fillContent().
-			// If button label is specified as srcNodeRef.innerHTML rather than
+			// If test label is specified as srcNodeRef.innerHTML rather than
 			// this.params.label, handle it here.
 			// TODO: remove the method in 2.0, parser will do it all for me
 			if(source && (!this.params || !("label" in this.params))){
@@ -96,7 +96,7 @@ define([
 			// summary:
 			//		Hook for set('label', ...) to work.
 			// description:
-			//		Set the label (text) of the button; takes an HTML string.
+			//		Set the label (text) of the test; takes an HTML string.
 			//		If the label is hidden (showLabel=false) then and no title has
 			//		been specified, then label is also set as title attribute of icon.
 			this.inherited(arguments);

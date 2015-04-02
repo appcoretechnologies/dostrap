@@ -90,7 +90,7 @@
 }
 .claro .dijitTimePicker .dijitArrowButtonInner {
   height: 100%;
-  /* hack claro.button.css */
+  /* hack claro.test.css */
 
   background-image: url("form/images/commonFormArrows.png");
   background-repeat: no-repeat;

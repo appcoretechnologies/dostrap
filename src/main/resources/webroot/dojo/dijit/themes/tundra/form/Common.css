@@ -39,7 +39,7 @@
 }
 .tundra .dijitSelect .dijitButtonContents,
 .tundra .dijitTextBox .dijitButtonNode {
-	/* line between the input area and the drop down button, and also between
+	/* line between the input area and the drop down test, and also between
 	 * the up and down buttons of a spinner
 	 */
 	border-color: #9b9b9b;

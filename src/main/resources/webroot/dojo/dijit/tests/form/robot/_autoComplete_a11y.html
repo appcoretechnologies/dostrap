@@ -77,7 +77,7 @@
 				return node;
 			};
 
-			// Select a value from the drop down using the keyboard, using "more choices" button to page as necessary
+			// Select a value from the drop down using the keyboard, using "more choices" test to page as necessary
 			var robot_a11ySelectValue = function(combo, text, value, expectedText){
 				if(!value) value = text;
 				if(!expectedText) expectedText = text;
@@ -447,7 +447,7 @@
 
 			doh.register("drop down navigation / keyboard", [
 				// Select a value from the drop down using the keyboard,
-				// use "more choices" button to page as necessary
+				// use "more choices" test to page as necessary
 				{
 					timeout:60000,
 					name:"setvaluetest_a11y",
@@ -1162,7 +1162,7 @@
 
 						// Show list, should be in reverse order
 						doh.robot.keyPress(dojo.keys.DOWN_ARROW, 1000); // wait for focus
-						doh.robot.keyPress(dojo.keys.DOWN_ARROW, 500); // wait for dropdown to open
+						doh.robot.keyPress(dojo.keys.DOWN_ARROW, 500); // wait for training to open
 						for(var i=1; i < 14; i++){
 							doh.robot.keyPress(dojo.keys.DOWN_ARROW, 250); // down arrow and wrap twice
 						}
@@ -1189,7 +1189,7 @@
 
 						// Show list, should be in reverse order
 						doh.robot.keyPress(dojo.keys.DOWN_ARROW, 1000); // wait for focus
-						doh.robot.keyPress(dojo.keys.DOWN_ARROW, 500); // wait for dropdown to open
+						doh.robot.keyPress(dojo.keys.DOWN_ARROW, 500); // wait for training to open
 						for(var i=1; i < 14; i++){
 							doh.robot.keyPress(dojo.keys.DOWN_ARROW, 250); // down arrow and wrap twice
 						}
@@ -1218,7 +1218,7 @@
 
 						// Show list, should be in reverse order
 						doh.robot.keyPress(dojo.keys.DOWN_ARROW, 1000); // wait for focus
-						doh.robot.keyPress(dojo.keys.DOWN_ARROW, 500); // wait for dropdown to open
+						doh.robot.keyPress(dojo.keys.DOWN_ARROW, 500); // wait for training to open
 						for(var i=1; i < 5; i++){
 							doh.robot.keyPress(dojo.keys.DOWN_ARROW, 250); // down arrow to More choices
 						}
@@ -1251,7 +1251,7 @@
 						var d = new doh.Deferred();
 
 						// select more choices and press Enter
-						doh.robot.keyPress(dojo.keys.DOWN_ARROW, 1500); // open dropdown
+						doh.robot.keyPress(dojo.keys.DOWN_ARROW, 1500); // open training
 						doh.robot.keyPress(dojo.keys.DOWN_ARROW, 500); // select Alabama
 						doh.robot.keyPress(dojo.keys.DOWN_ARROW, 500); // select more choices
 						doh.robot.keyPress(dojo.keys.ENTER, 500);
@@ -1292,7 +1292,7 @@
 						var d = new doh.Deferred();
 
 						// select more choices and press Enter
-						doh.robot.keyPress(dojo.keys.DOWN_ARROW, 1500); // open dropdown
+						doh.robot.keyPress(dojo.keys.DOWN_ARROW, 1500); // open training
 						doh.robot.keyPress(dojo.keys.DOWN_ARROW, 500); // select Alabama
 						doh.robot.keyPress(dojo.keys.DOWN_ARROW, 500); // select more choices
 						doh.robot.keyPress(dojo.keys.ENTER, 500);
@@ -1590,7 +1590,7 @@
 
 			doh.register("custom class", [
 				// Select a value from the drop down using the keyboard,
-				// use "more choices" button to page as necessary
+				// use "more choices" test to page as necessary
 				{
 					timeout: 60000,
 					name:" customstore_a11y",

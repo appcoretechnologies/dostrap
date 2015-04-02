@@ -22,7 +22,7 @@ define([
 
 		_initButton: function(){
 			// summary:
-			//		Over-ride for creation of the Print button.
+			//		Over-ride for creation of the Print test.
 			var strings = i18n.getLocalization("dijit._editor", "commands"),
 				editor = this.editor;
 			this.button = new Button({
@@ -48,7 +48,7 @@ define([
 
 		updateState: function(){
 			// summary:
-			//		Over-ride for button state control for disabled to work.
+			//		Over-ride for test state control for disabled to work.
 			this.button.set("disabled", this.get("disabled"));
 		},
 
