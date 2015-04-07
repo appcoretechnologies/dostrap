@@ -3,17 +3,13 @@ define(['dojo/_base/declare',
     'dijit/_TemplatedMixin',
     "dojo/text!./templates/dataGrid.html",
     "weblabs/datagrid/headerCell",
-    "weblabs/datagrid/tableRow",
-
-
-
+    "weblabs/datagrid/dataRow",
     'dojo/domReady!',
-   // 'dojox/grid/_Grid',
     "dojo/_base/lang",
     'dojo/_base/array',
     "dojo/dom-construct",
     'dojo/data/ItemFileReadStore'
-], function (declare, _WidgetBase, _Templated, templateString, HeaderCell, TableRow, dom, lang, array, domConstruct, ItemFileReadStore) {
+], function (declare, _WidgetBase, _Templated, templateString, HeaderCell, DataRow, dom, lang, array, domConstruct, ItemFileReadStore) {
     return declare([ _WidgetBase, _Templated], {
         templateString:templateString,
         store:null,
@@ -24,7 +20,6 @@ define(['dojo/_base/declare',
             this._setStore(this.store);
 
         },
-
 
         _setStructure: function(structure){
              array.forEach(structure, this.setupHeaderCell, this);
@@ -39,38 +34,17 @@ define(['dojo/_base/declare',
            store.fetch({
                onComplete:function(items, request){
                    grid.gotList(items, request, grid)
-               },
-              // onError: gotError
+               }
            });
        },
 
         gotList: function(items, request, grid){
-       // var itemsList = "";
+            var store = this.store;
             var structure = this.structure;
-        dojo.forEach(items, function(item){
-           // item._RI=null;
-            var tableRow = new TableRow({item:item, layout: structure});   //TO read a data from this page to other page(item: item)
-            console.debug(tableRow.item);
-
-            domConstruct.place(tableRow.rowNode, this.bodyNode);
-           // tableRow.startup();//for (var key in item) {
-          //  }
-
+            dojo.forEach(items, function(item){
+            var dataRow = new DataRow({item:item, layout: structure, store: store});   //TO read a data from this page to other page(item: item)
+            domConstruct.place(dataRow.rowNode, this.bodyNode);
         },this);
-
-
-            //tableRow.rowNode;
-            //domConstruct.place(tableRow.rowNode, this.rowNode);
-            //itemsList += items.getValue(item, "label") + " ";
-       // });
-       // console.debug("All items are: " + itemsList);
-     },
-
-   /*var gotError = function(error, request){
-        alert("The request to the store failed. " +  error);
-    }*/
-
-
-
+     }
     });
 });

@@ -8,14 +8,16 @@
 </head>
 
 <script>
-    require(["dojo/parser"]);
+    require(["dojo/parser", "weblabs/buttons/button"],
+    function(parser, button){
+
+    });
 </script>
 
 <script>
     var layout = [
-        {label: 'Index',field: 'id'},
-        {label: 'Date', field: 'date'},
-
+        {label: 'Index',field: 'id', widgetType: "weblabs/buttons/button"},
+        {label: 'Date', field: 'date'}
     ];
     var data = {
         identifier: "id",
@@ -25,8 +27,6 @@
         ]
     };
 </script>
-
-
 
 <body>
     <div data-dojo-id="storeData" data-dojo-type="dojo/data/ItemFileReadStore" data-dojo-props='data:data'></div>
