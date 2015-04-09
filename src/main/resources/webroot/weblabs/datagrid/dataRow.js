@@ -24,7 +24,10 @@ define(['dojo/_base/declare',
         },
 
         setupDataCell: function(entity, item){
-            var dataCell= new DataCell({data: this.store.getValue(item, entity.field)});
+
+         //   var wt = entity.widgetType;
+           // console.debug("wt "+ wt);
+            var dataCell= new DataCell({data: item[entity.field] ,entity:entity});
             domConstruct.place(dataCell.dataNode, this.rowNode);
         }
     });

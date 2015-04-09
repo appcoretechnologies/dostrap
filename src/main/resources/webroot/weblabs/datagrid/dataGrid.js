@@ -31,14 +31,15 @@ define(['dojo/_base/declare',
 
        _setStore: function(store){
            var grid = this;
-           store.fetch({
-               onComplete:function(items, request){
-                   grid.gotList(items, request, grid)
-               }
+           store.query({
+           }).then (function(results){
+               console.debug("result "+ results);
+               grid.gotList(results.items, grid);
+
            });
        },
 
-        gotList: function(items, request, grid){
+        gotList: function(items, grid){
             var store = this.store;
             var structure = this.structure;
             dojo.forEach(items, function(item){

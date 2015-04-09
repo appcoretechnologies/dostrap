@@ -1,0 +1,7 @@
+{
+"identifier": "id",
+"items": [
+{"id": 1, "test": {"label":"Amit"}, "date": "2010-01-01"},
+{"id": 2, "date": "2010-01-01"}
+]
+}
