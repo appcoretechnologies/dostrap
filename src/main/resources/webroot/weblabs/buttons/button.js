@@ -88,8 +88,8 @@ define(['dojo/_base/declare',
             // If button label is specified as srcNodeRef.innerHTML rather than
             // this.params.label, handle it here.
             // TODO: remove the method in 2.0, parser will do it all for me
-            console.debug("size " + this.size);
-            console.debug("type" + this.type);
+           // console.debug("size " + this.size);
+          //  console.debug("type" + this.type);
 
             if (source && (!this.params || !("label" in this.params))) {
                 var sourceLabel = source.innerHTML;
