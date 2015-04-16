@@ -4,7 +4,7 @@ define(['dojo/_base/declare',
     "dojo/text!./templates/dataGrid.html",
     "weblabs/datagrid/headerCell",
     "weblabs/datagrid/dataRow",
-    "weblabs/datagrid/pagination",
+    "weblabs/datagrid/pagination/pagination",
     'dojo/domReady!',
     "dojo/_base/lang",
     'dojo/_base/array',
@@ -35,7 +35,7 @@ define(['dojo/_base/declare',
                 count: 10
             }).then(function (results) {
                     var totalRecodes = results.items.length;
-                    console.debug("r " + totalRecodes);
+            //        console.debug("r " + totalRecodes);
                     grid.items = results.items;
                     grid.setItems(0);
                     grid._setPagination(totalRecodes);
@@ -51,7 +51,7 @@ define(['dojo/_base/declare',
             var counter = 0;
             domConstruct.empty(this.bodyNode);
             // dojo.forEach(items, function (item) {
-            console.debug("IL" + items.length);
+           // console.debug("IL" + items.length);
             for (var i = startRowNumber; i < items.length; i++) {
                 if (counter >= recordsPerPage) {
                     break;
@@ -66,8 +66,8 @@ define(['dojo/_base/declare',
             console.debug(this.pagination.recordsPerPage);
             // var totalRecordss = totalRecodes;
             var pagination = new Pagination({recordsPerPage: this.pagination.recordsPerPage, totalRecodes: totalRecodes, dataGrid: this });
-            console.debug("pagination " + pagination);
-            console.debug("totalRecodes " + totalRecodes);
+          //  console.debug("pagination " + pagination);
+          //  console.debug("totalRecodes " + totalRecodes);
             domConstruct.place(pagination.paginationNode, this.containerNode);
         }
     });

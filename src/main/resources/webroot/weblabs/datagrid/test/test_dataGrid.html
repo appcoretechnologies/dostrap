@@ -14,7 +14,7 @@
 <script>
     var layout = [
         {label: 'Index', field: 'id' },
-        {label: 'test', field: 'test', widgetType: "weblabs/buttons/button", widgetLayout: {label: "@userName", type: "warning"}, events:[{"click":function(){}}]},  // @ dynamic parameter, type:"i" static parameter
+        {label: 'test', field: 'test', widgetType: "weblabs/buttons/button", widgetLayout: {label: "@userName", btnType: "warning"}, events:[{"click":function(){}}]},  // @ dynamic parameter, type:"i" static parameter
         {label: 'Date', field: 'date', widgetType: "weblabs/buttons/button", getWidgetParams: function (item) {
             var params = {label: item.date};
             return params;

@@ -3,7 +3,7 @@ define(['dojo/_base/declare',
     'dijit/_TemplatedMixin',
     "dojo/text!./templates/pagination.html",
     'dojo/domReady!',
-    "weblabs/datagrid/pageNavButton",
+    "weblabs/datagrid/pagination/pageNavButton",
     "dojo/dom-construct"
 ], function (declare, _WidgetBase, _Templated, templateString, dom, PageNavButton, domConstruct) {
     return declare([ _WidgetBase, _Templated], {

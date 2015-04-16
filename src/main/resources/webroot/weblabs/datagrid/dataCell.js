@@ -16,6 +16,7 @@ define(['dojo/_base/declare',
         widgetType: null,
         _setDataAttr: function (/*String*/ content) {
             var dc = this;
+          //  console.debug("content "+content);
             if (!dc.entity.widgetType || dc.entity.widgetType == "") {
                domConstruct.place("<div>" + content +
                     "</div>", this.dataNode);
