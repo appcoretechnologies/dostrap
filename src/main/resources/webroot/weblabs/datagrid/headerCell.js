@@ -5,9 +5,9 @@ define(['dojo/_base/declare',
     'dojo/domReady!'
 ], function (declare, _WidgetBase, _Templated, templateString, dom) {
     return declare([ _WidgetBase, _Templated], {
-        templateString:templateString,
+        templateString: templateString,
         label: "default",
-        field:""
+        field: ""
 
-     });
+    });
 });

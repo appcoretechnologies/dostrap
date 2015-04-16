@@ -7,28 +7,50 @@ define(['dojo/_base/declare',
     //"weblabs/buttons/button"
 ], function (declare, _WidgetBase, _Templated, templateString, DataCell, domConstruct) {
     return declare([ _WidgetBase, _Templated], {
-        templateString:templateString,
+        templateString: templateString,
         item: null,
-        layout:null,
+        layout: null,
         store: null,
-        field:null,
-        postCreate: function(){
-           this.inherited(arguments);
-           this.setData(this.layout, this.item);
+        field: null,
+        //widgetType: null,
+        postCreate: function () {
+            this.inherited(arguments);
+            this.setData(this.layout, this.item);
         },
 
-        setData:function(structure, item){
-           dojo.forEach(structure, function(entity){
-           this.setupDataCell(entity, item)
-        },this);
+        setData: function (structure, item) {
+            dojo.forEach(structure, function (entity) {
+                this.setupDataCell(entity, item)
+            }, this);
         },
 
-        setupDataCell: function(entity, item){
+        setupDataCell: function (entity, item) {
+             var params = {};
+            if (entity.getWidgetParams) {
+                var p = entity.getWidgetParams(item);
+                var dataCell = new DataCell({data: p, entity: entity});
+                domConstruct.place(dataCell.dataNode, this.rowNode);
+            }
+            else if (entity.widgetLayout) {
+                for (var key in entity.widgetLayout) {
 
-         //   var wt = entity.widgetType;
-           // console.debug("wt "+ wt);
-            var dataCell= new DataCell({data: item[entity.field] ,entity:entity});
-            domConstruct.place(dataCell.dataNode, this.rowNode);
+                    var val = entity.widgetLayout[key];
+                    if (val[0] == '@') {
+                        var string = val.substring(1);
+                        params[key] = item[string];
+                    }
+                    else {
+                        params[key] = val;
+                    }
+                }
+                var dataCell = new DataCell({data: params, entity: entity});
+                domConstruct.place(dataCell.dataNode, this.rowNode);
+            } else {
+                var dataCell = new DataCell({data: item[entity.field], entity: entity});
+                domConstruct.place(dataCell.dataNode, this.rowNode);
+            }
+
+
         }
     });
 });

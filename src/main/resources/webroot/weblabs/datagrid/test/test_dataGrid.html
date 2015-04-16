@@ -13,15 +13,19 @@
 
 <script>
     var layout = [
-        {label: 'Index',field: 'id' },
-        {label: 'test', field: 'test', widgetType: "weblabs/buttons/button"},
-        {label: 'Date', field: 'date'}
+        {label: 'Index', field: 'id' },
+        {label: 'test', field: 'test', widgetType: "weblabs/buttons/button", widgetLayout: {label: "@userName", type: "warning"}, events:[{"click":function(){}}]},  // @ dynamic parameter, type:"i" static parameter
+        {label: 'Date', field: 'date', widgetType: "weblabs/buttons/button", getWidgetParams: function (item) {
+            var params = {label: item.date};
+            return params;
+        }}
     ];
 
 </script>
 
+
 <body>
-    <div data-dojo-id="storeData" data-dojo-type="dojo/store/JsonRest" data-dojo-props='target:"./json/data.json"'></div>
-    <span data-dojo-type="weblabs/datagrid/dataGrid" data-dojo-props="structure:layout, store:storeData"></span>
+<div data-dojo-id="storeData" data-dojo-type="dojo/store/JsonRest" data-dojo-props='target:"./json/data.json"'></div>
+<span data-dojo-type="weblabs/datagrid/dataGrid" data-dojo-props="structure:layout, store:storeData, pagination :{recordsPerPage:10,} "></span>
 </body>
 </html>
