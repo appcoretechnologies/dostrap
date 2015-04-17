@@ -1,9 +1,5 @@
-# Vert.x Example Maven Project
+# Ebox-widgets
 
-Example project for creating a Vert.x module with a Gradle build.
-
-By default this module contains a simple Java verticle which listens on the event bus and responds to `ping!`
-messages with `pong!`.
-
-This example also shows you how to write tests in Java, Groovy, Ruby and Python
+These are dojo custom widgets built on bootstrap templates. 
+To build awesome web applications go visit www.ennovationbox.com
 
