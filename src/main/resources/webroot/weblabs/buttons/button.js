@@ -13,7 +13,7 @@ define([
 	"require"
 ], function( declare, domClass, has, kernel, lang, ready, template,_WidgetBase, _TemplatedMixin,topic,require){
 
-	var Button =declare([_WidgetBase, _TemplatedMixin], {
+	var Button =declare("weblabs.buttons.Button",[_WidgetBase, _TemplatedMixin], {
 		// summary:
 		//		Basically the same thing as a normal HTML button, but with special styling.
 		// description:
@@ -21,24 +21,38 @@ define([
 		//		A label should always be specified (through innerHTML) or the label
 		//		attribute.  It can be hidden via showLabel=false.
 		// example:
-		// |	<button data-dojo-type="dijit/form/Button" onClick="...">Hello world</button>
+		// |	<button data-dojo-type="weblabs/buttons/Button" onClick="...">Hello world</button>
+		
+		// btnClass : String
+		// set the class for the button
 		btnClass: "btn btn-default",
-		btnType: "default",//"primary","success","failure","info","warning","danger"
-		btnSize: "default", //"xs-small","small","default","large"
+		// btnType: String
+		// button type , based on the type append the btnClass in reference to bootstrap css
+		// allowed values "primary","success","failure","info","warning","danger"
+		type: "default",
+		// btnSize: String
+		// button size, based on the size of the append the btnClass in reference to bottstrap css
+		// allowed values "xs-small","small","default","large"
+		size: "default",
 		
 		templateString: template,
-		postCreate: function(){
-            		this.connect(this.domNode, "onclick", "alertME");
-        		},
-		alertME: function(){
-            		topic.publish("some/topic", { msg:this.domNode});
-        	
-		var handle = topic.subscribe("some/topic", function(e){
-    			alert("I received: " + e.msg.className);
-    			handle.remove();
-		});
-		},
-		_setBtnTypeAttr: function(val){
+		// iconClass: String
+		iconClass: "",
+		
+		// read the source inner HTML and append to the text node specific to the button
+	    _fillContent: function (/*DomNode*/ source) {
+	    	
+	    	 if(source)
+	    	{
+	    		 // append the label 
+	    		 this.buttonLabelNode.innerHTML =  source.innerHTML;
+	             console.debug(source.innerHTML);  	
+	    	}
+	    		
+	     },
+        
+        // set the button type
+		_setTypeAttr: function(val){
 			var displayClass="";
 			if(val=="default"){
 			displayClass="btn btn-default";
@@ -64,13 +78,12 @@ define([
 			 this._set("btnType", val);
 		},
 		
-	     _setBtnSizeAttr: function(val){
+		// set the button size
+	    _setSizeAttr: function(val){
  		       var displayClass = "";
 			
 			if(val=="default"){
-			  // TODO : should be addd any other class here ??? as
-			 // required css already added in by btn type attribute
-			 // for this case
+			  displayClass = "default"
 			}
 			else if(val=="large")
 			{
@@ -90,21 +103,19 @@ define([
 			if(this.containerNode){
 			domClass.add(this.containerNode, displayClass);
 			}
-			this._set("btnSize", val);
-
 		},
 
+		// set the icon class 
 		_setIconClassAttr: { node: "iconNode", type: "class" },
 		
 
-
-		// Map widget attributes to DOMNode attributes.
-		
-
-		
+		_setLabelAttr(/*String*/label)
+		{
+			console.debug(" setting the button label as "+label)
+			// set the label of the for the button
+			this.buttonLabelNode.innerHTML = label;
+		}
 	});
-
-	
 
 	return Button;
 });

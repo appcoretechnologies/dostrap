@@ -15,6 +15,24 @@ define([
 		menuItemType: "",
 		disabled: "",
 		label:"",
+		
+		buildRendering: function(){
+					this.inherited(arguments);
+					// attach an on click event to get the value of selected li 
+					var onClickHandler = this.connect(this.containerNode, "onclick", "setSelectedValue");
+            		//this._connectHandlers.push(onClickHandler);
+        		},
+        setSelectedValue : function()
+        {
+        	// set the selected value to the parent's button label 
+        	var parent = this.getParent();
+        	//if parent exists, if the parent has a button widget 
+        	// refer weblabs/templates/Dropdown.html for reference
+        	if(parent && parent.dropdownButton)
+        	{
+        		parent.dropdownButton.set("label",this.containerNode.innerHTML);
+        	}
+        },
 		_setMenuItemTypeAttr : function(val) {
 			var displayClass = "";
 			if (val == "divider") {

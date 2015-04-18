@@ -68,6 +68,20 @@
 
   </dependencies>
 
+<build>
+   <pluginManagement>
+            <plugins>
+                <!-- Configure the execution of the compiler to execute the codegen processor -->
+                <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+   </build>
   
   
 </project>
