@@ -23,7 +23,6 @@ define([
 			}
 		},
 
-
 		addChild: function(/*dijit/_WidgetBase*/ widget, /*int?*/ insertIndex){
 			// summary:
 			//		Makes the given widget a child of this widget.

@@ -17,14 +17,15 @@ package com.appcoretech;
  * @author <a href="http://tfox.org">Tim Fox</a>
  */
 
-import org.vertx.java.core.Handler;
-import org.vertx.java.core.http.HttpServerRequest;
-import org.vertx.java.platform.Verticle;
+import io.vertx.core.AbstractVerticle;
+import io.vertx.core.Handler;
+import io.vertx.core.Vertx;
+import io.vertx.core.http.HttpServerRequest;
 
 /*
 This is a simple Java verticle which receives `ping` messages on the event bus and sends back `pong` replies
  */
-public class Server extends Verticle {
+public class Server extends AbstractVerticle {
 
     public void start() {
         vertx.createHttpServer().requestHandler(new Handler<HttpServerRequest>() {
@@ -33,5 +34,17 @@ public class Server extends Verticle {
                 req.response().sendFile("webroot/" + file);
             }
         }).listen(8080);
+    }
+
+    public static void main(String[] args){
+        Vertx v=Vertx.vertx();
+        String cname=Server.class.getCanonicalName();
+        String udir=System.getProperty("user.dir");
+        System.out.println("user.dir "+ udir);
+        System.setProperty("user.dir",udir+"\\src\\main\\java");
+         udir=System.getProperty("user.dir");
+        System.out.println("user.dir "+ udir);
+        System.out.println("cname "+cname);
+        v.deployVerticle(cname);
     }
 }

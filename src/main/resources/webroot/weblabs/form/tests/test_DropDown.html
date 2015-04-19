@@ -7,57 +7,60 @@
  <link rel="stylesheet" href="../../css/bootstrap.css">
 
 <!-- <link rel="stylesheet" href="../dojo/dijit/themes/claro/claro.css"> -->
-    <!-- Custom styles for this template -->
+    <!-- Custom styles for this templates -->
 <script type="text/javascript" src="../../../dojo/dojo/dojo.js" data-dojo-config="'cacheBust:new Date();parseOnLoad':true,'async':true,'packages':[{'name':'weblabs','location':'../../../weblabs'}],'parseOnLoad':true"></script>
 
 <script type="text/javascript">
 require([
   "dijit/dijit",
   "dojo/parser",
-  "dijit/form/Button",
-  "dijit/layout/AccordionContainer",
-   "weblabs/form/DropDown",
-    "weblabs/form/MenuItem"
+  "weblabs/form/DropDown",
+  "weblabs/form/MenuItem"
 ]);
 </script>
 
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"></meta>
 </head>
-<body data-maq-flow-layout="true" data-maq-comptype="sketchlofi" class="claro" data-maq-ws="collapse" data-maq-appstates="{}" data-maq-device="android_340x480" id="myapp">
+<body >
 
-<div id="test"/>
-<div data-dojo-type="weblabs/form/dropdown" data-dojo-props="label: 'DropDown'">
-<span data-dojo-type="weblabs/form/MenuItem"  >Action One</span>
+ <br></br>
+ <h1>Declarative Example for Creating Dropdown Widget</h1>
+ <hr></hr>
+ <br></br>
+<!-- <div data-dojo-type="weblabs/form/DropDown"   data-dojo-props="label: 'DropDown',type:'up', item: item, textField:'xyz'"> -->
+<div data-dojo-type="weblabs/form/DropDown"   data-dojo-props="label: 'DropDown'">
+<span data-dojo-type="weblabs/form/MenuItem"  >Hellooo</span>
 <span data-dojo-type="weblabs/form/MenuItem">Some Other Action</span>
 <span data-dojo-type="weblabs/form/MenuItem" data-dojo-props="disabled:'disabled'">Something else here</span>
 <span data-dojo-type="weblabs/form/MenuItem" data-dojo-props="menuItemType: 'divider'">
 </span>
 <span data-dojo-type="weblabs/form/MenuItem" >Separate Link</span>
-
 </div>
-<!-- <script type="text/javascript">
-require(["dijit","weblabs/buttons/MenuItem","weblabs/buttons/dropdown","dojo/dom","weblabs/buttons/DropDownMenu"],
-        function(dijit, MenuItem,dropdown,dom,DropDownMenu){
+
+ <br></br>
+ <h1>Programmatically Creation of Dropdown Widget</h1>
+ <hr></hr>
+ <br></br>
+
+<div id="dropdown"></div>
+ <script type="text/javascript">
+require(["dijit","weblabs/form/MenuItem","weblabs/form/DropDown","dojo/dom"],
+        function(dijit, MenuItem,DropDown,dom){
 	
-	var dropdownmenu= new DropDownMenu({label:"test "});
+	var dropdownmenu= new DropDown({label:"DropDown "},"dropdown");
 	var menuItem = new MenuItem({label:"test new"});
 	var menuItem2 = new MenuItem({label:"test new2"});
 	var menuItem3 = new MenuItem({label:"test new3"});
 	var menuItem4 = new MenuItem({label:"test new4"});
 	
+	  // [ [ { id:'1', xyz: 'test1'},{ id:'1', xyz: 'test1'}]
 	dropdownmenu.addChild(menuItem);
 	dropdownmenu.addChild(menuItem2);
 	dropdownmenu.addChild(menuItem3);
 	dropdownmenu.addChild(menuItem4);
 	dropdownmenu.startup();
-	var button = new dropdown({
-        label: "hello!",
-       dropDown: dropdownmenu   
-    });
-	button.startup();
-	dom.byId("test").appendChild(dropdownmenu.domNode)
 	});
-</script> -->
+</script>  
 </body>
 </html>

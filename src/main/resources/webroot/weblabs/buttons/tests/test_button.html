@@ -3,76 +3,82 @@
 <head>
 <meta charset="utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<title>Untitled</title>
+<title>Button Widget</title>
  
- <!-- Bootstrap core CSS --><link href="../css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap core CSS -->
+<link href="../css/bootstrap.min.css" rel="stylesheet">
 <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
-<script type="text/javascript" src="../../../dojo/dojo/dojo.js" data-dojo-config="'cacheBust:new Date();parseOnLoad':true,'async':true,'packages':[{'name':'weblabs','location':'../../../weblabs'}],'parseOnLoad':true"></script>
-<script  src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-
+<script type="text/javascript" src="../../../dojo/dojo/dojo.js" data-dojo-config="'cacheBust:new Date();parseOnLoad':true,'async':true,'packages':[{'name':'weblabs','location':'./../../weblabs'}],'parseOnLoad':true"></script>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> </meta>
+</head>
 <script type="text/javascript">
 require([
   "dijit/dijit",
   "dojo/parser",
-  "dojox/io/xhrScriptPlugin",
-  "dojo/data/ItemFileReadStore",
-  "dojox/data/CsvStore",
-  "dijit/form/Button",
-  "dijit/form/ComboButton",
-  "dijit/Menu",
-  "dijit/MenuItem",
-  "dijit/form/DropDownButton",
-  "dijit/layout/BorderContainer",
-  "dijit/layout/ContentPane",
-  "dijit/layout/AccordionContainer",
-  "dijit/MenuBar",
-  "dijit/MenuBar",
-  "dijit/PopupMenuBarItem",
-  "dijit/layout/TabContainer",
-  "dijit/DropDownMenu"
+  "weblabs/buttons/Button"
 ]);
 </script>
 
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"></meta>
-</head>
-
-
-
-<button data-dojo-props="btnType:'default', btnSize:'default'" data-dojo-type="weblabs/buttons/Button" >Default</button>
-<button data-dojo-props="btnType:'primary', btnSize:'default'" data-dojo-type="weblabs/buttons/Button" >primary</button>
-<button data-dojo-props="btnType:'success', btnSize:'default'" data-dojo-type="weblabs/buttons/Button" >success</button>
-<button data-dojo-props="btnType:'info', btnSize:'default'" data-dojo-type="weblabs/buttons/Button" >info</button>
-<button data-dojo-props="btnType:'warning', btnSize:'default'" data-dojo-type="weblabs/buttons/Button" >warning</button>
-<button data-dojo-props="btnType:'danger', btnSize:'default'" data-dojo-type="weblabs/buttons/Button" >danger</button>
+<br></br>
+ <h1>Declarative Example for Creating Button Widget</h1>
+ <hr></hr>
+ <br></br>
+<button id="test" data-dojo-props="type:'default', size:'default',iconClass:'caret'" data-dojo-type="weblabs/buttons/Button" >Default</button>
+ <button data-dojo-props="type:'primary', size:'default',iconClass:'fa fa-clipboard'" data-dojo-type="weblabs/buttons/Button" ></button>
+<button data-dojo-props="type:'success', size:'default'" data-dojo-type="weblabs/buttons/Button" >success</button>
+<button data-dojo-props="type:'info', size:'default'" data-dojo-type="weblabs/buttons/Button" >info</button>
+<button data-dojo-props="type:'warning', size:'default'" data-dojo-type="weblabs/buttons/Button" >warning</button>
+<button data-dojo-props="type:'danger', size:'default'" data-dojo-type="weblabs/buttons/Button" >danger</button>
 <br/><br/><br/>
-<button data-dojo-props="btnType:'default', btnSize:'large'" data-dojo-type="weblabs/buttons/Button" >Default</button>
-<button data-dojo-props="btnType:'primary', btnSize:'large'" data-dojo-type="weblabs/buttons/Button" >primary</button>
-<button data-dojo-props="btnType:'success', btnSize:'large'" data-dojo-type="weblabs/buttons/Button" >success</button>
-<button data-dojo-props="btnType:'info', btnSize:'large'" data-dojo-type="weblabs/buttons/Button" >info</button>
-<button data-dojo-props="btnType:'warning', btnSize:'large'" data-dojo-type="weblabs/buttons/Button" >warning</button>
-<button data-dojo-props="btnType:'danger', btnSize:'large'" data-dojo-type="weblabs/buttons/Button" >danger</button>
+<button data-dojo-props="type:'default', size:'large'" data-dojo-type="weblabs/buttons/Button" >Default</button>
+<button data-dojo-props="type:'primary', size:'large'" data-dojo-type="weblabs/buttons/Button" >primary</button>
+<button data-dojo-props="type:'success', size:'large'" data-dojo-type="weblabs/buttons/Button" >success</button>
+<button data-dojo-props="type:'info', size:'large',iconClass:'fa fa-clipboard'" data-dojo-type="weblabs/buttons/Button" >info</button>
+<button data-dojo-props="type:'warning', size:'large'" data-dojo-type="weblabs/buttons/Button" >warning</button>
+<button data-dojo-props="type:'danger', size:'large'" data-dojo-type="weblabs/buttons/Button" >danger</button>
 <br/><br/><br/>
-<button data-dojo-props="btnType:'default', btnSize:'small'" data-dojo-type="weblabs/buttons/Button" >Default</button>
-<button data-dojo-props="btnType:'primary', btnSize:'small'" data-dojo-type="weblabs/buttons/Button" >primary</button>
-<button data-dojo-props="btnType:'success', btnSize:'small'" data-dojo-type="weblabs/buttons/Button" >success</button>
-<button data-dojo-props="btnType:'info', btnSize:'small'" data-dojo-type="weblabs/buttons/Button" >info</button>
-<button data-dojo-props="btnType:'warning', btnSize:'small'" data-dojo-type="weblabs/buttons/Button" >warning</button>
-<button data-dojo-props="btnType:'danger', btnSize:'small'" data-dojo-type="weblabs/buttons/Button" >danger</button>
+<button data-dojo-props="type:'default', size:'small'" data-dojo-type="weblabs/buttons/Button" >Default</button>
+<button data-dojo-props="type:'primary', size:'small'" data-dojo-type="weblabs/buttons/Button" >primary</button>
+<button data-dojo-props="type:'success', size:'small'" data-dojo-type="weblabs/buttons/Button" >success</button>
+<button data-dojo-props="type:'info', size:'small'" data-dojo-type="weblabs/buttons/Button" >info</button>
+<button data-dojo-props="type:'warning', size:'small'" data-dojo-type="weblabs/buttons/Button" >warning</button>
+<button data-dojo-props="type:'danger', size:'small'" data-dojo-type="weblabs/buttons/Button" >danger</button>
 <br/><br/><br/>
-<button data-dojo-props="btnType:'default', btnSize:'xs-small'" data-dojo-type="weblabs/buttons/Button" >Default</button>
-<button data-dojo-props="btnType:'primary', btnSize:'xs-small'" data-dojo-type="weblabs/buttons/Button" >primary</button>
-<button data-dojo-props="btnType:'success', btnSize:'xs-small'" data-dojo-type="weblabs/buttons/Button" >success</button>
-<button data-dojo-props="btnType:'info', btnSize:'xs-small'" data-dojo-type="weblabs/buttons/Button" >info</button>
-<button data-dojo-props="btnType:'warning', btnSize:'xs-small'" data-dojo-type="weblabs/buttons/Button" >warning</button>
-<button data-dojo-props="btnType:'danger', btnSize:'xs-small'" data-dojo-type="weblabs/buttons/Button" >danger</button>
-     <button data-dojo-type="weblabs/buttons/Button" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconCut', showLabel: false" type="button"></button>
-</div>
-<div style="width: 350px; height: 300px">
-    <div data-dojo-type="../../../dojo/dijit/layout/TabContainer">
-        
-       
-    </div>
+<button data-dojo-props="type:'default', size:'xs-small'" data-dojo-type="weblabs/buttons/Button" >Default</button>
+<button data-dojo-props="type:'primary', size:'xs-small'" data-dojo-type="weblabs/buttons/Button" >primary</button>
+<button data-dojo-props="type:'success', size:'xs-small'" data-dojo-type="weblabs/buttons/Button" >success</button>
+<button data-dojo-props="type:'info', size:'xs-small'" data-dojo-type="weblabs/buttons/Button" >info</button>
+<button data-dojo-props="type:'warning', size:'xs-small'" data-dojo-type="weblabs/buttons/Button" >warning</button>
+<button data-dojo-props="type:'danger', size:'xs-small'" data-dojo-type="weblabs/buttons/Button" >danger</button>
+
+<br></br>
+	<h1>Programmatically Created Button</h1>
+	<hr></hr>
+	<div id="default"></div>
+	<div id="primary"></div>
+	<script>
+		require(["weblabs/buttons/Button"], function(Button){
+			   // create default button Object
+			    var button = new Button({
+			    }, "default");
+			   // set the properties
+			   button.set("label","test");
+		 	   button.set("type","default");
+			   button.set("size","default"); 
+			   button.set("iconClass","caret");
+			   button.startup();
+			   //create primary button object
+			   var primaryBtn = new Button({
+			    }, "primary");
+			   // set the properties
+			   primaryBtn.set("label","Primary");
+			   primaryBtn.set("type","primary");
+		 	   primaryBtn.set("size","default"); 
+		 	   primaryBtn.set("iconClass",'fa fa-clipboard');
+		 	   primaryBtn.startup();
+		});
+	</script> 
+
 </body>
 </html>
