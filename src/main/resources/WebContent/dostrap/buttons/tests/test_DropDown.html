@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>Untitled</title>
+ <link rel="stylesheet" href="../../css/bootstrap.css">
+
+<!-- <link rel="stylesheet" href="../dojo/dijit/themes/claro/claro.css"> -->
+    <!-- Custom styles for this templates -->
+    <script type="text/javascript" src="../../../dojo/dojo/dojo.js" data-dojo-config="'cacheBust:new Date();parseOnLoad':true,'async':true,'packages':[{'name':'dostrap','location':'./../../dostrap'}],'parseOnLoad':true"></script>
+
+<script type="text/javascript">
+require([
+  "dijit/dijit",
+  "dojo/parser",
+  "dostrap/buttons/DropDown",
+  "dostrap/buttons/MenuItem"
+]);
+</script>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"></meta>
+</head>
+<body >
+
+ <br></br>
+ <h1>Declarative Example for Creating Dropdown Widget</h1>
+ <hr></hr>
+ <br></br>
+<!-- <div data-dojo-type="dostrap/buttons/DropDown"   data-dojo-props="label: 'DropDown',type:'up', item: item, textField:'xyz'"> -->
+<div data-dojo-type="dostrap/buttons/DropDown"   data-dojo-props="label: 'DropDown'">
+<span data-dojo-type="dostrap/buttons/MenuItem"  >Hellooo</span>
+<span data-dojo-type="dostrap/buttons/MenuItem">Some Other Action</span>
+<span data-dojo-type="dostrap/buttons/MenuItem" data-dojo-props="disabled:'disabled'">Something else here</span>
+<span data-dojo-type="dostrap/buttons/MenuItem" data-dojo-props="menuItemType: 'divider'">
+</span>
+<span data-dojo-type="dostrap/buttons/MenuItem" >Separate Link</span>
+</div>
+
+ <br></br>
+ <h1>Programmatically Creation of Dropdown Widget</h1>
+ <hr></hr>
+ <br></br>
+
+<div id="dropdown"></div>
+ <script type="text/javascript">
+require(["dijit","dostrap/buttons/MenuItem","dostrap/buttons/DropDown","dojo/dom"],
+        function(dijit, MenuItem,DropDown,dom){
+	
+	var dropdownmenu= new DropDown({label:"DropDown "},"dropdown");
+	var menuItem = new MenuItem({label:"test new"});
+	var menuItem2 = new MenuItem({label:"test new2"});
+	var menuItem3 = new MenuItem({label:"test new3"});
+	var menuItem4 = new MenuItem({label:"test new4"});
+	
+	  // [ [ { id:'1', xyz: 'test1'},{ id:'1', xyz: 'test1'}]
+	dropdownmenu.addChild(menuItem);
+	dropdownmenu.addChild(menuItem2);
+	dropdownmenu.addChild(menuItem3);
+	dropdownmenu.addChild(menuItem4);
+	dropdownmenu.startup();
+	});
+</script>  
+</body>
+</html>

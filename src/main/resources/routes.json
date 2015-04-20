@@ -1,0 +1,12 @@
+{
+  "web_module_name": "dostrap",
+  "web_module_path": "dostrap",
+  "sockJs_routes": [],
+  "url_routes": [
+    {
+      "url": "*",
+      "action": "sendFile",
+      "action_path": "WebContent/dostrap"
+    }
+  ]
+}
