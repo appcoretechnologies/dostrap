@@ -6,7 +6,7 @@ define([ 'dojo/_base/declare', 'dijit/_WidgetBase', 'dijit/_TemplatedMixin',
 
 ], function(declare, _WidgetBase, _Templated, templateString, dom, domClass,
 		_Container, domConstruct, NavButton, domStyle, domAttr, dijit, array) {
-	return declare([ _WidgetBase, _Templated, _Container ], {
+	return declare("dostrap.form.TabContainer",[ _WidgetBase, _Templated, _Container ], {
 		// summary:
 		//		A widget containing an HTML fragment, specified with its
 		//      child elements represented as content pane.

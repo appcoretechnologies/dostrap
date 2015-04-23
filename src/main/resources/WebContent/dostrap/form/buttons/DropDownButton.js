@@ -6,18 +6,18 @@ define([
 	"dojo/_base/kernel", // kernel.deprecated
 	"dojo/_base/lang", // lang.trim
 	"dojo/ready",
-	"dojo/text!./templates/DropDown.html",
+	"dojo/text!./templates/DropDownButton.html",
 	"dijit/_WidgetBase",
 	"dijit/_TemplatedMixin",
 	"dijit/_WidgetsInTemplateMixin",
 	"dojo/topic",
 	"require",
 	"dojo/dom-construct" ,// domConstruct.place,
-	"dostrap/buttons/Button"
+	"dostrap/form/buttons/Button"
 ], function( declare, domClass, has, kernel, lang, ready, template,_WidgetBase, _TemplatedMixin,_WidgetsInTemplateMixin,topic,require,domConstruct,button){
 
 	var isOpen=false;
-	var Button =declare("dostrap.buttons.DropDown",[_WidgetBase, _TemplatedMixin,_WidgetsInTemplateMixin], {
+	var Button =declare("dostrap.buttons.form.DropDownButton",[_WidgetBase, _TemplatedMixin,_WidgetsInTemplateMixin], {
 		// summary:
 		//		A widget representing the dropdown allows to select one value
 		//		from the set of given values

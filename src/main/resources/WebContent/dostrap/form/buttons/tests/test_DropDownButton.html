@@ -3,19 +3,19 @@
 <head>
 <meta charset="utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<title>Untitled</title>
- <link rel="stylesheet" href="../../css/bootstrap.css">
+<title>Drop Down</title>
+ <link rel="stylesheet" href="../../../css/bootstrap.css">
 
 <!-- <link rel="stylesheet" href="../dojo/dijit/themes/claro/claro.css"> -->
     <!-- Custom styles for this templates -->
-    <script type="text/javascript" src="../../../dojo/dojo/dojo.js" data-dojo-config="'cacheBust:new Date();parseOnLoad':true,'async':true,'packages':[{'name':'dostrap','location':'./../../dostrap'}],'parseOnLoad':true"></script>
+    <script type="text/javascript" src="../../../../dojo/dojo/dojo.js" data-dojo-config="'cacheBust:new Date();parseOnLoad':true,'async':true,'packages':[{'name':'dostrap','location':'./../../dostrap'}],'parseOnLoad':true"></script>
 
 <script type="text/javascript">
 require([
   "dijit/dijit",
   "dojo/parser",
-  "dostrap/buttons/DropDown",
-  "dostrap/buttons/MenuItem"
+  "dostrap/form/buttons/DropDownButton",
+  "dostrap/form/buttons/MenuItem"
 ]);
 </script>
 
@@ -29,13 +29,13 @@ require([
  <hr></hr>
  <br></br>
 <!-- <div data-dojo-type="dostrap/buttons/DropDown"   data-dojo-props="label: 'DropDown',type:'up', item: item, textField:'xyz'"> -->
-<div data-dojo-type="dostrap/buttons/DropDown"   data-dojo-props="label: 'DropDown'">
-<span data-dojo-type="dostrap/buttons/MenuItem"  >Hellooo</span>
-<span data-dojo-type="dostrap/buttons/MenuItem">Some Other Action</span>
-<span data-dojo-type="dostrap/buttons/MenuItem" data-dojo-props="disabled:'disabled'">Something else here</span>
-<span data-dojo-type="dostrap/buttons/MenuItem" data-dojo-props="menuItemType: 'divider'">
+<div data-dojo-type="dostrap/form/buttons/DropDownButton"   data-dojo-props="label: 'DropDown'">
+<span data-dojo-type="dostrap/form/buttons/MenuItem"  >Hellooo</span>
+<span data-dojo-type="dostrap/form/buttons/MenuItem">Some Other Action</span>
+<span data-dojo-type="dostrap/form/buttons/MenuItem" data-dojo-props="disabled:'disabled'">Something else here</span>
+<span data-dojo-type="dostrap/form/buttons/MenuItem" data-dojo-props="menuItemType: 'divider'">
 </span>
-<span data-dojo-type="dostrap/buttons/MenuItem" >Separate Link</span>
+<span data-dojo-type="dostrap/form/buttons/MenuItem" >Separate Link</span>
 </div>
 
  <br></br>
@@ -45,7 +45,7 @@ require([
 
 <div id="dropdown"></div>
  <script type="text/javascript">
-require(["dijit","dostrap/buttons/MenuItem","dostrap/buttons/DropDown","dojo/dom"],
+require(["dijit","dostrap/form/buttons/MenuItem","dostrap/form/buttons/DropDownButton","dojo/dom"],
         function(dijit, MenuItem,DropDown,dom){
 	
 	var dropdownmenu= new DropDown({label:"DropDown "},"dropdown");

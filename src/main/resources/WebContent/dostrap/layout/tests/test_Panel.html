@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>Untitled</title>
+ 
+ <!-- Bootstrap core CSS -->
+ <link href="../../css/bootstrap.min.css" rel="stylesheet">
+<script type="text/javascript" src="../../../dojo/dojo/dojo.js" data-dojo-config="'cacheBust:new Date();parseOnLoad':true,'async':true,'packages':[{'name':'dostrap','location':'./../../dostrap'}],'parseOnLoad':true"></script>
+
+<script type="text/javascript">
+require([
+  "dijit/dijit",
+  "dostrap/layout/panel"
+]);
+</script>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"></meta>
+</head>
+
+<h1>Declarative Example for Panel</h1>
+	<hr></hr>
+<div data-dojo-props= "content:'Body Content', header:'Header Content', footer:'Footer Content'"  style="width: 250px" data-dojo-type="dostrap/layout/panel" >
+</div> 
+	<h1>Programmatically Created  Panel</h1>
+	<hr></hr>
+	<div id="tc1-prog"></div>
+ <script>
+	require(["dostrap/layout/Panel", "dojo/domReady!"], function(Panel){
+	    var tc = new Panel({content:'Javascript based Panel example',
+							header:'Programatically Created Panel -  Header',
+							footer:'Programatically created Panel - Footer'},'tc1-prog');
+					   tc.startup();
+			});
+	</script> 
+	<br></br>
+
+
+</body>
+</html>

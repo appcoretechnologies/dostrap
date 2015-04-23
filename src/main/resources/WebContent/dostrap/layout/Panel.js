@@ -6,7 +6,7 @@ define([
 	"dojo/_base/kernel", // kernel.deprecated
 	"dojo/_base/lang", // lang.trim
 	"dojo/ready",
-	"dojo/text!dostrap/buttons/templates/panel.html",
+	"dojo/text!./templates/Panel.html",
 	"dijit/_WidgetBase",
 	"dijit/_TemplatedMixin",
 	"dojo/topic",
@@ -14,7 +14,7 @@ define([
 	"dijit/layout/ContentPane",
 ], function( declare, domClass, has, kernel, lang, ready, template,_WidgetBase, _TemplatedMixin,topic,require,ContentPane){
 //Order of inheritese
-	var Button =declare([ContentPane,_WidgetBase, _TemplatedMixin], {
+	var Button =declare("dostrap.form.Panel",[ContentPane,_WidgetBase, _TemplatedMixin], {
 		// summary:
 		//		Basically the same thing as a normal HTML button, but with special styling.
 		// description:

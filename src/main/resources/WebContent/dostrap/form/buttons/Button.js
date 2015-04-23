@@ -6,14 +6,14 @@ define([
 	"dojo/_base/kernel", // kernel.deprecated
 	"dojo/_base/lang", // lang.trim
 	"dojo/ready",
-	"dojo/text!dostrap/buttons/templates/button.html",
+	"dojo/text!./templates/Button.html",
 	"dijit/_WidgetBase",
 	"dijit/_TemplatedMixin",
 	"dojo/topic",
 	"require"
 ], function( declare, domClass, has, kernel, lang, ready, template,_WidgetBase, _TemplatedMixin,topic,require){
 
-	var Button =declare("dostrap.buttons.Button",[_WidgetBase, _TemplatedMixin], {
+	var Button =declare("dostrap.form.buttons.Button",[_WidgetBase, _TemplatedMixin], {
 		// summary:
 		//		Basically the same thing as a normal HTML button, but with special styling.
 		// description:
