@@ -1,37 +1,30 @@
 define(['dojo/_base/declare',
     'dijit/_WidgetBase',
     'dijit/_TemplatedMixin',
-    "dojo/text!./templates/pagination.html",
+    "dojo/text!./templates/Pagination.html",
     'dojo/domReady!',
-    "dostrap/datagrid/pagination/pageNavButton",
+    "dostrap/datagrid/pagination/PageNavButton",
     "dojo/dom-construct"
+
 ], function (declare, _WidgetBase, _Templated, templateString, dom, PageNavButton, domConstruct) {
     return declare([ _WidgetBase, _Templated], {
         templateString: templateString,
-        recordsPerPage:null,
-        totalRecodes:null,
-        dataGrid:null,
+        recordsPerPage: null,
+        totalRecodes: null,
+        dataGrid: null,
+
         postCreate: function () {
             this.inherited(arguments);
             this._setPaginationCount();
         },
 
-        _setPaginationCount: function(){
-                console.debug("recordCount "+this.recordsPerPage);
-                console.debug("totalRecodes "+this.totalRecodes);
-                var pageCount = Math.ceil(this.totalRecodes/ this.recordsPerPage);
-                console.debug("pageCount "+ pageCount);
-
-            for (var i=0; i < pageCount; i++){
-                var pageNavButton = new PageNavButton ({pageNumberLabel:i+1, recordCount:this.recordsPerPage, dataGrid: this.dataGrid});
-              //  console.debug("pageNumberLabel "+pageNavButton.pageNumberLabel);
+        _setPaginationCount: function () {
+            var pageCount = Math.ceil(this.totalRecodes / this.recordsPerPage);
+            for (var i = 0; i < pageCount; i++) {
+                var pageNavButton = new PageNavButton({pageNumberLabel: i + 1, recordCount: this.recordsPerPage, dataGrid: this.dataGrid});
                 var pageNumber = pageNavButton.pageNumberLabel;
                 domConstruct.place(pageNavButton.domNode, this.paginationNode);
             }
-           // console.debug("pageNumber "+pageNumber);
-
-            //console.debug("SBN "+startbeginNum);
-}
-
+        }
     });
 });
