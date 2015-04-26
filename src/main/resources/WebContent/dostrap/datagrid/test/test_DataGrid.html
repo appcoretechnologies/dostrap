@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Grid</title>
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <script type="text/javascript" src="../../../dojo/dojo/dojo.js"
+            data-dojo-config="'cacheBust:new Date();parseOnLoad':true,'async':true,'packages':[{'name':'dostrap','location':'./../../dostrap'}],'parseOnLoad':true"></script>
+</head>
+
+<script>
+    require(["dojo/parser"]);
+</script>
+
+<script>
+    var layout = [
+        {label: 'Index', field: 'id' },
+        {label: 'test', field: 'test', widgetType: "dostrap/form/buttons/Button", widgetLayout: {label: "@userName", type: "warning"}, events: [
+            {"click": function () {
+            }}
+        ]},  // @ dynamic parameter, type:"i" static parameter
+        {label: 'Date', field: 'date', widgetType: "dostrap/form/buttons/Button", getWidgetParams: function (item) {
+            var params = {label: item.date};
+            return params;
+        }}
+    ];
+</script>
+
+
+<body>
+<div data-dojo-id="storeData" data-dojo-type="dojo/store/JsonRest" data-dojo-props='target:"./json/data.json"'></div>
+<span data-dojo-type="dostrap/datagrid/DataGrid"
+      data-dojo-props="structure:layout, store:storeData, pagination :{recordsPerPage:10} "></span>
+</body>
+</html>
