@@ -9,7 +9,7 @@ define([
 	"dojo/sniff", // has("ie") has("mozilla")
 	"dijit/form/_FormValueWidget",
 	"dijit/form/_TextBoxMixin",
-	"dojo/text!./templates/textbox.html",
+	"dojo/text!./templates/Textbox.html",
 	"dojo/dom-class"
 		// to export dijit._setSelectionRange, remove in 2.0
 ], function(declare,domClass,  domConstruct, domStyle, kernel, lang, on, has,
