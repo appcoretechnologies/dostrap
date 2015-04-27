@@ -21,7 +21,7 @@ require([
   "dojox/data/CsvStore",
   "dijit/form/Button",
   "dostrap/form/Label", 
-  "dostrap/form/textbox"
+  "dostrap/form/Textbox"
 ]);
 </script>
 
@@ -35,7 +35,7 @@ require([
 	<hr></hr>
  <span  data-dojo-type="dostrap/form/Label" >TextBox</span>
 
-<input  name="firstname" value="testing testing" data-dojo-type="dostrap/form/textbox" data-dojo-props= "title:'username', postTitle:'@'"/>
+<input  name="firstname" value="testing testing" data-dojo-type="dostrap/form/Textbox" data-dojo-props= "title:'username', postTitle:'@'"/>
 </div>
 
 
@@ -44,8 +44,8 @@ require([
 	<hr></hr>
 	<div id="tc1-prog"></div>
  <script>
-	require(["dostrap/form/textbox", "dojo/domReady!"], function(textbox){
-	    var tc = new textbox({title:'Javascript based TextBox example',
+	require(["dostrap/form/Textbox", "dojo/domReady!"], function(Textbox){
+	    var tc = new Textbox({title:'Javascript based TextBox example',
 	    	postTitle:'@'},'tc1-prog');
 					   tc.startup();
 			});
