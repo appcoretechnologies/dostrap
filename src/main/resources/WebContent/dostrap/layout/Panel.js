@@ -30,32 +30,36 @@ define([
 		headerclass:"",
 		footerclass:"",
 		
+		// colspan: <integer>
+		// this attribute is used to span the panel when used with layout widget
+		colspan: 0,
+		
 		templateString: template,
 		
 		startup : function() {
 		 this.inherited(arguments);
 		},
-			_setBodyAttr: function(val){
+	
+		_setBodyAttr: function(val){
 		
 			
 		},
 		
-			_setHeaderAttr: function(val){
+		_setHeaderAttr: function(val){
 			this._set("header", val);
 			var labelNode = this.headerNode;
 			labelNode.innerHTML = val;
 		},
 		
-			_setFooterAttr: function(val){
+		_setFooterAttr: function(val){
 			this._set("footer", val);
 			var labelNode = this.footerNode;
 			labelNode.innerHTML = val;
-		}	
-
-
-		// Map widget attributes to DOMNode attributes.
+		},	
 		
-
+		_setColspanAttr: function(val){
+			this._set("colspan",val);
+		}
 		
 	});
 

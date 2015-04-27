@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>Grid Layout</title>
+ 
+ <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+<script type="text/javascript" src="../../../dojo/dojo/dojo.js" data-dojo-config="'cacheBust:new Date();parseOnLoad':true,'async':true,'packages':[{'name':'dostrap','location':'./../../dostrap'}],'parseOnLoad':true"></script>
+
+<script type="text/javascript">
+require([
+  "dijit/dijit",
+  "dostrap/layout/panel",
+  "dostrap/layout/GridLayout",
+  "dostrap/layout/GridLayoutRow"
+]);
+</script>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"></meta>
+</head>
+
+<h1>Declarative Example for Layout Grid</h1>
+	<hr></hr>
+	
+	<div data-dojo-type="dostrap/layout/GridLayout">
+	 	 <div data-dojo-type="dostrap/layout/GridLayoutRow">
+			<div data-dojo-props= "content:'Body Content', header:'Header Content', footer:'Footer Content',colspan:5"   data-dojo-type="dostrap/layout/panel" ></div>
+			<div data-dojo-props= "content:'Body Content', header:'Header Content', footer:'Footer Content'"   data-dojo-type="dostrap/layout/panel" ></div>
+			<div data-dojo-props= "content:'Body Content', header:'Header dContent', footer:'Footer Content'"   data-dojo-type="dostrap/layout/panel" ></div>
+			<div data-dojo-props= "content:'Body Content', header:'Header Content', footer:'Footer Content'"   data-dojo-type="dostrap/layout/panel" ></div>
+			<div data-dojo-props= "content:'Body Content', header:'Header Content', footer:'Footer Content'"   data-dojo-type="dostrap/layout/panel" ></div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-sm-5">
+			<div data-dojo-props= "content:'Body Content', header:'Header Content', footer:'Footer Content'"  style="width: 400px" data-dojo-type="dostrap/layout/panel" ></div>
+		</div>
+	
+		<div class="col-sm-3">
+			<div data-dojo-props= "content:'Body Content', header:'Header Content', footer:'Footer Content'"  style="width: 250px" data-dojo-type="dostrap/layout/panel" ></div>
+		</div>
+	</div>
+</body>
+</html>
