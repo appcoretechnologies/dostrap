@@ -27,8 +27,8 @@ define([
 		body:"",
 		header:"",
 		footer:"",
-		headerclass:"",
-		footerclass:"",
+		headerClass:"",
+		footerClass:"",
 		
 		// colspan: <integer>
 		// this attribute is used to span the panel when used with layout widget
@@ -41,20 +41,27 @@ define([
 		},
 	
 		_setBodyAttr: function(val){
-		
 			
 		},
 		
 		_setHeaderAttr: function(val){
+			//set the header style class
+			this._set("headerClass","panel-heading");
 			this._set("header", val);
 			var labelNode = this.headerNode;
 			labelNode.innerHTML = val;
+			// set the header node style
+			this.headerNode.className = this.headerClass;
 		},
 		
 		_setFooterAttr: function(val){
+			//set the Footer style class
+			this._set("footerClass","panel-footer");
 			this._set("footer", val);
 			var labelNode = this.footerNode;
 			labelNode.innerHTML = val;
+			// set the footer node style
+			this.footerNode.className = this.footerClass;
 		},	
 		
 		_setColspanAttr: function(val){
