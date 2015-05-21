@@ -22,7 +22,7 @@ define([
 		//		attribute.  It can be hidden via showLabel=false.
 		// example:
 		// |	<button data-dojo-type="dijit/form/Button" onClick="...">Hello world</button>
-		labelClass:"nav navbar-nav",
+		navtype:"nav navbar-nav",
 		templateString: template,
 		navBarClass: "navbar-collapse collapse",
 		
@@ -50,9 +50,9 @@ define([
         		}
         		},
         		
-		_setLabelClassAttr: function(val){
+		_setNavtypeAttr: function(val){
 			var displayClass="";
-			if(val=="navbar"){
+			if(val=="horizontal"){
 			displayClass="nav navbar-nav";
 			}else if(val=="primary"){
 				displayClass="btn btn-primary";
@@ -69,6 +69,10 @@ define([
 			else if(val=="danger"){
 				displayClass="btn btn-danger";
 			}
+			else if(val=="verticle"){
+				displayClass="nav nav-stacked";
+			}
+
 
 			if(this.containerNode){
 			domClass.replace(this.containerNode, displayClass);
