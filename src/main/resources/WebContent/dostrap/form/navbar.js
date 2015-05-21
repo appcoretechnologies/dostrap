@@ -54,20 +54,6 @@ define([
 			var displayClass="";
 			if(val=="horizontal"){
 			displayClass="nav navbar-nav";
-			}else if(val=="primary"){
-				displayClass="btn btn-primary";
-			}
-			else if(val=="success"){
-				displayClass="btn btn-success";
-			}
-			else if(val=="info"){
-				displayClass="btn btn-info";
-			}
-			else if(val=="warning"){
-				displayClass="btn btn-warning";
-			}
-			else if(val=="danger"){
-				displayClass="btn btn-danger";
 			}
 			else if(val=="verticle"){
 				displayClass="nav nav-stacked";
