@@ -69,7 +69,7 @@ define(['dojo/_base/declare',
             {
                 this.getParent().activeNode.setClass("");
                 var cp = this.getParent().activeNode.contentPane;
-                domStyle.set(cp.domNode,'display','none');
+                domStyle.set(cp.containerNode,'display','none');
             }
             
             if(this && this.getParent() != null)
@@ -77,7 +77,7 @@ define(['dojo/_base/declare',
 	            // set the class of the button
 	            this.setClass("active");
 	            this.getParent().setActiveNode(this);
-	            domStyle.set(this.contentPane.domNode,'display','block');
+	            domStyle.set(this.contentPane.containerNode,'display','block');
             }
         },
         setClass: function(classname ) {
