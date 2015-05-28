@@ -65,10 +65,10 @@ define(['dojo/_base/declare',
         setActive: function(){
         	// de active the currently active button and hide the corresponding
         	// content pane
-            if(this && this.getParent() != null && this.getParent().getActiveNode)
+            if(this && this.getParent() != null && this.getParent().getActiveNode())
             {
-                this.getParent().activeNode.setClass("");
-                var cp = this.getParent().activeNode.contentPane;
+                this.getParent().getActiveNode().setClass("");
+                var cp = this.getParent().getActiveNode().contentPane;
                 domStyle.set(cp.containerNode,'display','none');
             }
             

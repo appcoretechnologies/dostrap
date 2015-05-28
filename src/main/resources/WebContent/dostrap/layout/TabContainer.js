@@ -33,7 +33,7 @@ define([ 'dojo/_base/declare', 'dijit/_WidgetBase', 'dijit/_TemplatedMixin',
 			if (this._started) {
 				return;
 			}
-
+			this._started = true;
 			// get all the children of the tab container
 			var dest = this.getChildren();
 			// Setup each page panel to be initially hidden
@@ -41,6 +41,7 @@ define([ 'dojo/_base/declare', 'dijit/_WidgetBase', 'dijit/_TemplatedMixin',
 		},
 
 		setupChild : function(child) {
+
 			var navButton,buttonClass = "";
 			// get the selected flag for each of the child panes
 			// by default it would be false
@@ -102,8 +103,15 @@ define([ 'dojo/_base/declare', 'dijit/_WidgetBase', 'dijit/_TemplatedMixin',
 		},
 		addChild: function(/*dijit/_WidgetBase*/ widget){
 		  this.inherited(arguments);
-		  //this.setupChild(widget);
-		}
+            if (!this._started) {
+                this._started = true;
+            }
+		  this.setupChild(widget);
+
+		},
+        removeChild: function(/*dijit/_WidgetBase*/ widget){
+            this.inherited(arguments);
+        }
 
 	});
 });
